@@ -1,0 +1,99 @@
+╔══════════════════════════════════════════════════════════════╗
+║          🚀 LUX LADY - DEPLOY LÊN VERCEL NGAY!              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📋 3 CÁCH DEPLOY (Chọn 1 trong 3):
+
+┌─────────────────────────────────────────────────────────────┐
+│ CÁCH 1: DRAG & DROP (Đơn giản nhất - 2 phút)               │
+└─────────────────────────────────────────────────────────────┘
+
+1. Mở: https://vercel.com/signup
+2. Đăng nhập (GitHub/Google/Email)
+3. Vào: https://vercel.com/new
+4. Kéo thả toàn bộ thư mục này vào
+5. Đợi 30 giây → Xong! 🎉
+
+Link: https://lux-lady-jewelry.vercel.app
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ CÁCH 2: QUA GITHUB (Tự động deploy - Recommended)          │
+└─────────────────────────────────────────────────────────────┘
+
+Bước 1: Tạo Git Repo
+  git init
+  git add .
+  git commit -m "Initial commit"
+
+Bước 2: Push lên GitHub
+  - Tạo repo: https://github.com/new
+  - Tên: lux-lady-jewelry
+  - Chạy (thay YOUR_USERNAME):
+    git remote add origin https://github.com/YOUR_USERNAME/lux-lady-jewelry.git
+    git branch -M main
+    git push -u origin main
+
+Bước 3: Deploy trên Vercel
+  - Vào: https://vercel.com/new
+  - Import Git Repository
+  - Chọn repo vừa tạo
+  - Click Deploy → Xong!
+
+Lợi ích: Mỗi lần push code, tự động deploy!
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ CÁCH 3: DÙNG SCRIPT TỰ ĐỘNG                                │
+└─────────────────────────────────────────────────────────────┘
+
+Chạy lệnh:
+  ./deploy.sh
+
+Script sẽ tự động:
+  ✓ Tạo git repo
+  ✓ Commit code
+  ✓ Hướng dẫn push lên GitHub
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                    📚 TÀI LIỆU HƯỚNG DẪN                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+📖 QUICK-START.md    → Hướng dẫn nhanh (5 phút)
+📖 DEPLOY.md         → Hướng dẫn chi tiết đầy đủ
+📖 README.md         → Tài liệu dự án
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                    ✅ SAU KHI DEPLOY                         ║
+╚══════════════════════════════════════════════════════════════╝
+
+Kiểm tra:
+  ✓ Website hiển thị đúng
+  ✓ Ảnh sản phẩm load được
+  ✓ Wishlist hoạt động
+  ✓ Share buttons hoạt động
+  ✓ Zalo button hoạt động
+  ✓ Responsive trên mobile
+
+Custom Domain (Optional):
+  → Vercel Dashboard → Settings → Domains
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                    🎉 MIỄN PHÍ 100%                          ║
+╚══════════════════════════════════════════════════════════════╝
+
+Vercel Free Plan:
+  ✓ Unlimited deployments
+  ✓ Automatic HTTPS
+  ✓ Global CDN
+  ✓ 100GB bandwidth/tháng
+  ✓ Auto-scaling
+  ✓ Preview deployments
+
+
+📞 Cần hỗ trợ? Zalo: 0382539292
+
+🚀 Chúc bạn deploy thành công!
