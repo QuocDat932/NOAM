@@ -66,71 +66,6 @@ git push -u origin main
 
 ---
 
-## 🎯 Cách 2: Deploy Trực Tiếp (Không cần GitHub)
-
-### Bước 1: Cài Vercel CLI
-
-```bash
-# Cài đặt Vercel CLI
-npm install -g vercel
-
-# Hoặc dùng yarn
-yarn global add vercel
-```
-
-### Bước 2: Login vào Vercel
-
-```bash
-vercel login
-```
-
-### Bước 3: Deploy
-
-```bash
-# Chạy lệnh deploy trong thư mục project
-vercel
-
-# Trả lời các câu hỏi:
-# - Set up and deploy? → Y
-# - Which scope? → Chọn account của bạn
-# - Link to existing project? → N
-# - What's your project's name? → lux-lady-jewelry
-# - In which directory is your code located? → ./
-```
-
-### Bước 4: Deploy Production
-
-```bash
-# Deploy lên production
-vercel --prod
-```
-
----
-
-## 🎯 Cách 3: Deploy bằng Drag & Drop (Đơn giản nhất)
-
-### Bước 1: Chuẩn bị files
-
-Đảm bảo thư mục có các files sau:
-```
-lux-lady/
-├── index.html
-├── styles.css
-├── app.js
-├── README.md
-└── Img/
-    └── (tất cả ảnh sản phẩm)
-```
-
-### Bước 2: Deploy
-
-1. Truy cập: https://vercel.com/new
-2. Đăng nhập bằng GitHub/GitLab/Bitbucket
-3. Kéo thả (drag & drop) toàn bộ thư mục vào
-4. Đợi upload và deploy hoàn thành
-5. Nhận link website!
-
----
 
 ## ⚙️ Cấu Hình Vercel (Optional)
 
@@ -167,12 +102,6 @@ git commit -m "Update: mô tả thay đổi"
 git push
 
 # Vercel sẽ tự động deploy lại!
-```
-
-### Nếu dùng Vercel CLI:
-```bash
-# Deploy lại
-vercel --prod
 ```
 
 ---
@@ -270,7 +199,7 @@ Vercel tự động set cache headers cho static files
 ## 🎉 Hoàn Thành!
 
 Website của bạn giờ đã live tại:
-- **Vercel URL**: `https://lux-lady-jewelry.vercel.app`
+- **Vercel URL**: `https://lux-lady.vercel.app`
 - **Custom Domain**: `https://yourdomain.com` (nếu có)
 
 ### Features Vercel Miễn Phí:

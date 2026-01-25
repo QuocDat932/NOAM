@@ -1,4 +1,4 @@
-// NAM Jewelry - Enhanced JavaScript
+// Lux Lady - Enhanced JavaScript
 const contactZalo = "0382539292";
 const formatCurrency = (amount) => new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
 
@@ -13,7 +13,7 @@ const categories = [
     { id: 'vong-tay', name: 'Vòng Tay' }
 ];
 
-const commonDesc = "Sản phẩm được chế tác thủ công tinh xảo bởi những nghệ nhân hàng đầu tại NAM Jewelry. Sử dụng chất liệu cao cấp, đảm bảo độ sáng bóng và bền đẹp theo thời gian.";
+const commonDesc = "Sản phẩm được chế tác thủ công tinh xảo bởi những nghệ nhân hàng đầu tại Lux Lady. Sử dụng chất liệu cao cấp, đảm bảo độ sáng bóng và bền đẹp theo thời gian.";
 
 // PRODUCTS DATA with real images from Img folder
 const products = [
