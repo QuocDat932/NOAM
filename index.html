@@ -6,67 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lux Lady – Trang sức cao cấp</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Chuyên cung cấp trang sức vàng, bạc, đá quý, kim cương thiên nhiên với thiết kế tinh xảo. Uy tín, chất lượng, giá tốt nhất thị trường.">
-    <meta name="keywords" content="trang sức, nhẫn kim cương, dây chuyền vàng, bông tai, trang sức cưới, Blue Luxury">
+    <!-- SEO -->
+    <meta name="description" content="Lux Lady - Chuyên cung cấp trang sức cao cấp và phụ kiện thời trang. Thiết kế tinh xảo, chất lượng vượt trội.">
+    <meta name="keywords" content="trang sức, nhẫn kim cương, dây chuyền vàng, túi xách, Lux Lady">
     <meta name="author" content="Lux Lady">
     <meta property="og:title" content="Lux Lady - Trang Sức Cao Cấp">
-    <meta property="og:image"
-        content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1000">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1000">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                            gold: '#d4af37',
-                        }
+                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 800: '#075985', 900: '#0c4a6e', gold: '#d4af37' }
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
                         sans: ['"Montserrat"', 'sans-serif'],
                     },
-                    animation: {
-                        'fade-in': 'fadeIn 0.5s ease-out',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                    },
+                    animation: { 'fade-in': 'fadeIn 0.5s ease-out', 'slide-up': 'slideUp 0.5s ease-out' },
                     keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
                     }
                 }
             }
         }
     </script>
-
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -77,11 +52,13 @@
     <!-- Top Bar -->
     <div class="bg-brand-900 text-white text-xs py-2">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="hidden md:flex space-x-4">
-                <span><i class="fas fa-phone-alt mr-2"></i>0909.123.456</span>
-                <span><i class="fas fa-envelope mr-2"></i>contact@blueluxury.vn</span>
-            </div>
-            <div class="flex space-x-4 ml-auto w-full md:w-auto justify-end">
+            <div id="top-bar-info" class="hidden md:flex space-x-4"></div>
+            <div class="flex items-center space-x-4 ml-auto">
+                <!-- Language Toggle -->
+                <div class="flex items-center gap-1 border border-white/30 rounded-full px-1">
+                    <button class="lang-btn px-2 py-0.5 rounded-full text-[10px] font-bold transition" data-lang="vi">VI</button>
+                    <button class="lang-btn px-2 py-0.5 rounded-full text-[10px] font-bold transition" data-lang="en">EN</button>
+                </div>
                 <a href="https://www.facebook.com/lux.lady.68" target="_blank" class="hover:text-brand-100">Facebook</a>
                 <a href="https://zalo.me/0382539292" target="_blank" class="hover:text-brand-100">Zalo</a>
             </div>
@@ -99,20 +76,20 @@
                 </div>
             </a>
 
-            <!-- Search Bar (Desktop & Mobile) -->
+            <!-- Search (Desktop) -->
             <div class="search-container flex-1 max-w-md hidden md:block">
                 <div class="relative">
-                    <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm..."
-                        class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:border-brand-500 text-sm">
+                    <input type="text" class="search-input w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:border-brand-500 text-sm">
                     <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                 </div>
-                <div id="search-results" class="search-results hidden"></div>
+                <div class="search-results hidden"></div>
             </div>
 
             <nav class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
-                <a href="#" class="hover:text-brand-800 transition text-brand-500">Trang chủ</a>
-                <a href="#collections-section" class="hover:text-brand-800 transition">Bộ sưu tập</a>
-                <a href="#contact" class="hover:text-brand-800 transition">Liên hệ</a>
+                <a href="#" class="hover:text-brand-800 transition text-brand-500" data-i18n="nav.home">Trang chủ</a>
+                <a href="#about-wrapper" class="hover:text-brand-800 transition" data-i18n="nav.about">Giới thiệu</a>
+                <a href="#products-section" class="hover:text-brand-800 transition" data-i18n="nav.products">Sản phẩm</a>
+                <a href="#contact" class="hover:text-brand-800 transition" data-i18n="nav.contact">Liên hệ</a>
             </nav>
             <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-900"><i class="fas fa-bars"></i></button>
         </div>
@@ -120,427 +97,188 @@
         <!-- Mobile Search -->
         <div class="md:hidden px-4 pb-3">
             <div class="search-container relative">
-                <input type="text" id="search-input-mobile" placeholder="Tìm kiếm sản phẩm..."
-                    class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:border-brand-500 text-sm">
+                <input type="text" class="search-input w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:border-brand-500 text-sm">
                 <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                <div class="search-results hidden"></div>
             </div>
-            <div id="search-results-mobile" class="search-results hidden"></div>
         </div>
 
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg z-50">
             <nav class="flex flex-col space-y-3 font-medium text-sm uppercase">
-                <a href="#" class="block py-2 text-brand-500 border-b border-gray-100">Trang chủ</a>
-                <a href="#collections-section" class="block py-2 hover:bg-gray-50 border-b border-gray-100">Bộ sưu
-                    tập</a>
-                <a href="#contact" class="block py-2 hover:bg-gray-50">Liên hệ</a>
+                <a href="#" class="block py-2 text-brand-500 border-b border-gray-100" data-i18n="nav.home">Trang chủ</a>
+                <a href="#about-wrapper" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.about">Giới thiệu</a>
+                <a href="#products-section" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.products">Sản phẩm</a>
+                <a href="#contact" class="block py-2 hover:bg-gray-50" data-i18n="nav.contact">Liên hệ</a>
             </nav>
         </div>
 
         <!-- Sticky Category Tabs -->
         <div class="category-tabs hidden md:block">
-            <div class="container mx-auto px-4 py-2 flex gap-4" id="category-tabs-container">
-                <!-- Will be populated by JS -->
-            </div>
+            <div class="container mx-auto px-4 py-2 flex gap-4" id="category-tabs-container"></div>
         </div>
     </header>
 
     <!-- Hero Banner -->
     <section class="relative h-[300px] md:h-[600px] bg-brand-900 overflow-hidden flex items-center">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=2000"
-                alt="Banner" class="w-full h-full object-cover opacity-40">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=2000" alt="Banner" class="w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/70 to-transparent"></div>
         </div>
         <div class="container mx-auto px-4 relative z-10 text-white">
-            <div class="max-w-2xl animate-slide-up">
-                <span
-                    class="uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm text-brand-100 mb-2 block">Bộ
-                    sưu tập 2025</span>
-                <h2 class="text-3xl md:text-6xl font-serif font-bold mb-4 md:mb-6 leading-tight">Vẻ Đẹp Vĩnh Cửu <br>
-                    Của Thời Gian</h2>
-                <div class="flex gap-4">
-                    <a href="#collections-section"
-                        class="bg-white text-brand-900 px-6 py-2 md:px-8 md:py-3 font-medium hover:bg-brand-50 transition shadow-lg uppercase text-xs md:text-sm tracking-wider">Xem
-                        Sản Phẩm</a>
-                </div>
-            </div>
+            <div id="hero-content" class="max-w-2xl animate-slide-up"></div>
         </div>
     </section>
 
     <!-- Trust Badges -->
     <section class="py-8 md:py-12 bg-white border-b">
-        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
-            <div class="space-y-2"><i class="fas fa-medal text-2xl md:text-3xl text-brand-800"></i>
-                <h3 class="font-bold text-xs md:text-sm uppercase">Chất lượng Vàng</h3>
-            </div>
-            <div class="space-y-2"><i class="fas fa-gem text-2xl md:text-3xl text-brand-800"></i>
-                <h3 class="font-bold text-xs md:text-sm uppercase">Kim cương GIA</h3>
-            </div>
-            <div class="space-y-2"><i class="fas fa-shield-alt text-2xl md:text-3xl text-brand-800"></i>
-                <h3 class="font-bold text-xs md:text-sm uppercase">Bảo hành Trọn đời</h3>
-            </div>
-            <div class="space-y-2"><i class="fas fa-shipping-fast text-2xl md:text-3xl text-brand-800"></i>
-                <h3 class="font-bold text-xs md:text-sm uppercase">Giao hàng An toàn</h3>
-            </div>
-        </div>
+        <div id="badges-section" class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center"></div>
     </section>
 
-    <!-- TRANG CHỦ: SẢN PHẨM MỚI -->
-    <section id="new-arrivals-home" class="py-12 md:py-16 container mx-auto px-4">
+    <!-- About / Giới thiệu -->
+    <section id="about-wrapper" class="py-12 md:py-16 bg-gray-50">
+        <div id="about-section"></div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="py-12 md:py-16 container mx-auto px-4">
         <div class="text-center mb-8 md:mb-10">
-            <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase">New Arrivals</span>
-            <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2">Sản Phẩm Mới Về</h2>
+            <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase" data-i18n="products.newArrivalsLabel">New Arrivals</span>
+            <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2" data-i18n="products.newArrivals">Sản Phẩm Mới Về</h2>
             <div class="w-16 md:w-20 h-1 bg-brand-500 mx-auto mt-4"></div>
         </div>
-
-        <!-- Sort Controls -->
         <div class="flex justify-end items-center mb-6">
             <select id="sort-select" onchange="sortProducts()" class="px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-brand-500">
-                <option value="default">Sắp xếp</option>
-                <option value="price-asc">Giá: Thấp đến Cao</option>
-                <option value="price-desc">Giá: Cao đến Thấp</option>
-                <option value="name-asc">Tên: A-Z</option>
+                <option value="default" data-i18n="products.sort">Sắp xếp</option>
+                <option value="name-asc" data-i18n="products.sortNameAZ">Tên: A-Z</option>
+                <option value="name-desc" data-i18n="products.sortNameZA">Tên: Z-A</option>
             </select>
         </div>
-
-        <!-- Grid Responsive: 2 cột mobile, 4 cột desktop -->
         <div id="new-products-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8"></div>
         <div class="text-center mt-8 md:mt-12">
             <button id="load-more-new-btn" onclick="toggleNewProducts()"
                 class="border border-brand-900 text-brand-900 px-6 py-2 md:px-8 md:py-3 uppercase text-xs md:text-sm font-bold hover:bg-brand-900 hover:text-white transition duration-300">
-                Xem tất cả sản phẩm mới
             </button>
         </div>
     </section>
 
-    <!-- BỘ SƯU TẬP (Danh mục) -->
-    <main id="collections-section" class="bg-gray-50 pb-16">
-        <div id="dynamic-categories-container"></div>
-    </main>
-
-    <!-- MỤC 5: CUSTOMER REVIEWS SECTION -->
-    <section class="py-12 md:py-16 bg-white">
+    <!-- Products Section (Catalog Tabs + Filters + Grid) -->
+    <main id="products-section" class="bg-gray-50 py-12 md:py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-8 md:mb-10">
-                <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase">Reviews</span>
-                <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2">Khách Hàng Nói Gì</h2>
+                <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase" data-i18n="products.sectionLabel">Bộ sưu tập</span>
+                <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2" data-i18n="nav.products">Sản phẩm</h2>
                 <div class="w-16 md:w-20 h-1 bg-brand-500 mx-auto mt-4"></div>
             </div>
-            
-            <!-- Star Rating Summary -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-brand-900">4.8</div>
-                    <div class="star-rating text-2xl my-2">
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star filled"></i>
-                        <i class="fas fa-star-half-alt filled"></i>
-                    </div>
-                    <div class="text-gray-600">Dựa trên 1,234 đánh giá</div>
-                </div>
-            </div>
 
-            <!-- Reviews Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold">
-                            N
-                        </div>
-                        <div>
-                            <div class="font-bold">Nguyễn Thị Mai</div>
-                            <div class="star-rating text-sm">
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 text-sm">"Sản phẩm rất đẹp, chất lượng vàng tốt. Nhân viên tư vấn nhiệt tình. Sẽ quay lại ủng hộ!"</p>
-                </div>
+            <!-- Catalog Tabs -->
+            <div id="catalog-tabs" class="flex justify-center gap-3 mb-6 flex-wrap"></div>
 
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold">
-                            T
-                        </div>
-                        <div>
-                            <div class="font-bold">Trần Văn Hùng</div>
-                            <div class="star-rating text-sm">
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 text-sm">"Mua nhẫn cưới ở đây, thiết kế đẹp, giá hợp lý. Vợ rất thích!"</p>
-                </div>
+            <!-- Filters -->
+            <div id="catalog-filters" class="mb-6 p-4 bg-white rounded-xl shadow-sm border border-gray-100"></div>
 
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold">
-                            L
-                        </div>
-                        <div>
-                            <div class="font-bold">Lê Thị Hoa</div>
-                            <div class="star-rating text-sm">
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 text-sm">"Dây chuyền kim cương đẹp lắm, đúng như mô tả. Giao hàng nhanh!"</p>
-                </div>
-            </div>
+            <!-- Products Grid -->
+            <div id="catalog-products" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6"></div>
         </div>
+    </main>
+
+    <!-- Reviews -->
+    <section class="py-12 md:py-16 bg-white">
+        <div id="reviews-content" class="container mx-auto px-4"></div>
     </section>
 
-    <!-- MỤC 5: TRUST BADGES WITH ANIMATION -->
+    <!-- Stats -->
     <section class="py-12 md:py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="space-y-2">
-                    <div class="counter-number" data-target="1234">0</div>
-                    <p class="text-gray-600">Khách hàng hài lòng</p>
-                </div>
-                <div class="space-y-2">
-                    <div class="counter-number" data-target="5000">0</div>
-                    <p class="text-gray-600">Sản phẩm đã bán</p>
-                </div>
-                <div class="space-y-2">
-                    <div class="counter-number" data-target="15">0</div>
-                    <p class="text-gray-600">Năm kinh nghiệm</p>
-                </div>
-                <div class="space-y-2">
-                    <div class="counter-number" data-target="98">0</div>
-                    <p class="text-gray-600">% Hài lòng</p>
-                </div>
-            </div>
+            <div id="stats-content" class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"></div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact" class="bg-brand-900 text-white pt-12 md:pt-16 pb-8">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-                <div class="flex items-center gap-2 mb-4">
-                    <i class="fas fa-gem text-xl md:text-2xl text-brand-500"></i>
-                    <span class="text-lg md:text-xl font-serif font-bold">LUX LADY</span>
-                </div>
-                <p class="text-gray-400 text-sm">Nơi tôn vinh vẻ đẹp sang trọng và đẳng cấp.</p>
-            </div>
-            <div>
-                <h4 class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">Liên Hệ</h4>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li><i class="fas fa-phone w-5 text-brand-500"></i> 0909.123.456</li>
-                    <li><i class="fas fa-map-marker-alt w-5 text-brand-500"></i> 123 Đường Lê Lợi, TP.HCM</li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-white/10 pt-8 text-center text-xs text-gray-500">
-            <p>&copy; 2025 Lux Lady. All rights reserved.</p>
-        </div>
+        <div id="footer-content"></div>
     </footer>
 
-    <!-- PRODUCT DETAIL MODAL (POPUP) -->
+    <!-- Product Detail Modal -->
     <div id="product-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
-        <!-- Backdrop -->
         <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden relative z-10 flex flex-col md:flex-row animate-slide-up max-h-[85vh] md:max-h-[90vh]">
+            <button onclick="closeModal()" class="absolute top-2 right-12 md:top-4 md:right-16 z-20 text-gray-600 hover:text-red-500 text-xl md:text-2xl transition bg-white/80 rounded-full w-8 h-8 flex items-center justify-center shadow-sm"><i class="fas fa-times"></i></button>
+            <button onclick="toggleFullscreen()" class="absolute top-2 right-2 md:top-4 md:right-4 z-20 text-gray-600 hover:text-brand-500 text-xl md:text-2xl transition bg-white/80 rounded-full w-8 h-8 flex items-center justify-center shadow-sm"><i class="fas fa-expand"></i></button>
 
-        <!-- Modal Content (Responsive Size) -->
-        <div
-            class="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden relative z-10 flex flex-col md:flex-row animate-slide-up max-h-[85vh] md:max-h-[90vh]">
-
-            <!-- Close Button -->
-            <button onclick="closeModal()"
-                class="absolute top-2 right-12 md:top-4 md:right-16 z-20 text-gray-600 hover:text-red-500 text-xl md:text-2xl transition bg-white/80 rounded-full w-8 h-8 flex items-center justify-center shadow-sm">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <!-- Fullscreen Button -->
-            <button onclick="toggleFullscreen()"
-                class="absolute top-2 right-2 md:top-4 md:right-4 z-20 text-gray-600 hover:text-brand-500 text-xl md:text-2xl transition bg-white/80 rounded-full w-8 h-8 flex items-center justify-center shadow-sm">
-                <i class="fas fa-expand"></i>
-            </button>
-
-            <!-- Image Side (Gallery with Zoom) -->
-            <div class="md:w-1/2 bg-gray-100 flex flex-col h-auto md:h-auto">
-                <!-- Main Image Area with Zoom -->
-                <div class="h-56 md:h-[400px] w-full relative group overflow-hidden bg-white flex items-center justify-center zoom-container"
-                    onclick="openLightbox()">
-                    <img id="modal-img" src="" alt="Product Detail"
-                        class="w-full h-full object-cover transition duration-500">
-                    <div
-                        class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition flex items-center justify-center">
-                        <i
-                            class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+            <!-- Image -->
+            <div class="md:w-1/2 bg-gray-100 flex flex-col">
+                <div class="h-56 md:h-[400px] w-full relative group overflow-hidden bg-white flex items-center justify-center zoom-container" onclick="openLightbox()">
+                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
                     </div>
                 </div>
-
-                <!-- Thumbnails Area -->
-                <div class="flex gap-2 p-2 md:p-3 overflow-x-auto bg-gray-50 border-t border-gray-200"
-                    id="modal-thumbnails">
-                    <!-- Javascript will inject thumbnails here -->
-                </div>
+                <div class="flex gap-2 p-2 md:p-3 overflow-x-auto bg-gray-50 border-t border-gray-200" id="modal-thumbnails"></div>
             </div>
 
-            <!-- Info Side -->
+            <!-- Info -->
             <div class="md:w-1/2 p-5 md:p-8 overflow-y-auto modal-content bg-white">
-                <span id="modal-category"
-                    class="text-[10px] md:text-xs font-bold text-brand-500 uppercase tracking-widest mb-1 md:mb-2 block"></span>
-                <h2 id="modal-name"
-                    class="text-xl md:text-3xl font-serif font-bold text-brand-900 mb-2 md:mb-4 leading-tight"></h2>
-
-                <div class="flex items-end gap-2 md:gap-3 mb-4 md:mb-6">
-                    <span id="modal-price" class="text-xl md:text-2xl font-bold text-red-600"></span>
-                    <span class="text-xs md:text-sm text-gray-400 mb-1"> (Đã bao gồm VAT)</span>
-                </div>
-
+                <span id="modal-category" class="text-[10px] md:text-xs font-bold text-brand-500 uppercase tracking-widest mb-1 md:mb-2 block"></span>
+                <h2 id="modal-name" class="text-xl md:text-3xl font-serif font-bold text-brand-900 mb-4 md:mb-6 leading-tight"></h2>
                 <div class="bg-gray-50 p-3 md:p-4 rounded-lg mb-4 md:mb-6 border border-gray-100">
-                    <p class="text-xs md:text-sm text-gray-600 mb-1"><span class="font-bold text-gray-800">Mã SP:</span>
-                        <span id="modal-code"></span></p>
-                    <p class="text-xs md:text-sm text-gray-600 mb-1">
-                        <span class="font-bold text-gray-800">Tình trạng:</span>
-                        <span id="modal-status"></span>
-                    </p>
+                    <p class="text-xs md:text-sm text-gray-600 mb-1"><span id="modal-code-label" class="font-bold text-gray-800">Mã SP</span>: <span id="modal-code-value"></span></p>
+                    <p class="text-xs md:text-sm text-gray-600"><span id="modal-status-label" class="font-bold text-gray-800">Tình trạng</span>: <span id="modal-status-value"></span></p>
                 </div>
-
                 <div class="mb-6 md:mb-8">
-                    <h4 class="font-bold text-sm md:text-base text-gray-800 mb-1 md:mb-2">Mô tả chi tiết:</h4>
+                    <h4 id="modal-desc-label" class="font-bold text-sm md:text-base text-gray-800 mb-1 md:mb-2">Mô tả chi tiết</h4>
                     <p id="modal-desc" class="text-gray-600 text-xs md:text-sm leading-relaxed text-justify"></p>
                 </div>
-
                 <div class="flex flex-col gap-2 md:gap-3 mt-auto">
-                    <a id="modal-zalo-btn" href="#" target="_blank"
-                        class="bg-blue-500 hover:bg-blue-600 text-white py-2 md:py-3 px-6 rounded-lg text-center font-bold uppercase transition shadow-lg flex items-center justify-center gap-2 text-sm">
-                        <span
-                            class="bg-white text-blue-500 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold">Z</span>
-                        Chat Zalo Ngay
+                    <a id="modal-zalo-btn" href="#" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white py-2 md:py-3 px-6 rounded-lg text-center font-bold uppercase transition shadow-lg flex items-center justify-center gap-2 text-sm">
+                        <span class="bg-white text-blue-500 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold">Z</span>
+                        <span id="modal-zalo-text">Liên hệ qua Zalo</span>
                     </a>
-                    <a href="tel:0909123456"
-                        class="border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 md:py-3 px-6 rounded-lg text-center font-bold uppercase transition flex items-center justify-center gap-2 text-sm">
-                        <i class="fas fa-phone-alt"></i> Gọi Hotline
+                    <a id="modal-hotline-btn" href="tel:0382539292" class="border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 md:py-3 px-6 rounded-lg text-center font-bold uppercase transition flex items-center justify-center gap-2 text-sm">
+                        <i class="fas fa-phone-alt"></i> <span id="modal-hotline-text">Gọi Hotline</span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Lightbox for Full Image View -->
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <button onclick="closeLightbox()"
-            class="absolute top-4 right-4 text-white text-3xl hover:text-brand-500 transition z-10">
-            <i class="fas fa-times"></i>
-        </button>
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-3xl hover:text-brand-500 transition z-10"><i class="fas fa-times"></i></button>
         <img id="lightbox-img" src="" alt="Full View">
     </div>
 
-    <!-- Back to Top Button -->
-    <div id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <!-- Back to Top -->
+    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 
     <!-- Bottom Navigation (Mobile) -->
-    <nav class="bottom-nav">
-        <a href="#" class="bottom-nav-item active">
-            <i class="fas fa-home"></i>
-            <span>Trang chủ</span>
-        </a>
-        <a href="#collections-section" class="bottom-nav-item">
-            <i class="fas fa-th-large"></i>
-            <span>Sản phẩm</span>
-        </a>
-        <a href="https://zalo.me/0382539292" target="_blank" class="bottom-nav-item">
-            <i class="fas fa-comments"></i>
-            <span>Chat</span>
-        </a>
-        <a href="#contact" class="bottom-nav-item">
-            <i class="fas fa-phone"></i>
-            <span>Liên hệ</span>
-        </a>
-    </nav>
+    <nav id="bottom-nav" class="bottom-nav"></nav>
 
-    <!-- Lightbox for Full Image View -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <button onclick="closeLightbox()"
-            class="absolute top-4 right-4 text-white text-3xl hover:text-brand-500 transition z-10">
-            <i class="fas fa-times"></i>
-        </button>
-        <img id="lightbox-img" src="" alt="Full View">
-    </div>
-
-    <!-- Back to Top Button -->
-    <div id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <!-- Bottom Navigation (Mobile) -->
-    <nav class="bottom-nav">
-        <a href="#" class="bottom-nav-item active">
-            <i class="fas fa-home"></i>
-            <span>Trang chủ</span>
-        </a>
-        <a href="#collections-section" class="bottom-nav-item">
-            <i class="fas fa-th-large"></i>
-            <span>Sản phẩm</span>
-        </a>
-        <a href="https://zalo.me/0382539292" target="_blank" class="bottom-nav-item">
-            <i class="fas fa-comments"></i>
-            <span>Chat</span>
-        </a>
-        <a href="#contact" class="bottom-nav-item">
-            <i class="fas fa-phone"></i>
-            <span>Liên hệ</span>
-        </a>
-    </nav>
-
-    <!-- Sticky Zalo Button -->
+    <!-- Sticky Zalo + Wishlist -->
     <div class="fixed bottom-20 md:bottom-6 right-6 z-40 flex flex-col gap-3">
-        <a href="https://zalo.me/0382539292" target="_blank"
-            class="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-600 transition animate-bounce">
+        <a href="https://zalo.me/0382539292" target="_blank" class="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-600 transition animate-bounce">
             <span class="font-bold text-[10px] md:text-xs">Zalo</span>
         </a>
-        <!-- Wishlist Button (Nút Yêu Thích) -->
         <button id="wishlist-toggle" class="relative w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-red-500 shadow-lg hover:bg-red-50 transition">
             <i class="fas fa-heart"></i>
             <span id="wishlist-badge" class="badge-counter hidden">0</span>
         </button>
     </div>
 
-    <!-- Toast Container -->
+    <!-- Toast -->
     <div id="toast-container" class="toast-container"></div>
 
     <!-- Share Modal -->
     <div id="share-modal" class="share-modal">
         <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4 animate-slide-up">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-bold">Chia sẻ sản phẩm</h3>
-                <button onclick="closeShareModal()" class="text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
+                <h3 id="share-title" class="text-xl font-bold">Chia sẻ sản phẩm</h3>
+                <button onclick="closeShareModal()" class="text-gray-500 hover:text-gray-700"><i class="fas fa-times text-xl"></i></button>
             </div>
             <div class="grid grid-cols-3 gap-4">
-                <button onclick="shareToFacebook()" class="flex flex-col items-center gap-2 p-4 border rounded-lg hover:bg-blue-50 transition">
-                    <i class="fab fa-facebook text-3xl text-blue-600"></i>
-                    <span class="text-sm">Facebook</span>
-                </button>
-                <button onclick="shareToZalo()" class="flex flex-col items-center gap-2 p-4 border rounded-lg hover:bg-blue-50 transition">
-                    <i class="fas fa-comment text-3xl text-blue-500"></i>
-                    <span class="text-sm">Zalo</span>
-                </button>
-                <button onclick="copyLink()" class="flex flex-col items-center gap-2 p-4 border rounded-lg hover:bg-gray-50 transition">
-                    <i class="fas fa-link text-3xl text-gray-600"></i>
-                    <span class="text-sm">Copy Link</span>
-                </button>
+                <button onclick="shareToFacebook()" class="flex flex-col items-center gap-2 p-4 border rounded-lg hover:bg-blue-50 transition"><i class="fab fa-facebook text-3xl text-blue-600"></i><span class="text-sm">Facebook</span></button>
+                <button onclick="shareToZalo()" class="flex flex-col items-center gap-2 p-4 border rounded-lg hover:bg-blue-50 transition"><i class="fas fa-comment text-3xl text-blue-500"></i><span class="text-sm">Zalo</span></button>
+                <button onclick="copyLink()" class="flex flex-col items-center gap-2 p-4 border rounded-lg hover:bg-gray-50 transition"><i class="fas fa-link text-3xl text-gray-600"></i><span class="text-sm">Copy Link</span></button>
             </div>
         </div>
     </div>
@@ -550,22 +288,14 @@
         <div class="absolute inset-0 bg-black/70" onclick="closeWishlistModal()"></div>
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden relative z-10 max-h-[85vh]">
             <div class="p-6 border-b flex justify-between items-center">
-                <h2 class="text-2xl font-bold">Sản phẩm yêu thích</h2>
-                <button onclick="closeWishlistModal()" class="text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
+                <h2 id="wishlist-title" class="text-2xl font-bold">Sản phẩm yêu thích</h2>
+                <button onclick="closeWishlistModal()" class="text-gray-500 hover:text-gray-700"><i class="fas fa-times text-2xl"></i></button>
             </div>
-            <div id="wishlist-content" class="p-6 overflow-y-auto max-h-[calc(85vh-80px)]">
-                <!-- Will be populated by JS -->
-            </div>
+            <div id="wishlist-content" class="p-6 overflow-y-auto max-h-[calc(85vh-80px)]"></div>
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script src="./app.js"></script>
-    <script>
-        // Inline scripts that need to stay in HTML
-    </script>
 </body>
 
 </html>

@@ -1,6 +1,5 @@
-/* ===== NAM JEWELRY - MAIN STYLES ===== */
+/* ===== LUX LADY - MAIN STYLES ===== */
 
-/* Base Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
@@ -10,9 +9,22 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-/* ===== PRODUCT CARD EFFECTS ===== */
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-btn {
+    opacity: 0.6;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
 
-/* Enhanced Product Card Hover Effects */
+.lang-btn.active {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+}
+
+/* ===== PRODUCT CARD ===== */
 .product-card {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -30,7 +42,7 @@ body {
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Image Zoom Container */
+/* ===== IMAGE ZOOM & LIGHTBOX ===== */
 .zoom-container {
     position: relative;
     overflow: hidden;
@@ -45,9 +57,6 @@ body {
     transform: scale(1.5);
 }
 
-/* ===== LIGHTBOX & MODAL ===== */
-
-/* Lightbox Styles */
 .lightbox {
     display: none;
     position: fixed;
@@ -71,7 +80,7 @@ body {
     object-fit: contain;
 }
 
-/* Modal Animation */
+/* ===== MODAL ===== */
 #product-modal {
     transition: opacity 0.3s ease;
 }
@@ -86,7 +95,6 @@ body {
     pointer-events: auto;
 }
 
-/* Custom Scrollbar */
 .modal-content::-webkit-scrollbar {
     width: 6px;
 }
@@ -100,15 +108,37 @@ body {
     border-radius: 3px;
 }
 
-/* Thumbnail Active State */
 .thumb-active {
     border-color: #0ea5e9 !important;
     opacity: 1 !important;
 }
 
-/* ===== SEARCH & FILTER ===== */
+.modal-fullscreen {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+}
 
-/* Search Bar Styles */
+.related-products-scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 16px 0;
+}
+
+.related-products-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.related-products-scroll::-webkit-scrollbar-thumb {
+    background: #0ea5e9;
+    border-radius: 3px;
+}
+
+/* ===== SEARCH ===== */
 .search-container {
     position: relative;
 }
@@ -139,43 +169,7 @@ body {
     background: #f9fafb;
 }
 
-/* Filter Panel */
-.filter-panel {
-    transition: all 0.3s ease;
-}
-
-/* Price Range Slider */
-input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 6px;
-    border-radius: 5px;
-    background: #ddd;
-    outline: none;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #0ea5e9;
-    cursor: pointer;
-}
-
-input[type="range"]::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #0ea5e9;
-    cursor: pointer;
-}
-
 /* ===== NAVIGATION ===== */
-
-/* Back to Top Button */
 #back-to-top {
     position: fixed;
     bottom: 80px;
@@ -203,7 +197,6 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
 }
 
-/* Scroll Progress Bar */
 #scroll-progress {
     position: fixed;
     top: 0;
@@ -215,24 +208,6 @@ input[type="range"]::-moz-range-thumb {
     transition: width 0.1s ease;
 }
 
-/* Mega Menu Styles */
-.mega-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top: 1px solid #e5e7eb;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    z-index: 40;
-}
-
-.mega-menu.active {
-    display: block;
-}
-
-/* Sticky Category Tabs */
 .category-tabs {
     position: sticky;
     top: 60px;
@@ -253,8 +228,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* ===== MOBILE NAVIGATION ===== */
-
-/* Bottom Navigation for Mobile */
 .bottom-nav {
     display: none;
     position: fixed;
@@ -295,75 +268,22 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 0.25rem;
 }
 
-/* Swipe Indicator for Mobile */
-.swipe-indicator {
-    display: none;
+/* ===== SCROLL SECTIONS ===== */
+section[id],
+main[id] {
+    scroll-margin-top: 160px;
 }
 
-@media (max-width: 768px) {
-    .swipe-indicator {
-        display: block;
-        text-align: center;
-        padding: 0.5rem;
-        color: #6b7280;
-        font-size: 0.75rem;
-    }
-}
-
-/* ===== LOADING & ANIMATIONS ===== */
-
-/* Loading Skeleton */
-.skeleton {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
-}
-
-/* Parallax Effect */
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Scroll Margin for Sections (prevent sticky header overlap) */
-section[id^="section-"] {
-    scroll-margin-top: 180px;
-}
-
-#collections-section {
-    scroll-margin-top: 180px;
-}
-
-/* Smooth Animations */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* ===== MỤC 9: MICRO-INTERACTIONS ===== */
-
-/* Ripple Effect */
 .ripple {
     position: relative;
     overflow: hidden;
@@ -387,7 +307,7 @@ section[id^="section-"] {
     height: 300px;
 }
 
-/* Toast Notifications */
+/* ===== TOAST ===== */
 .toast-container {
     position: fixed;
     top: 80px;
@@ -415,14 +335,8 @@ section[id^="section-"] {
 .toast.info { border-left: 4px solid #3b82f6; }
 
 @keyframes slideInRight {
-    from {
-        transform: translateX(400px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(400px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 .toast-progress {
@@ -439,22 +353,43 @@ section[id^="section-"] {
     to { width: 0%; }
 }
 
-/* Loading Spinner */
-.spinner {
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid #0ea5e9;
+/* ===== WISHLIST ===== */
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background: white;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    animation: spin 1s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border: none;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.wishlist-btn:hover {
+    transform: scale(1.1);
 }
 
-/* Badge Counter Animation */
+.wishlist-btn.active {
+    background: #ef4444;
+    color: white;
+}
+
+.wishlist-btn.active i {
+    animation: heartBeat 0.3s;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
 .badge-counter {
     position: absolute;
     top: -8px;
@@ -477,63 +412,7 @@ section[id^="section-"] {
     50% { transform: scale(1.1); }
 }
 
-/* Success Checkmark */
-.checkmark-circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-}
-
-.checkmark-check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
-}
-
-@keyframes stroke {
-    100% { stroke-dashoffset: 0; }
-}
-
-/* ===== MỤC 7: INTERACTIVE ELEMENTS ===== */
-
-/* Wishlist Heart */
-.wishlist-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 36px;
-    height: 36px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-}
-
-.wishlist-btn:hover {
-    transform: scale(1.1);
-}
-
-.wishlist-btn.active {
-    background: #ef4444;
-    color: white;
-}
-
-.wishlist-btn.active i {
-    animation: heartBeat 0.3s;
-}
-
-@keyframes heartBeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-}
-
-/* Share Modal */
+/* ===== SHARE MODAL ===== */
 .share-modal {
     display: none;
     position: fixed;
@@ -548,104 +427,33 @@ section[id^="section-"] {
     display: flex;
 }
 
-/* ===== MỤC 5: SOCIAL PROOF ===== */
-
-/* Star Rating */
+/* ===== SOCIAL PROOF ===== */
 .star-rating {
     display: inline-flex;
     gap: 2px;
 }
 
-.star {
-    color: #d1d5db;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.star.filled {
+.star-rating .filled {
     color: #fbbf24;
 }
 
-.star:hover,
-.star:hover ~ .star {
-    color: #fbbf24;
-}
-
-/* Testimonial Slider */
-.testimonial-slider {
-    overflow: hidden;
-    position: relative;
-}
-
-.testimonial-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.testimonial-item {
-    min-width: 100%;
-    padding: 0 20px;
-}
-
-/* Trust Badge Counter */
 .counter-number {
     font-size: 2.5rem;
     font-weight: bold;
     color: #0ea5e9;
 }
 
-/* ===== MỤC 10: ENHANCED MODAL ===== */
-
-/* Fullscreen Modal */
-.modal-fullscreen {
-    max-width: 100vw !important;
-    max-height: 100vh !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    border-radius: 0 !important;
-}
-
-/* Related Products Scroll */
-.related-products-scroll {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 16px 0;
-}
-
-.related-products-scroll::-webkit-scrollbar {
-    height: 6px;
-}
-
-.related-products-scroll::-webkit-scrollbar-thumb {
-    background: #0ea5e9;
-    border-radius: 3px;
-}
-
-/* Quick Buy Form */
-.quantity-selector {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 8px 12px;
-}
-
-.quantity-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #f3f4f6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ===== CATALOG FILTER BUTTONS ===== */
+.filter-btn {
     cursor: pointer;
-    transition: all 0.2s;
+    border: none;
 }
 
-.quantity-btn:hover {
-    background: #0ea5e9;
-    color: white;
+.filter-btn:hover {
+    transform: translateY(-1px);
+}
+
+.catalog-tab {
+    cursor: pointer;
+    border: none;
 }

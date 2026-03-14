@@ -1,778 +1,1013 @@
-// Lux Lady - Enhanced JavaScript
-const contactZalo = "0382539292";
-const formatCurrency = (amount) => new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+// ============================================================
+// LUX LADY - Main Application
+// Cấu trúc: CONFIG → I18N → CATALOG → PRODUCTS → STATE → FUNCTIONS → INIT
+// Chỉ cần chỉnh sửa các section CONFIG/CATALOG/PRODUCTS để update nội dung
+// ============================================================
 
-const categories = [
-    { id: 'bo-trang-suc', name: 'Bộ Trang Sức' },
-    { id: 'charm-bac', name: 'Charm Bạc' },
-    { id: 'day-chuyen-nu', name: 'Dây Chuyền Nữ' },
-    { id: 'lac-tay-nam', name: 'Lắc Tay Nam' },
-    { id: 'lac-tay-nu', name: 'Lắc Tay Nữ' },
-    { id: 'nhan', name: 'Nhẫn' },
-    { id: 'vong-co-nu', name: 'Vòng Cổ Nữ' },
-    { id: 'vong-tay', name: 'Vòng Tay' }
+// ===== CONFIG =====
+const CONFIG = {
+    zalo: '0382539292',
+    phone: '0382539292',
+    email: 'contact@luxlady.vn',
+    facebook: 'https://www.facebook.com/lux.lady.68',
+    address: { vi: '123 Đường Lê Lợi, TP.HCM', en: '123 Le Loi Street, HCMC' },
+    defaultLang: 'vi',
+    newArrivalsLimit: 4,
+};
+
+// ===== I18N (Translations) =====
+const i18n = {
+    vi: {
+        nav: { home: 'Trang chủ', about: 'Giới thiệu', products: 'Sản phẩm', contact: 'Liên hệ' },
+        hero: {
+            subtitle: 'Bộ sưu tập 2025',
+            title: 'Vẻ Đẹp Vĩnh Cửu<br>Của Thời Gian',
+            cta: 'Xem Sản Phẩm',
+        },
+        about: {
+            sectionLabel: 'Về chúng tôi',
+            sectionTitle: 'Lux Lady',
+            intro: 'Lux Lady là thương hiệu chuyên cung cấp trang sức cao cấp và phụ kiện thời trang được chế tác tinh xảo. Chúng tôi mang đến những sản phẩm chất lượng, kết hợp giữa nghệ thuật truyền thống và xu hướng hiện đại.',
+            visionTitle: 'Tầm nhìn',
+            visionText: 'Trở thành thương hiệu trang sức & phụ kiện được yêu thích hàng đầu, nơi mỗi sản phẩm đều mang một câu chuyện và giá trị riêng biệt.',
+            services: [
+                { icon: 'fa-gem', title: 'Trang sức cao cấp', desc: 'Chế tác thủ công từ ngọc trai, đá quý thiên nhiên và bạc 925.' },
+                { icon: 'fa-bag-shopping', title: 'Phụ kiện thời trang', desc: 'Túi xách, ví và balo từ chất liệu thiên nhiên độc đáo.' },
+                { icon: 'fa-hand-sparkles', title: 'Thiết kế riêng', desc: 'Nhận thiết kế theo yêu cầu, tạo nên sản phẩm độc bản cho bạn.' },
+            ],
+        },
+        badges: [
+            { icon: 'fa-medal', text: 'Chất lượng Vàng' },
+            { icon: 'fa-gem', text: 'Kim cương GIA' },
+            { icon: 'fa-shield-alt', text: 'Bảo hành Trọn đời' },
+            { icon: 'fa-shipping-fast', text: 'Giao hàng An toàn' },
+        ],
+        products: {
+            sectionLabel: 'Bộ sưu tập',
+            newArrivals: 'Sản Phẩm Mới Về',
+            newArrivalsLabel: 'New Arrivals',
+            viewAll: 'Xem tất cả sản phẩm mới',
+            collapse: 'Thu gọn',
+            viewDetail: 'Xem chi tiết',
+            allFilter: 'Tất cả',
+            sort: 'Sắp xếp',
+            sortNameAZ: 'Tên: A-Z',
+            sortNameZA: 'Tên: Z-A',
+            searchPlaceholder: 'Tìm kiếm sản phẩm...',
+            noResult: 'Không tìm thấy sản phẩm',
+            contactZalo: 'Liên hệ qua Zalo',
+            callHotline: 'Gọi Hotline',
+            productCode: 'Mã SP',
+            status: 'Tình trạng',
+            inStock: 'Còn hàng',
+            outOfStock: 'Tạm hết hàng',
+            description: 'Mô tả chi tiết',
+            related: 'Sản phẩm liên quan',
+        },
+        reviews: {
+            sectionLabel: 'Reviews',
+            sectionTitle: 'Khách Hàng Nói Gì',
+            basedOn: 'Dựa trên 1,234 đánh giá',
+            items: [
+                { name: 'Nguyễn Thị Mai', text: '"Sản phẩm rất đẹp, chất lượng vàng tốt. Nhân viên tư vấn nhiệt tình. Sẽ quay lại ủng hộ!"' },
+                { name: 'Trần Văn Hùng', text: '"Mua nhẫn cưới ở đây, thiết kế đẹp, giá hợp lý. Vợ rất thích!"' },
+                { name: 'Lê Thị Hoa', text: '"Dây chuyền kim cương đẹp lắm, đúng như mô tả. Giao hàng nhanh!"' },
+            ],
+        },
+        stats: [
+            { target: 1234, text: 'Khách hàng hài lòng' },
+            { target: 5000, text: 'Sản phẩm đã bán' },
+            { target: 15, text: 'Năm kinh nghiệm' },
+            { target: 98, text: '% Hài lòng' },
+        ],
+        footer: {
+            tagline: 'Nơi tôn vinh vẻ đẹp sang trọng và đẳng cấp.',
+            contactTitle: 'Liên Hệ',
+            connectTitle: 'Kết Nối',
+        },
+        wishlist: {
+            title: 'Sản phẩm yêu thích',
+            empty: 'Chưa có sản phẩm yêu thích',
+            remove: 'Xóa',
+            added: 'Đã thêm vào danh sách yêu thích',
+            removed: 'Đã xóa khỏi danh sách yêu thích',
+        },
+        share: { title: 'Chia sẻ sản phẩm', copied: 'Đã sao chép link!' },
+        bottomNav: { home: 'Trang chủ', products: 'Sản phẩm', chat: 'Chat', contact: 'Liên hệ' },
+    },
+    en: {
+        nav: { home: 'Home', about: 'About', products: 'Products', contact: 'Contact' },
+        hero: {
+            subtitle: 'Collection 2025',
+            title: 'Timeless Elegance<br>Beyond Beauty',
+            cta: 'View Products',
+        },
+        about: {
+            sectionLabel: 'About Us',
+            sectionTitle: 'Lux Lady',
+            intro: 'Lux Lady is a premium brand specializing in fine jewelry and fashion accessories, meticulously crafted. We bring quality products that blend traditional artistry with modern trends.',
+            visionTitle: 'Vision',
+            visionText: 'To become the most beloved jewelry & accessories brand, where every product carries its own story and unique value.',
+            services: [
+                { icon: 'fa-gem', title: 'Fine Jewelry', desc: 'Handcrafted from natural pearls, gemstones, and 925 silver.' },
+                { icon: 'fa-bag-shopping', title: 'Fashion Accessories', desc: 'Handbags, wallets, and backpacks from unique natural materials.' },
+                { icon: 'fa-hand-sparkles', title: 'Custom Design', desc: 'Bespoke designs to create one-of-a-kind products just for you.' },
+            ],
+        },
+        badges: [
+            { icon: 'fa-medal', text: 'Gold Quality' },
+            { icon: 'fa-gem', text: 'GIA Diamond' },
+            { icon: 'fa-shield-alt', text: 'Lifetime Warranty' },
+            { icon: 'fa-shipping-fast', text: 'Safe Delivery' },
+        ],
+        products: {
+            sectionLabel: 'Collections',
+            newArrivals: 'New Arrivals',
+            newArrivalsLabel: 'New Arrivals',
+            viewAll: 'View all new products',
+            collapse: 'Collapse',
+            viewDetail: 'View Details',
+            allFilter: 'All',
+            sort: 'Sort by',
+            sortNameAZ: 'Name: A-Z',
+            sortNameZA: 'Name: Z-A',
+            searchPlaceholder: 'Search products...',
+            noResult: 'No products found',
+            contactZalo: 'Contact via Zalo',
+            callHotline: 'Call Hotline',
+            productCode: 'Code',
+            status: 'Status',
+            inStock: 'In Stock',
+            outOfStock: 'Out of Stock',
+            description: 'Description',
+            related: 'Related Products',
+        },
+        reviews: {
+            sectionLabel: 'Reviews',
+            sectionTitle: 'What Customers Say',
+            basedOn: 'Based on 1,234 reviews',
+            items: [
+                { name: 'Nguyen Thi Mai', text: '"Beautiful products, great gold quality. The staff was very helpful. Will come back!"' },
+                { name: 'Tran Van Hung', text: '"Bought wedding rings here, beautiful design, reasonable price. My wife loves them!"' },
+                { name: 'Le Thi Hoa', text: '"The diamond necklace is gorgeous, exactly as described. Fast delivery!"' },
+            ],
+        },
+        stats: [
+            { target: 1234, text: 'Happy Customers' },
+            { target: 5000, text: 'Products Sold' },
+            { target: 15, text: 'Years Experience' },
+            { target: 98, text: '% Satisfaction' },
+        ],
+        footer: {
+            tagline: 'Where luxury and elegance are celebrated.',
+            contactTitle: 'Contact',
+            connectTitle: 'Connect',
+        },
+        wishlist: {
+            title: 'Wishlist',
+            empty: 'No favorite products yet',
+            remove: 'Remove',
+            added: 'Added to wishlist',
+            removed: 'Removed from wishlist',
+        },
+        share: { title: 'Share Product', copied: 'Link copied!' },
+        bottomNav: { home: 'Home', products: 'Products', chat: 'Chat', contact: 'Contact' },
+    },
+};
+
+// ===== CATALOG STRUCTURE =====
+// Thêm/sửa/xóa danh mục tại đây. UI tự động render theo list này.
+const catalog = [
+    {
+        id: 'jewelry',
+        name: { vi: 'Trang Sức', en: 'Jewelry' },
+        icon: 'fa-gem',
+        filters: [
+            {
+                id: 'line',
+                name: { vi: 'Dòng hàng', en: 'Product Line' },
+                options: [
+                    { id: 'ngoc-trai', name: { vi: 'Ngọc Trai', en: 'Pearl' } },
+                    { id: 'da-quy', name: { vi: 'Đá Quý', en: 'Gemstone' } },
+                    { id: 'bac', name: { vi: 'Bạc', en: 'Silver' } },
+                ],
+            },
+            {
+                id: 'type',
+                name: { vi: 'Chủng loại', en: 'Type' },
+                options: [
+                    { id: 'nhan', name: { vi: 'Nhẫn', en: 'Ring' } },
+                    { id: 'day-chuyen', name: { vi: 'Dây Chuyền', en: 'Necklace' } },
+                    { id: 'lac-tay', name: { vi: 'Lắc Tay', en: 'Bracelet' } },
+                    { id: 'vong-tay', name: { vi: 'Vòng Tay', en: 'Bangle' } },
+                    { id: 'vong-co', name: { vi: 'Vòng Cổ', en: 'Choker' } },
+                    { id: 'bo-trang-suc', name: { vi: 'Bộ Trang Sức', en: 'Jewelry Set' } },
+                    { id: 'charm', name: { vi: 'Charm', en: 'Charm' } },
+                ],
+            },
+        ],
+    },
+    {
+        id: 'bag',
+        name: { vi: 'Túi & Balo', en: 'Bags & Backpacks' },
+        icon: 'fa-bag-shopping',
+        filters: [
+            {
+                id: 'material',
+                name: { vi: 'Chất liệu', en: 'Material' },
+                options: [
+                    { id: 'soi-co', name: { vi: 'Sợi cọ', en: 'Palm Fiber' } },
+                    { id: 'soi-co-grass', name: { vi: 'Sợi cỏ', en: 'Grass Fiber' } },
+                ],
+            },
+            {
+                id: 'line',
+                name: { vi: 'Dòng hàng', en: 'Product Line' },
+                options: [
+                    { id: 'tui-xach', name: { vi: 'Túi xách', en: 'Handbag' } },
+                    { id: 'vi', name: { vi: 'Ví', en: 'Wallet' } },
+                    { id: 'balo', name: { vi: 'Balo', en: 'Backpack' } },
+                ],
+            },
+        ],
+    },
 ];
 
-const commonDesc = "Sản phẩm được chế tác thủ công tinh xảo bởi những nghệ nhân hàng đầu tại Lux Lady. Sử dụng chất liệu cao cấp, đảm bảo độ sáng bóng và bền đẹp theo thời gian.";
-
-// PRODUCTS DATA with real images from Img folder
+// ===== PRODUCTS =====
+// code format: {CATALOG}-{TYPE}-{SEQ}  (vd: JW-CH-001, BG-TX-001)
+// catalogId: trỏ tới catalog.id
+// tags: object với key = filter.id, value = option.id (match catalog.filters)
+// Thêm sản phẩm mới: copy 1 object, đổi thông tin, UI tự render.
 const products = [
-    // Bộ trang sức
-    { id: 101, name: "Bộ Trang Sức Cỏ 4 Lá", price: 8500000, categoryId: "bo-trang-suc", isNew: true, code: "BTS-001", 
-      image: "./Img/Bo-trang-suc/bo-trang-suc-co-4-la.jpg", inStock: true, 
-      description: "Bộ trang sức cỏ 4 lá may mắn, thiết kế tinh tế mang lại vẻ đẹp sang trọng." },
-    { id: 102, name: "Bộ Trang Sức Nhẫn Bông Tai", price: 12500000, categoryId: "bo-trang-suc", isNew: true, code: "BTS-002", 
-      image: "./Img/Bo-trang-suc/bo-trang-suc-nhan-bong-tay-001.jpg", inStock: true, description: commonDesc },
-    { id: 103, name: "Bộ Trang Sức Nhẫn Dây Chuyền", price: 15000000, categoryId: "bo-trang-suc", isNew: false, code: "BTS-003", 
-      image: "./Img/Bo-trang-suc/bo-trang-suc-nhan-day-chuyen.jpg", inStock: true, description: commonDesc },
+    // ── JEWELRY: Bộ Trang Sức ──
+    { id: 1, code: 'JW-BTS-001', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: true, inStock: true,
+      name: { vi: 'Bộ Trang Sức Cỏ 4 Lá', en: '4-Leaf Clover Jewelry Set' },
+      image: './Img/Bo-trang-suc/bo-trang-suc-co-4-la.jpg',
+      description: { vi: 'Bộ trang sức cỏ 4 lá may mắn, thiết kế tinh tế mang lại vẻ đẹp sang trọng.', en: 'Lucky 4-leaf clover jewelry set, exquisitely designed for an elegant look.' } },
+    { id: 2, code: 'JW-BTS-002', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: true, inStock: true,
+      name: { vi: 'Bộ Trang Sức Nhẫn Bông Tai', en: 'Ring & Earring Jewelry Set' },
+      image: './Img/Bo-trang-suc/bo-trang-suc-nhan-bong-tay-001.jpg',
+      description: { vi: 'Bộ trang sức nhẫn kết hợp bông tai, chế tác tinh xảo từ nghệ nhân hàng đầu.', en: 'Ring and earring set, meticulously crafted by top artisans.' } },
+    { id: 3, code: 'JW-BTS-003', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: false, inStock: true,
+      name: { vi: 'Bộ Trang Sức Nhẫn Dây Chuyền', en: 'Ring & Necklace Jewelry Set' },
+      image: './Img/Bo-trang-suc/bo-trang-suc-nhan-day-chuyen.jpg',
+      description: { vi: 'Bộ trang sức nhẫn và dây chuyền đồng bộ, sang trọng và quý phái.', en: 'Matching ring and necklace set, luxurious and sophisticated.' } },
 
-    // Charm bạc
-    { id: 201, name: "Charm Bạc Trái Tim", price: 450000, categoryId: "charm-bac", isNew: true, code: "CB-001", 
-      image: "./Img/Charm-bac/charm-bac-001.jpg", inStock: true, description: "Charm bạc 925 cao cấp, thiết kế trái tim dễ thương." },
-    { id: 202, name: "Charm Bạc Ngôi Sao", price: 480000, categoryId: "charm-bac", isNew: false, code: "CB-002", 
-      image: "./Img/Charm-bac/charm-bac-002.jpg", inStock: true, description: commonDesc },
-    { id: 203, name: "Charm Bạc Hoa Cúc", price: 520000, categoryId: "charm-bac", isNew: true, code: "CB-003", 
-      image: "./Img/Charm-bac/charm-bac-003.jpg", inStock: true, description: commonDesc },
-    { id: 204, name: "Charm Bạc Bướm", price: 550000, categoryId: "charm-bac", isNew: false, code: "CB-004", 
-      image: "./Img/Charm-bac/charm-bac-004.jpg", inStock: true, description: commonDesc },
-    { id: 205, name: "Charm Bạc Mặt Trăng", price: 490000, categoryId: "charm-bac", isNew: true, code: "CB-005", 
-      image: "./Img/Charm-bac/charm-bac-005.jpg", inStock: true, description: commonDesc },
-    { id: 206, name: "Charm Bạc Vương Miện", price: 580000, categoryId: "charm-bac", isNew: false, code: "CB-006", 
-      image: "./Img/Charm-bac/charm-bac-006.jpg", inStock: true, description: commonDesc },
-    { id: 207, name: "Charm Bạc Chìa Khóa", price: 460000, categoryId: "charm-bac", isNew: true, code: "CB-007", 
-      image: "./Img/Charm-bac/charm-bac-007.jpg", inStock: true, description: commonDesc },
-    { id: 208, name: "Charm Bạc Cỏ 4 Lá", price: 510000, categoryId: "charm-bac", isNew: false, code: "CB-008", 
-      image: "./Img/Charm-bac/charm-bac-008.jpg", inStock: true, description: commonDesc },
-    { id: 209, name: "Charm Bạc Hình Tròn", price: 440000, categoryId: "charm-bac", isNew: true, code: "CB-009", 
-      image: "./Img/Charm-bac/charm-bac-009.jpg", inStock: true, description: commonDesc },
-    { id: 210, name: "Charm Bạc Giọt Nước", price: 470000, categoryId: "charm-bac", isNew: false, code: "CB-010", 
-      image: "./Img/Charm-bac/charm-bac-010.jpg", inStock: true, description: commonDesc },
-    { id: 211, name: "Charm Bạc Hình Vuông", price: 500000, categoryId: "charm-bac", isNew: true, code: "CB-011", 
-      image: "./Img/Charm-bac/charm-bac-011.jpg", inStock: true, description: commonDesc },
-    { id: 212, name: "Charm Bạc Infinity", price: 530000, categoryId: "charm-bac", isNew: false, code: "CB-012", 
-      image: "./Img/Charm-bac/charm-bac-012.jpg", inStock: true, description: commonDesc },
+    // ── JEWELRY: Charm Bạc ──
+    { id: 10, code: 'JW-CH-001', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+      name: { vi: 'Charm Bạc Trái Tim', en: 'Silver Heart Charm' },
+      image: './Img/Charm-bac/charm-bac-001.jpg',
+      description: { vi: 'Charm bạc 925 cao cấp, thiết kế trái tim dễ thương.', en: 'Premium 925 silver charm with cute heart design.' } },
+    { id: 11, code: 'JW-CH-002', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
+      name: { vi: 'Charm Bạc Ngôi Sao', en: 'Silver Star Charm' },
+      image: './Img/Charm-bac/charm-bac-002.jpg',
+      description: { vi: 'Charm bạc ngôi sao lấp lánh, phong cách trẻ trung.', en: 'Sparkling silver star charm, youthful style.' } },
+    { id: 12, code: 'JW-CH-003', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+      name: { vi: 'Charm Bạc Hoa Cúc', en: 'Silver Daisy Charm' },
+      image: './Img/Charm-bac/charm-bac-003.jpg',
+      description: { vi: 'Charm bạc hoa cúc tinh tế, mang vẻ đẹp tự nhiên.', en: 'Delicate silver daisy charm with natural beauty.' } },
+    { id: 13, code: 'JW-CH-004', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
+      name: { vi: 'Charm Bạc Bướm', en: 'Silver Butterfly Charm' },
+      image: './Img/Charm-bac/charm-bac-004.jpg',
+      description: { vi: 'Charm bạc hình bướm, biểu tượng của sự tự do.', en: 'Silver butterfly charm, symbol of freedom.' } },
+    { id: 14, code: 'JW-CH-005', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+      name: { vi: 'Charm Bạc Mặt Trăng', en: 'Silver Moon Charm' },
+      image: './Img/Charm-bac/charm-bac-005.jpg',
+      description: { vi: 'Charm bạc mặt trăng huyền bí, phong cách độc đáo.', en: 'Mystical silver moon charm, unique style.' } },
+    { id: 15, code: 'JW-CH-006', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
+      name: { vi: 'Charm Bạc Vương Miện', en: 'Silver Crown Charm' },
+      image: './Img/Charm-bac/charm-bac-006.jpg',
+      description: { vi: 'Charm bạc vương miện, thể hiện đẳng cấp nữ hoàng.', en: 'Silver crown charm, expressing queenly elegance.' } },
+    { id: 16, code: 'JW-CH-007', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+      name: { vi: 'Charm Bạc Chìa Khóa', en: 'Silver Key Charm' },
+      image: './Img/Charm-bac/charm-bac-007.jpg',
+      description: { vi: 'Charm bạc chìa khóa, biểu tượng mở cánh cửa mới.', en: 'Silver key charm, symbol of new beginnings.' } },
+    { id: 17, code: 'JW-CH-008', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
+      name: { vi: 'Charm Bạc Cỏ 4 Lá', en: 'Silver 4-Leaf Clover Charm' },
+      image: './Img/Charm-bac/charm-bac-008.jpg',
+      description: { vi: 'Charm bạc cỏ 4 lá may mắn, mang lại tài lộc.', en: 'Lucky silver 4-leaf clover charm.' } },
+    { id: 18, code: 'JW-CH-009', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+      name: { vi: 'Charm Bạc Hình Tròn', en: 'Silver Circle Charm' },
+      image: './Img/Charm-bac/charm-bac-009.jpg',
+      description: { vi: 'Charm bạc hình tròn tối giản, phù hợp mọi phong cách.', en: 'Minimalist silver circle charm, suits any style.' } },
+    { id: 19, code: 'JW-CH-010', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
+      name: { vi: 'Charm Bạc Giọt Nước', en: 'Silver Teardrop Charm' },
+      image: './Img/Charm-bac/charm-bac-010.jpg',
+      description: { vi: 'Charm bạc giọt nước thanh lịch.', en: 'Elegant silver teardrop charm.' } },
+    { id: 20, code: 'JW-CH-011', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+      name: { vi: 'Charm Bạc Hình Vuông', en: 'Silver Square Charm' },
+      image: './Img/Charm-bac/charm-bac-011.jpg',
+      description: { vi: 'Charm bạc hình vuông hiện đại.', en: 'Modern silver square charm.' } },
+    { id: 21, code: 'JW-CH-012', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
+      name: { vi: 'Charm Bạc Infinity', en: 'Silver Infinity Charm' },
+      image: './Img/Charm-bac/charm-bac-012.jpg',
+      description: { vi: 'Charm bạc infinity, biểu tượng tình yêu vĩnh cửu.', en: 'Silver infinity charm, symbol of eternal love.' } },
 
-    // Dây chuyền nữ
-    { id: 301, name: "Dây Chuyền Nữ Thanh Lịch", price: 3500000, categoryId: "day-chuyen-nu", isNew: true, code: "DCN-001", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-001.jpg", inStock: true, description: "Dây chuyền vàng 18K, thiết kế thanh lịch cho phái đẹp." },
-    { id: 302, name: "Dây Chuyền Nữ Sang Trọng", price: 4200000, categoryId: "day-chuyen-nu", isNew: false, code: "DCN-002", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-002.jpg", inStock: true, description: commonDesc },
-    { id: 303, name: "Dây Chuyền Nữ Tinh Tế", price: 3800000, categoryId: "day-chuyen-nu", isNew: true, code: "DCN-003", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-003.jpg", inStock: true, description: commonDesc },
-    { id: 304, name: "Dây Chuyền Nữ Đính Đá", price: 5500000, categoryId: "day-chuyen-nu", isNew: false, code: "DCN-004", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-004.jpg", inStock: true, description: commonDesc },
-    { id: 305, name: "Dây Chuyền Nữ Trái Tim", price: 4000000, categoryId: "day-chuyen-nu", isNew: true, code: "DCN-005", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-005.jpg", inStock: true, description: commonDesc },
-    { id: 306, name: "Dây Chuyền Nữ Ngọc Trai", price: 6200000, categoryId: "day-chuyen-nu", isNew: false, code: "DCN-006", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-006.jpg", inStock: true, description: commonDesc },
-    { id: 307, name: "Dây Chuyền Nữ Mặt Tròn", price: 3900000, categoryId: "day-chuyen-nu", isNew: true, code: "DCN-007", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-007.jpg", inStock: true, description: commonDesc },
-    { id: 308, name: "Dây Chuyền Nữ Cổ Điển", price: 4500000, categoryId: "day-chuyen-nu", isNew: false, code: "DCN-008", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-008.jpg", inStock: true, description: commonDesc },
-    { id: 309, name: "Dây Chuyền Nữ Hiện Đại", price: 4800000, categoryId: "day-chuyen-nu", isNew: true, code: "DCN-009", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-009.jpg", inStock: true, description: commonDesc },
-    { id: 310, name: "Dây Chuyền Nữ Đơn Giản", price: 3200000, categoryId: "day-chuyen-nu", isNew: false, code: "DCN-010", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-010.jpg", inStock: true, description: commonDesc },
-    { id: 311, name: "Dây Chuyền Nữ Dây Xích", price: 3600000, categoryId: "day-chuyen-nu", isNew: true, code: "DCN-011", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-011.jpg", inStock: true, description: commonDesc },
-    { id: 312, name: "Dây Chuyền Nữ Mặt Vuông", price: 4100000, categoryId: "day-chuyen-nu", isNew: false, code: "DCN-012", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-012.jpg", inStock: true, description: commonDesc },
-    { id: 313, name: "Dây Chuyền Nữ Tourmaline", price: 7500000, categoryId: "day-chuyen-nu", isNew: true, code: "DCN-013", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-013-Tourmaline.jpg", inStock: true, description: "Dây chuyền đính đá Tourmaline thiên nhiên cao cấp." },
-    { id: 314, name: "Dây Chuyền Nữ Luxury", price: 5800000, categoryId: "day-chuyen-nu", isNew: false, code: "DCN-014", 
-      image: "./Img/Day-chuyen-nu/Day-chuyen-nu-014.jpg", inStock: true, description: commonDesc },
+    // ── JEWELRY: Dây Chuyền Nữ ──
+    { id: 30, code: 'JW-DC-001', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Thanh Lịch', en: 'Elegant Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-001.jpg',
+      description: { vi: 'Dây chuyền vàng 18K, thiết kế thanh lịch cho phái đẹp.', en: '18K gold necklace, elegant design for women.' } },
+    { id: 31, code: 'JW-DC-002', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Sang Trọng', en: 'Luxurious Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-002.jpg',
+      description: { vi: 'Dây chuyền sang trọng, chế tác tinh xảo.', en: 'Luxurious necklace, exquisitely crafted.' } },
+    { id: 32, code: 'JW-DC-003', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Tinh Tế', en: 'Delicate Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-003.jpg',
+      description: { vi: 'Dây chuyền tinh tế, phù hợp mọi dịp.', en: 'Delicate necklace, perfect for any occasion.' } },
+    { id: 33, code: 'JW-DC-004', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Đính Đá', en: 'Gemstone Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-004.jpg',
+      description: { vi: 'Dây chuyền đính đá quý lấp lánh.', en: 'Necklace adorned with sparkling gemstones.' } },
+    { id: 34, code: 'JW-DC-005', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Trái Tim', en: 'Heart Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-005.jpg',
+      description: { vi: 'Dây chuyền trái tim lãng mạn.', en: 'Romantic heart pendant necklace.' } },
+    { id: 35, code: 'JW-DC-006', catalogId: 'jewelry',
+      tags: { line: 'ngoc-trai', type: 'day-chuyen' }, isNew: false, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Ngọc Trai', en: 'Pearl Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-006.jpg',
+      description: { vi: 'Dây chuyền ngọc trai thiên nhiên cao cấp.', en: 'Premium natural pearl necklace.' } },
+    { id: 36, code: 'JW-DC-007', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Mặt Tròn', en: 'Round Pendant Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-007.jpg',
+      description: { vi: 'Dây chuyền mặt tròn tối giản, thanh lịch.', en: 'Minimalist round pendant necklace.' } },
+    { id: 37, code: 'JW-DC-008', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Cổ Điển', en: 'Classic Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-008.jpg',
+      description: { vi: 'Dây chuyền phong cách cổ điển sang trọng.', en: 'Classic style luxury necklace.' } },
+    { id: 38, code: 'JW-DC-009', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Hiện Đại', en: 'Modern Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-009.jpg',
+      description: { vi: 'Dây chuyền thiết kế hiện đại, trẻ trung.', en: 'Modern design necklace, youthful.' } },
+    { id: 39, code: 'JW-DC-010', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'day-chuyen' }, isNew: false, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Đơn Giản', en: 'Simple Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-010.jpg',
+      description: { vi: 'Dây chuyền bạc đơn giản, dễ phối đồ.', en: 'Simple silver necklace, easy to pair.' } },
+    { id: 40, code: 'JW-DC-011', catalogId: 'jewelry',
+      tags: { line: 'bac', type: 'day-chuyen' }, isNew: true, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Dây Xích', en: 'Chain Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-011.jpg',
+      description: { vi: 'Dây chuyền dây xích phong cách cá tính.', en: 'Chain necklace with edgy style.' } },
+    { id: 41, code: 'JW-DC-012', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Mặt Vuông', en: 'Square Pendant Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-012.jpg',
+      description: { vi: 'Dây chuyền mặt vuông hiện đại.', en: 'Modern square pendant necklace.' } },
+    { id: 42, code: 'JW-DC-013', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Tourmaline', en: 'Tourmaline Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-013-Tourmaline.jpg',
+      description: { vi: 'Dây chuyền đính đá Tourmaline thiên nhiên cao cấp.', en: 'Premium natural Tourmaline pendant necklace.' } },
+    { id: 43, code: 'JW-DC-014', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+      name: { vi: 'Dây Chuyền Nữ Luxury', en: 'Luxury Necklace' },
+      image: './Img/Day-chuyen-nu/Day-chuyen-nu-014.jpg',
+      description: { vi: 'Dây chuyền cao cấp, đẳng cấp sang trọng.', en: 'High-end luxury necklace.' } },
 
-    // Lắc tay nam
-    { id: 401, name: "Lắc Tay Nam Mạnh Mẽ", price: 8500000, categoryId: "lac-tay-nam", isNew: true, code: "LTN-001", 
-      image: "./Img/Lac-tay-nam/128L16-C02500_c8-Ptsj.jpg", inStock: true, description: "Lắc tay nam vàng 18K, thiết kế mạnh mẽ, nam tính." },
-    { id: 402, name: "Lắc Tay Nam Sang Trọng", price: 9200000, categoryId: "lac-tay-nam", isNew: false, code: "LTN-002", 
-      image: "./Img/Lac-tay-nam/128L17-C03000_1L3-Ptsj.jpg", inStock: true, description: commonDesc },
-    { id: 403, name: "Lắc Tay Nam Cổ Điển", price: 7800000, categoryId: "lac-tay-nam", isNew: true, code: "LTN-003", 
-      image: "./Img/Lac-tay-nam/CTL1143-C0700_4c7-Ptsj.jpg", inStock: true, description: commonDesc },
-    { id: 404, name: "Lắc Tay Nam Hiện Đại", price: 10500000, categoryId: "lac-tay-nam", isNew: false, code: "LTN-004", 
-      image: "./Img/Lac-tay-nam/KL010-C03400_8c-Ptsj.jpg", inStock: true, description: commonDesc },
+    // ── JEWELRY: Lắc Tay Nam ──
+    { id: 50, code: 'JW-LT-001', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+      name: { vi: 'Lắc Tay Nam Mạnh Mẽ', en: "Men's Bold Bracelet" },
+      image: './Img/Lac-tay-nam/128L16-C02500_c8-Ptsj.jpg',
+      description: { vi: 'Lắc tay nam vàng 18K, thiết kế mạnh mẽ, nam tính.', en: "18K gold men's bracelet, bold and masculine design." } },
+    { id: 51, code: 'JW-LT-002', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
+      name: { vi: 'Lắc Tay Nam Sang Trọng', en: "Men's Luxury Bracelet" },
+      image: './Img/Lac-tay-nam/128L17-C03000_1L3-Ptsj.jpg',
+      description: { vi: 'Lắc tay nam sang trọng, phong cách lịch lãm.', en: "Luxury men's bracelet, refined style." } },
+    { id: 52, code: 'JW-LT-003', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+      name: { vi: 'Lắc Tay Nam Cổ Điển', en: "Men's Classic Bracelet" },
+      image: './Img/Lac-tay-nam/CTL1143-C0700_4c7-Ptsj.jpg',
+      description: { vi: 'Lắc tay nam cổ điển, bền đẹp theo thời gian.', en: "Classic men's bracelet, timeless beauty." } },
+    { id: 53, code: 'JW-LT-004', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
+      name: { vi: 'Lắc Tay Nam Hiện Đại', en: "Men's Modern Bracelet" },
+      image: './Img/Lac-tay-nam/KL010-C03400_8c-Ptsj.jpg',
+      description: { vi: 'Lắc tay nam hiện đại, phong cách trẻ trung.', en: "Modern men's bracelet, youthful style." } },
 
-    // Lắc tay nữ
-    { id: 501, name: "Lắc Tay Nữ Tinh Tế", price: 5200000, categoryId: "lac-tay-nu", isNew: true, code: "LTNU-001", 
-      image: "./Img/Lac-tay-nu/L005675-09290-Ptsj.jpg", inStock: true, description: "Lắc tay nữ vàng trắng, thiết kế tinh tế, nữ tính." },
-    { id: 502, name: "Lắc Tay Nữ Thanh Lịch", price: 6100000, categoryId: "lac-tay-nu", isNew: false, code: "LTNU-002", 
-      image: "./Img/Lac-tay-nu/L006294-013040-Ptsj.jpg", inStock: true, description: commonDesc },
-    { id: 503, name: "Lắc Tay Nữ Đính Đá", price: 7200000, categoryId: "lac-tay-nu", isNew: true, code: "LTNU-003", 
-      image: "./Img/Lac-tay-nu/L006727-010490-Ptsj.jpg", inStock: true, description: commonDesc },
-    { id: 504, name: "Lắc Tay Nữ Sang Trọng", price: 5800000, categoryId: "lac-tay-nu", isNew: false, code: "LTNU-004", 
-      image: "./Img/Lac-tay-nu/L006767-07680-Ptsj.jpg", inStock: true, description: commonDesc },
-    { id: 505, name: "Lắc Tay Nữ Luxury", price: 8500000, categoryId: "lac-tay-nu", isNew: true, code: "LTNU-005", 
-      image: "./Img/Lac-tay-nu/L007218-015130-Ptsj.jpg", inStock: true, description: commonDesc },
+    // ── JEWELRY: Lắc Tay Nữ ──
+    { id: 60, code: 'JW-LT-005', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+      name: { vi: 'Lắc Tay Nữ Tinh Tế', en: "Women's Delicate Bracelet" },
+      image: './Img/Lac-tay-nu/L005675-09290-Ptsj.jpg',
+      description: { vi: 'Lắc tay nữ vàng trắng, thiết kế tinh tế, nữ tính.', en: "White gold women's bracelet, delicate and feminine." } },
+    { id: 61, code: 'JW-LT-006', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
+      name: { vi: 'Lắc Tay Nữ Thanh Lịch', en: "Women's Elegant Bracelet" },
+      image: './Img/Lac-tay-nu/L006294-013040-Ptsj.jpg',
+      description: { vi: 'Lắc tay nữ thanh lịch, phù hợp mọi phong cách.', en: "Elegant women's bracelet for any style." } },
+    { id: 62, code: 'JW-LT-007', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+      name: { vi: 'Lắc Tay Nữ Đính Đá', en: "Women's Gemstone Bracelet" },
+      image: './Img/Lac-tay-nu/L006727-010490-Ptsj.jpg',
+      description: { vi: 'Lắc tay nữ đính đá quý lấp lánh.', en: "Women's bracelet adorned with sparkling gems." } },
+    { id: 63, code: 'JW-LT-008', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
+      name: { vi: 'Lắc Tay Nữ Sang Trọng', en: "Women's Luxury Bracelet" },
+      image: './Img/Lac-tay-nu/L006767-07680-Ptsj.jpg',
+      description: { vi: 'Lắc tay nữ sang trọng cho những dịp đặc biệt.', en: "Luxury women's bracelet for special occasions." } },
+    { id: 64, code: 'JW-LT-009', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+      name: { vi: 'Lắc Tay Nữ Luxury', en: "Women's Premium Bracelet" },
+      image: './Img/Lac-tay-nu/L007218-015130-Ptsj.jpg',
+      description: { vi: 'Lắc tay nữ cao cấp, đẳng cấp vượt trội.', en: "Premium women's bracelet, superior quality." } },
 
-    // Nhẫn
-    { id: 601, name: "Nhẫn Kim Cương Solitaire", price: 25500000, categoryId: "nhan", isNew: true, code: "N-001", 
-      image: "./Img/Nhan/nhan-001.jpg", inStock: true, description: "Nhẫn kim cương thiên nhiên, thiết kế Solitaire kinh điển." },
+    // ── JEWELRY: Nhẫn ──
+    { id: 70, code: 'JW-NH-001', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'nhan' }, isNew: true, inStock: true,
+      name: { vi: 'Nhẫn Kim Cương Solitaire', en: 'Solitaire Diamond Ring' },
+      image: './Img/Nhan/nhan-001.jpg',
+      description: { vi: 'Nhẫn kim cương thiên nhiên, thiết kế Solitaire kinh điển.', en: 'Natural diamond ring, classic Solitaire design.' } },
 
-    // Vòng cổ nữ
-    { id: 801, name: "Vòng Cổ Nữ Sang Trọng", price: 6800000, categoryId: "vong-co-nu", isNew: true, code: "VCN-001", 
-      image: "./Img/Vong-co-nu/vong-co-nu-001.jpg", inStock: true, description: "Vòng cổ nữ vàng 18K, thiết kế sang trọng, quý phái." },
+    // ── JEWELRY: Vòng Cổ Nữ ──
+    { id: 80, code: 'JW-VC-001', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'vong-co' }, isNew: true, inStock: true,
+      name: { vi: 'Vòng Cổ Nữ Sang Trọng', en: 'Luxury Choker' },
+      image: './Img/Vong-co-nu/vong-co-nu-001.jpg',
+      description: { vi: 'Vòng cổ nữ vàng 18K, thiết kế sang trọng, quý phái.', en: '18K gold choker, luxurious and sophisticated.' } },
 
-    // Vòng tay
-    { id: 701, name: "Vòng Tay Ngọc Trai Nuôi", price: 4500000, categoryId: "vong-tay", isNew: true, code: "VT-001", 
-      image: "./Img/Vong-tay/vong-tay-ngoc-trai-nuoi.jpg", inStock: true, description: "Vòng tay ngọc trai nuôi cấy cao cấp, độ bóng hoàn hảo." },
-    { id: 702, name: "Vòng Tay Ngọc Trai Topaz", price: 6200000, categoryId: "vong-tay", isNew: false, code: "VT-002", 
-      image: "./Img/Vong-tay/vong-tay-ngoc-trai-topaz.jpg", inStock: true, description: "Vòng tay kết hợp ngọc trai và đá Topaz xanh." },
-    { id: 703, name: "Vòng Tay Labradorite Moonstone", price: 5800000, categoryId: "vong-tay", isNew: true, code: "VT-003", 
-      image: "./Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg", inStock: true, description: "Vòng tay đá quý Labradorite và Moonstone thiên nhiên." }
+    // ── JEWELRY: Vòng Tay ──
+    { id: 90, code: 'JW-VT-001', catalogId: 'jewelry',
+      tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: true, inStock: true,
+      name: { vi: 'Vòng Tay Ngọc Trai Nuôi', en: 'Cultured Pearl Bangle' },
+      image: './Img/Vong-tay/vong-tay-ngoc-trai-nuoi.jpg',
+      description: { vi: 'Vòng tay ngọc trai nuôi cấy cao cấp, độ bóng hoàn hảo.', en: 'Premium cultured pearl bangle, perfect luster.' } },
+    { id: 91, code: 'JW-VT-002', catalogId: 'jewelry',
+      tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: false, inStock: true,
+      name: { vi: 'Vòng Tay Ngọc Trai Topaz', en: 'Pearl & Topaz Bangle' },
+      image: './Img/Vong-tay/vong-tay-ngoc-trai-topaz.jpg',
+      description: { vi: 'Vòng tay kết hợp ngọc trai và đá Topaz xanh.', en: 'Bangle combining pearls and blue Topaz.' } },
+    { id: 92, code: 'JW-VT-003', catalogId: 'jewelry',
+      tags: { line: 'da-quy', type: 'vong-tay' }, isNew: true, inStock: true,
+      name: { vi: 'Vòng Tay Labradorite Moonstone', en: 'Labradorite Moonstone Bangle' },
+      image: './Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg',
+      description: { vi: 'Vòng tay đá quý Labradorite và Moonstone thiên nhiên.', en: 'Natural Labradorite and Moonstone gemstone bangle.' } },
+
+    // ── BAG: (Chưa có sản phẩm - thêm tại đây) ──
+    // { id: 100, code: 'BG-TX-001', catalogId: 'bag',
+    //   tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
+    //   name: { vi: 'Túi Xách Sợi Cọ', en: 'Palm Fiber Handbag' },
+    //   image: './Img/Bag/tui-xach-001.jpg',
+    //   description: { vi: 'Túi xách từ sợi cọ tự nhiên.', en: 'Handbag made from natural palm fiber.' } },
 ];
 
-let currentSort = 'default';
-let filteredProducts = [...products];
-let isShowingAllNew = false;
 
-// ===== SEARCH FUNCTIONALITY =====
-function initSearch() {
-    const searchInputs = ['search-input', 'search-input-mobile'];
-    searchInputs.forEach(inputId => {
-        const input = document.getElementById(inputId);
-        const resultsId = inputId.includes('mobile') ? 'search-results-mobile' : 'search-results';
-        const resultsContainer = document.getElementById(resultsId);
+// ============================================================
+// STATE
+// ============================================================
+let state = {
+    lang: localStorage.getItem('lang') || CONFIG.defaultLang,
+    sort: 'default',
+    showAllNew: false,
+    activeCatalog: 'jewelry',
+    activeFilters: {},
+    wishlist: JSON.parse(localStorage.getItem('wishlist') || '[]'),
+    currentShareProduct: null,
+};
 
-        if (input) {
-            input.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                if (query.length < 2) {
-                    resultsContainer.classList.add('hidden');
-                    return;
-                }
+// ============================================================
+// UTILITY
+// ============================================================
+const t = (path) => {
+    const keys = path.split('.');
+    let obj = i18n[state.lang];
+    for (const k of keys) { if (obj === undefined) return path; obj = obj[k]; }
+    return obj ?? path;
+};
 
-                const results = products.filter(p =>
-                    p.name.toLowerCase().includes(query) ||
-                    p.code.toLowerCase().includes(query) ||
-                    categories.find(c => c.id === p.categoryId)?.name.toLowerCase().includes(query)
-                );
+const localized = (obj) => obj?.[state.lang] ?? obj?.vi ?? '';
+const getCatalog = (id) => catalog.find(c => c.id === id);
 
-                if (results.length > 0) {
-                    resultsContainer.innerHTML = results.slice(0, 5).map(p => `
-                        <div class="search-result-item flex gap-3" onclick="openModal(${p.id}); document.getElementById('${inputId}').value=''; document.getElementById('${resultsId}').classList.add('hidden');">
-                            <img src="${p.image}" alt="${p.name}" class="w-12 h-12 object-cover rounded">
-                            <div class="flex-1">
-                                <p class="font-medium text-sm">${p.name}</p>
-                                <p class="text-xs text-gray-500">${formatCurrency(p.price)}</p>
-                            </div>
-                        </div>
-                    `).join('');
-                    resultsContainer.classList.remove('hidden');
-                } else {
-                    resultsContainer.innerHTML = '<div class="p-4 text-center text-gray-500 text-sm">Không tìm thấy sản phẩm</div>';
-                    resultsContainer.classList.remove('hidden');
-                }
-            });
+const getFilteredProducts = (catalogId) => {
+    let result = products.filter(p => p.catalogId === catalogId);
+    for (const [filterId, optionId] of Object.entries(state.activeFilters)) {
+        if (optionId) result = result.filter(p => p.tags[filterId] === optionId);
+    }
+    return result;
+};
 
-            // Close search results when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
-                    resultsContainer.classList.add('hidden');
-                }
-            });
-        }
-    });
+const getNewArrivals = () => {
+    let result = products.filter(p => p.isNew);
+    if (state.sort === 'name-asc') result.sort((a, b) => localized(a.name).localeCompare(localized(b.name)));
+    else if (state.sort === 'name-desc') result.sort((a, b) => localized(b.name).localeCompare(localized(a.name)));
+    return result;
+};
+
+// ============================================================
+// RENDER
+// ============================================================
+function setLang(lang) {
+    state.lang = lang;
+    localStorage.setItem('lang', lang);
+    renderAll();
 }
 
-// ===== SORT FUNCTIONALITY =====
-function sortProducts() {
-    currentSort = document.getElementById('sort-select').value;
-    
-    // Always show all new products
-    filteredProducts = products.filter(p => p.isNew);
+function createProductCard(product, isHidden = false) {
+    const isWishlisted = state.wishlist.includes(product.id);
+    return `
+        <article class="product-card group bg-white rounded-lg shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full animate-fade-in relative ${isHidden ? 'hidden' : ''}">
+            <button onclick="toggleWishlist(${product.id}, event)" class="wishlist-btn ${isWishlisted ? 'active' : ''}">
+                <i class="fas fa-heart"></i>
+            </button>
+            <div class="relative overflow-hidden aspect-square cursor-pointer" onclick="openModal(${product.id})">
+                <img src="${product.image}" alt="${localized(product.name)}" class="product-img w-full h-full object-cover" loading="lazy">
+                ${product.isNew ? '<span class="absolute top-2 left-2 bg-brand-500 text-white text-[8px] md:text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded-sm">New</span>' : ''}
+            </div>
+            <div class="p-3 md:p-4 flex flex-col flex-grow text-center">
+                <h3 class="font-serif font-bold text-gray-800 text-xs md:text-lg mb-2 md:mb-3 line-clamp-2 hover:text-brand-500 transition cursor-pointer" onclick="openModal(${product.id})">${localized(product.name)}</h3>
+                <div class="mt-auto flex gap-2">
+                    <button onclick="openModal(${product.id})" class="flex-1 bg-brand-500 text-white py-2 px-3 rounded-lg text-xs hover:bg-brand-800 transition ripple">${t('products.viewDetail')}</button>
+                    <button onclick="shareProduct(${product.id}, event)" class="bg-gray-100 text-gray-700 py-2 px-3 rounded-lg text-xs hover:bg-gray-200 transition"><i class="fas fa-share-alt"></i></button>
+                </div>
+            </div>
+        </article>`;
+}
 
-    // Sort
-    switch (currentSort) {
-        case 'price-asc':
-            filteredProducts.sort((a, b) => a.price - b.price);
-            break;
-        case 'price-desc':
-            filteredProducts.sort((a, b) => b.price - a.price);
-            break;
-        case 'name-asc':
-            filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
-            break;
-        default:
-            // Default: keep original order (by ID)
-            filteredProducts.sort((a, b) => a.id - b.id);
+function renderTopBar() {
+    document.getElementById('top-bar-info').innerHTML = `
+        <span><i class="fas fa-phone-alt mr-2"></i>${CONFIG.phone}</span>
+        <span><i class="fas fa-envelope mr-2"></i>${CONFIG.email}</span>`;
+}
+
+function renderNav() {
+    document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.getAttribute('data-i18n')); });
+    document.querySelectorAll('.search-input').forEach(input => { input.placeholder = t('products.searchPlaceholder'); });
+    document.querySelectorAll('.lang-btn').forEach(btn => { btn.classList.toggle('active', btn.dataset.lang === state.lang); });
+}
+
+function renderHero() {
+    const hero = document.getElementById('hero-content');
+    if (!hero) return;
+    hero.innerHTML = `
+        <span class="uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm text-brand-100 mb-2 block">${t('hero.subtitle')}</span>
+        <h2 class="text-3xl md:text-6xl font-serif font-bold mb-4 md:mb-6 leading-tight">${t('hero.title')}</h2>
+        <div class="flex gap-4">
+            <a href="#products-section" class="bg-white text-brand-900 px-6 py-2 md:px-8 md:py-3 font-medium hover:bg-brand-50 transition shadow-lg uppercase text-xs md:text-sm tracking-wider">${t('hero.cta')}</a>
+        </div>`;
+}
+
+function renderAbout() {
+    const container = document.getElementById('about-section');
+    if (!container) return;
+    const about = t('about');
+    container.innerHTML = `
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-14">
+                <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase">${about.sectionLabel}</span>
+                <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2">${about.sectionTitle}</h2>
+                <div class="w-16 md:w-20 h-1 bg-brand-500 mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6">${about.intro}</p>
+                <div class="bg-brand-50 border-l-4 border-brand-500 p-4 md:p-6 rounded-r-lg text-left">
+                    <h3 class="font-serif font-bold text-brand-900 text-lg mb-2">${about.visionTitle}</h3>
+                    <p class="text-gray-600 text-sm md:text-base">${about.visionText}</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                ${about.services.map(s => `
+                    <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition border border-gray-100">
+                        <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas ${s.icon} text-2xl text-brand-500"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-900 mb-2">${s.title}</h4>
+                        <p class="text-gray-600 text-sm">${s.desc}</p>
+                    </div>`).join('')}
+            </div>
+        </div>`;
+}
+
+function renderBadges() {
+    const container = document.getElementById('badges-section');
+    if (!container) return;
+    container.innerHTML = t('badges').map(b => `
+        <div class="space-y-2"><i class="fas ${b.icon} text-2xl md:text-3xl text-brand-800"></i>
+            <h3 class="font-bold text-xs md:text-sm uppercase">${b.text}</h3>
+        </div>`).join('');
+}
+
+function renderNewArrivals() {
+    const container = document.getElementById('new-products-grid');
+    const btn = document.getElementById('load-more-new-btn');
+    if (!container || !btn) return;
+    const items = getNewArrivals();
+    const limit = state.showAllNew ? items.length : CONFIG.newArrivalsLimit;
+    container.innerHTML = items.map((p, i) => createProductCard(p, i >= limit)).join('');
+    if (items.length <= CONFIG.newArrivalsLimit) btn.classList.add('hidden');
+    else btn.classList.remove('hidden');
+    btn.textContent = state.showAllNew ? t('products.collapse') : t('products.viewAll');
+}
+
+function renderCatalogSection() {
+    const tabsContainer = document.getElementById('catalog-tabs');
+    const filtersContainer = document.getElementById('catalog-filters');
+    const productsContainer = document.getElementById('catalog-products');
+    if (!tabsContainer) return;
+
+    tabsContainer.innerHTML = catalog.map(cat => `
+        <button onclick="switchCatalog('${cat.id}')"
+            class="catalog-tab px-4 md:px-6 py-2 md:py-3 text-sm font-medium rounded-full transition whitespace-nowrap flex items-center gap-2
+            ${state.activeCatalog === cat.id ? 'bg-brand-500 text-white shadow-md' : 'bg-white text-gray-700 hover:bg-brand-50 border border-gray-200'}">
+            <i class="fas ${cat.icon}"></i> ${localized(cat.name)}
+        </button>`).join('');
+
+    const activeCat = getCatalog(state.activeCatalog);
+    if (activeCat && filtersContainer) {
+        filtersContainer.innerHTML = activeCat.filters.map(filter => `
+            <div class="mb-3">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-2">${localized(filter.name)}</span>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="setFilter('${filter.id}', '')"
+                        class="filter-btn px-3 py-1 text-xs rounded-full transition ${!state.activeFilters[filter.id] ? 'bg-brand-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}">${t('products.allFilter')}</button>
+                    ${filter.options.map(opt => `
+                        <button onclick="setFilter('${filter.id}', '${opt.id}')"
+                            class="filter-btn px-3 py-1 text-xs rounded-full transition ${state.activeFilters[filter.id] === opt.id ? 'bg-brand-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}">${localized(opt.name)}</button>`).join('')}
+                </div>
+            </div>`).join('');
     }
 
+    if (productsContainer) {
+        const filtered = getFilteredProducts(state.activeCatalog);
+        if (filtered.length > 0) {
+            productsContainer.innerHTML = filtered.map(p => createProductCard(p)).join('');
+        } else {
+            productsContainer.innerHTML = `<div class="col-span-full text-center py-16"><i class="fas fa-box-open text-5xl text-gray-300 mb-4"></i><p class="text-gray-500">${t('products.noResult')}</p></div>`;
+        }
+    }
+}
+
+function renderCategoryTabs() {
+    const container = document.getElementById('category-tabs-container');
+    if (!container) return;
+    const activeCat = getCatalog(state.activeCatalog);
+    if (!activeCat) return;
+    const typeFilter = activeCat.filters.find(f => f.id === 'type' || f.id === 'line');
+    if (!typeFilter) return;
+    container.innerHTML = typeFilter.options.map(opt => `
+        <a href="#" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-brand-500 hover:border-b-2 hover:border-brand-500 transition whitespace-nowrap"
+           onclick="event.preventDefault(); setFilter('${typeFilter.id}', '${opt.id}')">${localized(opt.name)}</a>`).join('');
+}
+
+function renderReviews() {
+    const container = document.getElementById('reviews-content');
+    if (!container) return;
+    const reviews = t('reviews');
+    container.innerHTML = `
+        <div class="text-center mb-8 md:mb-10">
+            <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase">${reviews.sectionLabel}</span>
+            <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2">${reviews.sectionTitle}</h2>
+            <div class="w-16 md:w-20 h-1 bg-brand-500 mx-auto mt-4"></div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+            <div class="text-center">
+                <div class="text-5xl font-bold text-brand-900">4.8</div>
+                <div class="star-rating text-2xl my-2"><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star-half-alt filled"></i></div>
+                <div class="text-gray-600">${reviews.basedOn}</div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            ${reviews.items.map(r => `
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold">${r.name[0]}</div>
+                        <div>
+                            <div class="font-bold">${r.name}</div>
+                            <div class="star-rating text-sm"><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">${r.text}</p>
+                </div>`).join('')}
+        </div>`;
+}
+
+function renderStats() {
+    const container = document.getElementById('stats-content');
+    if (!container) return;
+    container.innerHTML = t('stats').map(s => `
+        <div class="space-y-2">
+            <div class="counter-number" data-target="${s.target}">0</div>
+            <p class="text-gray-600">${s.text}</p>
+        </div>`).join('');
+    counterAnimated = false;
+}
+
+function renderFooter() {
+    const container = document.getElementById('footer-content');
+    if (!container) return;
+    const footer = t('footer');
+    container.innerHTML = `
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4"><i class="fas fa-gem text-xl md:text-2xl text-brand-500"></i><span class="text-lg md:text-xl font-serif font-bold">LUX LADY</span></div>
+                <p class="text-gray-400 text-sm">${footer.tagline}</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">${footer.contactTitle}</h4>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><i class="fas fa-phone w-5 text-brand-500"></i> ${CONFIG.phone}</li>
+                    <li><i class="fas fa-envelope w-5 text-brand-500"></i> ${CONFIG.email}</li>
+                    <li><i class="fas fa-map-marker-alt w-5 text-brand-500"></i> ${localized(CONFIG.address)}</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">${footer.connectTitle}</h4>
+                <div class="flex gap-4">
+                    <a href="${CONFIG.facebook}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://zalo.me/${CONFIG.zalo}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-500 transition"><span class="text-xs font-bold">Zalo</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 text-center text-xs text-gray-500"><p>&copy; 2025 Lux Lady. All rights reserved.</p></div>`;
+}
+
+function renderBottomNav() {
+    const nav = document.getElementById('bottom-nav');
+    if (!nav) return;
+    const bn = t('bottomNav');
+    nav.innerHTML = `
+        <a href="#" class="bottom-nav-item active"><i class="fas fa-home"></i><span>${bn.home}</span></a>
+        <a href="#products-section" class="bottom-nav-item"><i class="fas fa-th-large"></i><span>${bn.products}</span></a>
+        <a href="https://zalo.me/${CONFIG.zalo}" target="_blank" class="bottom-nav-item"><i class="fas fa-comments"></i><span>${bn.chat}</span></a>
+        <a href="#contact" class="bottom-nav-item"><i class="fas fa-phone"></i><span>${bn.contact}</span></a>`;
+}
+
+function renderAll() {
+    renderTopBar();
+    renderNav();
+    renderHero();
+    renderAbout();
+    renderBadges();
+    renderNewArrivals();
+    renderCatalogSection();
+    renderCategoryTabs();
+    renderReviews();
+    renderStats();
+    renderFooter();
+    renderBottomNav();
+    updateWishlistBadge();
+}
+
+// ============================================================
+// INTERACTIONS
+// ============================================================
+function switchCatalog(catalogId) {
+    state.activeCatalog = catalogId;
+    state.activeFilters = {};
+    renderCatalogSection();
+    renderCategoryTabs();
+}
+
+function setFilter(filterId, optionId) {
+    if (optionId) state.activeFilters[filterId] = optionId;
+    else delete state.activeFilters[filterId];
+    renderCatalogSection();
+}
+
+function sortProducts() {
+    state.sort = document.getElementById('sort-select').value;
     renderNewArrivals();
 }
 
-// ===== LIGHTBOX FUNCTIONALITY =====
-function openLightbox() {
-    const mainImg = document.getElementById('modal-img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    lightboxImg.src = mainImg.src;
-    lightbox.classList.add('active');
+function toggleNewProducts() {
+    state.showAllNew = !state.showAllNew;
+    renderNewArrivals();
 }
 
-function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('active');
-}
-
-// ===== SCROLL PROGRESS BAR =====
-window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    document.getElementById('scroll-progress').style.width = scrolled + '%';
-
-    // Back to top button
-    const backToTop = document.getElementById('back-to-top');
-    if (winScroll > 300) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
-    }
-});
-
-// ===== BACK TO TOP =====
-document.addEventListener('DOMContentLoaded', () => {
-    const backToTopBtn = document.getElementById('back-to-top');
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-});
-
-// ===== CATEGORY TABS =====
-function initCategoryTabs() {
-    const container = document.getElementById('category-tabs-container');
-    if (container) {
-        container.innerHTML = categories.map(cat => `
-            <a href="#section-${cat.id}" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-brand-500 hover:border-b-2 hover:border-brand-500 transition whitespace-nowrap" onclick="scrollToSection('${cat.id}', event)">
-                ${cat.name}
-            </a>
-        `).join('');
-    }
-}
-
-// Scroll to section with offset for sticky header
-function scrollToSection(sectionId, event) {
-    if (event) event.preventDefault();
-    const section = document.getElementById(`section-${sectionId}`);
-    if (section) {
-        const headerHeight = 180; // Height of sticky header + tabs
-        const sectionTop = section.offsetTop - headerHeight;
-        window.scrollTo({
-            top: sectionTop,
-            behavior: 'smooth'
-        });
-    }
-}
-
-// ===== BOTTOM NAV ACTIVE STATE =====
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.bottom-nav-item').forEach(item => {
-        item.addEventListener('click', function (e) {
-            if (!this.href.includes('zalo.me')) {
-                document.querySelectorAll('.bottom-nav-item').forEach(i => i.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
-});
-
-// ===== MODAL POPUP LOGIC =====
 function openModal(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
+    const cat = getCatalog(product.catalogId);
 
-    // Fill Data
-    document.getElementById('modal-name').innerText = product.name;
-    document.getElementById('modal-category').innerText = categories.find(c => c.id === product.categoryId)?.name || 'Sản phẩm';
-    document.getElementById('modal-price').innerText = formatCurrency(product.price);
-    document.getElementById('modal-code').innerText = product.code;
-    document.getElementById('modal-desc').innerText = product.description || "Đang cập nhật...";
+    document.getElementById('modal-category').innerText = cat ? localized(cat.name) : '';
+    document.getElementById('modal-name').innerText = localized(product.name);
+    document.getElementById('modal-code-label').innerText = t('products.productCode');
+    document.getElementById('modal-code-value').innerText = product.code;
+    document.getElementById('modal-status-label').innerText = t('products.status');
+    document.getElementById('modal-desc-label').innerText = t('products.description');
+    document.getElementById('modal-desc').innerText = localized(product.description);
 
-    const statusEl = document.getElementById('modal-status');
-    if (product.inStock) {
-        statusEl.className = "text-green-600 font-medium";
-        statusEl.innerHTML = '<i class="fas fa-check-circle mr-1"></i>Còn hàng';
-    } else {
-        statusEl.className = "text-red-500 font-medium";
-        statusEl.innerHTML = '<i class="fas fa-times-circle mr-1"></i>Tạm hết hàng';
-    }
+    const statusEl = document.getElementById('modal-status-value');
+    statusEl.className = product.inStock ? "text-green-600 font-medium" : "text-red-500 font-medium";
+    statusEl.innerHTML = product.inStock
+        ? `<i class="fas fa-check-circle mr-1"></i>${t('products.inStock')}`
+        : `<i class="fas fa-times-circle mr-1"></i>${t('products.outOfStock')}`;
 
-    const linkZalo = `https://zalo.me/${contactZalo}?text=Tôi quan tâm sản phẩm ${product.name} mã ${product.code}`;
-    document.getElementById('modal-zalo-btn').href = linkZalo;
+    document.getElementById('modal-zalo-btn').href = `https://zalo.me/${CONFIG.zalo}?text=${encodeURIComponent('Tôi quan tâm sản phẩm ' + localized(product.name) + ' mã ' + product.code)}`;
+    document.getElementById('modal-zalo-text').textContent = t('products.contactZalo');
+    document.getElementById('modal-hotline-text').textContent = t('products.callHotline');
+    document.getElementById('modal-hotline-btn').href = `tel:${CONFIG.phone}`;
 
-    // Image Gallery Logic
+    // Image gallery
     const mainImg = document.getElementById('modal-img');
-    const thumbsContainer = document.getElementById('modal-thumbnails');
+    const thumbs = document.getElementById('modal-thumbnails');
     mainImg.src = product.image;
     mainImg.style.opacity = '1';
-    thumbsContainer.innerHTML = '';
+    thumbs.innerHTML = '';
 
-    const images = [product.image];
-    if (product.image1) images.push(product.image1);
-    if (product.image2) images.push(product.image2);
-    if (product.image3) images.push(product.image3);
-
-    images.forEach((imgSrc, index) => {
+    const images = [product.image, product.image1, product.image2, product.image3].filter(Boolean);
+    images.forEach((src, i) => {
         const thumb = document.createElement('img');
-        thumb.src = imgSrc;
-        thumb.className = `w-12 h-12 md:w-16 md:h-16 object-cover cursor-pointer border-2 border-transparent hover:border-brand-500 rounded-md transition duration-200 flex-shrink-0 ${index === 0 ? 'thumb-active' : 'opacity-60 hover:opacity-100'}`;
+        thumb.src = src;
+        thumb.className = `w-12 h-12 md:w-16 md:h-16 object-cover cursor-pointer border-2 border-transparent hover:border-brand-500 rounded-md transition duration-200 flex-shrink-0 ${i === 0 ? 'thumb-active' : 'opacity-60 hover:opacity-100'}`;
         thumb.onclick = () => {
             mainImg.style.opacity = '0.5';
-            setTimeout(() => {
-                mainImg.src = imgSrc;
-                mainImg.style.opacity = '1';
-            }, 100);
-            Array.from(thumbsContainer.children).forEach(c => c.classList.remove('thumb-active'));
+            setTimeout(() => { mainImg.src = src; mainImg.style.opacity = '1'; }, 100);
+            Array.from(thumbs.children).forEach(c => c.classList.remove('thumb-active'));
             thumb.classList.add('thumb-active');
         };
-        thumbsContainer.appendChild(thumb);
+        thumbs.appendChild(thumb);
     });
+
+    // Related
+    const modalContent = document.querySelector('.modal-content');
+    modalContent.querySelector('.related-section')?.remove();
+    const related = products
+        .filter(p => p.catalogId === product.catalogId && p.id !== product.id)
+        .filter(p => Object.entries(product.tags).some(([k, v]) => p.tags[k] === v))
+        .slice(0, 4);
+    if (related.length > 0) {
+        modalContent.insertAdjacentHTML('beforeend', `
+            <div class="mt-6 pt-6 border-t related-section">
+                <h4 class="font-bold text-base mb-4">${t('products.related')}</h4>
+                <div class="related-products-scroll">
+                    ${related.map(p => `
+                        <div class="min-w-[120px] cursor-pointer" onclick="openModal(${p.id})">
+                            <img src="${p.image}" class="w-full aspect-square object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="text-xs font-medium line-clamp-2">${localized(p.name)}</p>
+                        </div>`).join('')}
+                </div>
+            </div>`);
+    }
 
     document.getElementById('product-modal').classList.remove('hidden');
 }
 
-function closeModal() {
-    document.getElementById('product-modal').classList.add('hidden');
-}
+function closeModal() { document.getElementById('product-modal').classList.add('hidden'); }
+function toggleFullscreen() { document.querySelector('#product-modal > div:last-child').classList.toggle('modal-fullscreen'); }
+function openLightbox() { document.getElementById('lightbox-img').src = document.getElementById('modal-img').src; document.getElementById('lightbox').classList.add('active'); }
+function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
 
-// ===== RENDER UI LOGIC =====
-const createProductCard = (product, isHidden = false) => {
-    const isWishlisted = wishlist.includes(product.id);
-    return `
-        <article class="product-card group bg-white rounded-lg shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full animate-fade-in relative ${isHidden ? 'hidden' : ''}">
-            <!-- Wishlist Button -->
-            <button onclick="toggleWishlist(${product.id}, event)" class="wishlist-btn ${isWishlisted ? 'active' : ''}">
-                <i class="fas fa-heart"></i>
-            </button>
-            
-            <!-- Product Image -->
-            <div class="relative overflow-hidden aspect-square cursor-pointer" onclick="openModal(${product.id})">
-                <img src="${product.image}" alt="${product.name}" class="product-img w-full h-full object-cover">
-                ${product.isNew ? '<span class="absolute top-2 left-2 bg-brand-500 text-white text-[8px] md:text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded-sm">New</span>' : ''}
-            </div>
-            
-            <!-- Product Info -->
-            <div class="p-3 md:p-4 flex flex-col flex-grow text-center">
-                <h3 class="font-serif font-bold text-gray-800 text-xs md:text-lg mb-1 md:mb-2 line-clamp-2 hover:text-brand-500 transition cursor-pointer" onclick="openModal(${product.id})">${product.name}</h3>
-                <div class="mt-auto">
-                    <p class="text-brand-800 font-bold text-sm md:text-lg mb-2">${formatCurrency(product.price)}</p>
-                    
-                    <!-- Action Buttons -->
-                    <div class="flex gap-2 mt-2">
-                        <button onclick="openModal(${product.id})" class="flex-1 bg-brand-500 text-white py-2 px-3 rounded-lg text-xs hover:bg-brand-600 transition ripple">
-                            Xem chi tiết
-                        </button>
-                        <button onclick="shareProduct(${product.id}, event)" class="bg-gray-100 text-gray-700 py-2 px-3 rounded-lg text-xs hover:bg-gray-200 transition">
-                            <i class="fas fa-share-alt"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </article>
-    `;
-};
-
-// Render New Arrivals
-function renderNewArrivals() {
-    const container = document.getElementById('new-products-grid');
-    const btn = document.getElementById('load-more-new-btn');
-    const limit = isShowingAllNew ? filteredProducts.length : 4;
-
-    container.innerHTML = filteredProducts.map((p, index) => createProductCard(p, index >= limit)).join('');
-
-    // Hide button if few products
-    if (filteredProducts.length <= 4) btn.classList.add('hidden');
-    else btn.classList.remove('hidden');
-
-    btn.innerText = isShowingAllNew ? "Thu gọn" : "Xem tất cả sản phẩm mới";
-}
-
-function toggleNewProducts() {
-    isShowingAllNew = !isShowingAllNew;
-    renderNewArrivals();
-}
-
-// Render Collections
-function renderCollections() {
-    const container = document.getElementById('dynamic-categories-container');
-    container.innerHTML = '';
-
-    categories.forEach(cate => {
-        const cateProducts = products.filter(p => p.categoryId === cate.id);
-        if (cateProducts.length === 0) return;
-
-        const sectionId = `section-${cate.id}`;
-        const gridId = `grid-${cate.id}`;
-        const btnId = `btn-${cate.id}`;
-        const displayCount = window.innerWidth < 768 ? 4 : 5;
-        const initialHTML = cateProducts.map((p, idx) => createProductCard(p, idx >= displayCount)).join('');
-        const showButton = cateProducts.length > displayCount;
-
-        const sectionHTML = `
-            <section class="py-8 md:py-12 container mx-auto px-4 border-b last:border-0" id="${sectionId}">
-                <div class="flex items-center justify-between mb-4 md:mb-8">
-                    <div>
-                        <h3 class="text-xl md:text-3xl font-serif font-bold text-brand-900">${cate.name}</h3>
-                        <div class="h-1 w-8 md:w-12 bg-brand-500 mt-2"></div>
-                    </div>
-                </div>
-                <div id="${gridId}" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6 transition-all">
-                    ${initialHTML}
-                </div>
-                ${showButton ? `
-                    <div class="text-center mt-6 md:mt-8">
-                        <button id="${btnId}" onclick="toggleCategory('${cate.id}')" class="text-brand-800 text-xs md:text-base font-medium hover:text-brand-500 transition border-b border-brand-800 pb-1">
-                            Xem tất cả <i class="fas fa-chevron-down ml-1"></i>
-                        </button>
-                    </div>
-                ` : ''}
-            </section>
-        `;
-        container.innerHTML += sectionHTML;
-    });
-}
-
-function toggleCategory(cateId) {
-    const grid = document.getElementById(`grid-${cateId}`);
-    const btn = document.getElementById(`btn-${cateId}`);
-    const cards = grid.children;
-    let isExpanded = btn.getAttribute('data-expanded') === 'true';
-    const displayCount = window.innerWidth < 768 ? 4 : 5;
-
-    if (!isExpanded) {
-        for (let card of cards) card.classList.remove('hidden');
-        btn.innerHTML = `Thu gọn <i class="fas fa-chevron-up ml-1"></i>`;
-        btn.setAttribute('data-expanded', 'true');
-    } else {
-        for (let i = 0; i < cards.length; i++) {
-            if (i >= displayCount) cards[i].classList.add('hidden');
-        }
-        btn.innerHTML = `Xem tất cả <i class="fas fa-chevron-down ml-1"></i>`;
-        btn.setAttribute('data-expanded', 'false');
-        document.getElementById(`section-${cateId}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-
-// ===== INIT ON PAGE LOAD =====
-document.addEventListener('DOMContentLoaded', () => {
-    renderNewArrivals();
-    renderCollections();
-    initSearch();
-    initCategoryTabs();
-    
-    // Fix scroll offset for all anchor links
-    document.querySelectorAll('a[href^="#section-"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const sectionId = this.getAttribute('href').replace('#section-', '');
-            scrollToSection(sectionId);
+function initSearch() {
+    document.querySelectorAll('.search-input').forEach(input => {
+        const results = input.closest('.search-container').querySelector('.search-results');
+        if (!input || !results) return;
+        input.addEventListener('input', (e) => {
+            const q = e.target.value.toLowerCase().trim();
+            if (q.length < 2) { results.classList.add('hidden'); return; }
+            const found = products.filter(p => localized(p.name).toLowerCase().includes(q) || p.code.toLowerCase().includes(q));
+            results.innerHTML = found.length > 0
+                ? found.slice(0, 5).map(p => `
+                    <div class="search-result-item flex gap-3" onclick="openModal(${p.id}); this.closest('.search-container').querySelector('.search-input').value=''; this.closest('.search-results').classList.add('hidden');">
+                        <img src="${p.image}" alt="${localized(p.name)}" class="w-12 h-12 object-cover rounded">
+                        <div class="flex-1"><p class="font-medium text-sm">${localized(p.name)}</p><p class="text-xs text-gray-500">${p.code}</p></div>
+                    </div>`).join('')
+                : `<div class="p-4 text-center text-gray-500 text-sm">${t('products.noResult')}</div>`;
+            results.classList.remove('hidden');
         });
-    });
-    
-    // Fix scroll offset for collections link
-    document.querySelectorAll('a[href="#collections-section"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const section = document.getElementById('collections-section');
-            if (section) {
-                const headerHeight = 180;
-                const sectionTop = section.offsetTop - headerHeight;
-                window.scrollTo({
-                    top: sectionTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
-// Re-render on resize
-window.addEventListener('resize', () => {
-    clearTimeout(window.resizedFinished);
-    window.resizedFinished = setTimeout(() => {
-        renderCollections();
-    }, 250);
-});
-
-// Toggle Mobile Menu
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
-});
-
-
-// ===== MỤC 9: MICRO-INTERACTIONS =====
-
-// Toast Notifications
-function showToast(message, type = 'success') {
-    const container = document.getElementById('toast-container');
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
-    
-    const icon = type === 'success' ? 'check-circle' : type === 'error' ? 'times-circle' : 'info-circle';
-    const color = type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6';
-    
-    toast.innerHTML = `
-        <i class="fas fa-${icon}" style="color: ${color}; font-size: 20px;"></i>
-        <span class="flex-1">${message}</span>
-        <button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-gray-600">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="toast-progress" style="color: ${color}"></div>
-    `;
-    
-    container.appendChild(toast);
-    
-    setTimeout(() => {
-        toast.style.animation = 'slideInRight 0.3s ease-out reverse';
-        setTimeout(() => toast.remove(), 300);
-    }, 3000);
-}
-
-// Animated Counter
-function animateCounter() {
-    const counters = document.querySelectorAll('.counter-number');
-    const speed = 200;
-    
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const increment = target / speed;
-        
-        const updateCount = () => {
-            const count = +counter.innerText;
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 1);
-            } else {
-                counter.innerText = target;
-            }
-        };
-        
-        updateCount();
+        document.addEventListener('click', (e) => { if (!input.contains(e.target) && !results.contains(e.target)) results.classList.add('hidden'); });
     });
 }
 
-// Trigger counter animation when scrolling into view
-let counterAnimated = false;
-window.addEventListener('scroll', () => {
-    if (!counterAnimated) {
-        const counters = document.querySelector('.counter-number');
-        if (counters) {
-            const rect = counters.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                animateCounter();
-                counterAnimated = true;
-            }
-        }
-    }
-});
-
-// ===== MỤC 7: INTERACTIVE ELEMENTS =====
-
-// Wishlist Management
-let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
-
-function toggleWishlist(productId, event) {
+// Wishlist
+function toggleWishlist(id, event) {
     event.stopPropagation();
-    
-    const index = wishlist.indexOf(productId);
-    if (index > -1) {
-        wishlist.splice(index, 1);
-        showToast('Đã xóa khỏi danh sách yêu thích', 'info');
-    } else {
-        wishlist.push(productId);
-        showToast('Đã thêm vào danh sách yêu thích', 'success');
-    }
-    
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    const idx = state.wishlist.indexOf(id);
+    if (idx > -1) { state.wishlist.splice(idx, 1); showToast(t('wishlist.removed'), 'info'); }
+    else { state.wishlist.push(id); showToast(t('wishlist.added'), 'success'); }
+    localStorage.setItem('wishlist', JSON.stringify(state.wishlist));
     updateWishlistBadge();
     renderNewArrivals();
-    renderCollections();
+    renderCatalogSection();
 }
 
 function updateWishlistBadge() {
     const badge = document.getElementById('wishlist-badge');
-    if (wishlist.length > 0) {
-        badge.textContent = wishlist.length;
-        badge.classList.remove('hidden');
-    } else {
-        badge.classList.add('hidden');
-    }
+    badge.textContent = state.wishlist.length;
+    badge.classList.toggle('hidden', state.wishlist.length === 0);
 }
 
-// Open Wishlist Modal
-document.getElementById('wishlist-toggle')?.addEventListener('click', () => {
-    const modal = document.getElementById('wishlist-modal');
+function openWishlistModal() {
     const content = document.getElementById('wishlist-content');
-    
-    if (wishlist.length === 0) {
-        content.innerHTML = `
-            <div class="text-center py-12">
-                <i class="fas fa-heart text-6xl text-gray-300 mb-4"></i>
-                <p class="text-gray-600">Chưa có sản phẩm yêu thích</p>
-            </div>
-        `;
+    document.getElementById('wishlist-title').textContent = t('wishlist.title');
+    if (state.wishlist.length === 0) {
+        content.innerHTML = `<div class="text-center py-12"><i class="fas fa-heart text-6xl text-gray-300 mb-4"></i><p class="text-gray-600">${t('wishlist.empty')}</p></div>`;
     } else {
-        const wishlistProducts = products.filter(p => wishlist.includes(p.id));
-        content.innerHTML = `
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                ${wishlistProducts.map(p => `
-                    <div class="border rounded-lg overflow-hidden">
-                        <img src="${p.image}" alt="${p.name}" class="w-full aspect-square object-cover cursor-pointer" onclick="openModal(${p.id}); closeWishlistModal();">
-                        <div class="p-3">
-                            <h4 class="font-bold text-sm mb-1">${p.name}</h4>
-                            <p class="text-brand-500 font-bold text-sm">${formatCurrency(p.price)}</p>
-                            <button onclick="toggleWishlist(${p.id}, event); document.getElementById('wishlist-toggle').click(); document.getElementById('wishlist-toggle').click();" class="mt-2 w-full text-red-500 border border-red-500 py-1 rounded text-xs hover:bg-red-50 transition">
-                                Xóa
-                            </button>
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-        `;
+        const items = products.filter(p => state.wishlist.includes(p.id));
+        content.innerHTML = `<div class="grid grid-cols-2 md:grid-cols-3 gap-4">${items.map(p => `
+            <div class="border rounded-lg overflow-hidden">
+                <img src="${p.image}" alt="${localized(p.name)}" class="w-full aspect-square object-cover cursor-pointer" onclick="openModal(${p.id}); closeWishlistModal();">
+                <div class="p-3"><h4 class="font-bold text-sm mb-2">${localized(p.name)}</h4>
+                    <button onclick="toggleWishlist(${p.id}, event); openWishlistModal();" class="w-full text-red-500 border border-red-500 py-1 rounded text-xs hover:bg-red-50 transition">${t('wishlist.remove')}</button>
+                </div>
+            </div>`).join('')}</div>`;
     }
-    
-    modal.classList.remove('hidden');
-});
-
-function closeWishlistModal() {
-    document.getElementById('wishlist-modal').classList.add('hidden');
+    document.getElementById('wishlist-modal').classList.remove('hidden');
 }
 
-// Share Product
-let currentShareProduct = null;
+function closeWishlistModal() { document.getElementById('wishlist-modal').classList.add('hidden'); }
 
-function shareProduct(productId, event) {
+// Share
+function shareProduct(id, event) {
     event.stopPropagation();
-    currentShareProduct = products.find(p => p.id === productId);
+    state.currentShareProduct = products.find(p => p.id === id);
+    document.getElementById('share-title').textContent = t('share.title');
     document.getElementById('share-modal').classList.add('active');
 }
-
-function closeShareModal() {
-    document.getElementById('share-modal').classList.remove('active');
-}
-
-function shareToFacebook() {
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-    showToast('Đang mở Facebook...', 'info');
-}
-
+function closeShareModal() { document.getElementById('share-modal').classList.remove('active'); }
+function shareToFacebook() { window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank'); }
 function shareToZalo() {
-    const text = currentShareProduct ? `Xem sản phẩm ${currentShareProduct.name} - ${formatCurrency(currentShareProduct.price)}` : '';
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://zalo.me/share?url=${url}&text=${encodeURIComponent(text)}`, '_blank');
-    showToast('Đang mở Zalo...', 'info');
+    const text = state.currentShareProduct ? `${localized(state.currentShareProduct.name)} - Lux Lady` : '';
+    window.open(`https://zalo.me/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`, '_blank');
+}
+function copyLink() { navigator.clipboard.writeText(window.location.href); showToast(t('share.copied'), 'success'); closeShareModal(); }
+
+// Toast
+function showToast(message, type = 'success') {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    const icon = type === 'success' ? 'check-circle' : type === 'error' ? 'times-circle' : 'info-circle';
+    const color = type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6';
+    toast.innerHTML = `<i class="fas fa-${icon}" style="color: ${color}; font-size: 20px;"></i><span class="flex-1">${message}</span>
+        <button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-gray-600"><i class="fas fa-times"></i></button>
+        <div class="toast-progress" style="color: ${color}"></div>`;
+    container.appendChild(toast);
+    setTimeout(() => { toast.style.animation = 'slideInRight 0.3s ease-out reverse'; setTimeout(() => toast.remove(), 300); }, 3000);
 }
 
-function copyLink() {
-    navigator.clipboard.writeText(window.location.href);
-    showToast('Đã sao chép link!', 'success');
-    closeShareModal();
+// Counter
+let counterAnimated = false;
+function animateCounter() {
+    document.querySelectorAll('.counter-number').forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const inc = target / 200;
+        const update = () => { const c = +counter.innerText; if (c < target) { counter.innerText = Math.ceil(c + inc); setTimeout(update, 1); } else counter.innerText = target; };
+        update();
+    });
 }
 
-// ===== MỤC 10: ENHANCED MODAL =====
-
-// Add Related Products to Modal
-function addRelatedProducts(currentProduct) {
-    const relatedProducts = products
-        .filter(p => p.categoryId === currentProduct.categoryId && p.id !== currentProduct.id)
-        .slice(0, 4);
-    
-    if (relatedProducts.length > 0) {
-        const relatedSection = `
-            <div class="mt-6 pt-6 border-t">
-                <h4 class="font-bold text-base mb-4">Sản phẩm liên quan</h4>
-                <div class="related-products-scroll">
-                    ${relatedProducts.map(p => `
-                        <div class="min-w-[150px] cursor-pointer" onclick="openModal(${p.id})">
-                            <img src="${p.image}" class="w-full aspect-square object-cover rounded-lg mb-2">
-                            <p class="text-xs font-medium line-clamp-2">${p.name}</p>
-                            <p class="text-sm font-bold text-brand-500">${formatCurrency(p.price)}</p>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-        return relatedSection;
+// ============================================================
+// SCROLL
+// ============================================================
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById('scroll-progress').style.width = (winScroll / height) * 100 + '%';
+    document.getElementById('back-to-top').classList.toggle('show', winScroll > 300);
+    if (!counterAnimated) {
+        const c = document.querySelector('.counter-number');
+        if (c) { const r = c.getBoundingClientRect(); if (r.top < window.innerHeight && r.bottom > 0) { animateCounter(); counterAnimated = true; } }
     }
-    return '';
-}
-
-// Update openModal to include related products and quick buy
-const originalOpenModal = openModal;
-window.openModal = function(productId) {
-    originalOpenModal(productId);
-    
-    const product = products.find(p => p.id === productId);
-    if (!product) return;
-    
-    // Add related products
-    const modalContent = document.querySelector('.modal-content');
-    const relatedHTML = addRelatedProducts(product);
-    if (relatedHTML) {
-        const existingRelated = modalContent.querySelector('.related-products-scroll');
-        if (existingRelated) {
-            existingRelated.closest('.mt-6').remove();
-        }
-        modalContent.insertAdjacentHTML('beforeend', relatedHTML);
-    }
-    
-    // Add Quick Buy section
-    const quickBuyHTML = `
-        <div class="mt-4 p-4 bg-gray-50 rounded-lg">
-            <h4 class="font-bold text-sm mb-3">Mua nhanh</h4>
-            <div class="quantity-selector mb-3">
-                <button class="quantity-btn" onclick="changeQuantity(-1)">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <span id="quantity-value" class="font-bold">1</span>
-                <button class="quantity-btn" onclick="changeQuantity(1)">
-                    <i class="fas fa-plus"></i>
-                </button>
-            </div>
-            <button onclick="quickBuy(${productId})" class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-bold">
-                <i class="fas fa-shopping-cart mr-2"></i>Mua ngay
-            </button>
-        </div>
-    `;
-    
-    const existingQuickBuy = modalContent.querySelector('.quantity-selector');
-    if (!existingQuickBuy) {
-        const actionsDiv = modalContent.querySelector('.flex.flex-col.gap-2');
-        actionsDiv.insertAdjacentHTML('beforebegin', quickBuyHTML);
-    }
-};
-
-let currentQuantity = 1;
-
-function changeQuantity(delta) {
-    currentQuantity = Math.max(1, currentQuantity + delta);
-    document.getElementById('quantity-value').textContent = currentQuantity;
-}
-
-function quickBuy(productId) {
-    const product = products.find(p => p.id === productId);
-    const message = `Tôi muốn mua ${currentQuantity} ${product.name} (${product.code}) - Tổng: ${formatCurrency(product.price * currentQuantity)}`;
-    const zaloLink = `https://zalo.me/${contactZalo}?text=${encodeURIComponent(message)}`;
-    window.open(zaloLink, '_blank');
-    showToast(`Đang chuyển đến Zalo để đặt ${currentQuantity} sản phẩm...`, 'success');
-    currentQuantity = 1;
-}
-
-// Fullscreen Modal Toggle
-function toggleFullscreen() {
-    const modal = document.querySelector('#product-modal > div');
-    modal.classList.toggle('modal-fullscreen');
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    updateWishlistBadge();
 });
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+    renderAll();
+    initSearch();
+    document.getElementById('back-to-top')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => document.getElementById('mobile-menu')?.classList.toggle('hidden'));
+    document.addEventListener('click', (e) => {
+        const item = e.target.closest('.bottom-nav-item');
+        if (item && !item.href?.includes('zalo.me')) { document.querySelectorAll('.bottom-nav-item').forEach(i => i.classList.remove('active')); item.classList.add('active'); }
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+            const el = document.getElementById(this.getAttribute('href').slice(1));
+            if (el) { e.preventDefault(); window.scrollTo({ top: el.offsetTop - 160, behavior: 'smooth' }); }
+        });
+    });
+    document.getElementById('wishlist-toggle')?.addEventListener('click', openWishlistModal);
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+});
+
+let resizeTimer;
+window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(renderCatalogSection, 250); });
