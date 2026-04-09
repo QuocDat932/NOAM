@@ -1164,7 +1164,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.getElementById('wishlist-toggle')?.addEventListener('click', openWishlistModal);
     document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+    initScrollSpy();
 });
 
 let resizeTimer;
 window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(renderCatalogSection, 250); });
+
+// ===== SCROLL SPY – Highlight active nav on scroll =====
+function initScrollSpy() {
+    const sections = [
+        { id: null, href: '#' },                    // Trang chủ (top)
+        { id: 'about-wrapper', href: '#about-wrapper' },
+        { id: 'brand-story', href: '#brand-story' },
+        { id: 'products-section', href: '#products-section' },
+        { id: 'contact', href: '#contact' },
+    ];
+
+    const setActive = (activeHref) => {
+        // Desktop nav
+        document.querySelectorAll('header nav a').forEach(a => {
+            a.classList.remove('text-brand-500');
+            if (a.getAttribute('href') === activeHref) {
+                a.classList.add('text-brand-500');
+            }
+        });
+        // Bottom nav (mobile)
+        document.querySelectorAll('.bottom-nav-item').forEach(a => {
+            a.classList.remove('active');
+            const href = a.getAttribute('href');
+            if (href === activeHref) a.classList.add('active');
+            // Map: brand-story & about → home; products-section → products
+            if (activeHref === '#' && href === '#') a.classList.add('active');
+            if (activeHref === '#products-section' && href === '#products-section') a.classList.add('active');
+            if (activeHref === '#contact' && href === '#contact') a.classList.add('active');
+        });
+    };
+
+    const onScroll = () => {
+        const scrollY = window.scrollY + 200; // offset for sticky header
+
+        // Traverse sections bottom-up to find the current one
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const sec = sections[i];
+            if (!sec.id) {
+                // Home — fallback if no other section matched
+                setActive(sec.href);
+                return;
+            }
+            const el = document.getElementById(sec.id);
+            if (el && el.offsetTop <= scrollY) {
+                setActive(sec.href);
+                return;
+            }
+        }
+        setActive('#'); // default: home
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // run once on init
+}
