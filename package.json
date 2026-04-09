@@ -1,0 +1,9 @@
+{
+  "name": "noam-website",
+  "version": "1.0.0",
+  "description": "NOAM – Shine your Bright",
+  "scripts": {
+    "dev": "npx serve -l 3000",
+    "start": "npx serve -l 3000"
+  }
+}

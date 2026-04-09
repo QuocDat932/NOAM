@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lux Lady – Trang sức cao cấp</title>
+    <title>NOAM – Shine your Bright</title>
+    <link rel="icon" type="image/jpeg" href="./Img/logo/logo-img.jpg">
 
     <!-- SEO -->
-    <meta name="description" content="Lux Lady - Chuyên cung cấp trang sức cao cấp và phụ kiện thời trang. Thiết kế tinh xảo, chất lượng vượt trội.">
-    <meta name="keywords" content="trang sức, nhẫn kim cương, dây chuyền vàng, túi xách, Lux Lady">
-    <meta name="author" content="Lux Lady">
-    <meta property="og:title" content="Lux Lady - Trang Sức Cao Cấp">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1000">
+    <meta name="description" content="NOAM – Shine your Bright. Trang sức cao cấp & phụ kiện thủ công tinh xảo.">
+    <meta name="keywords" content="NOAM, trang sức, túi xách thủ công, ngọc trai, đá quý, bạc, sợi cọ, sợi cỏ">
+    <meta name="author" content="NOAM">
+    <meta property="og:title" content="NOAM – Shine your Bright">
+    <meta property="og:image" content="./Img/logo/logo-f.jpg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,6 +47,14 @@
 
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Poster / Splash Screen -->
+    <div id="poster-splash" class="poster-splash">
+        <img src="./Img/poster/poster01.png" alt="NOAM - noam.vn" class="poster-img">
+        <button id="poster-close" class="poster-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
@@ -68,12 +77,8 @@
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-40">
         <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-4">
-            <a href="#" class="flex items-center gap-2 group">
-                <i class="fas fa-gem text-2xl md:text-3xl text-brand-800 group-hover:text-brand-500 transition"></i>
-                <div>
-                    <h1 class="text-lg md:text-2xl font-serif font-bold text-brand-900 tracking-wider">LUX LADY</h1>
-                    <p class="text-[8px] md:text-[10px] tracking-[0.2em] text-gray-500 uppercase">Luxury Jewelry</p>
-                </div>
+            <a href="#" class="flex items-center group">
+                <img src="./Img/logo/logo-f.jpg" alt="NOAM - Shine your Bright" class="h-10 md:h-14 w-auto rounded">
             </a>
 
             <!-- Search (Desktop) -->
@@ -88,6 +93,7 @@
             <nav class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
                 <a href="#" class="hover:text-brand-800 transition text-brand-500" data-i18n="nav.home">Trang chủ</a>
                 <a href="#about-wrapper" class="hover:text-brand-800 transition" data-i18n="nav.about">Giới thiệu</a>
+                <a href="#brand-story" class="hover:text-brand-800 transition" data-i18n="nav.brandStory">Câu chuyện</a>
                 <a href="#products-section" class="hover:text-brand-800 transition" data-i18n="nav.products">Sản phẩm</a>
                 <a href="#contact" class="hover:text-brand-800 transition" data-i18n="nav.contact">Liên hệ</a>
             </nav>
@@ -108,6 +114,7 @@
             <nav class="flex flex-col space-y-3 font-medium text-sm uppercase">
                 <a href="#" class="block py-2 text-brand-500 border-b border-gray-100" data-i18n="nav.home">Trang chủ</a>
                 <a href="#about-wrapper" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.about">Giới thiệu</a>
+                <a href="#brand-story" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.brandStory">Câu chuyện</a>
                 <a href="#products-section" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.products">Sản phẩm</a>
                 <a href="#contact" class="block py-2 hover:bg-gray-50" data-i18n="nav.contact">Liên hệ</a>
             </nav>
@@ -138,6 +145,11 @@
     <!-- About / Giới thiệu -->
     <section id="about-wrapper" class="py-12 md:py-16 bg-gray-50">
         <div id="about-section"></div>
+    </section>
+
+    <!-- Brand Story / Câu chuyện thương hiệu -->
+    <section id="brand-story" class="py-16 md:py-24 bg-white overflow-hidden">
+        <div id="brand-story-content" class="container mx-auto px-4"></div>
     </section>
 
     <!-- New Arrivals -->

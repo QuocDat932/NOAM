@@ -1,5 +1,5 @@
 // ============================================================
-// LUX LADY - Main Application
+// NOAM - Shine your Bright - Main Application
 // Cấu trúc: CONFIG → I18N → CATALOG → PRODUCTS → STATE → FUNCTIONS → INIT
 // Chỉ cần chỉnh sửa các section CONFIG/CATALOG/PRODUCTS để update nội dung
 // ============================================================
@@ -8,7 +8,7 @@
 const CONFIG = {
     zalo: '0382539292',
     phone: '0382539292',
-    email: 'contact@luxlady.vn',
+    email: 'contact@noam.vn',
     facebook: 'https://www.facebook.com/lux.lady.68',
     address: { vi: '123 Đường Lê Lợi, TP.HCM', en: '123 Le Loi Street, HCMC' },
     defaultLang: 'vi',
@@ -18,7 +18,7 @@ const CONFIG = {
 // ===== I18N (Translations) =====
 const i18n = {
     vi: {
-        nav: { home: 'Trang chủ', about: 'Giới thiệu', products: 'Sản phẩm', contact: 'Liên hệ' },
+        nav: { home: 'Trang chủ', about: 'Giới thiệu', brandStory: 'Câu chuyện', products: 'Sản phẩm', contact: 'Liên hệ' },
         hero: {
             subtitle: 'Bộ sưu tập 2025',
             title: 'Vẻ Đẹp Vĩnh Cửu<br>Của Thời Gian',
@@ -26,8 +26,8 @@ const i18n = {
         },
         about: {
             sectionLabel: 'Về chúng tôi',
-            sectionTitle: 'Lux Lady',
-            intro: 'Lux Lady là thương hiệu chuyên cung cấp trang sức cao cấp và phụ kiện thời trang được chế tác tinh xảo. Chúng tôi mang đến những sản phẩm chất lượng, kết hợp giữa nghệ thuật truyền thống và xu hướng hiện đại.',
+            sectionTitle: 'NOAM',
+            intro: 'NOAM là thương hiệu chuyên cung cấp trang sức cao cấp và phụ kiện thời trang được chế tác tinh xảo. Chúng tôi mang đến những sản phẩm chất lượng, kết hợp giữa nghệ thuật truyền thống và xu hướng hiện đại.',
             visionTitle: 'Tầm nhìn',
             visionText: 'Trở thành thương hiệu trang sức & phụ kiện được yêu thích hàng đầu, nơi mỗi sản phẩm đều mang một câu chuyện và giá trị riêng biệt.',
             services: [
@@ -35,6 +35,42 @@ const i18n = {
                 { icon: 'fa-bag-shopping', title: 'Phụ kiện thời trang', desc: 'Túi xách, ví và balo từ chất liệu thiên nhiên độc đáo.' },
                 { icon: 'fa-hand-sparkles', title: 'Thiết kế riêng', desc: 'Nhận thiết kế theo yêu cầu, tạo nên sản phẩm độc bản cho bạn.' },
             ],
+        },
+        brandStory: {
+            sectionLabel: 'Brand Story',
+            sectionTitle: 'Câu Chuyện Thương Hiệu',
+            nameOrigin: {
+                title: 'NOAM – נועם',
+                subtitle: 'Một cái tên trong tiếng Hebrew mang ý nghĩa tinh tế',
+                meaning: 'Pleasant · Delight · Grace',
+                desc: 'Sự dịu dàng, thanh nhã, duyên dáng — một năng lượng rất đẹp: dịu dàng, an yên, nhưng vẫn đầy chiều sâu.',
+            },
+            acronym: {
+                title: 'N · O · A · M',
+                items: [
+                    { letter: 'N', word: 'Nature', desc: 'Thiên nhiên' },
+                    { letter: 'O', word: 'Origin', desc: 'Nguyên bản' },
+                    { letter: 'A', word: 'Art', desc: 'Nghệ thuật' },
+                    { letter: 'M', word: 'Making', desc: 'Thủ công' },
+                ],
+            },
+            story: {
+                title: 'Câu Chuyện Của Chúng Tôi',
+                paragraphs: [
+                    'Trong thế giới của những sản phẩm thủ công, mỗi chất liệu đều mang trong mình một câu chuyện của thời gian.',
+                    'NOAM Handmade được sinh ra từ niềm tin rằng: một món đồ không chỉ để sử dụng hay làm đẹp, mà còn là một tác phẩm nghệ thuật mang linh hồn của người chế tác.',
+                    'Từ những viên đá quý, sợi cọ, tấm da hay chất liệu thô mộc, qua đôi tay của những người nghệ nhân, từng chi tiết được tạo nên bằng sự tỉ mỉ, kiên nhẫn và tình yêu dành cho nghề. Mỗi sản phẩm của NOAM — dù là trang sức hay túi xách — đều chứa đựng một hành trình sáng tạo riêng biệt.',
+                    'Đó không chỉ là thiết kế, mà là sự giao thoa của ánh sáng, chất liệu, văn hóa và cảm xúc.',
+                ],
+            },
+            values: [
+                { icon: 'fa-leaf', title: 'Vẻ đẹp nguyên bản', desc: 'Tôn vinh vẻ đẹp tự nhiên của chất liệu' },
+                { icon: 'fa-hands', title: 'Nghệ thuật thủ công', desc: 'Chế tác bởi nghệ nhân Việt Nam' },
+                { icon: 'fa-fingerprint', title: 'Cá tính riêng', desc: 'Mỗi sản phẩm là một dấu ấn khác biệt' },
+            ],
+            belief: 'Giá trị đích thực của một sản phẩm không nằm ở sự phô bày, mà ở cảm xúc nó khơi gợi và dấu ấn mà nó để lại.',
+            slogan: 'Shine your Bright',
+            sloganDesc: 'Tỏa sáng theo cách rất riêng của bạn.',
         },
         badges: [
             { icon: 'fa-medal', text: 'Chất lượng Vàng' },
@@ -96,7 +132,7 @@ const i18n = {
         bottomNav: { home: 'Trang chủ', products: 'Sản phẩm', chat: 'Chat', contact: 'Liên hệ' },
     },
     en: {
-        nav: { home: 'Home', about: 'About', products: 'Products', contact: 'Contact' },
+        nav: { home: 'Home', about: 'About', brandStory: 'Our Story', products: 'Products', contact: 'Contact' },
         hero: {
             subtitle: 'Collection 2025',
             title: 'Timeless Elegance<br>Beyond Beauty',
@@ -104,8 +140,8 @@ const i18n = {
         },
         about: {
             sectionLabel: 'About Us',
-            sectionTitle: 'Lux Lady',
-            intro: 'Lux Lady is a premium brand specializing in fine jewelry and fashion accessories, meticulously crafted. We bring quality products that blend traditional artistry with modern trends.',
+            sectionTitle: 'NOAM',
+            intro: 'NOAM is a premium brand specializing in fine jewelry and fashion accessories, meticulously crafted. We bring quality products that blend traditional artistry with modern trends.',
             visionTitle: 'Vision',
             visionText: 'To become the most beloved jewelry & accessories brand, where every product carries its own story and unique value.',
             services: [
@@ -113,6 +149,42 @@ const i18n = {
                 { icon: 'fa-bag-shopping', title: 'Fashion Accessories', desc: 'Handbags, wallets, and backpacks from unique natural materials.' },
                 { icon: 'fa-hand-sparkles', title: 'Custom Design', desc: 'Bespoke designs to create one-of-a-kind products just for you.' },
             ],
+        },
+        brandStory: {
+            sectionLabel: 'Brand Story',
+            sectionTitle: 'Our Brand Story',
+            nameOrigin: {
+                title: 'NOAM – נועם',
+                subtitle: 'A Hebrew name with a beautiful and delicate meaning',
+                meaning: 'Pleasant · Delight · Grace',
+                desc: 'Gentleness, elegance, charm — a beautiful energy: tender, serene, yet full of depth.',
+            },
+            acronym: {
+                title: 'N · O · A · M',
+                items: [
+                    { letter: 'N', word: 'Nature', desc: 'Natural materials' },
+                    { letter: 'O', word: 'Origin', desc: 'Authentic origin' },
+                    { letter: 'A', word: 'Art', desc: 'Artistic craft' },
+                    { letter: 'M', word: 'Making', desc: 'Handmade' },
+                ],
+            },
+            story: {
+                title: 'Our Story',
+                paragraphs: [
+                    'In the world of handmade products, every material carries within it a story of time.',
+                    'NOAM Handmade was born from the belief that an item is not just for use or beauty, but is also a work of art carrying the soul of its maker.',
+                    'From precious gemstones, palm fibers, leather to raw materials — through the hands of artisans, every detail is crafted with meticulous care, patience, and love for the craft. Each NOAM product — whether jewelry or handbag — holds a unique creative journey.',
+                    'It is not just design, but an intersection of light, material, culture, and emotion.',
+                ],
+            },
+            values: [
+                { icon: 'fa-leaf', title: 'Natural Beauty', desc: 'Celebrating the authentic beauty of materials' },
+                { icon: 'fa-hands', title: 'Artisan Craft', desc: 'Handcrafted by Vietnamese artisans' },
+                { icon: 'fa-fingerprint', title: 'Unique Identity', desc: 'Each product is a distinctive signature' },
+            ],
+            belief: 'The true value of a product lies not in display, but in the emotions it evokes and the impression it leaves behind.',
+            slogan: 'Shine your Bright',
+            sloganDesc: 'Shine in your own unique way.',
         },
         badges: [
             { icon: 'fa-medal', text: 'Gold Quality' },
@@ -604,6 +676,74 @@ function renderAbout() {
         </div>`;
 }
 
+function renderBrandStory() {
+    const container = document.getElementById('brand-story-content');
+    if (!container) return;
+    const bs = t('brandStory');
+
+    container.innerHTML = `
+        <!-- Section Header -->
+        <div class="text-center mb-12 md:mb-16">
+            <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase">${bs.sectionLabel}</span>
+            <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2">${bs.sectionTitle}</h2>
+            <div class="w-16 md:w-20 h-1 bg-brand-500 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Name Origin -->
+        <div class="max-w-3xl mx-auto text-center mb-16 md:mb-20">
+            <h3 class="text-3xl md:text-5xl font-serif font-bold text-brand-900 mb-3">${bs.nameOrigin.title}</h3>
+            <p class="text-gray-500 text-sm md:text-base mb-4">${bs.nameOrigin.subtitle}</p>
+            <p class="text-brand-500 text-lg md:text-xl font-medium italic tracking-wide mb-4">${bs.nameOrigin.meaning}</p>
+            <p class="text-gray-600 text-sm md:text-base leading-relaxed max-w-xl mx-auto">${bs.nameOrigin.desc}</p>
+        </div>
+
+        <!-- NOAM Acronym -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-20 max-w-4xl mx-auto">
+            ${bs.acronym.items.map(item => `
+                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-brand-500 hover:shadow-lg transition duration-300">
+                    <span class="text-4xl md:text-5xl font-serif font-bold text-brand-500">${item.letter}</span>
+                    <p class="text-sm md:text-base font-bold text-brand-900 mt-2">${item.word}</p>
+                    <p class="text-xs text-gray-500 mt-1">${item.desc}</p>
+                </div>
+            `).join('')}
+        </div>
+
+        <!-- Story -->
+        <div class="max-w-3xl mx-auto mb-16 md:mb-20">
+            <h3 class="text-xl md:text-2xl font-serif font-bold text-brand-900 text-center mb-8">${bs.story.title}</h3>
+            <div class="space-y-4 md:space-y-6">
+                ${bs.story.paragraphs.map((p, i) => `
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed text-justify ${i === 0 ? 'text-lg md:text-xl text-gray-700 font-light text-center italic' : ''}">${p}</p>
+                `).join('')}
+            </div>
+        </div>
+
+        <!-- Values -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20 max-w-4xl mx-auto">
+            ${bs.values.map(v => `
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas ${v.icon} text-2xl text-brand-500"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-900 mb-2">${v.title}</h4>
+                    <p class="text-gray-500 text-sm">${v.desc}</p>
+                </div>
+            `).join('')}
+        </div>
+
+        <!-- Belief Quote -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <div class="bg-brand-900 rounded-2xl p-8 md:p-12">
+                <i class="fas fa-quote-left text-brand-500 text-2xl md:text-3xl mb-4 block"></i>
+                <p class="text-white text-base md:text-lg leading-relaxed italic mb-6">${bs.belief}</p>
+                <div class="w-12 h-0.5 bg-brand-500 mx-auto mb-6"></div>
+                <p class="text-brand-gold text-2xl md:text-3xl font-serif font-bold tracking-wider">${bs.slogan}</p>
+                <p class="text-gray-400 text-sm mt-2">${bs.sloganDesc}</p>
+            </div>
+        </div>
+    `;
+}
+
 function renderBadges() {
     const container = document.getElementById('badges-section');
     if (!container) return;
@@ -725,7 +865,7 @@ function renderFooter() {
     container.innerHTML = `
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-                <div class="flex items-center gap-2 mb-4"><i class="fas fa-gem text-xl md:text-2xl text-brand-500"></i><span class="text-lg md:text-xl font-serif font-bold">LUX LADY</span></div>
+                <div class="flex items-center gap-2 mb-4"><img src="./Img/logo/logo-f.jpg" alt="NOAM" class="h-12 w-auto rounded"></div>
                 <p class="text-gray-400 text-sm">${footer.tagline}</p>
             </div>
             <div>
@@ -744,7 +884,7 @@ function renderFooter() {
                 </div>
             </div>
         </div>
-        <div class="border-t border-white/10 pt-8 text-center text-xs text-gray-500"><p>&copy; 2025 Lux Lady. All rights reserved.</p></div>`;
+        <div class="border-t border-white/10 pt-8 text-center text-xs text-gray-500"><p>&copy; 2025 NOAM. All rights reserved.</p></div>`;
 }
 
 function renderBottomNav() {
@@ -763,6 +903,7 @@ function renderAll() {
     renderNav();
     renderHero();
     renderAbout();
+    renderBrandStory();
     renderBadges();
     renderNewArrivals();
     renderCatalogSection();
@@ -943,7 +1084,7 @@ function shareProduct(id, event) {
 function closeShareModal() { document.getElementById('share-modal').classList.remove('active'); }
 function shareToFacebook() { window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank'); }
 function shareToZalo() {
-    const text = state.currentShareProduct ? `${localized(state.currentShareProduct.name)} - Lux Lady` : '';
+    const text = state.currentShareProduct ? `${localized(state.currentShareProduct.name)} - NOAM` : '';
     window.open(`https://zalo.me/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`, '_blank');
 }
 function copyLink() { navigator.clipboard.writeText(window.location.href); showToast(t('share.copied'), 'success'); closeShareModal(); }
@@ -990,7 +1131,23 @@ window.addEventListener('scroll', () => {
 // ============================================================
 // INIT
 // ============================================================
+// ===== POSTER / SPLASH SCREEN =====
+function initPoster() {
+    const poster = document.getElementById('poster-splash');
+    const closeBtn = document.getElementById('poster-close');
+    if (!poster) return;
+
+    const closePoster = () => {
+        poster.classList.add('closing');
+        setTimeout(() => poster.classList.add('hidden'), 300);
+    };
+
+    closeBtn.addEventListener('click', closePoster);
+    poster.addEventListener('click', (e) => { if (e.target === poster) closePoster(); });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initPoster();
     renderAll();
     initSearch();
     document.getElementById('back-to-top')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));

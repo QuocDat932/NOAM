@@ -1,8 +1,83 @@
-/* ===== LUX LADY - MAIN STYLES ===== */
+/* ===== NOAM - MAIN STYLES ===== */
 
 body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+}
+
+/* ===== POSTER / SPLASH SCREEN ===== */
+.poster-splash {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: posterFadeIn 0.3s ease-out;
+}
+
+.poster-splash.hidden {
+    display: none;
+}
+
+.poster-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: posterZoomIn 0.4s ease-out;
+}
+
+@media (min-width: 768px) {
+    .poster-img {
+        max-width: 70vw;
+        max-height: 85vh;
+    }
+}
+
+.poster-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.poster-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.poster-splash.closing {
+    animation: posterFadeOut 0.3s ease-in forwards;
+}
+
+@keyframes posterFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes posterZoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes posterFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 .font-serif {

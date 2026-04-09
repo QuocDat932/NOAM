@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pandoc \"C:\\\\Users\\\\User\\\\Downloads\\\\NOAM - Câu chuyện thương hiệu.docx\" -t plain --wrap=none)",
+      "Bash(python -c ':*)",
+      "Read(//c/Users/User/Downloads/**)",
+      "Bash(python -u -c ':*)"
+    ]
+  }
+}
