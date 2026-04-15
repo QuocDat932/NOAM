@@ -180,9 +180,9 @@ Xem file `tasks.md` để biết danh sách đầy đủ các tính năng cần 
 
 ## 📝 License
 
-© 2025 Lux Lady. All rights reserved.
+© 2025 Lux Lady. Design Web By SunSolution.vn
 
 ---
 
-**Phát triển bởi**: Kiro AI Assistant  
+**Phát triển bởi**: Design Web By SunSolution.vn
 **Ngày cập nhật**: 22/01/2026
