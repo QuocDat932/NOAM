@@ -6,8 +6,8 @@
 
 // ===== CONFIG =====
 const CONFIG = {
-    zalo: '0382539292',
-    phone: '0382539292',
+    zalo: '0988063617',
+    phone: '0988063617',
     email: 'contact@noam.vn',
     facebook: 'https://www.facebook.com/lux.lady.68',
     address: { vi: '123 Đường Lê Lợi, TP.HCM', en: '123 Le Loi Street, HCMC' },
@@ -18,7 +18,7 @@ const CONFIG = {
 // ===== I18N (Translations) =====
 const i18n = {
     vi: {
-        nav: { home: 'Trang chủ', about: 'Giới thiệu', brandStory: 'Câu chuyện', products: 'Sản phẩm', contact: 'Liên hệ' },
+        nav: { brandStory: 'Câu chuyện thương hiệu', products: 'Sản phẩm', knowledge: 'Kiến thức', contact: 'Liên hệ' },
         hero: {
             subtitle: 'Bộ sưu tập 2025',
             title: 'Vẻ Đẹp Vĩnh Cửu<br>Của Thời Gian',
@@ -128,11 +128,21 @@ const i18n = {
             added: 'Đã thêm vào danh sách yêu thích',
             removed: 'Đã xóa khỏi danh sách yêu thích',
         },
+        knowledge: {
+            sectionLabel: 'Knowledge',
+            sectionTitle: 'Kiến Thức',
+            comingSoon: 'Nội dung đang được cập nhật...',
+            items: [
+                { icon: 'fa-gem', title: 'Cách nhận biết đá quý thiên nhiên', desc: 'Hướng dẫn phân biệt đá quý thật và đá nhân tạo qua màu sắc, độ cứng và ánh sáng.' },
+                { icon: 'fa-ring', title: 'Bảo quản trang sức đúng cách', desc: 'Mẹo giữ cho trang sức luôn sáng bóng và bền đẹp theo thời gian.' },
+                { icon: 'fa-leaf', title: 'Chất liệu sợi cọ & sợi cỏ', desc: 'Tìm hiểu về nguồn gốc và đặc tính của các chất liệu tự nhiên trong túi xách NOAM.' },
+            ],
+        },
         share: { title: 'Chia sẻ sản phẩm', copied: 'Đã sao chép link!' },
         bottomNav: { home: 'Trang chủ', products: 'Sản phẩm', chat: 'Chat', contact: 'Liên hệ' },
     },
     en: {
-        nav: { home: 'Home', about: 'About', brandStory: 'Our Story', products: 'Products', contact: 'Contact' },
+        nav: { brandStory: 'Brand Story', products: 'Products', knowledge: 'Knowledge', contact: 'Contact' },
         hero: {
             subtitle: 'Collection 2025',
             title: 'Timeless Elegance<br>Beyond Beauty',
@@ -241,6 +251,16 @@ const i18n = {
             remove: 'Remove',
             added: 'Added to wishlist',
             removed: 'Removed from wishlist',
+        },
+        knowledge: {
+            sectionLabel: 'Knowledge',
+            sectionTitle: 'Knowledge',
+            comingSoon: 'Content is being updated...',
+            items: [
+                { icon: 'fa-gem', title: 'How to identify natural gemstones', desc: 'Guide to distinguishing real gemstones from synthetic ones by color, hardness, and light.' },
+                { icon: 'fa-ring', title: 'Proper jewelry care', desc: 'Tips to keep your jewelry always shiny and beautiful over time.' },
+                { icon: 'fa-leaf', title: 'Palm & grass fiber materials', desc: 'Learn about the origin and characteristics of natural materials in NOAM handbags.' },
+            ],
         },
         share: { title: 'Share Product', copied: 'Link copied!' },
         bottomNav: { home: 'Home', products: 'Products', chat: 'Chat', contact: 'Contact' },
@@ -615,7 +635,7 @@ function createProductCard(product, isHidden = false) {
             <div class="p-3 md:p-4 flex flex-col flex-grow text-center">
                 <h3 class="font-serif font-bold text-gray-800 text-xs md:text-lg mb-2 md:mb-3 line-clamp-2 hover:text-brand-500 transition cursor-pointer" onclick="openModal(${product.id})">${localized(product.name)}</h3>
                 <div class="mt-auto flex gap-2">
-                    <button onclick="openModal(${product.id})" class="flex-1 bg-brand-500 text-white py-2 px-3 rounded-lg text-xs hover:bg-brand-800 transition ripple">${t('products.viewDetail')}</button>
+                    <button onclick="openModal(${product.id})" class="flex-1 bg-brand-900 text-brand-gold py-2 px-3 rounded-lg text-xs hover:bg-brand-gold hover:text-brand-900 transition ripple">${t('products.viewDetail')}</button>
                     <button onclick="shareProduct(${product.id}, event)" class="bg-gray-100 text-gray-700 py-2 px-3 rounded-lg text-xs hover:bg-gray-200 transition"><i class="fas fa-share-alt"></i></button>
                 </div>
             </div>
@@ -638,10 +658,10 @@ function renderHero() {
     const hero = document.getElementById('hero-content');
     if (!hero) return;
     hero.innerHTML = `
-        <span class="uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm text-brand-100 mb-2 block">${t('hero.subtitle')}</span>
+        <span class="uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm text-brand-gold mb-2 block">${t('hero.subtitle')}</span>
         <h2 class="text-3xl md:text-6xl font-serif font-bold mb-4 md:mb-6 leading-tight">${t('hero.title')}</h2>
         <div class="flex gap-4">
-            <a href="#products-section" class="bg-white text-brand-900 px-6 py-2 md:px-8 md:py-3 font-medium hover:bg-brand-50 transition shadow-lg uppercase text-xs md:text-sm tracking-wider">${t('hero.cta')}</a>
+            <a href="#products-section" class="bg-brand-gold text-brand-900 px-6 py-2 md:px-8 md:py-3 font-bold hover:bg-brand-gold/80 transition shadow-lg uppercase text-xs md:text-sm tracking-wider">${t('hero.cta')}</a>
         </div>`;
 }
 
@@ -774,7 +794,7 @@ function renderCatalogSection() {
     tabsContainer.innerHTML = catalog.map(cat => `
         <button onclick="switchCatalog('${cat.id}')"
             class="catalog-tab px-4 md:px-6 py-2 md:py-3 text-sm font-medium rounded-full transition whitespace-nowrap flex items-center gap-2
-            ${state.activeCatalog === cat.id ? 'bg-brand-500 text-white shadow-md' : 'bg-white text-gray-700 hover:bg-brand-50 border border-gray-200'}">
+            ${state.activeCatalog === cat.id ? 'bg-brand-900 text-brand-gold shadow-md border border-brand-gold' : 'bg-white text-gray-700 hover:bg-brand-50 border border-gray-200'}">
             <i class="fas ${cat.icon}"></i> ${localized(cat.name)}
         </button>`).join('');
 
@@ -785,10 +805,10 @@ function renderCatalogSection() {
                 <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-2">${localized(filter.name)}</span>
                 <div class="flex flex-wrap gap-2">
                     <button onclick="setFilter('${filter.id}', '')"
-                        class="filter-btn px-3 py-1 text-xs rounded-full transition ${!state.activeFilters[filter.id] ? 'bg-brand-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}">${t('products.allFilter')}</button>
+                        class="filter-btn px-3 py-1 text-xs rounded-full transition ${!state.activeFilters[filter.id] ? 'bg-brand-900 text-brand-gold' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}">${t('products.allFilter')}</button>
                     ${filter.options.map(opt => `
                         <button onclick="setFilter('${filter.id}', '${opt.id}')"
-                            class="filter-btn px-3 py-1 text-xs rounded-full transition ${state.activeFilters[filter.id] === opt.id ? 'bg-brand-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}">${localized(opt.name)}</button>`).join('')}
+                            class="filter-btn px-3 py-1 text-xs rounded-full transition ${state.activeFilters[filter.id] === opt.id ? 'bg-brand-900 text-brand-gold' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}">${localized(opt.name)}</button>`).join('')}
                 </div>
             </div>`).join('');
     }
@@ -836,7 +856,7 @@ function renderReviews() {
             ${reviews.items.map(r => `
                 <div class="bg-gray-50 p-6 rounded-lg">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold">${r.name[0]}</div>
+                        <div class="w-12 h-12 bg-brand-900 rounded-full flex items-center justify-center text-brand-gold font-bold">${r.name[0]}</div>
                         <div>
                             <div class="font-bold">${r.name}</div>
                             <div class="star-rating text-sm"><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i></div>
@@ -856,6 +876,31 @@ function renderStats() {
             <p class="text-gray-600">${s.text}</p>
         </div>`).join('');
     counterAnimated = false;
+}
+
+function renderKnowledge() {
+    const container = document.getElementById('knowledge-content');
+    if (!container) return;
+    const kn = t('knowledge');
+
+    container.innerHTML = `
+        <div class="text-center mb-8 md:mb-10">
+            <span class="text-brand-gold text-xs md:text-sm font-bold tracking-widest uppercase">${kn.sectionLabel}</span>
+            <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2">${kn.sectionTitle}</h2>
+            <div class="w-16 md:w-20 h-1 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            ${kn.items.map(item => `
+                <div class="bg-white rounded-xl p-6 md:p-8 border border-gray-100 hover:shadow-lg transition duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold transition duration-300">
+                        <i class="fas ${item.icon} text-xl text-brand-gold group-hover:text-brand-900 transition duration-300"></i>
+                    </div>
+                    <h4 class="font-bold text-brand-900 mb-2 text-base md:text-lg">${item.title}</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">${item.desc}</p>
+                </div>
+            `).join('')}
+        </div>
+    `;
 }
 
 function renderFooter() {
@@ -879,8 +924,8 @@ function renderFooter() {
             <div>
                 <h4 class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">${footer.connectTitle}</h4>
                 <div class="flex gap-4">
-                    <a href="${CONFIG.facebook}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-500 transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://zalo.me/${CONFIG.zalo}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-500 transition"><span class="text-xs font-bold">Zalo</span></a>
+                    <a href="${CONFIG.facebook}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://zalo.me/${CONFIG.zalo}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><span class="text-xs font-bold">Zalo</span></a>
                 </div>
             </div>
         </div>
@@ -909,6 +954,7 @@ function renderAll() {
     renderCatalogSection();
     renderCategoryTabs();
     renderReviews();
+    renderKnowledge();
     renderStats();
     renderFooter();
     renderBottomNav();
@@ -959,6 +1005,24 @@ function openModal(productId) {
     statusEl.innerHTML = product.inStock
         ? `<i class="fas fa-check-circle mr-1"></i>${t('products.inStock')}`
         : `<i class="fas fa-times-circle mr-1"></i>${t('products.outOfStock')}`;
+
+    // Show product tags (material/type) in modal detail
+    const tagsContainer = document.getElementById('modal-tags');
+    if (tagsContainer && cat) {
+        const tagLabels = [];
+        Object.entries(product.tags).forEach(([filterId, optionId]) => {
+            const filter = cat.filters.find(f => f.id === filterId);
+            if (filter) {
+                const option = filter.options.find(o => o.id === optionId);
+                if (option) tagLabels.push({ filterName: localized(filter.name), optionName: localized(option.name) });
+            }
+        });
+        tagsContainer.innerHTML = tagLabels.map(tag =>
+            `<span class="inline-flex items-center gap-1 px-3 py-1 bg-brand-900/5 text-brand-900 text-xs rounded-full border border-brand-900/10">
+                <span class="font-medium">${tag.filterName}:</span> ${tag.optionName}
+            </span>`
+        ).join('');
+    }
 
     document.getElementById('modal-zalo-btn').href = `https://zalo.me/${CONFIG.zalo}?text=${encodeURIComponent('Tôi quan tâm sản phẩm ' + localized(product.name) + ' mã ' + product.code)}`;
     document.getElementById('modal-zalo-text').textContent = t('products.contactZalo');
@@ -1152,14 +1216,21 @@ document.addEventListener('DOMContentLoaded', () => {
     initSearch();
     document.getElementById('back-to-top')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     document.getElementById('mobile-menu-btn')?.addEventListener('click', () => document.getElementById('mobile-menu')?.classList.toggle('hidden'));
-    document.addEventListener('click', (e) => {
-        const item = e.target.closest('.bottom-nav-item');
-        if (item && !item.href?.includes('zalo.me')) { document.querySelectorAll('.bottom-nav-item').forEach(i => i.classList.remove('active')); item.classList.add('active'); }
-    });
+    // Bottom nav active state is managed by scroll spy — no manual override needed
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', function (e) {
-            const el = document.getElementById(this.getAttribute('href').slice(1));
-            if (el) { e.preventDefault(); window.scrollTo({ top: el.offsetTop - 160, behavior: 'smooth' }); }
+            const targetId = this.getAttribute('href').slice(1);
+            if (!targetId) return; // href="#" — ignore
+            const el = document.getElementById(targetId);
+            if (el) {
+                e.preventDefault();
+                const header = document.querySelector('header');
+                const headerH = header ? header.offsetHeight : 80;
+                const targetY = el.getBoundingClientRect().top + window.scrollY - headerH - 20;
+                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+                // Close mobile menu if open
+                document.getElementById('mobile-menu')?.classList.add('hidden');
+            }
         });
     });
     document.getElementById('wishlist-toggle')?.addEventListener('click', openWishlistModal);
@@ -1172,54 +1243,82 @@ window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer
 
 // ===== SCROLL SPY – Highlight active nav on scroll =====
 function initScrollSpy() {
-    const sections = [
-        { id: null, href: '#' },                    // Trang chủ (top)
-        { id: 'about-wrapper', href: '#about-wrapper' },
-        { id: 'brand-story', href: '#brand-story' },
-        { id: 'products-section', href: '#products-section' },
-        { id: 'contact', href: '#contact' },
-    ];
+    // Sections in page order (top → bottom)
+    const sectionIds = ['brand-story', 'products-section', 'knowledge', 'contact'];
+
+    // Cache all nav links (desktop + mobile menu + bottom nav)
+    const navSelectors = 'header nav a.nav-link, #mobile-menu nav a';
+
+    let currentActiveHref = null;
+    let ticking = false;
 
     const setActive = (activeHref) => {
-        // Desktop nav
-        document.querySelectorAll('header nav a').forEach(a => {
-            a.classList.remove('text-brand-500');
+        if (currentActiveHref === activeHref) return; // no change, skip DOM work
+        currentActiveHref = activeHref;
+
+        // Desktop nav + mobile menu
+        document.querySelectorAll(navSelectors).forEach(a => {
             if (a.getAttribute('href') === activeHref) {
-                a.classList.add('text-brand-500');
+                a.classList.add('nav-active');
+            } else {
+                a.classList.remove('nav-active');
             }
         });
-        // Bottom nav (mobile)
+
+        // Bottom nav (mobile) — "Home" (#) is active when no section matched
         document.querySelectorAll('.bottom-nav-item').forEach(a => {
-            a.classList.remove('active');
             const href = a.getAttribute('href');
-            if (href === activeHref) a.classList.add('active');
-            // Map: brand-story & about → home; products-section → products
-            if (activeHref === '#' && href === '#') a.classList.add('active');
-            if (activeHref === '#products-section' && href === '#products-section') a.classList.add('active');
-            if (activeHref === '#contact' && href === '#contact') a.classList.add('active');
+            if (href?.includes('zalo.me') || href?.includes('tel:')) return; // skip external links
+            const isMatch = (href === activeHref) || (activeHref === null && href === '#');
+            if (isMatch) {
+                a.classList.add('active');
+            } else {
+                a.classList.remove('active');
+            }
         });
+    };
+
+    const getDocumentTop = (el) => {
+        // getBoundingClientRect().top is viewport-relative
+        // Add scrollY to get document-absolute position — ALWAYS accurate
+        return el.getBoundingClientRect().top + window.scrollY;
     };
 
     const onScroll = () => {
-        const scrollY = window.scrollY + 200; // offset for sticky header
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+            ticking = false;
 
-        // Traverse sections bottom-up to find the current one
-        for (let i = sections.length - 1; i >= 0; i--) {
-            const sec = sections[i];
-            if (!sec.id) {
-                // Home — fallback if no other section matched
-                setActive(sec.href);
+            const header = document.querySelector('header');
+            const headerH = header ? header.offsetHeight : 80;
+            // The "trigger line" — a point just below the header
+            const triggerY = window.scrollY + headerH + 60;
+
+            // Also detect if user scrolled near the bottom (for "contact" / footer)
+            const nearBottom = (window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 100);
+            if (nearBottom) {
+                setActive('#contact');
                 return;
             }
-            const el = document.getElementById(sec.id);
-            if (el && el.offsetTop <= scrollY) {
-                setActive(sec.href);
-                return;
+
+            // Traverse bottom-up: first section whose top is at or above the trigger line wins
+            let matched = null;
+            for (let i = sectionIds.length - 1; i >= 0; i--) {
+                const el = document.getElementById(sectionIds[i]);
+                if (el && getDocumentTop(el) <= triggerY) {
+                    matched = '#' + sectionIds[i];
+                    break;
+                }
             }
-        }
-        setActive('#'); // default: home
+
+            setActive(matched); // null = no section in view → all nav items deactivated
+        });
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // run once on init
+    // Run after short delay so rendered content has settled
+    setTimeout(onScroll, 200);
+    // Also run after images/fonts/etc fully loaded
+    window.addEventListener('load', () => setTimeout(onScroll, 100));
 }

@@ -28,7 +28,15 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 800: '#075985', 900: '#0c4a6e', gold: '#d4af37' }
+                        brand: {
+                            50: '#fefdf5',    /* lightest gold tint */
+                            100: '#fdf6e3',   /* warm cream */
+                            500: '#d4af37',   /* gold (primary accent) */
+                            600: '#b8961f',   /* darker gold */
+                            800: '#1a1a1a',   /* near-black */
+                            900: '#111111',   /* deep black */
+                            gold: '#d4af37',  /* gold */
+                        }
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
@@ -68,60 +76,58 @@
                     <button class="lang-btn px-2 py-0.5 rounded-full text-[10px] font-bold transition" data-lang="vi">VI</button>
                     <button class="lang-btn px-2 py-0.5 rounded-full text-[10px] font-bold transition" data-lang="en">EN</button>
                 </div>
-                <a href="https://www.facebook.com/lux.lady.68" target="_blank" class="hover:text-brand-100">Facebook</a>
-                <a href="https://zalo.me/0382539292" target="_blank" class="hover:text-brand-100">Zalo</a>
+                <a href="https://www.facebook.com/lux.lady.68" target="_blank" class="hover:text-brand-gold">Facebook</a>
+                <a href="https://zalo.me/0988063617" target="_blank" class="hover:text-brand-gold">Zalo</a>
             </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-40">
+    <header class="bg-brand-900 shadow-md sticky top-0 z-40">
         <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-4">
             <a href="#" class="flex items-center group">
-                <img src="./Img/logo/logo-f.jpg" alt="NOAM - Shine your Bright" class="h-10 md:h-14 w-auto rounded">
+                <img src="./Img/logo/logo-f.jpg" alt="NOAM - Shine your Bright" class="h-10 md:h-14 w-auto">
             </a>
 
             <!-- Search (Desktop) -->
             <div class="search-container flex-1 max-w-md hidden md:block">
                 <div class="relative">
-                    <input type="text" class="search-input w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:border-brand-500 text-sm">
-                    <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" class="search-input w-full px-4 py-2 pr-10 bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full focus:outline-none focus:border-brand-gold text-sm">
+                    <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-brand-gold/60"></i>
                 </div>
                 <div class="search-results hidden"></div>
             </div>
 
             <nav class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
-                <a href="#" class="hover:text-brand-800 transition text-brand-500" data-i18n="nav.home">Trang chủ</a>
-                <a href="#about-wrapper" class="hover:text-brand-800 transition" data-i18n="nav.about">Giới thiệu</a>
-                <a href="#brand-story" class="hover:text-brand-800 transition" data-i18n="nav.brandStory">Câu chuyện</a>
-                <a href="#products-section" class="hover:text-brand-800 transition" data-i18n="nav.products">Sản phẩm</a>
-                <a href="#contact" class="hover:text-brand-800 transition" data-i18n="nav.contact">Liên hệ</a>
+                <a href="#brand-story" class="nav-link text-white/70 hover:text-brand-gold transition" data-i18n="nav.brandStory">Câu chuyện thương hiệu</a>
+                <a href="#products-section" class="nav-link text-white/70 hover:text-brand-gold transition" data-i18n="nav.products">Sản phẩm</a>
+                <a href="#knowledge" class="nav-link text-white/70 hover:text-brand-gold transition" data-i18n="nav.knowledge">Kiến thức</a>
+                <a href="#contact" class="nav-link text-white/70 hover:text-brand-gold transition" data-i18n="nav.contact">Liên hệ</a>
             </nav>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-900"><i class="fas fa-bars"></i></button>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-gold"><i class="fas fa-bars"></i></button>
         </div>
 
         <!-- Mobile Search -->
         <div class="md:hidden px-4 pb-3">
             <div class="search-container relative">
-                <input type="text" class="search-input w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:border-brand-500 text-sm">
-                <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                <input type="text" class="search-input w-full px-4 py-2 pr-10 bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full focus:outline-none focus:border-brand-gold text-sm">
+                <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-brand-gold/60"></i>
                 <div class="search-results hidden"></div>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg z-50">
-            <nav class="flex flex-col space-y-3 font-medium text-sm uppercase">
-                <a href="#" class="block py-2 text-brand-500 border-b border-gray-100" data-i18n="nav.home">Trang chủ</a>
-                <a href="#about-wrapper" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.about">Giới thiệu</a>
-                <a href="#brand-story" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.brandStory">Câu chuyện</a>
-                <a href="#products-section" class="block py-2 hover:bg-gray-50 border-b border-gray-100" data-i18n="nav.products">Sản phẩm</a>
-                <a href="#contact" class="block py-2 hover:bg-gray-50" data-i18n="nav.contact">Liên hệ</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-900 border-t border-white/10 p-4 absolute w-full shadow-lg z-50">
+            <nav class="flex flex-col space-y-3 font-medium text-sm uppercase text-white/80">
+                <a href="#brand-story" class="block py-2 hover:text-brand-gold border-b border-white/10 transition" data-i18n="nav.brandStory">Câu chuyện thương hiệu</a>
+                <a href="#products-section" class="block py-2 hover:text-brand-gold border-b border-white/10 transition" data-i18n="nav.products">Sản phẩm</a>
+                <a href="#knowledge" class="block py-2 hover:text-brand-gold border-b border-white/10 transition" data-i18n="nav.knowledge">Kiến thức</a>
+                <a href="#contact" class="block py-2 hover:text-brand-gold transition" data-i18n="nav.contact">Liên hệ</a>
             </nav>
         </div>
 
-        <!-- Sticky Category Tabs -->
-        <div class="category-tabs hidden md:block">
+        <!-- Sticky Category Tabs (hidden: filter moved to product detail) -->
+        <div class="category-tabs hidden">
             <div class="container mx-auto px-4 py-2 flex gap-4" id="category-tabs-container"></div>
         </div>
     </header>
@@ -137,10 +143,12 @@
         </div>
     </section>
 
-    <!-- Trust Badges -->
+    <!-- Trust Badges (hidden: cần giấy phép bộ công thương) -->
+    <!--
     <section class="py-8 md:py-12 bg-white border-b">
         <div id="badges-section" class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center"></div>
     </section>
+    -->
 
     <!-- About / Giới thiệu -->
     <section id="about-wrapper" class="py-12 md:py-16 bg-gray-50">
@@ -169,7 +177,7 @@
         <div id="new-products-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8"></div>
         <div class="text-center mt-8 md:mt-12">
             <button id="load-more-new-btn" onclick="toggleNewProducts()"
-                class="border border-brand-900 text-brand-900 px-6 py-2 md:px-8 md:py-3 uppercase text-xs md:text-sm font-bold hover:bg-brand-900 hover:text-white transition duration-300">
+                class="border border-brand-gold text-brand-900 px-6 py-2 md:px-8 md:py-3 uppercase text-xs md:text-sm font-bold hover:bg-brand-900 hover:text-brand-gold transition duration-300">
             </button>
         </div>
     </section>
@@ -199,11 +207,18 @@
         <div id="reviews-content" class="container mx-auto px-4"></div>
     </section>
 
-    <!-- Stats -->
+    <!-- Stats (hidden: chưa có số xác thực) -->
+    <!--
     <section class="py-12 md:py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div id="stats-content" class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"></div>
         </div>
+    </section>
+    -->
+
+    <!-- Knowledge / Kiến thức -->
+    <section id="knowledge" class="py-12 md:py-16 bg-gray-50">
+        <div id="knowledge-content" class="container mx-auto px-4"></div>
     </section>
 
     <!-- Footer -->
@@ -233,6 +248,7 @@
             <div class="md:w-1/2 p-5 md:p-8 overflow-y-auto modal-content bg-white">
                 <span id="modal-category" class="text-[10px] md:text-xs font-bold text-brand-500 uppercase tracking-widest mb-1 md:mb-2 block"></span>
                 <h2 id="modal-name" class="text-xl md:text-3xl font-serif font-bold text-brand-900 mb-4 md:mb-6 leading-tight"></h2>
+                <div id="modal-tags" class="flex flex-wrap gap-2 mb-4"></div>
                 <div class="bg-gray-50 p-3 md:p-4 rounded-lg mb-4 md:mb-6 border border-gray-100">
                     <p class="text-xs md:text-sm text-gray-600 mb-1"><span id="modal-code-label" class="font-bold text-gray-800">Mã SP</span>: <span id="modal-code-value"></span></p>
                     <p class="text-xs md:text-sm text-gray-600"><span id="modal-status-label" class="font-bold text-gray-800">Tình trạng</span>: <span id="modal-status-value"></span></p>
@@ -246,7 +262,7 @@
                         <span class="bg-white text-blue-500 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold">Z</span>
                         <span id="modal-zalo-text">Liên hệ qua Zalo</span>
                     </a>
-                    <a id="modal-hotline-btn" href="tel:0382539292" class="border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 md:py-3 px-6 rounded-lg text-center font-bold uppercase transition flex items-center justify-center gap-2 text-sm">
+                    <a id="modal-hotline-btn" href="tel:0988063617" class="border border-brand-gold text-brand-900 hover:bg-brand-900 hover:text-brand-gold py-2 md:py-3 px-6 rounded-lg text-center font-bold uppercase transition flex items-center justify-center gap-2 text-sm">
                         <i class="fas fa-phone-alt"></i> <span id="modal-hotline-text">Gọi Hotline</span>
                     </a>
                 </div>
@@ -268,7 +284,7 @@
 
     <!-- Sticky Zalo + Wishlist -->
     <div class="fixed bottom-20 md:bottom-6 right-6 z-40 flex flex-col gap-3">
-        <a href="https://zalo.me/0382539292" target="_blank" class="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-600 transition animate-bounce">
+        <a href="https://zalo.me/0988063617" target="_blank" class="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-600 transition animate-bounce">
             <span class="font-bold text-[10px] md:text-xs">Zalo</span>
         </a>
         <button id="wishlist-toggle" class="relative w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center text-red-500 shadow-lg hover:bg-red-50 transition">
