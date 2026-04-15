@@ -929,7 +929,7 @@ function renderFooter() {
                 </div>
             </div>
         </div>
-        <div class="border-t border-white/10 pt-8 text-center text-xs text-gray-500"><p>&copy; 2025 NOAM. Design Web By <a href="https://sunsolutions.vn" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-yellow-300 transition underline">SunSolutions.vn</a></p></div>`;
+        <div class="border-t border-white/10 pt-8 pb-16 md:pb-0 text-center text-xs text-gray-500"><p>&copy; 2025 NOAM. Developed and designed by <a href="https://sunsolutions.vn" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-yellow-300 transition underline">SunSolutions.vn</a></p></div>`;
 }
 
 function renderBottomNav() {
