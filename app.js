@@ -43,7 +43,7 @@ const i18n = {
                 title: 'NOAM – נועם',
                 subtitle: 'Một cái tên trong tiếng Hebrew mang ý nghĩa tinh tế',
                 meaning: 'Pleasant · Delight · Grace',
-                desc: 'Sự dịu dàng, thanh nhã, duyên dáng — một năng lượng rất đẹp: dịu dàng, an yên, nhưng vẫn đầy chiều sâu.',
+                desc: 'Sự dịu dàng, thanh nhã, duyên dáng - một năng lượng rất đẹp: dịu dàng, an yên, nhưng vẫn đầy chiều sâu.',
             },
             acronym: {
                 title: 'N · O · A · M',
@@ -59,7 +59,7 @@ const i18n = {
                 paragraphs: [
                     'Trong thế giới của những sản phẩm thủ công, mỗi chất liệu đều mang trong mình một câu chuyện của thời gian.',
                     'NOAM Handmade được sinh ra từ niềm tin rằng: một món đồ không chỉ để sử dụng hay làm đẹp, mà còn là một tác phẩm nghệ thuật mang linh hồn của người chế tác.',
-                    'Từ những viên đá quý, sợi cọ, tấm da hay chất liệu thô mộc, qua đôi tay của những người nghệ nhân, từng chi tiết được tạo nên bằng sự tỉ mỉ, kiên nhẫn và tình yêu dành cho nghề. Mỗi sản phẩm của NOAM — dù là trang sức hay túi xách — đều chứa đựng một hành trình sáng tạo riêng biệt.',
+                    'Từ những viên đá quý, sợi cọ, tấm da hay chất liệu thô mộc, qua đôi tay của những người nghệ nhân, từng chi tiết được tạo nên bằng sự tỉ mỉ, kiên nhẫn và tình yêu dành cho nghề. Mỗi sản phẩm của NOAM - dù là trang sức hay túi xách - đều chứa đựng một hành trình sáng tạo riêng biệt.',
                     'Đó không chỉ là thiết kế, mà là sự giao thoa của ánh sáng, chất liệu, văn hóa và cảm xúc.',
                 ],
             },
@@ -167,7 +167,7 @@ const i18n = {
                 title: 'NOAM – נועם',
                 subtitle: 'A Hebrew name with a beautiful and delicate meaning',
                 meaning: 'Pleasant · Delight · Grace',
-                desc: 'Gentleness, elegance, charm — a beautiful energy: tender, serene, yet full of depth.',
+                desc: 'Gentleness, elegance, charm - a beautiful energy: tender, serene, yet full of depth.',
             },
             acronym: {
                 title: 'N · O · A · M',
@@ -183,7 +183,7 @@ const i18n = {
                 paragraphs: [
                     'In the world of handmade products, every material carries within it a story of time.',
                     'NOAM Handmade was born from the belief that an item is not just for use or beauty, but is also a work of art carrying the soul of its maker.',
-                    'From precious gemstones, palm fibers, leather to raw materials — through the hands of artisans, every detail is crafted with meticulous care, patience, and love for the craft. Each NOAM product — whether jewelry or handbag — holds a unique creative journey.',
+                    'From precious gemstones, palm fibers, leather to raw materials - through the hands of artisans, every detail is crafted with meticulous care, patience, and love for the craft. Each NOAM product - whether jewelry or handbag - holds a unique creative journey.',
                     'It is not just design, but an intersection of light, material, culture, and emotion.',
                 ],
             },
@@ -929,7 +929,7 @@ function renderFooter() {
                 </div>
             </div>
         </div>
-        <div class="border-t border-white/10 pt-8 text-center text-xs text-gray-500"><p>&copy; 2025 NOAM. All rights reserved.</p></div>`;
+        <div class="border-t border-white/10 pt-8 pb-16 md:pb-0 text-center text-xs text-gray-500"><p>&copy; 2025 NOAM. Developed and designed by <a href="https://sunsolution.vn" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-yellow-300 transition underline">SunSolution.vn</a></p></div>`;
 }
 
 function renderBottomNav() {
@@ -1216,11 +1216,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initSearch();
     document.getElementById('back-to-top')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     document.getElementById('mobile-menu-btn')?.addEventListener('click', () => document.getElementById('mobile-menu')?.classList.toggle('hidden'));
-    // Bottom nav active state is managed by scroll spy — no manual override needed
+    // Bottom nav active state is managed by scroll spy - no manual override needed
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href').slice(1);
-            if (!targetId) return; // href="#" — ignore
+            if (!targetId) return; // href="#" - ignore
             const el = document.getElementById(targetId);
             if (el) {
                 e.preventDefault();
@@ -1265,7 +1265,7 @@ function initScrollSpy() {
             }
         });
 
-        // Bottom nav (mobile) — "Home" (#) is active when no section matched
+        // Bottom nav (mobile) - "Home" (#) is active when no section matched
         document.querySelectorAll('.bottom-nav-item').forEach(a => {
             const href = a.getAttribute('href');
             if (href?.includes('zalo.me') || href?.includes('tel:')) return; // skip external links
@@ -1280,7 +1280,7 @@ function initScrollSpy() {
 
     const getDocumentTop = (el) => {
         // getBoundingClientRect().top is viewport-relative
-        // Add scrollY to get document-absolute position — ALWAYS accurate
+        // Add scrollY to get document-absolute position - ALWAYS accurate
         return el.getBoundingClientRect().top + window.scrollY;
     };
 
@@ -1292,7 +1292,7 @@ function initScrollSpy() {
 
             const header = document.querySelector('header');
             const headerH = header ? header.offsetHeight : 80;
-            // The "trigger line" — a point just below the header
+            // The "trigger line" - a point just below the header
             const triggerY = window.scrollY + headerH + 60;
 
             // Also detect if user scrolled near the bottom (for "contact" / footer)
