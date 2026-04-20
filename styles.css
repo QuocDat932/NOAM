@@ -5,6 +5,36 @@ body {
     scroll-behavior: smooth;
 }
 
+/* ===== HERO BANNER ===== */
+/* Mobile: show full 16:5 poster, no crop */
+.hero-banner {
+    aspect-ratio: 16 / 5;
+    height: auto;
+}
+
+.hero-img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.hero-overlay {
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.1), transparent);
+}
+
+/* Desktop: full-height hero with crop */
+@media (min-width: 768px) {
+    .hero-banner {
+        aspect-ratio: auto;
+        height: 600px;
+    }
+    .hero-img {
+        object-fit: cover;
+    }
+    .hero-overlay {
+        background: linear-gradient(to right, #111111, rgba(17, 17, 17, 0.5), transparent);
+    }
+}
+
 /* ===== POSTER / SPLASH SCREEN ===== */
 .poster-splash {
     position: fixed;
