@@ -6,10 +6,14 @@ body {
 }
 
 /* ===== HERO BANNER ===== */
-/* Mobile: show full 16:5 poster, no crop */
+/* All devices: show the full 16:5 poster, never cropped */
 .hero-banner {
     aspect-ratio: 16 / 5;
     height: auto;
+    width: 100%;
+    /* Cap absolute height on ultra-wide screens so banner doesn't get too tall.
+       Below that cap, aspect-ratio drives the height. */
+    max-height: 560px;
 }
 
 .hero-img {
@@ -18,20 +22,15 @@ body {
 }
 
 .hero-overlay {
-    background: linear-gradient(to right, rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.1), transparent);
+    /* Soft overlay — does not obscure poster content */
+    background: linear-gradient(to right, rgba(17, 17, 17, 0.15), rgba(17, 17, 17, 0.05), transparent);
+    pointer-events: none;
 }
 
-/* Desktop: full-height hero with crop */
-@media (min-width: 768px) {
-    .hero-banner {
-        aspect-ratio: auto;
-        height: 600px;
-    }
+/* Very large screens (≥ 1920px wide) — if max-height kicks in, let image cover */
+@media (min-width: 1920px) {
     .hero-img {
         object-fit: cover;
-    }
-    .hero-overlay {
-        background: linear-gradient(to right, #111111, rgba(17, 17, 17, 0.5), transparent);
     }
 }
 
