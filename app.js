@@ -8,7 +8,7 @@
 const CONFIG = {
     zalo: '0988063617',
     phone: '0988063617',
-    email: 'contact@noam.vn',
+    email: 'contactnoam.vn@gmail.com',
     facebook: 'https://www.facebook.com/lux.lady.68',
     address: { vi: '123 Đường Lê Lợi, TP.HCM', en: '123 Le Loi Street, HCMC' },
     defaultLang: 'vi',
