@@ -10,7 +10,6 @@ const CONFIG = {
     phone: '0988063617',
     email: 'contactnoam.vn@gmail.com',
     facebook: 'https://www.facebook.com/lux.lady.68',
-    address: { vi: '123 Đường Lê Lợi, TP.HCM', en: '123 Le Loi Street, HCMC' },
     defaultLang: 'vi',
     newArrivalsLimit: 4,
 };
@@ -1004,7 +1003,6 @@ function renderFooter() {
                 <ul class="space-y-3 text-sm text-gray-300">
                     <li><i class="fas fa-phone w-5 text-brand-500"></i> ${CONFIG.phone}</li>
                     <li><i class="fas fa-envelope w-5 text-brand-500"></i> ${CONFIG.email}</li>
-                    <li><i class="fas fa-map-marker-alt w-5 text-brand-500"></i> ${localized(CONFIG.address)}</li>
                 </ul>
             </div>
             <div>
