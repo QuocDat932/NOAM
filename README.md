@@ -176,7 +176,7 @@ Xem file `tasks.md` để biết danh sách đầy đủ các tính năng cần 
 ## 📞 Liên Hệ
 
 - **Zalo**: 0382539292
-- **Email**: contact@namjewelry.vn (cập nhật trong code)
+- **Email**: contactnoam.vn@gmail.com (cập nhật trong code)
 
 ## 📝 License
 
