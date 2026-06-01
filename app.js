@@ -10,6 +10,7 @@ const CONFIG = {
     phone: '0988063617',
     email: 'contactnoam.vn@gmail.com',
     facebook: 'https://www.facebook.com/lux.lady.68',
+    instagram: 'https://www.instagram.com/contactnoam.vn/',
     defaultLang: 'vi',
     newArrivalsLimit: 4,
 };
@@ -333,14 +334,14 @@ const products = [
     // ── JEWELRY: Bộ Trang Sức ──
     {
         id: 1, code: 'JW-BTS-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: false, inStock: true,
         name: { vi: 'Bộ Trang Sức Cỏ 4 Lá', en: '4-Leaf Clover Jewelry Set' },
         image: './Img/Bo-trang-suc/bo-trang-suc-co-4-la.jpg',
         description: { vi: 'Bộ trang sức cỏ 4 lá may mắn, thiết kế tinh tế mang lại vẻ đẹp sang trọng.', en: 'Lucky 4-leaf clover jewelry set, exquisitely designed for an elegant look.' }
     },
     {
         id: 2, code: 'JW-BTS-002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: false, inStock: true,
         name: { vi: 'Bộ Trang Sức Nhẫn Bông Tai', en: 'Ring & Earring Jewelry Set' },
         image: './Img/Bo-trang-suc/bo-trang-suc-nhan-bong-tay-001.jpg',
         description: { vi: 'Bộ trang sức nhẫn kết hợp bông tai, chế tác tinh xảo từ nghệ nhân hàng đầu.', en: 'Ring and earring set, meticulously crafted by top artisans.' }
@@ -356,7 +357,7 @@ const products = [
     // ── JEWELRY: Charm Bạc ──
     {
         id: 10, code: 'JW-CH-001', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
         name: { vi: 'Charm Bạc Trái Tim', en: 'Silver Heart Charm' },
         image: './Img/Charm-bac/charm-bac-001.jpg',
         description: { vi: 'Charm bạc 925 cao cấp, thiết kế trái tim dễ thương.', en: 'Premium 925 silver charm with cute heart design.' }
@@ -370,7 +371,7 @@ const products = [
     },
     {
         id: 12, code: 'JW-CH-003', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
         name: { vi: 'Charm Bạc Hoa Cúc', en: 'Silver Daisy Charm' },
         image: './Img/Charm-bac/charm-bac-003.jpg',
         description: { vi: 'Charm bạc hoa cúc tinh tế, mang vẻ đẹp tự nhiên.', en: 'Delicate silver daisy charm with natural beauty.' }
@@ -384,7 +385,7 @@ const products = [
     },
     {
         id: 14, code: 'JW-CH-005', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
         name: { vi: 'Charm Bạc Mặt Trăng', en: 'Silver Moon Charm' },
         image: './Img/Charm-bac/charm-bac-005.jpg',
         description: { vi: 'Charm bạc mặt trăng huyền bí, phong cách độc đáo.', en: 'Mystical silver moon charm, unique style.' }
@@ -398,7 +399,7 @@ const products = [
     },
     {
         id: 16, code: 'JW-CH-007', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
         name: { vi: 'Charm Bạc Chìa Khóa', en: 'Silver Key Charm' },
         image: './Img/Charm-bac/charm-bac-007.jpg',
         description: { vi: 'Charm bạc chìa khóa, biểu tượng mở cánh cửa mới.', en: 'Silver key charm, symbol of new beginnings.' }
@@ -412,7 +413,7 @@ const products = [
     },
     {
         id: 18, code: 'JW-CH-009', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
         name: { vi: 'Charm Bạc Hình Tròn', en: 'Silver Circle Charm' },
         image: './Img/Charm-bac/charm-bac-009.jpg',
         description: { vi: 'Charm bạc hình tròn tối giản, phù hợp mọi phong cách.', en: 'Minimalist silver circle charm, suits any style.' }
@@ -426,7 +427,7 @@ const products = [
     },
     {
         id: 20, code: 'JW-CH-011', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: true, inStock: true,
+        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
         name: { vi: 'Charm Bạc Hình Vuông', en: 'Silver Square Charm' },
         image: './Img/Charm-bac/charm-bac-011.jpg',
         description: { vi: 'Charm bạc hình vuông hiện đại.', en: 'Modern silver square charm.' }
@@ -442,7 +443,7 @@ const products = [
     // ── JEWELRY: Dây Chuyền Nữ ──
     {
         id: 30, code: 'JW-DC-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây Chuyền Nữ Thanh Lịch', en: 'Elegant Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-001.jpg',
         description: { vi: 'Dây chuyền vàng 18K, thiết kế thanh lịch cho phái đẹp.', en: '18K gold necklace, elegant design for women.' }
@@ -456,7 +457,7 @@ const products = [
     },
     {
         id: 32, code: 'JW-DC-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây Chuyền Nữ Tinh Tế', en: 'Delicate Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-003.jpg',
         description: { vi: 'Dây chuyền tinh tế, phù hợp mọi dịp.', en: 'Delicate necklace, perfect for any occasion.' }
@@ -470,7 +471,7 @@ const products = [
     },
     {
         id: 34, code: 'JW-DC-005', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây Chuyền Nữ Trái Tim', en: 'Heart Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-005.jpg',
         description: { vi: 'Dây chuyền trái tim lãng mạn.', en: 'Romantic heart pendant necklace.' }
@@ -484,7 +485,7 @@ const products = [
     },
     {
         id: 36, code: 'JW-DC-007', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây Chuyền Nữ Mặt Tròn', en: 'Round Pendant Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-007.jpg',
         description: { vi: 'Dây chuyền mặt tròn tối giản, thanh lịch.', en: 'Minimalist round pendant necklace.' }
@@ -498,7 +499,7 @@ const products = [
     },
     {
         id: 38, code: 'JW-DC-009', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây Chuyền Nữ Hiện Đại', en: 'Modern Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-009.jpg',
         description: { vi: 'Dây chuyền thiết kế hiện đại, trẻ trung.', en: 'Modern design necklace, youthful.' }
@@ -512,7 +513,7 @@ const products = [
     },
     {
         id: 40, code: 'JW-DC-011', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'bac', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây Chuyền Nữ Dây Xích', en: 'Chain Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-011.jpg',
         description: { vi: 'Dây chuyền dây xích phong cách cá tính.', en: 'Chain necklace with edgy style.' }
@@ -526,7 +527,7 @@ const products = [
     },
     {
         id: 42, code: 'JW-DC-013', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây Chuyền Nữ Tourmaline', en: 'Tourmaline Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-013-Tourmaline.jpg',
         description: { vi: 'Dây chuyền đính đá Tourmaline thiên nhiên cao cấp.', en: 'Premium natural Tourmaline pendant necklace.' }
@@ -542,7 +543,7 @@ const products = [
     // ── JEWELRY: Lắc Tay Nam ──
     {
         id: 50, code: 'JW-LT-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc Tay Nam Mạnh Mẽ', en: "Men's Bold Bracelet" },
         image: './Img/Lac-tay-nam/128L16-C02500_c8-Ptsj.jpg',
         description: { vi: 'Lắc tay nam vàng 18K, thiết kế mạnh mẽ, nam tính.', en: "18K gold men's bracelet, bold and masculine design." }
@@ -556,7 +557,7 @@ const products = [
     },
     {
         id: 52, code: 'JW-LT-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc Tay Nam Cổ Điển', en: "Men's Classic Bracelet" },
         image: './Img/Lac-tay-nam/CTL1143-C0700_4c7-Ptsj.jpg',
         description: { vi: 'Lắc tay nam cổ điển, bền đẹp theo thời gian.', en: "Classic men's bracelet, timeless beauty." }
@@ -572,7 +573,7 @@ const products = [
     // ── JEWELRY: Lắc Tay Nữ ──
     {
         id: 60, code: 'JW-LT-005', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc Tay Nữ Tinh Tế', en: "Women's Delicate Bracelet" },
         image: './Img/Lac-tay-nu/L005675-09290-Ptsj.jpg',
         description: { vi: 'Lắc tay nữ vàng trắng, thiết kế tinh tế, nữ tính.', en: "White gold women's bracelet, delicate and feminine." }
@@ -586,7 +587,7 @@ const products = [
     },
     {
         id: 62, code: 'JW-LT-007', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc Tay Nữ Đính Đá', en: "Women's Gemstone Bracelet" },
         image: './Img/Lac-tay-nu/L006727-010490-Ptsj.jpg',
         description: { vi: 'Lắc tay nữ đính đá quý lấp lánh.', en: "Women's bracelet adorned with sparkling gems." }
@@ -600,7 +601,7 @@ const products = [
     },
     {
         id: 64, code: 'JW-LT-009', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc Tay Nữ Luxury', en: "Women's Premium Bracelet" },
         image: './Img/Lac-tay-nu/L007218-015130-Ptsj.jpg',
         description: { vi: 'Lắc tay nữ cao cấp, đẳng cấp vượt trội.', en: "Premium women's bracelet, superior quality." }
@@ -609,7 +610,7 @@ const products = [
     // ── JEWELRY: Nhẫn ──
     {
         id: 70, code: 'JW-NH-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
         name: { vi: 'Nhẫn Kim Cương Solitaire', en: 'Solitaire Diamond Ring' },
         image: './Img/Nhan/nhan-001.jpg',
         description: { vi: 'Nhẫn kim cương thiên nhiên, thiết kế Solitaire kinh điển.', en: 'Natural diamond ring, classic Solitaire design.' }
@@ -618,7 +619,7 @@ const products = [
     // ── JEWELRY: Vòng Cổ Nữ ──
     {
         id: 80, code: 'JW-VC-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-co' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'vong-co' }, isNew: false, inStock: true,
         name: { vi: 'Vòng Cổ Nữ Sang Trọng', en: 'Luxury Choker' },
         image: './Img/Vong-co-nu/vong-co-nu-001.jpg',
         description: { vi: 'Vòng cổ nữ vàng 18K, thiết kế sang trọng, quý phái.', en: '18K gold choker, luxurious and sophisticated.' }
@@ -627,7 +628,7 @@ const products = [
     // ── JEWELRY: Vòng Tay ──
     {
         id: 90, code: 'JW-VT-001', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: true, inStock: true,
+        tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng Tay Ngọc Trai Nuôi', en: 'Cultured Pearl Bangle' },
         image: './Img/Vong-tay/vong-tay-ngoc-trai-nuoi.jpg',
         description: { vi: 'Vòng tay ngọc trai nuôi cấy cao cấp, độ bóng hoàn hảo.', en: 'Premium cultured pearl bangle, perfect luster.' }
@@ -641,18 +642,182 @@ const products = [
     },
     {
         id: 92, code: 'JW-VT-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng Tay Labradorite Moonstone', en: 'Labradorite Moonstone Bangle' },
         image: './Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg',
         description: { vi: 'Vòng tay đá quý Labradorite và Moonstone thiên nhiên.', en: 'Natural Labradorite and Moonstone gemstone bangle.' }
     },
 
-    // ── BAG: (Chưa có sản phẩm - thêm tại đây) ──
-    // { id: 100, code: 'BG-TX-001', catalogId: 'bag',
-    //   tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
-    //   name: { vi: 'Túi Xách Sợi Cọ', en: 'Palm Fiber Handbag' },
-    //   image: './Img/Bag/tui-xach-001.jpg',
-    //   description: { vi: 'Túi xách từ sợi cọ tự nhiên.', en: 'Handbag made from natural palm fiber.' } },
+    // ── BAG: (Sản phẩm túi xách sợi cọ SP01 - SP20) ──
+    {
+        id: 100, code: 'BR001', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR001', en: 'Palm Fiber Handbag BR001' },
+        image: './Img/TuiXach/SP01/LOGO1_1.jpg',
+        image1: './Img/TuiXach/SP01/LOGO1_2.jpg',
+        description: { vi: 'Kích thước: W29 x H13 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá đậm\n-        Lót trong túi: vải canvas\n-        Quai xích có phối da bò mềm để đeo vai không bị đau. \nCâu chuyện sản phẩm:  Túi sợi cọ xanh lá đậm với thiết kế thủ công tinh tế, kích thước W29 x H13 x đáy 9cm nhỏ gọn nhưng vẫn đủ không gian cho các vật dụng cần thiết. Lót trong bằng vải canvas bền đẹp, quai xích phối da bò mềm giúp đeo vai êm ái và thoải mái. Một phụ kiện thanh lịch, nổi bật nét đẹp tự nhiên và thời trang cho mọi outfit.', en: 'Size: W29 x H13 x D9 cm\nDetailed description:\n- Material: dark green palm fiber\n- Inner lining: canvas fabric\n- Chain shoulder strap padded with soft cowhide leather.\nAI product description: Exquisite hand-woven dark green palm fiber handbag. Compact size (W29 x H13 x D9 cm) yet spacious enough for essentials. Features durable canvas lining and a leather-padded chain strap for comfortable shoulder wear. A chic, natural fashion accessory.' }
+    },
+    {
+        id: 101, code: 'BR002', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR002', en: 'Palm Fiber Handbag BR002' },
+        image: './Img/TuiXach/SP02/LOGO2_1.jpg',
+        image1: './Img/TuiXach/SP02/LOGO2_2.jpg',
+        description: { vi: 'Kích thước: W20cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai xách và nắp túi là da bò nâu\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công kích thước W20cm với thiết kế nhỏ gọn, thanh lịch. Lót trong bằng vải canvas bền đẹp, quai xách và nắp túi bằng da bò nâu cao cấp tạo điểm nhấn sang trọng. Phụ kiện hoàn hảo cho những cô nàng yêu thích phong cách tự nhiên, tinh tế và thời trang.', en: 'Size: W20 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Handle and flap: brown cowhide leather\nAI product description: Handcrafted palm fiber bag (W20cm) featuring a compact and elegant silhouette. Built with a durable canvas lining and styled with premium brown cowhide leather handles and flap for a luxurious touch.' }
+    },
+    {
+        id: 102, code: 'BR003', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR003', en: 'Palm Fiber Handbag BR003' },
+        image: './Img/TuiXach/SP03/LOGO3.2.jpg',
+        image1: './Img/TuiXach/SP03/LOGO3.3.jpg',
+        image2: './Img/TuiXach/SP03/LOGO3.jpg',
+        description: { vi: 'Kích thước: W20 x H16 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai xách là da bò nâu\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H16 x đáy 9cm với lớp lót canvas bền đẹp và quai xách da bò nâu cao cấp. Điểm nhấn phụ kiện kim loại màu bạc tinh tế tạo nét sang trọng, hiện đại, giúp chiếc túi thêm phần nổi bật và cuốn hút trong mọi set đồ.', en: 'Size: W20 x H16 x D9 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Handle: brown cowhide leather\nAI product description: Hand-woven palm fiber bag (W20 x H16 x D9 cm) featuring a sturdy canvas lining and high-quality brown cowhide leather handles. Accented with sleek silver-tone hardware for a modern, luxurious look.' }
+    },
+    {
+        id: 103, code: 'BR004', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR004', en: 'Palm Fiber Handbag BR004' },
+        image: './Img/TuiXach/SP04/LOGO4_1.jpg',
+        image1: './Img/TuiXach/SP04/LOGO4_2.jpg',
+        description: { vi: 'Kích thước: W20 x H16 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai xách là da bò nâu\nCâu chuyện sản phẩm:  Túi đan thủ công từ sợi cọ tự nhiên, kích thước W20 x H16 x đáy 9cm, mang vẻ đẹp thanh lịch và gần gũi. Lót trong bằng vải canvas bền chắc, quai xách da bò nâu cao cấp kết hợp phụ kiện kim loại màu vàng sang trọng, tạo điểm nhấn nổi bật cho tổng thể thiết kế. Phù hợp để phối cùng nhiều phong cách từ nữ tính đến hiện đại.', en: 'Size: W20 x H16 x D9 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Handle: brown cowhide leather\nAI product description: Natural palm fiber hand-woven bag (W20 x H16 x D9 cm) showcasing natural charm and elegance. Completed with durable canvas lining, premium brown leather handles, and gold-tone metal hardware accents.' }
+    },
+    {
+        id: 104, code: 'BR005', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR005', en: 'Palm Fiber Handbag BR005' },
+        image: './Img/TuiXach/SP05/LOGO5_1.jpg',
+        image1: './Img/TuiXach/SP05/LOGO5_2.jpg',
+        image2: './Img/TuiXach/SP05/LOGO5_3.jpg',
+        description: { vi: 'Kích thước: W20 x H13 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ màu cam\n-        Lót trong túi: vải canvas\n-        Quai xích có phối da bò mềm để đeo vai không bị đau.\nCâu chuyện sản phẩm:  Túi sợi cọ màu cam kích thước W20 x H13 x đáy 8cm với thiết kế nhỏ gọn, nổi bật và thời trang. Lót trong bằng vải canvas bền đẹp, quai xích phối da bò mềm giúp đeo vai thoải mái suốt ngày dài. Phụ kiện hoàn hảo để tạo điểm nhấn trẻ trung, cá tính cho mọi outfit.', en: 'Size: W20 x H13 x D8 cm\nDetailed description:\n- Material: orange palm fiber\n- Inner lining: canvas fabric\n- Leather-padded chain shoulder strap\nAI product description: Vibrant orange palm fiber bag (W20 x H13 x D8 cm) in a compact, trendy design. Designed with a canvas lining and a chain strap padded with soft cowhide leather for all-day carrying comfort.' }
+    },
+    {
+        id: 105, code: 'BR006', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR006', en: 'Palm Fiber Handbag BR006' },
+        image: './Img/TuiXach/SP06/LOGO6_1.jpg',
+        image1: './Img/TuiXach/SP06/LOGO6_2.jpg',
+        description: { vi: 'Kích thước: W20 x H17 x đáy 10cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai trúc, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H17 x đáy 10cm với thiết kế thanh lịch và tiện dụng. Lót trong bằng vải canvas bền chắc, quai trúc tự nhiên tạo điểm nhấn độc đáo, kết hợp quai đeo chéo dây xích phối da bò sang trọng. Một phụ kiện tinh tế giúp hoàn thiện phong cách thời trang đầy cuốn hút.', en: 'Size: W20 x H17 x D10 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Bamboo handle, chain crossbody strap with cowhide details\nAI product description: Handcrafted palm fiber bag (W20 x H17 x D10 cm) combining style and utility. Styled with a natural bamboo handle for a unique organic feel and a leather-trimmed chain crossbody strap.' }
+    },
+    {
+        id: 106, code: 'BR007', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR007', en: 'Palm Fiber Handbag BR007' },
+        image: './Img/TuiXach/SP07/LOGO7_1.jpg',
+        image1: './Img/TuiXach/SP07/LOGO7_2.jpg',
+        image2: './Img/TuiXach/SP07/LOGO7_3.jpg',
+        description: { vi: 'Kích thước: W20 x H18 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Mặt trước túi đính hồ điệp đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai da, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H18 x đáy 8cm nổi bật với họa tiết hồ điệp đính kết từ ngọc trai thật và cườm pha lê tinh xảo. Lót trong bằng vải canvas bền đẹp, quai da cùng dây đeo chéo xích phối da bò mang đến sự tiện dụng và sang trọng. Một thiết kế thanh lịch, nữ tính, giúp bạn tỏa sáng trong mọi khoảnh khắc.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: palm fiber\n- Decorated with real pearls and crystal butterfly beads\n- Inner lining: canvas fabric\n- Leather handle and leather-padded chain crossbody strap\nAI product description: Exquisite palm fiber bag (W20 x H18 x D8 cm) adorned with a hand-beaded real pearl and crystal butterfly motif. Elegant design completed with canvas lining, leather handles, and chain strap.' }
+    },
+    {
+        id: 107, code: 'BR008', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR008', en: 'Palm Fiber Handbag BR008' },
+        image: './Img/TuiXach/SP08/LOGO8_1.jpg',
+        image1: './Img/TuiXach/SP08/LOGO8_2.jpg',
+        image2: './Img/TuiXach/SP08/LOGO8_3.jpg',
+        description: { vi: 'Kích thước: W23xH20x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ đỏ bóc đô\n-        Lót trong túi: vải canvas\n-        Quai da, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ đỏ bọc đô W23 x H20 x đáy 8cm nổi bật với gam màu sang trọng và thiết kế thủ công tinh tế. Lót trong bằng vải canvas bền chắc, quai da cao cấp kết hợp dây đeo chéo xích phối da bò mang đến sự tiện dụng và thanh lịch. Phụ kiện hoàn hảo dành cho những ai yêu thích phong cách nổi bật, nữ tính và thời trang.', en: 'Size: W23 x H20 x D8 cm\nDetailed description:\n- Material: bordeaux red palm fiber\n- Inner lining: canvas fabric\n- Leather handle and leather-padded chain crossbody strap\nAI product description: Bordeaux red palm fiber bag (W23 x H20 x D8 cm) showing deep luxurious colors and refined hand-weaving. Features a sturdy canvas lining, premium leather handle, and comfortable crossbody chain strap.' }
+    },
+    {
+        id: 108, code: 'BR009', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR009', en: 'Palm Fiber Handbag BR009' },
+        image: './Img/TuiXach/SP09/LOGO9_1.jpg',
+        image1: './Img/TuiXach/SP09/LOGO9_2.jpg',
+        description: { vi: 'Kích thước: W33xH30x đáy 14cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W33 x H30 x đáy 14cm với thiết kế rộng rãi, phù hợp cho nhu cầu sử dụng hằng ngày và các chuyến du lịch. Chất liệu sợi cọ tự nhiên kết hợp lớp lót canvas bền chắc mang đến sự tiện dụng và vẻ đẹp mộc mạc, thanh lịch. Một phụ kiện thời trang vừa tinh tế vừa đa năng cho mọi phong cách.', en: 'Size: W33 x H30 x D14 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\nAI product description: Spacious hand-woven palm fiber tote bag (W33 x H30 x D14 cm), perfect for daily needs or beach getaways. Natural palm fiber texture combined with canvas lining offers great durability and style.' }
+    },
+    {
+        id: 109, code: 'BR010', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR010', en: 'Palm Fiber Handbag BR010' },
+        image: './Img/TuiXach/SP10/LOGO10_1.jpg',
+        image1: './Img/TuiXach/SP10/LOGO10_2.jpg',
+        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Bên hông túi đính hồ điệp đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai da, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H18 x đáy 8cm nổi bật với chi tiết hồ điệp đính bên hông từ ngọc trai thật và cườm pha lê tinh xảo. Lót trong bằng vải canvas bền đẹp, quai da cùng dây đeo chéo xích phối da bò mang lại sự tiện dụng và thanh lịch. Thiết kế nữ tính, sang trọng, giúp tạo điểm nhấn cuốn hút cho mọi trang phục.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: palm fiber\n- Side decorated with real pearls and crystal butterfly beads\n- Inner lining: canvas fabric\n- Leather handle and leather-padded chain crossbody strap\nAI product description: Hand-woven palm fiber bag (W20 x H18 x D8 cm) highlighted by a delicate butterfly beaded with real pearls and crystals on the side. Features durable canvas lining and leather handles.' }
+    },
+    {
+        id: 110, code: 'BR011', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR011', en: 'Palm Fiber Handbag BR011' },
+        image: './Img/TuiXach/SP11/LOGO11_1.jpg',
+        image1: './Img/TuiXach/SP11/LOGO11_2.jpg',
+        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Mặt trước túi đính hoa đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai trúc và đai da có thể tháo rời, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H18 x đáy 8cm nổi bật với họa tiết hoa đính kết từ ngọc trai thật và cườm pha lê tinh xảo ở mặt trước. Lót trong bằng vải canvas bền đẹp, quai trúc cùng đai da tháo rời kết hợp dây đeo chéo xích phối da bò mang đến sự tiện dụng và thanh lịch. Một thiết kế sang trọng, nữ tính và đầy cuốn hút cho mọi dịp.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: palm fiber\n- Adorned with real pearls and crystal floral details\n- Inner lining: canvas fabric\n- Detachable bamboo handle, leather band, and chain crossbody strap\nAI product description: Elegant palm fiber bag (W20 x H18 x D8 cm) with hand-beaded pearl and crystal flowers on the front. Features a natural bamboo handle, detachable leather band, and leather-trimmed chain strap.' }
+    },
+    {
+        id: 111, code: 'BR012', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR012', en: 'Palm Fiber Handbag BR012' },
+        image: './Img/TuiXach/SP12/copy_z7886335477562_8f176a4f023a4cc66c6f81cdadd953c9.jpg',
+        image1: './Img/TuiXach/SP12/copy_z7886335484544_f0bfceb8327ca51d5308b45d8311bcfc.jpg',
+        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá\n-        Mặt trước túi đính hoa đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai trúc và đai da có thể tháo rời, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ xanh lá W20 x H18 x đáy 8cm nổi bật với hoa đính kết thủ công từ ngọc trai thật và cườm pha lê ở mặt trước. Lót trong bằng vải canvas bền chắc, quai trúc kết hợp đai da tháo rời cùng dây đeo chéo xích phối da bò mang đến sự tiện dụng và tinh tế. Một thiết kế thanh lịch, nổi bật và đầy cuốn hút cho mọi dịp.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: green palm fiber\n- Adorned with real pearls and crystal floral details\n- Inner lining: canvas fabric\n- Detachable bamboo handle, leather band, and chain crossbody strap\nAI product description: Green palm fiber handbag (W20 x H18 x D8 cm) featuring real pearl and crystal floral hand-beading. Set with a natural bamboo handle, detachable leather band, and chain crossbody strap.' }
+    },
+    {
+        id: 112, code: 'BR013', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR013', en: 'Palm Fiber Handbag BR013' },
+        image: './Img/TuiXach/SP13/copy_z7886337848652_549b0dd03cc2fa8f3c0cdfc8879f1ca0.jpg',
+        image1: './Img/TuiXach/SP13/copy_z7886337853889_b269a7cc16509508de68c5f874db4ae5.jpg',
+        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá\n-        Mặt trước túi đính hoa cườm và pha lê.\n-        Lót trong túi: vải canvas\n-        Quai da, có thêm quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Tinh tế trong từng chi tiết, túi sợi cọ xanh lá W20 x H18 x đáy 8cm gây ấn tượng với hoa đính cườm và pha lê lấp lánh trên mặt trước. Chất liệu sợi cọ thủ công kết hợp lớp lót canvas bền đẹp, quai da cùng dây đeo chéo xích phối da bò tạo nên sự cân bằng hoàn hảo giữa nét thanh lịch và tính ứng dụng. Một phụ kiện nổi bật dành cho những ai yêu thích vẻ đẹp nhẹ nhàng nhưng đầy cuốn hút.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: green palm fiber\n- Front decorated with beads and crystal flowers\n- Inner lining: canvas fabric\n- Leather handle and chain crossbody strap with leather details\nAI product description: Exquisite green palm fiber bag (W20 x H18 x D8 cm) featuring hand-embroidered beads and sparkling crystal flowers. Beautifully balanced design with canvas lining, leather handles, and chain strap.' }
+    },
+    {
+        id: 113, code: 'BR014', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR014', en: 'Palm Fiber Handbag BR014' },
+        image: './Img/TuiXach/SP14/copy_z7886343026196_2a1a4f0132efbb68a362b420881b40c2.jpg',
+        image1: './Img/TuiXach/SP14/copy_z7886343030031_5ab86e238604db26f91416f9c4c08aa2.jpg',
+        image2: './Img/TuiXach/SP14/copy_z7886343037370_c51da24536b5210af29da7ce6e4c49c7.jpg',
+        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ hồng pastel\n-        Mặt trước túi đính hồ điệp đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai trúc và đai da có thể tháo rời, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Nổi bật với sắc hồng pastel dịu dàng, chiếc túi sợi cọ thủ công W20 x H18 x đáy 8cm được tô điểm bằng hồ điệp đính kết từ ngọc trai thật và cườm pha lê đầy tinh xảo. Quai trúc thanh lịch, đai da tháo rời cùng dây đeo chéo xích phối da bò mang đến vẻ đẹp vừa nữ tính vừa hiện đại. Một thiết kế đầy cảm hứng dành cho những ai yêu thích sự tinh tế và lãng mạn.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: pastel pink palm fiber\n- Front decorated with real pearl and crystal butterfly\n- Inner lining: canvas fabric\n- Detachable bamboo handle, leather band, and chain crossbody strap\nAI product description: Soft pastel pink palm fiber bag (W20 x H18 x D8 cm) featuring an exquisite real pearl and crystal butterfly embellishment. Accented with natural bamboo handle and detachable leather band.' }
+    },
+    {
+        id: 114, code: 'BR015', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR015', en: 'Palm Fiber Handbag BR015' },
+        image: './Img/TuiXach/SP15/copy_z7886347965073_d310c87772073e5c2251634e2e98ffa9.jpg',
+        image1: './Img/TuiXach/SP15/copy_z7886347968895_b5e7ea87d730397eff746b29004f67c3.jpg',
+        image2: './Img/TuiXach/SP15/copy_z7886347978054_213bf3f9efbf0d2522874ff5c28efe42.jpg',
+        description: { vi: 'Kích thước: W25xH18x đáy 10cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai da, có thêm quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ W25 x H18 x đáy 10cm nổi bật với họa tiết hoa nổi thủ công phủ khắp thân túi, gợi cảm hứng từ một khu vườn hoa rực rỡ đầy sức sống. Thiết kế kết hợp hài hòa giữa chất liệu thủ công tự nhiên, lớp lót canvas bền chắc cùng quai da thanh lịch và dây đeo chéo xích phối da bò.', en: 'Size: W25 x H18 x D10 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Leather handle and chain crossbody strap with leather details\nAI product description: Palm fiber handbag (W25 x H18 x D10 cm) featuring intricate 3D hand-crocheted flowers covering the body, evoking a vibrant blooming garden. Designed with a canvas lining and leather handles.' }
+    },
+    {
+        id: 115, code: 'BR016', catalogId: 'bag',
+        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cọ BR016', en: 'Palm Fiber Handbag BR016' },
+        image: './Img/TuiXach/SP16/copy_z7886352866493_342653726611572247de6bf31206a302.jpg',
+        image1: './Img/TuiXach/SP16/copy_z7886352869813_2b77dd8117bd375b978ecb7ffe17cfe0.jpg',
+        description: { vi: 'Kích thước: W25xH18x đáy 10cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai da, có thêm quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ W25 x H18 x đáy 10cm nổi bật với những bông hoa đỏ nổi thủ công trên nền sợi cọ tự nhiên, tạo vẻ đẹp rực rỡ và đầy nghệ thuật. Lót canvas bền chắc, quai da cao cấp cùng dây đeo chéo xích phối da bò mang đến sự tiện dụng và thanh lịch. Một thiết kế cuốn hút, giúp bạn nổi bật trong mọi khoảnh khắc.', en: 'Size: W25 x H18 x D10 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Leather handle and chain crossbody strap with leather details\nAI product description: Palm fiber bag (W25 x H18 x D10 cm) decorated with vibrant red hand-crocheted flowers on a natural straw background. Sturdy canvas lining, premium leather handle, and crossbody chain strap.' }
+    },
+    {
+        id: 116, code: 'BG017', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cỏ BG017', en: 'Grass Fiber Handbag BG017' },
+        image: './Img/TuiXach/SP17/copy_z7886358671193_c6d488ce8227a55506c1a07411bcaf52 (2).jpg',
+        image1: './Img/TuiXach/SP17/copy_z7886358676984_81f5e78641790c850ee22b79bb3ce570 (2).jpg',
+        image2: './Img/TuiXach/SP17/copy_z7886358681860_9073f4435b3076ae69d94ab92560596f (2).jpg',
+        image3: './Img/TuiXach/SP17/copy_z7886358686431_3372ebbc40001ba0a163b68f335d1b0c (2).jpg',
+        description: { vi: 'Kích thước: W20cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cỏ W20cm nổi bật với thiết kế hoa thủ công độc đáo, mang vẻ đẹp mềm mại và đầy tính nghệ thuật. Chất liệu sợi cỏ tự nhiên kết hợp lớp lót canvas bền chắc tạo nên một phụ kiện vừa tinh tế vừa tiện dụng. Một lựa chọn hoàn hảo cho những cô nàng yêu thích phong cách nữ tính, thanh lịch và khác biệt.', en: 'Size: W20 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\nAI product description: Woven grass fiber bag (W20cm) featuring unique handcrafted flower details. Natural grass fiber combined with canvas lining creates a soft, artistic, and highly durable daily accessory.' }
+    },
+    {
+        id: 117, code: 'BG018', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cỏ BG018', en: 'Grass Fiber Handbag BG018' },
+        image: './Img/TuiXach/SP18/LOGO18_1.jpg',
+        image1: './Img/TuiXach/SP18/LOGO18_2.jpg',
+        description: { vi: 'Kích thước: W18 x H15 x đáy 12cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-      Mặt trước đính hoa hồng móc nổi 3D\n-        Lót trong túi: vải canvas\n-        Quai trúc\nCâu chuyện sản phẩm:  Túi sợi cỏ W18 x H15 x đáy 12cm nổi bật với hoa hồng móc nổi 3D đính ở mặt trước, mang đến vẻ đẹp nữ tính và lãng mạn. Lót canvas bền chắc kết hợp quai trúc tự nhiên tạo nên một thiết kế hài hòa, tinh tế và đậm dấu ấn thủ công. Phụ kiện hoàn hảo để tạo điểm nhấn cho mọi outfit.', en: 'Size: W18 x H15 x D12 cm\nDetailed description:\n- Material: grass fiber\n- Front decorated with 3D crocheted pink roses\n- Inner lining: canvas fabric\n- Bamboo handle\nAI product description: Handcrafted grass fiber bag (W18 x H15 x D12 cm) highlighted by lovely 3D crocheted roses. Perfect blend of natural grass texture and organic bamboo handle for a feminine, rustic look.' }
+    },
+    {
+        id: 118, code: 'BG019', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cỏ BG019', en: 'Grass Fiber Handbag BG019' },
+        image: './Img/TuiXach/SP19/LOGO19_1.jpg',
+        image1: './Img/TuiXach/SP19/LOGO19_2.jpg',
+        description: { vi: 'Kích thước: W25 x H18,5 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cỏ W25 x H18,5 x đáy 8cm sở hữu thiết kế thủ công thanh lịch với vẻ đẹp tự nhiên và tinh tế. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng cho nhu cầu sử dụng hằng ngày. Một phụ kiện nhẹ nhàng, thời trang và dễ dàng đồng hành cùng nhiều phong cách khác nhau.', en: 'Size: W25 x H18.5 x D8 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\nAI product description: Elegant grass fiber shoulder bag (W25 x H18.5 x D8 cm) presenting clean hand-woven details and natural textures. A lightweight and versatile fashion piece lined with durable canvas.' }
+    },
+    {
+        id: 119, code: 'BG020', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cỏ BG020', en: 'Grass Fiber Handbag BG020' },
+        image: './Img/TuiXach/SP20/LOGO20_1.jpg',
+        image1: './Img/TuiXach/SP20/LOGO20_2.jpg',
+        image2: './Img/TuiXach/SP20/LOGO20_3.jpg',
+        description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    }
 ];
 
 
@@ -1009,6 +1174,7 @@ function renderFooter() {
                 <h4 class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">${footer.connectTitle}</h4>
                 <div class="flex gap-4">
                     <a href="${CONFIG.facebook}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="${CONFIG.instagram}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-instagram"></i></a>
                     <a href="https://zalo.me/${CONFIG.zalo}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><span class="text-xs font-bold">Zalo</span></a>
                 </div>
             </div>
@@ -1081,8 +1247,50 @@ function openModal(productId) {
     document.getElementById('modal-code-label').innerText = t('products.productCode');
     document.getElementById('modal-code-value').innerText = product.code;
     document.getElementById('modal-status-label').innerText = t('products.status');
-    document.getElementById('modal-desc-label').innerText = t('products.description');
-    document.getElementById('modal-desc').innerText = localized(product.description);
+
+    const descLabel = document.getElementById('modal-desc-label');
+    const descEl = document.getElementById('modal-desc');
+    const descText = localized(product.description);
+
+    // Check if description has a story part
+    const storyDividerVi = "Câu chuyện sản phẩm:";
+    const storyDividerEn = "AI product description:";
+
+    let splitIdx = descText.indexOf(storyDividerVi);
+    let dividerLength = storyDividerVi.length;
+    if (splitIdx === -1) {
+        splitIdx = descText.indexOf(storyDividerEn);
+        dividerLength = storyDividerEn.length;
+    }
+
+    if (splitIdx !== -1) {
+        descLabel.style.display = 'none';
+
+        const detailPart = descText.substring(0, splitIdx).trim();
+        const storyPart = descText.substring(splitIdx + dividerLength).trim();
+
+        const detailTitle = state.lang === 'vi' ? 'Thông số chi tiết' : 'Specifications';
+        const storyTitle = state.lang === 'vi' ? 'Câu chuyện sản phẩm' : 'Product Story';
+
+        descEl.innerHTML = `
+            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200/60 mb-4 text-gray-700 text-xs md:text-sm leading-relaxed">
+                <div class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+                    <i class="fas fa-list-ul text-brand-500"></i> ${detailTitle}
+                </div>
+                <div class="space-y-1">${detailPart.replace(/\n/g, '<br>')}</div>
+            </div>
+            <div class="bg-brand-900/[0.03] p-4 rounded-xl border border-brand-900/10 text-gray-700 text-xs md:text-sm leading-relaxed">
+                <div class="font-bold text-brand-900 mb-2 flex items-center gap-2">
+                    <i class="fas fa-feather-alt text-brand-500"></i> ${storyTitle}
+                </div>
+                <div class="italic text-justify">${storyPart.replace(/\n/g, '<br>')}</div>
+            </div>
+        `;
+    } else {
+        descLabel.style.display = 'block';
+        descLabel.innerText = t('products.description');
+        descEl.innerHTML = descText.replace(/\n/g, '<br>');
+    }
 
     const statusEl = document.getElementById('modal-status-value');
     statusEl.className = product.inStock ? "text-green-600 font-medium" : "text-red-500 font-medium";
@@ -1108,10 +1316,18 @@ function openModal(productId) {
         ).join('');
     }
 
-    document.getElementById('modal-zalo-btn').href = `https://zalo.me/${CONFIG.zalo}?text=${encodeURIComponent('Tôi quan tâm sản phẩm ' + localized(product.name) + ' mã ' + product.code)}`;
-    document.getElementById('modal-zalo-text').textContent = t('products.contactZalo');
-    document.getElementById('modal-hotline-text').textContent = t('products.callHotline');
-    document.getElementById('modal-hotline-btn').href = `tel:${CONFIG.phone}`;
+    document.querySelectorAll('.modal-zalo-btn').forEach(el => {
+        el.href = `https://zalo.me/${CONFIG.zalo}?text=${encodeURIComponent('Tôi quan tâm sản phẩm ' + localized(product.name) + ' mã ' + product.code)}`;
+    });
+    document.querySelectorAll('.modal-zalo-text').forEach(el => {
+        el.textContent = t('products.contactZalo');
+    });
+    document.querySelectorAll('.modal-hotline-text').forEach(el => {
+        el.textContent = t('products.callHotline');
+    });
+    document.querySelectorAll('.modal-hotline-btn').forEach(el => {
+        el.href = `tel:${CONFIG.phone}`;
+    });
 
     // Image gallery
     const mainImg = document.getElementById('modal-img');
@@ -1137,10 +1353,26 @@ function openModal(productId) {
     // Related
     const modalContent = document.querySelector('.modal-content');
     modalContent.querySelector('.related-section')?.remove();
-    const related = products
-        .filter(p => p.catalogId === product.catalogId && p.id !== product.id)
-        .filter(p => Object.entries(product.tags).some(([k, v]) => p.tags[k] === v))
-        .slice(0, 4);
+
+    const categoryProducts = products.filter(p => p.catalogId === product.catalogId);
+    const currentIndex = categoryProducts.findIndex(p => p.id === product.id);
+    const related = [];
+
+    if (currentIndex !== -1 && categoryProducts.length > 1) {
+        const N = categoryProducts.length;
+        // Nếu là sản phẩm đầu tiên, đề xuất 3 sản phẩm tiếp theo.
+        // Ngược lại, đề xuất 1 sản phẩm trước đó và 2 sản phẩm kế tiếp để có thể lùi/tiến.
+        const offsets = currentIndex === 0 ? [1, 2, 3] : [-1, 1, 2];
+
+        offsets.forEach(offset => {
+            const idx = (currentIndex + offset + N) % N;
+            const targetProd = categoryProducts[idx];
+            if (targetProd && !related.includes(targetProd) && targetProd.id !== product.id) {
+                related.push(targetProd);
+            }
+        });
+    }
+
     if (related.length > 0) {
         modalContent.insertAdjacentHTML('beforeend', `
             <div class="mt-6 pt-6 border-t related-section">
