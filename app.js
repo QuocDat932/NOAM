@@ -9,8 +9,7 @@ const CONFIG = {
     zalo: '0988063617',
     phone: '0988063617',
     email: 'contactnoam.vn@gmail.com',
-    facebook: 'https://www.facebook.com/lux.lady.68',
-    instagram: 'https://www.instagram.com/contactnoam.vn/',
+    instagram: 'https://www.instagram.com/noam_by_nancy/',
     defaultLang: 'vi',
     newArrivalsLimit: 4,
 };
@@ -117,7 +116,7 @@ const i18n = {
             { target: 98, text: '% Hài lòng' },
         ],
         footer: {
-            tagline: 'Nơi tôn vinh vẻ đẹp sang trọng và đẳng cấp.',
+            tagline: 'Nghệ thuật tạo tác từ thiên nhiên.',
             contactTitle: 'Liên Hệ',
             connectTitle: 'Kết Nối',
         },
@@ -241,7 +240,7 @@ const i18n = {
             { target: 98, text: '% Satisfaction' },
         ],
         footer: {
-            tagline: 'Where luxury and elegance are celebrated.',
+            tagline: 'Art crafted from nature.',
             contactTitle: 'Contact',
             connectTitle: 'Connect',
         },
@@ -655,7 +654,7 @@ const products = [
         name: { vi: 'Túi Sợi Cọ BR001', en: 'Palm Fiber Handbag BR001' },
         image: './Img/TuiXach/SP01/LOGO1_1.jpg',
         image1: './Img/TuiXach/SP01/LOGO1_2.jpg',
-        description: { vi: 'Kích thước: W29 x H13 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá đậm\n-        Lót trong túi: vải canvas\n-        Quai xích có phối da bò mềm để đeo vai không bị đau. \nCâu chuyện sản phẩm:  Túi sợi cọ xanh lá đậm với thiết kế thủ công tinh tế, kích thước W29 x H13 x đáy 9cm nhỏ gọn nhưng vẫn đủ không gian cho các vật dụng cần thiết. Lót trong bằng vải canvas bền đẹp, quai xích phối da bò mềm giúp đeo vai êm ái và thoải mái. Một phụ kiện thanh lịch, nổi bật nét đẹp tự nhiên và thời trang cho mọi outfit.', en: 'Size: W29 x H13 x D9 cm\nDetailed description:\n- Material: dark green palm fiber\n- Inner lining: canvas fabric\n- Chain shoulder strap padded with soft cowhide leather.\nAI product description: Exquisite hand-woven dark green palm fiber handbag. Compact size (W29 x H13 x D9 cm) yet spacious enough for essentials. Features durable canvas lining and a leather-padded chain strap for comfortable shoulder wear. A chic, natural fashion accessory.' }
+        description: { vi: 'Kích thước: W19 x H13 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá đậm\n-        Lót trong túi: vải canvas\n-        Quai xích có phối da bò mềm để đeo vai không bị đau. \nCâu chuyện sản phẩm:  Túi sợi cọ xanh lá đậm với thiết kế thủ công tinh tế, kích thước W19 x H13 x đáy 9cm nhỏ gọn nhưng vẫn đủ không gian cho các vật dụng cần thiết. Lót trong bằng vải canvas bền đẹp, quai xích phối da bò mềm giúp đeo vai êm ái và thoải mái. Một phụ kiện thanh lịch, nổi bật nét đẹp tự nhiên và thời trang cho mọi outfit.', en: 'Size: W19 x H13 x D9 cm\nDetailed description:\n- Material: dark green palm fiber\n- Inner lining: canvas fabric\n- Chain shoulder strap padded with soft cowhide leather.\nAI product description: Exquisite hand-woven dark green palm fiber handbag. Compact size (W19 x H13 x D9 cm) yet spacious enough for essentials. Features durable canvas lining and a leather-padded chain strap for comfortable shoulder wear. A chic, natural fashion accessory.' }
     },
     {
         id: 101, code: 'BR002', catalogId: 'bag',
@@ -1173,7 +1172,6 @@ function renderFooter() {
             <div>
                 <h4 class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">${footer.connectTitle}</h4>
                 <div class="flex gap-4">
-                    <a href="${CONFIG.facebook}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-facebook-f"></i></a>
                     <a href="${CONFIG.instagram}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-instagram"></i></a>
                     <a href="https://zalo.me/${CONFIG.zalo}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><span class="text-xs font-bold">Zalo</span></a>
                 </div>
