@@ -288,6 +288,7 @@ const catalog = [
                 name: { vi: 'Chủng loại', en: 'Type' },
                 options: [
                     { id: 'nhan', name: { vi: 'Nhẫn', en: 'Ring' } },
+                    { id: 'khuyên tai', name: { vi: 'Khuyên Tai', en: 'Earring' } },
                     { id: 'day-chuyen', name: { vi: 'Dây Chuyền', en: 'Necklace' } },
                     { id: 'lac-tay', name: { vi: 'Lắc Tay', en: 'Bracelet' } },
                     { id: 'vong-tay', name: { vi: 'Vòng Tay', en: 'Bangle' } },
@@ -608,11 +609,277 @@ const products = [
 
     // ── JEWELRY: Nhẫn ──
     {
-        id: 70, code: 'JW-NH-001', catalogId: 'jewelry',
+        id: 1000, code: 'JW-NH-001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
         name: { vi: 'Nhẫn Kim Cương Solitaire', en: 'Solitaire Diamond Ring' },
         image: './Img/Nhan/nhan-001.jpg',
         description: { vi: 'Nhẫn kim cương thiên nhiên, thiết kế Solitaire kinh điển.', en: 'Natural diamond ring, classic Solitaire design.' }
+    },
+    {
+        id: 1001, code: 'JRP001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai vàng', en: 'Nhẫn ngọc trai vàng' },
+        image: './Img/rings/01.Nhẫn ngọc trai vàng/mục 1.png',
+        image1: './Img/rings/01.Nhẫn ngọc trai vàng/mục 1 (2).png',
+        image2: './Img/rings/01.Nhẫn ngọc trai vàng/mục 1 (3).png',
+        description: { vi: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.' }
+    },
+    {
+        id: 1002, code: 'JRP002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Queen ngọc trai vàng', en: 'Nhẫn Queen ngọc trai vàng' },
+        image: './Img/rings/02.Nhẫn Queen ngọc trai/mục 2.png',
+        image1: './Img/rings/02.Nhẫn Queen ngọc trai/mục 2 (2).png',
+        description: { vi: 'Mẫu nhẫn Queen đẳng cấp với ngọc trai vàng kích thước 10-15 li. Thiết kế tôn vinh vẻ đẹp quý phái, thích hợp cho những ai yêu thích trang sức nổi bật.', en: 'Mẫu nhẫn Queen đẳng cấp với ngọc trai vàng kích thước 10-15 li. Thiết kế tôn vinh vẻ đẹp quý phái, thích hợp cho những ai yêu thích trang sức nổi bật.' }
+    },
+    {
+        id: 1003, code: 'JRP003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/03.Nhẫn ngọc trai trắng/mục 3.png',
+        image1: './Img/rings/03.Nhẫn ngọc trai trắng/mục 3 (2).png',
+        description: { vi: 'Sở hữu viên ngọc trai trắng từ 10-15 li với độ bóng đẹp tự nhiên. Kiểu dáng thanh lịch, dễ dàng kết hợp cùng nhiều phong cách thời trang.', en: 'Sở hữu viên ngọc trai trắng từ 10-15 li với độ bóng đẹp tự nhiên. Kiểu dáng thanh lịch, dễ dàng kết hợp cùng nhiều phong cách thời trang.' }
+    },
+    {
+        id: 1004, code: 'JRP004', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/04.Nhẫn ngọc trai trắng/mục 4.png',
+        image1: './Img/rings/04.Nhẫn ngọc trai trắng/mục 4 (2).png',
+        description: { vi: 'Thiết kế nổi bật với ngọc trai trắng cỡ lớn 10-15 li. Chế tác thủ công theo yêu cầu, mang đến vẻ đẹp sang trọng và cuốn hút.', en: 'Thiết kế nổi bật với ngọc trai trắng cỡ lớn 10-15 li. Chế tác thủ công theo yêu cầu, mang đến vẻ đẹp sang trọng và cuốn hút.' }
+    },
+    {
+        id: 1005, code: 'JRS001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn thạch anh tím', en: 'Nhẫn thạch anh tím' },
+        image: './Img/rings/05.Nhẫn thạch anh tím/mục 5 (4).png',
+        image1: './Img/rings/05.Nhẫn thạch anh tím/mục 5 (3).png',
+        image2: './Img/rings/05.Nhẫn thạch anh tím/mục 5 (2).png',
+        description: { vi: 'Viên thạch anh tím mang sắc tím huyền bí, được chế tác tinh xảo trên nền vàng hoặc bạc. Phù hợp cho người yêu thích vẻ đẹp nhẹ nhàng và thanh lịch.', en: 'Viên thạch anh tím mang sắc tím huyền bí, được chế tác tinh xảo trên nền vàng hoặc bạc. Phù hợp cho người yêu thích vẻ đẹp nhẹ nhàng và thanh lịch.' }
+    },
+    {
+        id: 1006, code: 'JRS002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn đá Nam Phi các màu', en: 'Nhẫn đá Nam Phi các màu' },
+        image: './Img/rings/06.Nhẫn đá Nam Phi các màu/mục 6.png',
+        image1: './Img/rings/06.Nhẫn đá Nam Phi các màu/mục 6 (2).png',
+        description: { vi: 'Kết hợp đá Nam Phi nhiều màu sắc rực rỡ, tạo nên điểm nhấn độc đáo cho người đeo. Chế tác theo yêu cầu, phù hợp nhiều phong cách khác nhau.', en: 'Kết hợp đá Nam Phi nhiều màu sắc rực rỡ, tạo nên điểm nhấn độc đáo cho người đeo. Chế tác theo yêu cầu, phù hợp nhiều phong cách khác nhau.' }
+    },
+    {
+        id: 1007, code: 'JRP005', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/07.Nhẫn ngọc trai trắng 10-12 li/mục 7 (3).png',
+        image1: './Img/rings/07.Nhẫn ngọc trai trắng 10-12 li/mục 7 (2).png',
+        image2: './Img/rings/07.Nhẫn ngọc trai trắng 10-12 li/mục 7 (1).png',
+        description: { vi: 'Ngọc trai trắng kích thước 10-12 li với độ bóng đẹp tự nhiên. Thiết kế tinh tế giúp tôn lên nét thanh lịch và nữ tính.', en: 'Ngọc trai trắng kích thước 10-12 li với độ bóng đẹp tự nhiên. Thiết kế tinh tế giúp tôn lên nét thanh lịch và nữ tính.' }
+    },
+    {
+        id: 1008, code: 'JRP006', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/08.Nhẫn ngọc trai trắng 10-15li/mục 8.png',
+        image1: './Img/rings/08.Nhẫn ngọc trai trắng 10-15li/mục 8 (2).png',
+        description: { vi: 'Mẫu nhẫn nổi bật với viên ngọc trai trắng 10-15 li sang trọng. Phù hợp làm quà tặng hoặc trang sức cho những dịp đặc biệt.', en: 'Mẫu nhẫn nổi bật với viên ngọc trai trắng 10-15 li sang trọng. Phù hợp làm quà tặng hoặc trang sức cho những dịp đặc biệt.' }
+    },
+    {
+        id: 1009, code: 'JRP007', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/09.Nhẫn ngọc trai trắng 10–12 li(phối đá CZ xanh- ngọc lục bảo xanh)/z7886923472979_31dfe54d602cc72b73e2c243f602c79c.jpg',
+        image1: './Img/rings/09.Nhẫn ngọc trai trắng 10–12 li(phối đá CZ xanh- ngọc lục bảo xanh)/z7886923072109_f1d7d49c27ad9a6eed92261a609bc0ac.jpg',
+        description: { vi: 'Sự kết hợp hài hòa giữa ngọc trai trắng và đá xanh CZ hoặc ngọc lục bảo xanh. Thiết kế mang vẻ đẹp sang trọng, tinh tế và đầy cuốn hút.', en: 'Sự kết hợp hài hòa giữa ngọc trai trắng và đá xanh CZ hoặc ngọc lục bảo xanh. Thiết kế mang vẻ đẹp sang trọng, tinh tế và đầy cuốn hút.' }
+    },
+    {
+        id: 1010, code: 'JRP008', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/10.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 10.png',
+        image1: './Img/rings/10.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 10 (2).png',
+        description: { vi: 'Ngọc trai trắng kết hợp đá CZ trắng hoặc kim cương lab lấp lánh, tạo nên tổng thể thanh lịch và hiện đại. Phù hợp cho mọi độ tuổi.', en: 'Ngọc trai trắng kết hợp đá CZ trắng hoặc kim cương lab lấp lánh, tạo nên tổng thể thanh lịch và hiện đại. Phù hợp cho mọi độ tuổi.' }
+    },
+    {
+        id: 1011, code: 'JRP009', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/11.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 11.png',
+        image1: './Img/rings/11.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 11 (3).png',
+        image2: './Img/rings/11.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 11 (2).png',
+        description: { vi: 'Thiết kế nổi bật với ngọc trai trắng cùng điểm nhấn đá CZ trắng hoặc kim cương lab. Mang đến vẻ đẹp sang trọng cho người đeo.', en: 'Thiết kế nổi bật với ngọc trai trắng cùng điểm nhấn đá CZ trắng hoặc kim cương lab. Mang đến vẻ đẹp sang trọng cho người đeo.' }
+    },
+    {
+        id: 1012, code: 'JRS003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Ruby', en: 'Nhẫn Ruby' },
+        image: './Img/rings/12.Nhẫn Ruby (phối đá CZ trắng-kim cương lab)/mục 12.png',
+        image1: './Img/rings/12.Nhẫn Ruby (phối đá CZ trắng-kim cương lab)/mục 12 (3).png',
+        image2: './Img/rings/12.Nhẫn Ruby (phối đá CZ trắng-kim cương lab)/mục 12 (2).png',
+        description: { vi: 'Viên Ruby đỏ rực tượng trưng cho sự may mắn và quyền lực. Thiết kế tinh xảo giúp tôn lên vẻ đẹp nổi bật và đẳng cấp.', en: 'Viên Ruby đỏ rực tượng trưng cho sự may mắn và quyền lực. Thiết kế tinh xảo giúp tôn lên vẻ đẹp nổi bật và đẳng cấp.' }
+    },
+    {
+        id: 1013, code: 'JRS004', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn đá Nam Phi các màu', en: 'Nhẫn đá Nam Phi các màu' },
+        image: './Img/rings/13.Nhẫn đá Nam Phi các màu/mục 13.png',
+        image1: './Img/rings/13.Nhẫn đá Nam Phi các màu/mục 13 (2).png',
+        description: { vi: 'Mẫu nhẫn sử dụng đá Nam Phi đa sắc màu, tạo điểm nhấn trẻ trung và cá tính. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc.', en: 'Mẫu nhẫn sử dụng đá Nam Phi đa sắc màu, tạo điểm nhấn trẻ trung và cá tính. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc.' }
+    },
+    {
+        id: 1014, code: 'JRP010', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
+        image: './Img/rings/14.Nhẫn ngọc trai trắng 8-10 li/mục 14.png',
+        image1: './Img/rings/14.Nhẫn ngọc trai trắng 8-10 li/mục 14 (2).png',
+        description: { vi: 'Thiết kế nhẹ nhàng với ngọc trai trắng kích thước 8-10 ly kết hợp đá CZ trắng hoặc kim cương lab. Phù hợp cho người yêu thích vẻ đẹp thanh lịch và tinh tế.', en: 'Thiết kế nhẹ nhàng với ngọc trai trắng kích thước 8-10 ly kết hợp đá CZ trắng hoặc kim cương lab. Phù hợp cho người yêu thích vẻ đẹp thanh lịch và tinh tế.' }
+    },
+    {
+        id: 1015, code: 'JRP011', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn ngọc trai vàng', en: 'Nhẫn ngọc trai vàng' },
+        image: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15.png',
+        image1: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15 (3).png',
+        image2: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15 (2).png',
+        description: { vi: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.' }
+    },
+
+    // ── JEWELRY: Khuyên Tai ──
+    {
+        id: 1201, code: 'JRE001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai thạch anh tím vàng-bạc', en: 'Khuyên tai thạch anh tím vàng-bạc' },
+        image: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1.png',
+        image1: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1 (2).png',
+        image2: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1 (3).png',
+        description: { vi: 'Khuyên tai thạch anh tím vàng bạc theo yêu cầu', en: 'Earring with amethyst quartz gold and silver' }
+    },
+    {
+        id: 1202, code: 'JRE002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai thạch anh tím vàng-bạc (2)', en: 'Khuyên tai thạch anh tím vàng-bạc (2)' },
+        image: './Img/earing/02.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 2.png',
+        image1: './Img/earing/02.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 2 (2).png',
+        description: { vi: 'Khuyên tai thạch anh tím vàng bạc theo yêu cầu', en: 'Earring with amethyst quartz gold and silver' }
+    },
+    {
+        id: 1203, code: 'JRE003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai thạch anh tím vàng-bạc (3)', en: 'Khuyên tai thạch anh tím vàng-bạc (3)' },
+        image: './Img/earing/03.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 3.png',
+        image1: './Img/earing/03.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 3 (2).png',
+        description: { vi: 'Khuyên tai thạch anh tím vàng bạc theo yêu cầu', en: 'Earring with amethyst quartz gold and silver' }
+    },
+    {
+        id: 1204, code: 'JRE004', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai phối đá Nam phi hồng', en: 'Khuyên tai ngọc trai phối đá Nam phi hồng' },
+        image: './Img/earing/04.Khuyên tai ngọc trai phối đá Nam phi hồng vàng-bạc theo yêu cầu/4. mục 4.png',
+        image1: './Img/earing/04.Khuyên tai ngọc trai phối đá Nam phi hồng vàng-bạc theo yêu cầu/4. mục 4 (2).png',
+        image2: './Img/earing/04.Khuyên tai ngọc trai phối đá Nam phi hồng vàng-bạc theo yêu cầu/z7886817727520_014eca3a848d78eefdb54149e3c37e01.jpg',
+        description: { vi: 'Khuyên tai ngọc trai phối đá Nam phi hồng vàng bạc theo yêu cầu', en: 'Pearl earring with red South African stones' }
+    },
+    {
+        id: 1205, code: 'JRE005', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Hồ Điệp', en: 'Khuyên tai Hồ Điệp' },
+        image: './Img/earing/05.Khuyên tai Hồ Điệp/4. mục 5.png',
+        image1: './Img/earing/05.Khuyên tai Hồ Điệp/4. mục 5 (2).png',
+        image2: './Img/earing/05.Khuyên tai Hồ Điệp/4. mục 5 (3).png',
+        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
+    },
+    {
+        id: 1206, code: 'JRE006', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Hồ Điệp (2)', en: 'Khuyên tai Hồ Điệp (2)' },
+        image: './Img/earing/06.Khuyên tai Hồ Điệp/4. mục 6.png',
+        image1: './Img/earing/06.Khuyên tai Hồ Điệp/4. mục 6 (2).png',
+        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
+    },
+    {
+        id: 1207, code: 'JRE007', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Hồ Điệp (3)', en: 'Khuyên tai Hồ Điệp (3)' },
+        image: './Img/earing/07.Khuyên tai Hồ Điệp/4. mục 7.png',
+        image1: './Img/earing/07.Khuyên tai Hồ Điệp/4. mục 7 (2).png',
+        image2: './Img/earing/07.Khuyên tai Hồ Điệp/4. mục 7 (3).png',
+        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
+    },
+    {
+        id: 1208, code: 'JRE008', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Hồ Điệp (4)', en: 'Khuyên tai Hồ Điệp (4)' },
+        image: './Img/earing/08.Khuyên tai Hồ Điệp/4. mục 8.png',
+        image1: './Img/earing/08.Khuyên tai Hồ Điệp/4. mục 8 (2).png',
+        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
+    },
+    {
+        id: 1209, code: 'JRE009', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Thánh Giá', en: 'Khuyên tai Thánh Giá' },
+        image: './Img/earing/09.Khuyên tai Thánh Giá/4. mục 9.png',
+        image1: './Img/earing/09.Khuyên tai Thánh Giá/4. mục 9 (2).png',
+        description: { vi: 'Khuyên tai Thánh Giá', en: 'Cross shaped earring' }
+    },
+    {
+        id: 1210, code: 'JRE010', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai trái tim', en: 'Khuyên tai trái tim' },
+        image: './Img/earing/10.Khuyên tai trái tim/4. mục 10.png',
+        image1: './Img/earing/10.Khuyên tai trái tim/4. mục 10 (2).png',
+        description: { vi: 'Khuyên tai trái tim', en: 'Heart shaped earring' }
+    },
+    {
+        id: 1211, code: 'JRE011', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai trái tim (2)', en: 'Khuyên tai trái tim (2)' },
+        image: './Img/earing/11.Khuyên tai trái tim/4. mục 11.png',
+        image1: './Img/earing/11.Khuyên tai trái tim/4. mục 11 (2).png',
+        image2: './Img/earing/11.Khuyên tai trái tim/z7892573744136_e8689fba2a41d0e4ba9bd8b78364abc3.jpg',
+        description: { vi: 'Khuyên tai trái tim', en: 'Heart shaped earring' }
+    },
+    {
+        id: 1212, code: 'JRE012', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai trái tim thắt dây nơ', en: 'Khuyên tai trái tim thắt dây nơ' },
+        image: './Img/earing/12.Khuyên tai trái tim thắt dây nơ/4. mục 12.png',
+        image1: './Img/earing/12.Khuyên tai trái tim thắt dây nơ/4. mục 12 (2).png',
+        image2: './Img/earing/12.Khuyên tai trái tim thắt dây nơ/z7892599156277_d87dee2ed9df16c1ca637b06568c580e.jpg',
+        description: { vi: 'Khuyên tai trái tim thắt dây nơ', en: 'Heart shaped earring with bow' }
+    },
+    {
+        id: 1213, code: 'JRE013', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai dây nơ', en: 'Khuyên tai dây nơ' },
+        image: './Img/earing/13.Khuyên tai dây nơ/4. mục 13.png',
+        image1: './Img/earing/13.Khuyên tai dây nơ/4. mục 13 (2).png',
+        image2: './Img/earing/13.Khuyên tai dây nơ/z7892648770497_d44e2d1beb88f4236bf8612fc74a6b8c.jpg',
+        description: { vi: 'Khuyên tai dây nơ', en: 'Bow shaped earring' }
+    },
+    {
+        id: 1214, code: 'JRE014', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Hoa Mai', en: 'Khuyên tai Hoa Mai' },
+        image: './Img/earing/14.Khuyên tai Hoa Mai/4. mục 14.png',
+        image1: './Img/earing/14.Khuyên tai Hoa Mai/4. mục 14 (2).png',
+        image2: './Img/earing/14.Khuyên tai Hoa Mai/z7892661577725_036959bff9235e9da5cfcb596968f04e.jpg',
+        description: { vi: 'Khuyên tai Hoa Mai', en: 'Plum flower earring' }
+    },
+    {
+        id: 1215, code: 'JRE015', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai vàng', en: 'Khuyên tai ngọc trai vàng' },
+        image: './Img/earing/15.Khuyên tai ngọc trai vàng/4. mục 15.png',
+        image1: './Img/earing/15.Khuyên tai ngọc trai vàng/4. mục 15 (2).png',
+        image2: './Img/earing/15.Khuyên tai ngọc trai vàng/z7895182859056_31d367fbdfbf756d84f79d4c5b06f1cd.jpg',
+        description: { vi: 'Khuyên tai ngọc trai vàng', en: 'Pearl earring with gold' }
+    },
+    {
+        id: 1216, code: 'JRE016', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai trắng', en: 'Khuyên tai ngọc trai trắng' },
+        image: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16.png',
+        image1: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (2).png',
+        image2: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (3).png',
+        description: { vi: 'Khuyên tai ngọc trai trắng', en: 'Pearl earring with white' }
     },
 
     // ── JEWELRY: Vòng Cổ Nữ ──
@@ -1334,8 +1601,8 @@ function openModal(productId) {
     mainImg.style.opacity = '1';
     thumbs.innerHTML = '';
 
-    const images = [product.image, product.image1, product.image2, product.image3].filter(Boolean);
-    images.forEach((src, i) => {
+    const imageArray = [product.image, product.image1, product.image2, product.image3].filter(Boolean);
+    imageArray.forEach((src, i) => {
         const thumb = document.createElement('img');
         thumb.src = src;
         thumb.className = `w-12 h-12 md:w-16 md:h-16 object-cover cursor-pointer border-2 border-transparent hover:border-brand-500 rounded-md transition duration-200 flex-shrink-0 ${i === 0 ? 'thumb-active' : 'opacity-60 hover:opacity-100'}`;
