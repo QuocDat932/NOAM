@@ -1050,38 +1050,38 @@ const products = [
         description: { vi: 'Kích thước: W25xH18x đáy 10cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai da, có thêm quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ W25 x H18 x đáy 10cm nổi bật với những bông hoa đỏ nổi thủ công trên nền sợi cọ tự nhiên, tạo vẻ đẹp rực rỡ và đầy nghệ thuật. Lót canvas bền chắc, quai da cao cấp cùng dây đeo chéo xích phối da bò mang đến sự tiện dụng và thanh lịch. Một thiết kế cuốn hút, giúp bạn nổi bật trong mọi khoảnh khắc.', en: 'Size: W25 x H18 x D10 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Leather handle and chain crossbody strap with leather details\nAI product description: Palm fiber bag (W25 x H18 x D10 cm) decorated with vibrant red hand-crocheted flowers on a natural straw background. Sturdy canvas lining, premium leather handle, and crossbody chain strap.' }
     },
     {
-        id: 116, code: 'BG017', catalogId: 'bag',
+        id: 116, code: 'BG001', catalogId: 'bag',
         tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG017', en: 'Grass Fiber Handbag BG017' },
-        image: './Img/TuiXach/SP17/copy_z7886358671193_c6d488ce8227a55506c1a07411bcaf52 (2).jpg',
-        image1: './Img/TuiXach/SP17/copy_z7886358676984_81f5e78641790c850ee22b79bb3ce570 (2).jpg',
-        image2: './Img/TuiXach/SP17/copy_z7886358681860_9073f4435b3076ae69d94ab92560596f (2).jpg',
-        image3: './Img/TuiXach/SP17/copy_z7886358686431_3372ebbc40001ba0a163b68f335d1b0c (2).jpg',
+        name: { vi: 'Túi Sợi Cỏ BG001', en: 'Grass Fiber Handbag BG001' },
+        image: './Img/TuiXach/SP17/2_17 (2).png',
+        image1: './Img/TuiXach/SP17/2_17 (3).png',
+        image2: './Img/TuiXach/SP17/2_17 (4).png',
+        image3: './Img/TuiXach/SP17/2_17.png',
         description: { vi: 'Kích thước: W20cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cỏ W20cm nổi bật với thiết kế hoa thủ công độc đáo, mang vẻ đẹp mềm mại và đầy tính nghệ thuật. Chất liệu sợi cỏ tự nhiên kết hợp lớp lót canvas bền chắc tạo nên một phụ kiện vừa tinh tế vừa tiện dụng. Một lựa chọn hoàn hảo cho những cô nàng yêu thích phong cách nữ tính, thanh lịch và khác biệt.', en: 'Size: W20 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\nAI product description: Woven grass fiber bag (W20cm) featuring unique handcrafted flower details. Natural grass fiber combined with canvas lining creates a soft, artistic, and highly durable daily accessory.' }
     },
     {
-        id: 117, code: 'BG018', catalogId: 'bag',
+        id: 117, code: 'BG002', catalogId: 'bag',
         tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG018', en: 'Grass Fiber Handbag BG018' },
-        image: './Img/TuiXach/SP18/LOGO18_1.jpg',
-        image1: './Img/TuiXach/SP18/LOGO18_2.jpg',
+        name: { vi: 'Túi Sợi Cỏ BG002', en: 'Grass Fiber Handbag BG002' },
+        image: './Img/TuiXach/SP18/2_18 (2).png',
+        image1: './Img/TuiXach/SP18/2_18.png',
         description: { vi: 'Kích thước: W18 x H15 x đáy 12cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-      Mặt trước đính hoa hồng móc nổi 3D\n-        Lót trong túi: vải canvas\n-        Quai trúc\nCâu chuyện sản phẩm:  Túi sợi cỏ W18 x H15 x đáy 12cm nổi bật với hoa hồng móc nổi 3D đính ở mặt trước, mang đến vẻ đẹp nữ tính và lãng mạn. Lót canvas bền chắc kết hợp quai trúc tự nhiên tạo nên một thiết kế hài hòa, tinh tế và đậm dấu ấn thủ công. Phụ kiện hoàn hảo để tạo điểm nhấn cho mọi outfit.', en: 'Size: W18 x H15 x D12 cm\nDetailed description:\n- Material: grass fiber\n- Front decorated with 3D crocheted pink roses\n- Inner lining: canvas fabric\n- Bamboo handle\nAI product description: Handcrafted grass fiber bag (W18 x H15 x D12 cm) highlighted by lovely 3D crocheted roses. Perfect blend of natural grass texture and organic bamboo handle for a feminine, rustic look.' }
     },
     {
-        id: 118, code: 'BG019', catalogId: 'bag',
+        id: 118, code: 'BG003', catalogId: 'bag',
         tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG019', en: 'Grass Fiber Handbag BG019' },
-        image: './Img/TuiXach/SP19/LOGO19_1.jpg',
-        image1: './Img/TuiXach/SP19/LOGO19_2.jpg',
+        name: { vi: 'Túi Sợi Cỏ BG003', en: 'Grass Fiber Handbag BG003' },
+        image: './Img/TuiXach/SP19/2_19 (2).png',
+        image1: './Img/TuiXach/SP19/2_19.png',
         description: { vi: 'Kích thước: W25 x H18,5 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cỏ W25 x H18,5 x đáy 8cm sở hữu thiết kế thủ công thanh lịch với vẻ đẹp tự nhiên và tinh tế. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng cho nhu cầu sử dụng hằng ngày. Một phụ kiện nhẹ nhàng, thời trang và dễ dàng đồng hành cùng nhiều phong cách khác nhau.', en: 'Size: W25 x H18.5 x D8 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\nAI product description: Elegant grass fiber shoulder bag (W25 x H18.5 x D8 cm) presenting clean hand-woven details and natural textures. A lightweight and versatile fashion piece lined with durable canvas.' }
     },
     {
-        id: 119, code: 'BG020', catalogId: 'bag',
+        id: 119, code: 'BG004', catalogId: 'bag',
         tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG020', en: 'Grass Fiber Handbag BG020' },
-        image: './Img/TuiXach/SP20/LOGO20_1.jpg',
-        image1: './Img/TuiXach/SP20/LOGO20_2.jpg',
-        image2: './Img/TuiXach/SP20/LOGO20_3.jpg',
+        name: { vi: 'Túi Sợi Cỏ BG004', en: 'Grass Fiber Handbag BG004' },
+        image: './Img/TuiXach/SP20/2_20 (1).png',
+        image1: './Img/TuiXach/SP20/2_20 (2).png',
+        image2: './Img/TuiXach/SP20/2_20.png',
         description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
     }
 ];
