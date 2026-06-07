@@ -59,8 +59,12 @@
 
     <!-- Poster / Splash Screen -->
     <div id="poster-splash" class="poster-splash">
-        <div class="poster-frame">
-            <img src="./Img/poster/poster4x5.jpg" alt="NOAM - noam.vn" class="poster-img">
+        <div class="poster-frame" id="popup-slideshow-parent" style="position: relative;">
+            <div id="popup-slideshow-container">
+                <!-- Rendered dynamically -->
+            </div>
+            <!-- Indicator Dots -->
+            <div id="popup-slideshow-dots" class="popup-dots"></div>
         </div>
         <button id="poster-close" class="poster-close">
             <i class="fas fa-times"></i>
@@ -152,10 +156,12 @@
 
     <!-- Hero Banner -->
     <section class="hero-banner relative bg-brand-900 overflow-hidden flex items-center">
-        <div class="absolute inset-0 z-0">
-            <img src="./Img/poster/poster16x5.jpg" alt="Banner" class="hero-img w-full h-full opacity-80 md:opacity-60">
-            <div class="hero-overlay absolute inset-0"></div>
+        <div id="hero-slideshow-container" class="absolute inset-0 z-0">
+            <!-- Rendered dynamically -->
         </div>
+        <div class="hero-overlay absolute inset-0 z-10 pointer-events-none"></div>
+        <!-- Indicator Dots -->
+        <div id="hero-slideshow-dots" class="slideshow-dots"></div>
         <!-- <div class="container mx-auto px-4 relative z-10 text-white mt-16 md:mt-24">
             <div id="hero-content" class="max-w-2xl animate-slide-up "></div>
         </div> -->
@@ -404,6 +410,20 @@
             <div id="wishlist-content" class="p-6 overflow-y-auto max-h-[calc(85vh-80px)]"></div>
         </div>
     </div>
+
+    <!-- Product Data Files -->
+    <script src="./data/data_posters.js"></script>
+    <script src="./data/data_bo_trang_suc.js"></script>
+    <script src="./data/data_charm.js"></script>
+    <script src="./data/data_day_chuyen.js"></script>
+    <script src="./data/data_lac_tay.js"></script>
+    <script src="./data/data_chuoi_vong_co.js"></script>
+    <script src="./data/data_nhan.js"></script>
+    <script src="./data/data_khuyen_tai.js"></script>
+    <script src="./data/data_vong_tay.js"></script>
+    <script src="./data/data_kieng.js"></script>
+    <script src="./data/data_bag.js"></script>
+    <script src="./data/data_collection.js"></script>
 
     <script src="./app.js"></script>
 </body>

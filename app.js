@@ -337,1045 +337,17 @@ const catalog = [
 // tags: object với key = filter.id, value = option.id (match catalog.filters)
 // Thêm sản phẩm mới: copy 1 object, đổi thông tin, UI tự render.
 const products = [
-    // ── JEWELRY: Bộ Trang Sức ──
-    {
-        id: 1, code: 'JW-BTS-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: false, inStock: true,
-        name: { vi: 'Bộ Trang Sức Cỏ 4 Lá', en: '4-Leaf Clover Jewelry Set' },
-        image: './Img/Bo-trang-suc/bo-trang-suc-co-4-la.jpg',
-        description: { vi: 'Bộ trang sức cỏ 4 lá may mắn, thiết kế tinh tế mang lại vẻ đẹp sang trọng.', en: 'Lucky 4-leaf clover jewelry set, exquisitely designed for an elegant look.' }
-    },
-    {
-        id: 2, code: 'JW-BTS-002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: false, inStock: true,
-        name: { vi: 'Bộ Trang Sức Nhẫn Bông Tai', en: 'Ring & Earring Jewelry Set' },
-        image: './Img/Bo-trang-suc/bo-trang-suc-nhan-bong-tay-001.jpg',
-        description: { vi: 'Bộ trang sức nhẫn kết hợp bông tai, chế tác tinh xảo từ nghệ nhân hàng đầu.', en: 'Ring and earring set, meticulously crafted by top artisans.' }
-    },
-    {
-        id: 3, code: 'JW-BTS-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'bo-trang-suc' }, isNew: false, inStock: true,
-        name: { vi: 'Bộ Trang Sức Nhẫn Dây Chuyền', en: 'Ring & Necklace Jewelry Set' },
-        image: './Img/Bo-trang-suc/bo-trang-suc-nhan-day-chuyen.jpg',
-        description: { vi: 'Bộ trang sức nhẫn và dây chuyền đồng bộ, sang trọng và quý phái.', en: 'Matching ring and necklace set, luxurious and sophisticated.' }
-    },
-
-    // ── JEWELRY: Charm Bạc ──
-    {
-        id: 10, code: 'JW-CH-001', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Trái Tim', en: 'Silver Heart Charm' },
-        image: './Img/Charm-bac/charm-bac-001.jpg',
-        description: { vi: 'Charm bạc 925 cao cấp, thiết kế trái tim dễ thương.', en: 'Premium 925 silver charm with cute heart design.' }
-    },
-    {
-        id: 11, code: 'JW-CH-002', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Ngôi Sao', en: 'Silver Star Charm' },
-        image: './Img/Charm-bac/charm-bac-002.jpg',
-        description: { vi: 'Charm bạc ngôi sao lấp lánh, phong cách trẻ trung.', en: 'Sparkling silver star charm, youthful style.' }
-    },
-    {
-        id: 12, code: 'JW-CH-003', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Hoa Cúc', en: 'Silver Daisy Charm' },
-        image: './Img/Charm-bac/charm-bac-003.jpg',
-        description: { vi: 'Charm bạc hoa cúc tinh tế, mang vẻ đẹp tự nhiên.', en: 'Delicate silver daisy charm with natural beauty.' }
-    },
-    {
-        id: 13, code: 'JW-CH-004', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Bướm', en: 'Silver Butterfly Charm' },
-        image: './Img/Charm-bac/charm-bac-004.jpg',
-        description: { vi: 'Charm bạc hình bướm, biểu tượng của sự tự do.', en: 'Silver butterfly charm, symbol of freedom.' }
-    },
-    {
-        id: 14, code: 'JW-CH-005', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Mặt Trăng', en: 'Silver Moon Charm' },
-        image: './Img/Charm-bac/charm-bac-005.jpg',
-        description: { vi: 'Charm bạc mặt trăng huyền bí, phong cách độc đáo.', en: 'Mystical silver moon charm, unique style.' }
-    },
-    {
-        id: 15, code: 'JW-CH-006', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Vương Miện', en: 'Silver Crown Charm' },
-        image: './Img/Charm-bac/charm-bac-006.jpg',
-        description: { vi: 'Charm bạc vương miện, thể hiện đẳng cấp nữ hoàng.', en: 'Silver crown charm, expressing queenly elegance.' }
-    },
-    {
-        id: 16, code: 'JW-CH-007', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Chìa Khóa', en: 'Silver Key Charm' },
-        image: './Img/Charm-bac/charm-bac-007.jpg',
-        description: { vi: 'Charm bạc chìa khóa, biểu tượng mở cánh cửa mới.', en: 'Silver key charm, symbol of new beginnings.' }
-    },
-    {
-        id: 17, code: 'JW-CH-008', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Cỏ 4 Lá', en: 'Silver 4-Leaf Clover Charm' },
-        image: './Img/Charm-bac/charm-bac-008.jpg',
-        description: { vi: 'Charm bạc cỏ 4 lá may mắn, mang lại tài lộc.', en: 'Lucky silver 4-leaf clover charm.' }
-    },
-    {
-        id: 18, code: 'JW-CH-009', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Hình Tròn', en: 'Silver Circle Charm' },
-        image: './Img/Charm-bac/charm-bac-009.jpg',
-        description: { vi: 'Charm bạc hình tròn tối giản, phù hợp mọi phong cách.', en: 'Minimalist silver circle charm, suits any style.' }
-    },
-    {
-        id: 19, code: 'JW-CH-010', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Giọt Nước', en: 'Silver Teardrop Charm' },
-        image: './Img/Charm-bac/charm-bac-010.jpg',
-        description: { vi: 'Charm bạc giọt nước thanh lịch.', en: 'Elegant silver teardrop charm.' }
-    },
-    {
-        id: 20, code: 'JW-CH-011', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Hình Vuông', en: 'Silver Square Charm' },
-        image: './Img/Charm-bac/charm-bac-011.jpg',
-        description: { vi: 'Charm bạc hình vuông hiện đại.', en: 'Modern silver square charm.' }
-    },
-    {
-        id: 21, code: 'JW-CH-012', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'charm' }, isNew: false, inStock: true,
-        name: { vi: 'Charm Bạc Infinity', en: 'Silver Infinity Charm' },
-        image: './Img/Charm-bac/charm-bac-012.jpg',
-        description: { vi: 'Charm bạc infinity, biểu tượng tình yêu vĩnh cửu.', en: 'Silver infinity charm, symbol of eternal love.' }
-    },
-
-    // ── JEWELRY: Dây Chuyền Nữ ──
-    {
-        id: 30, code: 'JW-DC-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Thanh Lịch', en: 'Elegant Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-001.jpg',
-        description: { vi: 'Dây chuyền vàng 18K, thiết kế thanh lịch cho phái đẹp.', en: '18K gold necklace, elegant design for women.' }
-    },
-    {
-        id: 31, code: 'JW-DC-002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Sang Trọng', en: 'Luxurious Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-002.jpg',
-        description: { vi: 'Dây chuyền sang trọng, chế tác tinh xảo.', en: 'Luxurious necklace, exquisitely crafted.' }
-    },
-    {
-        id: 32, code: 'JW-DC-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Tinh Tế', en: 'Delicate Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-003.jpg',
-        description: { vi: 'Dây chuyền tinh tế, phù hợp mọi dịp.', en: 'Delicate necklace, perfect for any occasion.' }
-    },
-    {
-        id: 33, code: 'JW-DC-004', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Đính Đá', en: 'Gemstone Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-004.jpg',
-        description: { vi: 'Dây chuyền đính đá quý lấp lánh.', en: 'Necklace adorned with sparkling gemstones.' }
-    },
-    {
-        id: 34, code: 'JW-DC-005', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Trái Tim', en: 'Heart Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-005.jpg',
-        description: { vi: 'Dây chuyền trái tim lãng mạn.', en: 'Romantic heart pendant necklace.' }
-    },
-    {
-        id: 35, code: 'JW-DC-006', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Ngọc Trai', en: 'Pearl Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-006.jpg',
-        description: { vi: 'Dây chuyền ngọc trai thiên nhiên cao cấp.', en: 'Premium natural pearl necklace.' }
-    },
-    {
-        id: 36, code: 'JW-DC-007', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Mặt Tròn', en: 'Round Pendant Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-007.jpg',
-        description: { vi: 'Dây chuyền mặt tròn tối giản, thanh lịch.', en: 'Minimalist round pendant necklace.' }
-    },
-    {
-        id: 37, code: 'JW-DC-008', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Cổ Điển', en: 'Classic Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-008.jpg',
-        description: { vi: 'Dây chuyền phong cách cổ điển sang trọng.', en: 'Classic style luxury necklace.' }
-    },
-    {
-        id: 38, code: 'JW-DC-009', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Hiện Đại', en: 'Modern Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-009.jpg',
-        description: { vi: 'Dây chuyền thiết kế hiện đại, trẻ trung.', en: 'Modern design necklace, youthful.' }
-    },
-    {
-        id: 39, code: 'JW-DC-010', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Đơn Giản', en: 'Simple Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-010.jpg',
-        description: { vi: 'Dây chuyền bạc đơn giản, dễ phối đồ.', en: 'Simple silver necklace, easy to pair.' }
-    },
-    {
-        id: 40, code: 'JW-DC-011', catalogId: 'jewelry',
-        tags: { line: 'bac', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Dây Xích', en: 'Chain Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-011.jpg',
-        description: { vi: 'Dây chuyền dây xích phong cách cá tính.', en: 'Chain necklace with edgy style.' }
-    },
-    {
-        id: 41, code: 'JW-DC-012', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Mặt Vuông', en: 'Square Pendant Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-012.jpg',
-        description: { vi: 'Dây chuyền mặt vuông hiện đại.', en: 'Modern square pendant necklace.' }
-    },
-    {
-        id: 42, code: 'JW-DC-013', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Tourmaline', en: 'Tourmaline Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-013-Tourmaline.jpg',
-        description: { vi: 'Dây chuyền đính đá Tourmaline thiên nhiên cao cấp.', en: 'Premium natural Tourmaline pendant necklace.' }
-    },
-    {
-        id: 43, code: 'JW-DC-014', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Luxury', en: 'Luxury Necklace' },
-        image: './Img/Day-chuyen-nu/Day-chuyen-nu-014.jpg',
-        description: { vi: 'Dây chuyền cao cấp, đẳng cấp sang trọng.', en: 'High-end luxury necklace.' }
-    },
-
-    // ── JEWELRY: Lắc Tay Nam ──
-    {
-        id: 50, code: 'JW-LT-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nam Mạnh Mẽ', en: "Men's Bold Bracelet" },
-        image: './Img/Lac-tay-nam/128L16-C02500_c8-Ptsj.jpg',
-        description: { vi: 'Lắc tay nam vàng 18K, thiết kế mạnh mẽ, nam tính.', en: "18K gold men's bracelet, bold and masculine design." }
-    },
-    {
-        id: 51, code: 'JW-LT-002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nam Sang Trọng', en: "Men's Luxury Bracelet" },
-        image: './Img/Lac-tay-nam/128L17-C03000_1L3-Ptsj.jpg',
-        description: { vi: 'Lắc tay nam sang trọng, phong cách lịch lãm.', en: "Luxury men's bracelet, refined style." }
-    },
-    {
-        id: 52, code: 'JW-LT-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nam Cổ Điển', en: "Men's Classic Bracelet" },
-        image: './Img/Lac-tay-nam/CTL1143-C0700_4c7-Ptsj.jpg',
-        description: { vi: 'Lắc tay nam cổ điển, bền đẹp theo thời gian.', en: "Classic men's bracelet, timeless beauty." }
-    },
-    {
-        id: 53, code: 'JW-LT-004', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nam Hiện Đại', en: "Men's Modern Bracelet" },
-        image: './Img/Lac-tay-nam/KL010-C03400_8c-Ptsj.jpg',
-        description: { vi: 'Lắc tay nam hiện đại, phong cách trẻ trung.', en: "Modern men's bracelet, youthful style." }
-    },
-
-    // ── JEWELRY: Lắc Tay Nữ ──
-    {
-        id: 60, code: 'JW-LT-005', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nữ Tinh Tế', en: "Women's Delicate Bracelet" },
-        image: './Img/Lac-tay-nu/L005675-09290-Ptsj.jpg',
-        description: { vi: 'Lắc tay nữ vàng trắng, thiết kế tinh tế, nữ tính.', en: "White gold women's bracelet, delicate and feminine." }
-    },
-    {
-        id: 61, code: 'JW-LT-006', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nữ Thanh Lịch', en: "Women's Elegant Bracelet" },
-        image: './Img/Lac-tay-nu/L006294-013040-Ptsj.jpg',
-        description: { vi: 'Lắc tay nữ thanh lịch, phù hợp mọi phong cách.', en: "Elegant women's bracelet for any style." }
-    },
-    {
-        id: 62, code: 'JW-LT-007', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nữ Đính Đá', en: "Women's Gemstone Bracelet" },
-        image: './Img/Lac-tay-nu/L006727-010490-Ptsj.jpg',
-        description: { vi: 'Lắc tay nữ đính đá quý lấp lánh.', en: "Women's bracelet adorned with sparkling gems." }
-    },
-    {
-        id: 63, code: 'JW-LT-008', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nữ Sang Trọng', en: "Women's Luxury Bracelet" },
-        image: './Img/Lac-tay-nu/L006767-07680-Ptsj.jpg',
-        description: { vi: 'Lắc tay nữ sang trọng cho những dịp đặc biệt.', en: "Luxury women's bracelet for special occasions." }
-    },
-    {
-        id: 64, code: 'JW-LT-009', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Lắc Tay Nữ Luxury', en: "Women's Premium Bracelet" },
-        image: './Img/Lac-tay-nu/L007218-015130-Ptsj.jpg',
-        description: { vi: 'Lắc tay nữ cao cấp, đẳng cấp vượt trội.', en: "Premium women's bracelet, superior quality." }
-    },
-
-    // ── JEWELRY: Chuỗi Vòng Cổ Ngọc Trai ──
-    {
-        id: 200, code: 'JP001', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Quấn 3', en: 'Triple-Wrap Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/01.Chuoi-vong-co-Ngoc-trai-quan-3/JP001_01.jpg',
-        image1: './Img/Chuoi-vong-co/01.Chuoi-vong-co-Ngoc-trai-quan-3/JP001_02.jpg',
-        image2: './Img/Chuoi-vong-co/01.Chuoi-vong-co-Ngoc-trai-quan-3/JP001_03.jpg',
-        description: {
-            vi: 'Thanh lịch và sang trọng với thiết kế ngọc trai quấn 3 vòng. Sử dụng ngọc trai kích thước 6-10 li kết hợp mặt hồ điệp đính đá lấp lánh, tạo điểm nhấn tinh tế cho mọi trang phục.',
-            en: 'Elegant and luxurious with a 3-strand wrap design. Featuring 6–10mm pearls combined with a sparkling, stone-encrusted butterfly pendant, creating a sophisticated accent for any outfit.'
-        }
-    },
-    {
-        id: 201, code: 'JP002', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai 3 Màu', en: 'Three-Color Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/02.Chuoi-vong-co-Ngoc-trai-3-mau/JP002_01.jpg',
-        image1: './Img/Chuoi-vong-co/02.Chuoi-vong-co-Ngoc-trai-3-mau/JP002_02.jpg',
-        description: {
-            vi: 'Nổi bật với sự hòa quyện của ba sắc màu ngọc trai độc đáo. Thiết kế kết hợp mặt tròn đính đá CZ sang trọng, mang đến vẻ đẹp trẻ trung và hiện đại.',
-            en: 'Standing out with a harmonious blend of three unique pearl colors. The design combines a luxurious, CZ stone-encrusted round pendant, bringing a youthful and modern beauty.'
-        }
-    },
-
-    {
-        id: 202, code: 'JP003', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Quấn Đôi', en: 'Double-Wrap Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/03.Chuoi-vong-co-Ngoc-trai-quan-doi/JP003_01.jpg',
-        image1: './Img/Chuoi-vong-co/03.Chuoi-vong-co-Ngoc-trai-quan-doi/JP003_02.jpg',
-        description: {
-            vi: 'Thiết kế quấn đôi thanh lịch từ ngọc trai 9 li, kết hợp mặt hoa có nhụy và viền chủ tông ngọc trai 12-14 li. Phụ kiện hoàn hảo cho phong cách nữ tính, quý phái.',
-            en: 'An elegant double-wrap design crafted from 9mm pearls, combined with a floral pendant featuring a center pearl and a matching border of 12–14mm pearls. The perfect accessory for a feminine and noble style.'
-        }
-    },
-
-    {
-        id: 203, code: 'JP004', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Mặt Trái Tim', en: 'Heart Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/04.Chuoi-vong-co-Ngoc-trai-mat-trai-tim/JP004_01.jpg',
-        image1: './Img/Chuoi-vong-co/04.Chuoi-vong-co-Ngoc-trai-mat-trai-tim/JP004_02.jpg',
-        description: {
-            vi: 'Biểu tượng của tình yêu và sự ngọt ngào. Chuỗi ngọc trai 9-10 li kết hợp mặt trái tim đính đá CZ cùng viền chủ tông ngọc trai 13 li, tôn lên vẻ đẹp dịu dàng và quyến rũ.',
-            en: 'A symbol of love and sweetness. A 9–10mm pearl strand combined with a CZ stone-encrusted heart pendant and a matching border of 13mm pearls, enhancing a gentle and charming beauty.'
-        }
-    },
-
-    {
-        id: 204, code: 'JP005', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Đôi', en: 'Double Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/05.Chuoi-vong-co-Ngoc-trai-doi/JP005_01.jpg',
-        image1: './Img/Chuoi-vong-co/05.Chuoi-vong-co-Ngoc-trai-doi/JP005_02.jpg',
-        description: {
-            vi: 'Thiết kế tối giản nhưng đầy cuốn hút với ngọc trai 8-9 li và mặt hoa tiết X đính đá CZ. Phù hợp cho cả trang phục công sở và dự tiệc.',
-            en: 'A minimalist yet captivating design featuring 8–9mm pearls and an X-pattern floral pendant encrusted with CZ stones. Suitable for both office wear and parties.'
-        }
-    },
-
-    {
-        id: 205, code: 'JP006', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Mặt Hoa', en: 'Floral Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/06.Chuoi-vong-co-Ngoc-trai-mat-hoa/JP006_01.jpg',
-        image1: './Img/Chuoi-vong-co/06.Chuoi-vong-co-Ngoc-trai-mat-hoa/JP006_02.jpg',
-        description: {
-            vi: 'Điểm nhấn nổi bật từ mặt hoa 5 cánh đính đá CZ kết hợp viền chủ tông 9-11 li. Chuỗi ngọc trai 6-9 li mang vẻ đẹp thanh lịch, dễ dàng phối cùng nhiều phong cách.',
-            en: 'A striking highlight from a 5-petal flower pendant encrusted with CZ stones, combined with a matching 9–11mm pearl border. The 6–9mm pearl strand offers an elegant beauty that easily pairs with many styles.'
-        }
-    },
-
-    {
-        id: 206, code: 'JP007', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Đa Năng', en: 'Multi-Wear Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/07.Chuoi-vong-co-Ngoc-trai-thiet-ke-da-nang/JP007_01.jpg',
-        image1: './Img/Chuoi-vong-co/07.Chuoi-vong-co-Ngoc-trai-thiet-ke-da-nang/JP007_02.jpg',
-        description: {
-            vi: 'Thiết kế linh hoạt có thể đeo dáng dài hoặc quấn 2 vòng. Kết hợp mặt hoa 5 số đính đá CZ, chất liệu bạc xi vàng trắng cao cấp, giúp tôn lên nét sang trọng và đẳng cấp.',
-            en: 'A versatile design that can be worn as a long necklace or wrapped in 2 strands. Combined with a 5-digit/shape floral pendant encrusted with CZ stones and premium white gold-plated silver material, it elevates luxury and class.'
-        }
-    },
-
-    {
-        id: 207, code: 'JP008', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Thiết Kế Đặc Biệt', en: 'Special Design Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/08.Chuoi-vong-co-Ngoc-trai-thiet-ke-dac-biet/JP008_01.jpg',
-        image1: './Img/Chuoi-vong-co/08.Chuoi-vong-co-Ngoc-trai-thiet-ke-dac-biet/JP008_02.jpg',
-        description: {
-            vi: 'Mang phong cách độc đáo với ngọc trai 6-10 li, điểm nhấn là mặt nơ đính đá CZ kết hợp đá Topaz xanh nổi bật. Kèm khuyên tai ngọc trai 13 li đồng bộ, hoàn thiện vẻ đẹp quý phái.',
-            en: 'Bringing a unique style with 6–10mm pearls, highlighted by a bow pendant encrusted with CZ stones and striking blue Topaz. Comes with matching 13mm pearl earrings to complete the noble look.'
-        }
-    },
-
-    {
-        id: 208, code: 'JP009', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Trắng', en: 'White Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/09.Chuoi-vong-co-Ngoc-trai-trang/JP009_01.jpg',
-        image1: './Img/Chuoi-vong-co/09.Chuoi-vong-co-Ngoc-trai-trang/JP009_02.jpg',
-        description: {
-            vi: 'Vẻ đẹp tinh khôi từ ngọc trai trắng 10 li. Thiết kế kết hợp viền chủ tông 12 li hài hòa, mang đến sự thanh lịch và trang nhã cho người đeo.',
-            en: 'Pure and pristine beauty from 10mm white pearls. The design features a harmonious 12mm matching pearl border, bringing elegance and grace to the wearer.'
-        }
-    },
-
-    {
-        id: 209, code: 'JP010', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Bộ Vòng Cổ Và Khuyên Tai Ngọc Trai Trắng', en: 'White Pearl Necklace & Earring Set' },
-        image: './Img/Chuoi-vong-co/10.Bo-vong-co-va-khuyen-tai-Ngoc-trai-trang/JP010_01.jpg',
-        image1: './Img/Chuoi-vong-co/10.Bo-vong-co-va-khuyen-tai-Ngoc-trai-trang/JP010_02.jpg',
-        description: {
-            vi: 'Bộ trang sức đồng bộ gồm chuỗi ngọc trai 8 li và khuyên tai đá màu phối ngọc trai 10 li. Sự lựa chọn hoàn hảo cho những dịp đặc biệt hoặc làm quà tặng ý nghĩa.',
-            en: 'A matching jewelry set consisting of an 8mm pearl strand and colored gemstone earrings paired with 10mm pearls. The perfect choice for special occasions or as a meaningful gift.'
-        }
-    },
-
-    {
-        id: 210, code: 'JP011', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Vàng', en: 'Golden Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/11.Chuoi-vong-co-Ngoc-trai-vang/JP011_01.jpg',
-        image1: './Img/Chuoi-vong-co/11.Chuoi-vong-co-Ngoc-trai-vang/JP011_02.jpg',
-        description: {
-            vi: 'Sắc vàng ấm áp của ngọc trai 6-7 li kết hợp mặt cỏ 4 lá đá Tourmaline màu. Thiết kế mang ý nghĩa may mắn, tài lộc và hạnh phúc.',
-            en: 'The warm golden hue of 6–7mm pearls combined with a multi-colored Tourmaline gemstone four-leaf clover pendant. This design carries the meaning of luck, fortune, and happiness.'
-        }
-    },
-
-    {
-        id: 211, code: 'JP012', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ 3 Vòng Ngọc Trai Vàng Mỡ Gà', en: 'Triple-Layer Golden Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/12.Chuoi-vong-co-3-vong-Ngoc-trai-mau-vang-mo-ga/JP012_01.jpg',
-        image1: './Img/Chuoi-vong-co/12.Chuoi-vong-co-3-vong-Ngoc-trai-mau-vang-mo-ga/JP012_02.jpg',
-        description: {
-            vi: 'Thiết kế 3 vòng sang trọng từ ngọc trai 6 li màu vàng mỡ gà độc đáo. Kết hợp mặt bạc xi vàng trắng đính đá CZ tạo vẻ đẹp nổi bật và đẳng cấp.',
-            en: 'A luxurious 3-strand design crafted from unique 6mm cream-yellow pearls. Combined with a white gold-plated silver pendant encrusted with CZ stones to create a striking and high-class beauty.'
-        }
-    },
-
-    {
-        id: 212, code: 'JP013', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ 3 Vòng Ngọc Trai Màu Đen Phối Trắng', en: 'Black & White Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/13.Chuoi-vong-co-3-vong-Ngoc-trai-mau-den-phoi-trang/JP013_01.jpg',
-        image1: './Img/Chuoi-vong-co/13.Chuoi-vong-co-3-vong-Ngoc-trai-mau-den-phoi-trang/JP013_02.jpg',
-        description: {
-            vi: 'Sự tương phản tinh tế giữa ngọc trai đen và trắng kích thước 7-8 li. Điểm nhấn mặt bạc xi vàng trắng đính đá CZ mang phong cách hiện đại, cá tính.',
-            en: 'A sophisticated contrast between 7–8mm black and white pearls. The highlight is a white gold-plated silver pendant encrusted with CZ stones, bringing a modern and edgy style.'
-        }
-    },
-
-    {
-        id: 213, code: 'JP014', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Thiết Kế', en: 'Designer Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/14.Chuoi-vong-co-Ngoc-trai-thiet-ke/JP014_01.jpg',
-        image1: './Img/Chuoi-vong-co/14.Chuoi-vong-co-Ngoc-trai-thiet-ke/JP014_02.jpg',
-        description: {
-            vi: 'Mẫu thiết kế thời trang với chuỗi ngọc trai 2 tầng 6 li kết hợp viền chủ 9-11 li. Mặt đính đá CZ lấp lánh giúp tôn lên nét sang trọng và nữ tính.',
-            en: 'A fashionable design featuring a 2-tier 6mm pearl strand combined with a 9–11mm main border. The sparkling CZ stone-encrusted pendant enhances a luxurious and feminine look.'
-        }
-    },
-
-    {
-        id: 214, code: 'JP015', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
-        name: { vi: 'Chuỗi Ngọc Trai Vàng Hoàng Gia', en: 'Royal Golden Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_00.png',
-        image1: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_01.png',
-        image2: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_02.png',
-        image3: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_03.png',
-        image4: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_04.png',
-        image5: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_05.png',
-        image6: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_06.png',
-        description: {
-            vi: 'Chuỗi ngọc trai vàng tự nhiên với kích thước 11–12 li nổi bật, mang vẻ đẹp sang trọng và quý phái. Mặt chuỗi chế tác bằng vàng hoặc bạc cao cấp, nhận thiết kế theo yêu cầu, phù hợp làm quà tặng hoặc tôn lên phong cách thanh lịch của người đeo.',
-            en: "A natural yellow pearl strand with prominent 11–12mm sizes, exuding luxury and nobility. The pendant is crafted from high-quality gold or silver, with custom designs available upon request, making it perfect as a gift or to elevate the wearer's elegant style."
-        }
-    },
-
-
-    // ── JEWELRY: Nhẫn ──
-    {
-        id: 1000, code: 'JW-NH-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn Kim Cương Solitaire', en: 'Solitaire Diamond Ring' },
-        image: './Img/Nhan/nhan-001.jpg',
-        description: { vi: 'Nhẫn kim cương thiên nhiên, thiết kế Solitaire kinh điển.', en: 'Natural diamond ring, classic Solitaire design.' }
-    },
-    {
-        id: 1001, code: 'JRP001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai vàng', en: 'Nhẫn ngọc trai vàng' },
-        image: './Img/rings/01.Nhẫn ngọc trai vàng/mục 1.png',
-        image1: './Img/rings/01.Nhẫn ngọc trai vàng/mục 1 (2).png',
-        image2: './Img/rings/01.Nhẫn ngọc trai vàng/mục 1 (3).png',
-        description: { vi: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.' }
-    },
-    {
-        id: 1002, code: 'JRP002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn Queen ngọc trai vàng', en: 'Nhẫn Queen ngọc trai vàng' },
-        image: './Img/rings/02.Nhẫn Queen ngọc trai/mục 2.png',
-        image1: './Img/rings/02.Nhẫn Queen ngọc trai/mục 2 (2).png',
-        description: { vi: 'Mẫu nhẫn Queen đẳng cấp với ngọc trai vàng kích thước 10-15 li. Thiết kế tôn vinh vẻ đẹp quý phái, thích hợp cho những ai yêu thích trang sức nổi bật.', en: 'Mẫu nhẫn Queen đẳng cấp với ngọc trai vàng kích thước 10-15 li. Thiết kế tôn vinh vẻ đẹp quý phái, thích hợp cho những ai yêu thích trang sức nổi bật.' }
-    },
-    {
-        id: 1003, code: 'JRP003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/03.Nhẫn ngọc trai trắng/mục 3.png',
-        image1: './Img/rings/03.Nhẫn ngọc trai trắng/mục 3 (2).png',
-        description: { vi: 'Sở hữu viên ngọc trai trắng từ 10-15 li với độ bóng đẹp tự nhiên. Kiểu dáng thanh lịch, dễ dàng kết hợp cùng nhiều phong cách thời trang.', en: 'Sở hữu viên ngọc trai trắng từ 10-15 li với độ bóng đẹp tự nhiên. Kiểu dáng thanh lịch, dễ dàng kết hợp cùng nhiều phong cách thời trang.' }
-    },
-    {
-        id: 1004, code: 'JRP004', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/04.Nhẫn ngọc trai trắng/mục 4.png',
-        image1: './Img/rings/04.Nhẫn ngọc trai trắng/mục 4 (2).png',
-        description: { vi: 'Thiết kế nổi bật với ngọc trai trắng cỡ lớn 10-15 li. Chế tác thủ công theo yêu cầu, mang đến vẻ đẹp sang trọng và cuốn hút.', en: 'Thiết kế nổi bật với ngọc trai trắng cỡ lớn 10-15 li. Chế tác thủ công theo yêu cầu, mang đến vẻ đẹp sang trọng và cuốn hút.' }
-    },
-    {
-        id: 1005, code: 'JRS001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn thạch anh tím', en: 'Nhẫn thạch anh tím' },
-        image: './Img/rings/05.Nhẫn thạch anh tím/mục 5 (4).png',
-        image1: './Img/rings/05.Nhẫn thạch anh tím/mục 5 (3).png',
-        image2: './Img/rings/05.Nhẫn thạch anh tím/mục 5 (2).png',
-        description: { vi: 'Viên thạch anh tím mang sắc tím huyền bí, được chế tác tinh xảo trên nền vàng hoặc bạc. Phù hợp cho người yêu thích vẻ đẹp nhẹ nhàng và thanh lịch.', en: 'Viên thạch anh tím mang sắc tím huyền bí, được chế tác tinh xảo trên nền vàng hoặc bạc. Phù hợp cho người yêu thích vẻ đẹp nhẹ nhàng và thanh lịch.' }
-    },
-    {
-        id: 1006, code: 'JRS002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn đá Nam Phi các màu', en: 'Nhẫn đá Nam Phi các màu' },
-        image: './Img/rings/06.Nhẫn đá Nam Phi các màu/mục 6.png',
-        image1: './Img/rings/06.Nhẫn đá Nam Phi các màu/mục 6 (2).png',
-        description: { vi: 'Kết hợp đá Nam Phi nhiều màu sắc rực rỡ, tạo nên điểm nhấn độc đáo cho người đeo. Chế tác theo yêu cầu, phù hợp nhiều phong cách khác nhau.', en: 'Kết hợp đá Nam Phi nhiều màu sắc rực rỡ, tạo nên điểm nhấn độc đáo cho người đeo. Chế tác theo yêu cầu, phù hợp nhiều phong cách khác nhau.' }
-    },
-    {
-        id: 1007, code: 'JRP005', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/07.Nhẫn ngọc trai trắng 10-12 li/mục 7 (3).png',
-        image1: './Img/rings/07.Nhẫn ngọc trai trắng 10-12 li/mục 7 (2).png',
-        image2: './Img/rings/07.Nhẫn ngọc trai trắng 10-12 li/mục 7 (1).png',
-        description: { vi: 'Ngọc trai trắng kích thước 10-12 li với độ bóng đẹp tự nhiên. Thiết kế tinh tế giúp tôn lên nét thanh lịch và nữ tính.', en: 'Ngọc trai trắng kích thước 10-12 li với độ bóng đẹp tự nhiên. Thiết kế tinh tế giúp tôn lên nét thanh lịch và nữ tính.' }
-    },
-    {
-        id: 1008, code: 'JRP006', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/08.Nhẫn ngọc trai trắng 10-15li/mục 8.png',
-        image1: './Img/rings/08.Nhẫn ngọc trai trắng 10-15li/mục 8 (2).png',
-        description: { vi: 'Mẫu nhẫn nổi bật với viên ngọc trai trắng 10-15 li sang trọng. Phù hợp làm quà tặng hoặc trang sức cho những dịp đặc biệt.', en: 'Mẫu nhẫn nổi bật với viên ngọc trai trắng 10-15 li sang trọng. Phù hợp làm quà tặng hoặc trang sức cho những dịp đặc biệt.' }
-    },
-    {
-        id: 1009, code: 'JRP007', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/09.Nhẫn ngọc trai trắng 10–12 li(phối đá CZ xanh- ngọc lục bảo xanh)/z7886923472979_31dfe54d602cc72b73e2c243f602c79c.jpg',
-        image1: './Img/rings/09.Nhẫn ngọc trai trắng 10–12 li(phối đá CZ xanh- ngọc lục bảo xanh)/z7886923072109_f1d7d49c27ad9a6eed92261a609bc0ac.jpg',
-        description: { vi: 'Sự kết hợp hài hòa giữa ngọc trai trắng và đá xanh CZ hoặc ngọc lục bảo xanh. Thiết kế mang vẻ đẹp sang trọng, tinh tế và đầy cuốn hút.', en: 'Sự kết hợp hài hòa giữa ngọc trai trắng và đá xanh CZ hoặc ngọc lục bảo xanh. Thiết kế mang vẻ đẹp sang trọng, tinh tế và đầy cuốn hút.' }
-    },
-    {
-        id: 1010, code: 'JRP008', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/10.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 10.png',
-        image1: './Img/rings/10.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 10 (2).png',
-        description: { vi: 'Ngọc trai trắng kết hợp đá CZ trắng hoặc kim cương lab lấp lánh, tạo nên tổng thể thanh lịch và hiện đại. Phù hợp cho mọi độ tuổi.', en: 'Ngọc trai trắng kết hợp đá CZ trắng hoặc kim cương lab lấp lánh, tạo nên tổng thể thanh lịch và hiện đại. Phù hợp cho mọi độ tuổi.' }
-    },
-    {
-        id: 1011, code: 'JRP009', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/11.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 11.png',
-        image1: './Img/rings/11.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 11 (3).png',
-        image2: './Img/rings/11.Nhẫn ngọc trai trắng 10 - 12li (phối đá CZ trắng- kim cương lab)/mục 11 (2).png',
-        description: { vi: 'Thiết kế nổi bật với ngọc trai trắng cùng điểm nhấn đá CZ trắng hoặc kim cương lab. Mang đến vẻ đẹp sang trọng cho người đeo.', en: 'Thiết kế nổi bật với ngọc trai trắng cùng điểm nhấn đá CZ trắng hoặc kim cương lab. Mang đến vẻ đẹp sang trọng cho người đeo.' }
-    },
-    {
-        id: 1012, code: 'JRS003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn Ruby', en: 'Nhẫn Ruby' },
-        image: './Img/rings/12.Nhẫn Ruby (phối đá CZ trắng-kim cương lab)/mục 12.png',
-        image1: './Img/rings/12.Nhẫn Ruby (phối đá CZ trắng-kim cương lab)/mục 12 (3).png',
-        image2: './Img/rings/12.Nhẫn Ruby (phối đá CZ trắng-kim cương lab)/mục 12 (2).png',
-        description: { vi: 'Viên Ruby đỏ rực tượng trưng cho sự may mắn và quyền lực. Thiết kế tinh xảo giúp tôn lên vẻ đẹp nổi bật và đẳng cấp.', en: 'Viên Ruby đỏ rực tượng trưng cho sự may mắn và quyền lực. Thiết kế tinh xảo giúp tôn lên vẻ đẹp nổi bật và đẳng cấp.' }
-    },
-    {
-        id: 1013, code: 'JRS004', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn đá Nam Phi các màu', en: 'Nhẫn đá Nam Phi các màu' },
-        image: './Img/rings/13.Nhẫn đá Nam Phi các màu/mục 13.png',
-        image1: './Img/rings/13.Nhẫn đá Nam Phi các màu/mục 13 (2).png',
-        description: { vi: 'Mẫu nhẫn sử dụng đá Nam Phi đa sắc màu, tạo điểm nhấn trẻ trung và cá tính. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc.', en: 'Mẫu nhẫn sử dụng đá Nam Phi đa sắc màu, tạo điểm nhấn trẻ trung và cá tính. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc.' }
-    },
-    {
-        id: 1014, code: 'JRP010', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai trắng', en: 'Nhẫn ngọc trai trắng' },
-        image: './Img/rings/14.Nhẫn ngọc trai trắng 8-10 li/mục 14.png',
-        image1: './Img/rings/14.Nhẫn ngọc trai trắng 8-10 li/mục 14 (2).png',
-        description: { vi: 'Thiết kế nhẹ nhàng với ngọc trai trắng kích thước 8-10 ly kết hợp đá CZ trắng hoặc kim cương lab. Phù hợp cho người yêu thích vẻ đẹp thanh lịch và tinh tế.', en: 'Thiết kế nhẹ nhàng với ngọc trai trắng kích thước 8-10 ly kết hợp đá CZ trắng hoặc kim cương lab. Phù hợp cho người yêu thích vẻ đẹp thanh lịch và tinh tế.' }
-    },
-    {
-        id: 1015, code: 'JRP011', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn ngọc trai vàng', en: 'Nhẫn ngọc trai vàng' },
-        image: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15.png',
-        image1: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15 (3).png',
-        image2: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15 (2).png',
-        description: { vi: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.' }
-    },
-    {
-        id: 1016, code: 'JRS005', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn đá đỏ trái tim', en: 'Red stone heart ring' },
-        image: './Img/rings/JRS005/JRS005_03.png',
-        image1: './Img/rings/JRS005/JRS005_02.png',
-        image2: './Img/rings/JRS005/JRS005_01.png',
-        description: { vi: '- Chất liệu: Bạc xi bach kim\n  Câu chuyện sản phẩm:  Thiết kế mặt đá đỏ hình trái tim nổi bật, mang vẻ đẹp ngọt ngào và tinh tế. Chế tác trên nền bạc xi bạch kim, phù hợp làm trang sức hằng ngày hoặc quà tặng ý nghĩa.', en: '- Material: Platinum-plated silver\n Product story: Featuring a striking heart-shaped red stone design, exuding a sweet and delicate beauty. Crafted on a platinum-plated silver base, suitable as everyday jewelry or a meaningful gift.' }
-    },
-    {
-        id: 1017, code: 'JRS006', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn đá đỏ oval ', en: 'Oval red stone ring' },
-        image: './Img/rings/JRS006/JRS006_01.png',
-        image1: './Img/rings/JRS006/JRS006_02.png',
-        image2: './Img/rings/JRS006/JRS006_03.png',
-        image3: './Img/rings/JRS006/JRS006_04.png',
-        description: { vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bach kim\n  Câu chuyện sản phẩm:  Nhẫn đính đá đỏ dáng oval kết hợp đá CZ lấp lánh, tạo điểm nhấn sang trọng và cuốn hút. Chất liệu bạc xi bạch kim bền đẹp, phù hợp nhiều phong cách.', en: '- Combination: CZ stones\n - Material: Platinum-plated silver\n  Product story: This oval-shaped ring features a red gemstone and sparkling CZ stones, creating a luxurious and captivating focal point. The durable platinum-plated silver material suits many styles.' }
-    },
-    {
-        id: 1018, code: 'JRS007', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn Ruby đỏ ', en: 'Red Ruby Ring' },
-        image: './Img/rings/JRS007/JRS007_01.png',
-        image1: './Img/rings/JRS007/JRS007_02.png',
-        image2: './Img/rings/JRS007/JRS007_03.png',
-        description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Nhẫn Ruby đỏ nổi bật với sắc đỏ quyến rũ, chế tác bằng vàng, tôn lên vẻ đẹp sang trọng và đẳng cấp.', en: '- Material: Gold\n  Product Story: This striking red ruby ​​ring, crafted from gold, exudes elegance and sophistication.' }
-    },
-
-    // ── JEWELRY: Khuyên Tai ──
-    {
-        id: 1201, code: 'JES001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai thạch anh tím vàng-bạc', en: 'Khuyên tai thạch anh tím vàng-bạc' },
-        image: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1.png',
-        image1: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1 (2).png',
-        image2: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1 (3).png',
-        description: { vi: 'Khuyên tai thạch anh tím vàng bạc theo yêu cầu', en: 'Earring with amethyst quartz gold and silver' }
-    },
-    {
-        id: 1202, code: 'JRE002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai thạch anh tím vàng-bạc (2)', en: 'Khuyên tai thạch anh tím vàng-bạc (2)' },
-        image: './Img/earing/02.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 2.png',
-        image1: './Img/earing/02.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 2 (2).png',
-        description: { vi: 'Khuyên tai thạch anh tím vàng bạc theo yêu cầu', en: 'Earring with amethyst quartz gold and silver' }
-    },
-    {
-        id: 1203, code: 'JRE003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai thạch anh tím vàng-bạc (3)', en: 'Khuyên tai thạch anh tím vàng-bạc (3)' },
-        image: './Img/earing/03.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 3.png',
-        image1: './Img/earing/03.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 3 (2).png',
-        description: { vi: 'Khuyên tai thạch anh tím vàng bạc theo yêu cầu', en: 'Earring with amethyst quartz gold and silver' }
-    },
-    {
-        id: 1204, code: 'JRE004', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai ngọc trai phối đá Nam phi hồng', en: 'Khuyên tai ngọc trai phối đá Nam phi hồng' },
-        image: './Img/earing/04.Khuyên tai ngọc trai phối đá Nam phi hồng vàng-bạc theo yêu cầu/4. mục 4.png',
-        image1: './Img/earing/04.Khuyên tai ngọc trai phối đá Nam phi hồng vàng-bạc theo yêu cầu/4. mục 4 (2).png',
-        image2: './Img/earing/04.Khuyên tai ngọc trai phối đá Nam phi hồng vàng-bạc theo yêu cầu/z7886817727520_014eca3a848d78eefdb54149e3c37e01.jpg',
-        description: { vi: 'Khuyên tai ngọc trai phối đá Nam phi hồng vàng bạc theo yêu cầu', en: 'Pearl earring with red South African stones' }
-    },
-    {
-        id: 1205, code: 'JRE005', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai Hồ Điệp', en: 'Khuyên tai Hồ Điệp' },
-        image: './Img/earing/05.Khuyên tai Hồ Điệp/4. mục 5.png',
-        image1: './Img/earing/05.Khuyên tai Hồ Điệp/4. mục 5 (2).png',
-        image2: './Img/earing/05.Khuyên tai Hồ Điệp/4. mục 5 (3).png',
-        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
-    },
-    {
-        id: 1206, code: 'JRE006', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai Hồ Điệp (2)', en: 'Khuyên tai Hồ Điệp (2)' },
-        image: './Img/earing/06.Khuyên tai Hồ Điệp/4. mục 6.png',
-        image1: './Img/earing/06.Khuyên tai Hồ Điệp/4. mục 6 (2).png',
-        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
-    },
-    {
-        id: 1207, code: 'JRE007', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai Hồ Điệp (3)', en: 'Khuyên tai Hồ Điệp (3)' },
-        image: './Img/earing/07.Khuyên tai Hồ Điệp/4. mục 7.png',
-        image1: './Img/earing/07.Khuyên tai Hồ Điệp/4. mục 7 (2).png',
-        image2: './Img/earing/07.Khuyên tai Hồ Điệp/4. mục 7 (3).png',
-        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
-    },
-    {
-        id: 1208, code: 'JRE008', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai Hồ Điệp (4)', en: 'Khuyên tai Hồ Điệp (4)' },
-        image: './Img/earing/08.Khuyên tai Hồ Điệp/4. mục 8.png',
-        image1: './Img/earing/08.Khuyên tai Hồ Điệp/4. mục 8 (2).png',
-        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Orchid shaped earring' }
-    },
-    {
-        id: 1209, code: 'JRE009', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai Thánh Giá', en: 'Khuyên tai Thánh Giá' },
-        image: './Img/earing/09.Khuyên tai Thánh Giá/4. mục 9.png',
-        image1: './Img/earing/09.Khuyên tai Thánh Giá/4. mục 9 (2).png',
-        description: { vi: 'Khuyên tai Thánh Giá', en: 'Cross shaped earring' }
-    },
-    {
-        id: 1210, code: 'JRE010', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai trái tim', en: 'Khuyên tai trái tim' },
-        image: './Img/earing/10.Khuyên tai trái tim/4. mục 10.png',
-        image1: './Img/earing/10.Khuyên tai trái tim/4. mục 10 (2).png',
-        description: { vi: 'Khuyên tai trái tim', en: 'Heart shaped earring' }
-    },
-    {
-        id: 1211, code: 'JRE011', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai trái tim (2)', en: 'Khuyên tai trái tim (2)' },
-        image: './Img/earing/11.Khuyên tai trái tim/4. mục 11.png',
-        image1: './Img/earing/11.Khuyên tai trái tim/4. mục 11 (2).png',
-        description: { vi: 'Khuyên tai trái tim', en: 'Heart shaped earring' }
-    },
-    {
-        id: 1212, code: 'JRE012', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai trái tim thắt dây nơ', en: 'Khuyên tai trái tim thắt dây nơ' },
-        image: './Img/earing/12.Khuyên tai trái tim thắt dây nơ/4. mục 12.png',
-        image1: './Img/earing/12.Khuyên tai trái tim thắt dây nơ/4. mục 12 (2).png',
-        description: { vi: 'Khuyên tai trái tim thắt dây nơ', en: 'Heart shaped earring with bow' }
-    },
-    {
-        id: 1213, code: 'JRE013', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai dây nơ', en: 'Khuyên tai dây nơ' },
-        image: './Img/earing/13.Khuyên tai dây nơ/4. mục 13.png',
-        image1: './Img/earing/13.Khuyên tai dây nơ/4. mục 13 (2).png',
-        description: { vi: 'Khuyên tai dây nơ', en: 'Bow shaped earring' }
-    },
-    {
-        id: 1214, code: 'JRE014', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai Hoa Mai', en: 'Khuyên tai Hoa Mai' },
-        image: './Img/earing/14.Khuyên tai Hoa Mai/4. mục 14.png',
-        image1: './Img/earing/14.Khuyên tai Hoa Mai/4. mục 14 (2).png',
-        description: { vi: 'Khuyên tai Hoa Mai', en: 'Plum flower earring' }
-    },
-    {
-        id: 1215, code: 'JRE015', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai ngọc trai vàng', en: 'Khuyên tai ngọc trai vàng' },
-        image: './Img/earing/15.Khuyên tai ngọc trai vàng/4. mục 15.png',
-        image1: './Img/earing/15.Khuyên tai ngọc trai vàng/4. mục 15 (2).png',
-        description: { vi: 'Khuyên tai ngọc trai vàng', en: 'Pearl earring with gold' }
-    },
-    {
-        id: 1216, code: 'JRE016', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
-        name: { vi: 'Khuyên tai ngọc trai trắng', en: 'Khuyên tai ngọc trai trắng' },
-        image: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16.png',
-        image1: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (2).png',
-        image2: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (3).png',
-        description: { vi: 'Khuyên tai ngọc trai trắng', en: 'Pearl earring with white' }
-    },
-
-    // ── JEWELRY: Vòng Tay ──
-    {
-        id: 90, code: 'JW-VT-001', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng Tay Ngọc Trai Nuôi', en: 'Cultured Pearl Bangle' },
-        image: './Img/Vong-tay/vong-tay-ngoc-trai-nuoi.jpg',
-        description: { vi: 'Vòng tay ngọc trai nuôi cấy cao cấp, độ bóng hoàn hảo.', en: 'Premium cultured pearl bangle, perfect luster.' }
-    },
-    {
-        id: 91, code: 'JW-VT-002', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng Tay Ngọc Trai Topaz', en: 'Pearl & Topaz Bangle' },
-        image: './Img/Vong-tay/vong-tay-ngoc-trai-topaz.jpg',
-        description: { vi: 'Vòng tay kết hợp ngọc trai và đá Topaz xanh.', en: 'Bangle combining pearls and blue Topaz.' }
-    },
-    {
-        id: 92, code: 'JW-VT-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng Tay Labradorite Moonstone', en: 'Labradorite Moonstone Bangle' },
-        image: './Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg',
-        description: { vi: 'Vòng tay đá quý Labradorite và Moonstone thiên nhiên.', en: 'Natural Labradorite and Moonstone gemstone bangle.' }
-    },
-    {
-        id: 93, code: 'JSB001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng tay nơ', en: 'Bow bracelet' },
-        image: './Img/Vong-tay/JSB001/JSB001_01.png',
-        image1: './Img/Vong-tay/JSB001/JSB001_02.png',
-        image2: './Img/Vong-tay/JSB001/JSB001_03.png',
-        description: {
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế nơ duyên dáng đính đá CZ lấp lánh, mang đến vẻ đẹp nữ tính và thanh lịch.',
-            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The charming bow design adorned with sparkling CZ stones brings a feminine and elegant look.'
-        }
-    },
-    {
-        id: 94, code: 'JSB002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng tay charm túi xách', en: 'Charm bracelets and handbags' },
-        image: './Img/Vong-tay/JSB002/JSB002_01.png',
-        image1: './Img/Vong-tay/JSB002/JSB002_02.png',
-        description: {
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Điểm nhấn charm túi xách kết hợp đá CZ sáng bóng, tạo phong cách trẻ trung và hiện đại.',
-            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The handbag\'s charm features sparkling CZ stones, creating a youthful and modern style.'
-        }
-    },
-    {
-        id: 95, code: 'JSB003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng tay một hàng', en: 'Single row bracelet' },
-        image: './Img/Vong-tay/JSB003/JSB003_01.png',
-        image1: './Img/Vong-tay/JSB003/JSB003_02.png',
-        description: {
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế tối giản với một hàng đá CZ tinh tế, dễ dàng phối cùng nhiều trang phục.',
-            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The minimalist design, featuring a delicate row of CZ stones, easily complements a variety of outfits.'
-        }
-    },
-    {
-        id: 96, code: 'JSB004', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng tay hai hàng', en: 'Double row bracelet' },
-        image: './Img/Vong-tay/JSB004/JSB004_01.png',
-        image1: './Img/Vong-tay/JSB004/JSB004_02.png',
-        image2: './Img/Vong-tay/JSB004/JSB004_03.png',
-        description: {
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n Câu chuyện sản phẩm: Hai hàng đá CZ lấp lánh tạo hiệu ứng nổi bật, giúp tôn lên vẻ đẹp sang trọng và cuốn hút.',
-            en: '- Accents: CZ\n - Material: Platinum-plated silver\n Product story: Two rows of sparkling CZ stones create a striking effect, enhancing a luxurious and captivating beauty.'
-        }
-    },
-
-    // ── JEWELRY: Kiềng (Mẫu code để copy sau này) ──
-    /*
-    {
-        id: 1301, code: 'JPK001', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'kieng' }, isNew: true, inStock: true,
-        name: { vi: 'Kiềng cổ ngọc trai trắng', en: 'White Pearl Torc' },
-        image: './Img/Kieng/kieng-co-ngoc-trai.png',
-        image1: './Img/Kieng/kieng-co-ngoc-trai-detail.png',
-        description: { 
-            vi: 'Kiềng cổ ngọc trai trắng nổi bật với viên ngọc trai tự nhiên kích thước 12-15 li, mang vẻ đẹp sang trọng và quyền quý. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc.', 
-            en: 'White pearl torc featuring a prominent 12-15mm natural pearl, exhibiting a luxurious and regal beauty. Custom-made upon request in gold or silver.' 
-        }
-    },
-    */
-
-    // ── BAG: (Sản phẩm túi xách sợi cọ SP01 - SP20) ──
-    {
-        id: 100, code: 'BR001', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR001', en: 'Palm Fiber Handbag BR001' },
-        image: './Img/TuiXach/SP01/LOGO1_1.jpg',
-        image1: './Img/TuiXach/SP01/LOGO1_2.jpg',
-        description: { vi: 'Kích thước: W19 x H13 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá đậm\n-        Lót trong túi: vải canvas\n-        Quai xích có phối da bò mềm để đeo vai không bị đau. \nCâu chuyện sản phẩm:  Túi sợi cọ xanh lá đậm với thiết kế thủ công tinh tế, kích thước W19 x H13 x đáy 9cm nhỏ gọn nhưng vẫn đủ không gian cho các vật dụng cần thiết. Lót trong bằng vải canvas bền đẹp, quai xích phối da bò mềm giúp đeo vai êm ái và thoải mái. Một phụ kiện thanh lịch, nổi bật nét đẹp tự nhiên và thời trang cho mọi outfit.', en: 'Size: W19 x H13 x D9 cm\nDetailed description:\n- Material: dark green palm fiber\n- Inner lining: canvas fabric\n- Chain shoulder strap padded with soft cowhide leather.\nAI product description: Exquisite hand-woven dark green palm fiber handbag. Compact size (W19 x H13 x D9 cm) yet spacious enough for essentials. Features durable canvas lining and a leather-padded chain strap for comfortable shoulder wear. A chic, natural fashion accessory.' }
-    },
-    {
-        id: 101, code: 'BR002', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR002', en: 'Palm Fiber Handbag BR002' },
-        image: './Img/TuiXach/SP02/LOGO2_1.jpg',
-        image1: './Img/TuiXach/SP02/LOGO2_2.jpg',
-        description: { vi: 'Kích thước: W20cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai xách và nắp túi là da bò nâu\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công kích thước W20cm với thiết kế nhỏ gọn, thanh lịch. Lót trong bằng vải canvas bền đẹp, quai xách và nắp túi bằng da bò nâu cao cấp tạo điểm nhấn sang trọng. Phụ kiện hoàn hảo cho những cô nàng yêu thích phong cách tự nhiên, tinh tế và thời trang.', en: 'Size: W20 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Handle and flap: brown cowhide leather\nAI product description: Handcrafted palm fiber bag (W20cm) featuring a compact and elegant silhouette. Built with a durable canvas lining and styled with premium brown cowhide leather handles and flap for a luxurious touch.' }
-    },
-    {
-        id: 102, code: 'BR003', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR003', en: 'Palm Fiber Handbag BR003' },
-        image: './Img/TuiXach/SP03/LOGO3.2.jpg',
-        image1: './Img/TuiXach/SP03/LOGO3.3.jpg',
-        image2: './Img/TuiXach/SP03/LOGO3.jpg',
-        description: { vi: 'Kích thước: W20 x H16 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai xách là da bò nâu\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H16 x đáy 9cm với lớp lót canvas bền đẹp và quai xách da bò nâu cao cấp. Điểm nhấn phụ kiện kim loại màu bạc tinh tế tạo nét sang trọng, hiện đại, giúp chiếc túi thêm phần nổi bật và cuốn hút trong mọi set đồ.', en: 'Size: W20 x H16 x D9 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Handle: brown cowhide leather\nAI product description: Hand-woven palm fiber bag (W20 x H16 x D9 cm) featuring a sturdy canvas lining and high-quality brown cowhide leather handles. Accented with sleek silver-tone hardware for a modern, luxurious look.' }
-    },
-    {
-        id: 103, code: 'BR004', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR004', en: 'Palm Fiber Handbag BR004' },
-        image: './Img/TuiXach/SP04/LOGO4_1.jpg',
-        image1: './Img/TuiXach/SP04/LOGO4_2.jpg',
-        description: { vi: 'Kích thước: W20 x H16 x đáy 9cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai xách là da bò nâu\nCâu chuyện sản phẩm:  Túi đan thủ công từ sợi cọ tự nhiên, kích thước W20 x H16 x đáy 9cm, mang vẻ đẹp thanh lịch và gần gũi. Lót trong bằng vải canvas bền chắc, quai xách da bò nâu cao cấp kết hợp phụ kiện kim loại màu vàng sang trọng, tạo điểm nhấn nổi bật cho tổng thể thiết kế. Phù hợp để phối cùng nhiều phong cách từ nữ tính đến hiện đại.', en: 'Size: W20 x H16 x D9 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Handle: brown cowhide leather\nAI product description: Natural palm fiber hand-woven bag (W20 x H16 x D9 cm) showcasing natural charm and elegance. Completed with durable canvas lining, premium brown leather handles, and gold-tone metal hardware accents.' }
-    },
-    {
-        id: 104, code: 'BR005', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR005', en: 'Palm Fiber Handbag BR005' },
-        image: './Img/TuiXach/SP05/LOGO5_1.jpg',
-        image1: './Img/TuiXach/SP05/LOGO5_2.jpg',
-        image2: './Img/TuiXach/SP05/LOGO5_3.jpg',
-        description: { vi: 'Kích thước: W20 x H13 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ màu cam\n-        Lót trong túi: vải canvas\n-        Quai xích có phối da bò mềm để đeo vai không bị đau.\nCâu chuyện sản phẩm:  Túi sợi cọ màu cam kích thước W20 x H13 x đáy 8cm với thiết kế nhỏ gọn, nổi bật và thời trang. Lót trong bằng vải canvas bền đẹp, quai xích phối da bò mềm giúp đeo vai thoải mái suốt ngày dài. Phụ kiện hoàn hảo để tạo điểm nhấn trẻ trung, cá tính cho mọi outfit.', en: 'Size: W20 x H13 x D8 cm\nDetailed description:\n- Material: orange palm fiber\n- Inner lining: canvas fabric\n- Leather-padded chain shoulder strap\nAI product description: Vibrant orange palm fiber bag (W20 x H13 x D8 cm) in a compact, trendy design. Designed with a canvas lining and a chain strap padded with soft cowhide leather for all-day carrying comfort.' }
-    },
-    {
-        id: 105, code: 'BR006', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR006', en: 'Palm Fiber Handbag BR006' },
-        image: './Img/TuiXach/SP06/LOGO6_1.jpg',
-        image1: './Img/TuiXach/SP06/LOGO6_2.jpg',
-        description: { vi: 'Kích thước: W20 x H17 x đáy 10cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai trúc, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H17 x đáy 10cm với thiết kế thanh lịch và tiện dụng. Lót trong bằng vải canvas bền chắc, quai trúc tự nhiên tạo điểm nhấn độc đáo, kết hợp quai đeo chéo dây xích phối da bò sang trọng. Một phụ kiện tinh tế giúp hoàn thiện phong cách thời trang đầy cuốn hút.', en: 'Size: W20 x H17 x D10 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Bamboo handle, chain crossbody strap with cowhide details\nAI product description: Handcrafted palm fiber bag (W20 x H17 x D10 cm) combining style and utility. Styled with a natural bamboo handle for a unique organic feel and a leather-trimmed chain crossbody strap.' }
-    },
-    {
-        id: 106, code: 'BR007', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR007', en: 'Palm Fiber Handbag BR007' },
-        image: './Img/TuiXach/SP07/LOGO7_1.jpg',
-        image1: './Img/TuiXach/SP07/LOGO7_2.jpg',
-        image2: './Img/TuiXach/SP07/LOGO7_3.jpg',
-        description: { vi: 'Kích thước: W20 x H18 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Mặt trước túi đính hồ điệp đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai da, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H18 x đáy 8cm nổi bật với họa tiết hồ điệp đính kết từ ngọc trai thật và cườm pha lê tinh xảo. Lót trong bằng vải canvas bền đẹp, quai da cùng dây đeo chéo xích phối da bò mang đến sự tiện dụng và sang trọng. Một thiết kế thanh lịch, nữ tính, giúp bạn tỏa sáng trong mọi khoảnh khắc.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: palm fiber\n- Decorated with real pearls and crystal butterfly beads\n- Inner lining: canvas fabric\n- Leather handle and leather-padded chain crossbody strap\nAI product description: Exquisite palm fiber bag (W20 x H18 x D8 cm) adorned with a hand-beaded real pearl and crystal butterfly motif. Elegant design completed with canvas lining, leather handles, and chain strap.' }
-    },
-    {
-        id: 107, code: 'BR008', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR008', en: 'Palm Fiber Handbag BR008' },
-        image: './Img/TuiXach/SP08/LOGO8_1.jpg',
-        image1: './Img/TuiXach/SP08/LOGO8_2.jpg',
-        image2: './Img/TuiXach/SP08/LOGO8_3.jpg',
-        description: { vi: 'Kích thước: W23xH20x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ đỏ bóc đô\n-        Lót trong túi: vải canvas\n-        Quai da, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ đỏ bọc đô W23 x H20 x đáy 8cm nổi bật với gam màu sang trọng và thiết kế thủ công tinh tế. Lót trong bằng vải canvas bền chắc, quai da cao cấp kết hợp dây đeo chéo xích phối da bò mang đến sự tiện dụng và thanh lịch. Phụ kiện hoàn hảo dành cho những ai yêu thích phong cách nổi bật, nữ tính và thời trang.', en: 'Size: W23 x H20 x D8 cm\nDetailed description:\n- Material: bordeaux red palm fiber\n- Inner lining: canvas fabric\n- Leather handle and leather-padded chain crossbody strap\nAI product description: Bordeaux red palm fiber bag (W23 x H20 x D8 cm) showing deep luxurious colors and refined hand-weaving. Features a sturdy canvas lining, premium leather handle, and comfortable crossbody chain strap.' }
-    },
-    {
-        id: 108, code: 'BR009', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR009', en: 'Palm Fiber Handbag BR009' },
-        image: './Img/TuiXach/SP09/LOGO9_1.jpg',
-        image1: './Img/TuiXach/SP09/LOGO9_2.jpg',
-        description: { vi: 'Kích thước: W33xH30x đáy 14cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W33 x H30 x đáy 14cm với thiết kế rộng rãi, phù hợp cho nhu cầu sử dụng hằng ngày và các chuyến du lịch. Chất liệu sợi cọ tự nhiên kết hợp lớp lót canvas bền chắc mang đến sự tiện dụng và vẻ đẹp mộc mạc, thanh lịch. Một phụ kiện thời trang vừa tinh tế vừa đa năng cho mọi phong cách.', en: 'Size: W33 x H30 x D14 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\nAI product description: Spacious hand-woven palm fiber tote bag (W33 x H30 x D14 cm), perfect for daily needs or beach getaways. Natural palm fiber texture combined with canvas lining offers great durability and style.' }
-    },
-    {
-        id: 109, code: 'BR010', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR010', en: 'Palm Fiber Handbag BR010' },
-        image: './Img/TuiXach/SP10/LOGO10_1.jpg',
-        image1: './Img/TuiXach/SP10/LOGO10_2.jpg',
-        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Bên hông túi đính hồ điệp đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai da, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H18 x đáy 8cm nổi bật với chi tiết hồ điệp đính bên hông từ ngọc trai thật và cườm pha lê tinh xảo. Lót trong bằng vải canvas bền đẹp, quai da cùng dây đeo chéo xích phối da bò mang lại sự tiện dụng và thanh lịch. Thiết kế nữ tính, sang trọng, giúp tạo điểm nhấn cuốn hút cho mọi trang phục.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: palm fiber\n- Side decorated with real pearls and crystal butterfly beads\n- Inner lining: canvas fabric\n- Leather handle and leather-padded chain crossbody strap\nAI product description: Hand-woven palm fiber bag (W20 x H18 x D8 cm) highlighted by a delicate butterfly beaded with real pearls and crystals on the side. Features durable canvas lining and leather handles.' }
-    },
-    {
-        id: 110, code: 'BR011', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR011', en: 'Palm Fiber Handbag BR011' },
-        image: './Img/TuiXach/SP11/LOGO11_1.jpg',
-        image1: './Img/TuiXach/SP11/LOGO11_2.jpg',
-        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Mặt trước túi đính hoa đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai trúc và đai da có thể tháo rời, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ thủ công W20 x H18 x đáy 8cm nổi bật với họa tiết hoa đính kết từ ngọc trai thật và cườm pha lê tinh xảo ở mặt trước. Lót trong bằng vải canvas bền đẹp, quai trúc cùng đai da tháo rời kết hợp dây đeo chéo xích phối da bò mang đến sự tiện dụng và thanh lịch. Một thiết kế sang trọng, nữ tính và đầy cuốn hút cho mọi dịp.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: palm fiber\n- Adorned with real pearls and crystal floral details\n- Inner lining: canvas fabric\n- Detachable bamboo handle, leather band, and chain crossbody strap\nAI product description: Elegant palm fiber bag (W20 x H18 x D8 cm) with hand-beaded pearl and crystal flowers on the front. Features a natural bamboo handle, detachable leather band, and leather-trimmed chain strap.' }
-    },
-    {
-        id: 111, code: 'BR012', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR012', en: 'Palm Fiber Handbag BR012' },
-        image: './Img/TuiXach/SP12/copy_z7886335477562_8f176a4f023a4cc66c6f81cdadd953c9.jpg',
-        image1: './Img/TuiXach/SP12/copy_z7886335484544_f0bfceb8327ca51d5308b45d8311bcfc.jpg',
-        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá\n-        Mặt trước túi đính hoa đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai trúc và đai da có thể tháo rời, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ xanh lá W20 x H18 x đáy 8cm nổi bật với hoa đính kết thủ công từ ngọc trai thật và cườm pha lê ở mặt trước. Lót trong bằng vải canvas bền chắc, quai trúc kết hợp đai da tháo rời cùng dây đeo chéo xích phối da bò mang đến sự tiện dụng và tinh tế. Một thiết kế thanh lịch, nổi bật và đầy cuốn hút cho mọi dịp.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: green palm fiber\n- Adorned with real pearls and crystal floral details\n- Inner lining: canvas fabric\n- Detachable bamboo handle, leather band, and chain crossbody strap\nAI product description: Green palm fiber handbag (W20 x H18 x D8 cm) featuring real pearl and crystal floral hand-beading. Set with a natural bamboo handle, detachable leather band, and chain crossbody strap.' }
-    },
-    {
-        id: 112, code: 'BR013', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR013', en: 'Palm Fiber Handbag BR013' },
-        image: './Img/TuiXach/SP13/copy_z7886337848652_549b0dd03cc2fa8f3c0cdfc8879f1ca0.jpg',
-        image1: './Img/TuiXach/SP13/copy_z7886337853889_b269a7cc16509508de68c5f874db4ae5.jpg',
-        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ xanh lá\n-        Mặt trước túi đính hoa cườm và pha lê.\n-        Lót trong túi: vải canvas\n-        Quai da, có thêm quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Tinh tế trong từng chi tiết, túi sợi cọ xanh lá W20 x H18 x đáy 8cm gây ấn tượng với hoa đính cườm và pha lê lấp lánh trên mặt trước. Chất liệu sợi cọ thủ công kết hợp lớp lót canvas bền đẹp, quai da cùng dây đeo chéo xích phối da bò tạo nên sự cân bằng hoàn hảo giữa nét thanh lịch và tính ứng dụng. Một phụ kiện nổi bật dành cho những ai yêu thích vẻ đẹp nhẹ nhàng nhưng đầy cuốn hút.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: green palm fiber\n- Front decorated with beads and crystal flowers\n- Inner lining: canvas fabric\n- Leather handle and chain crossbody strap with leather details\nAI product description: Exquisite green palm fiber bag (W20 x H18 x D8 cm) featuring hand-embroidered beads and sparkling crystal flowers. Beautifully balanced design with canvas lining, leather handles, and chain strap.' }
-    },
-    {
-        id: 113, code: 'BR014', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: true, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR014', en: 'Palm Fiber Handbag BR014' },
-        image: './Img/TuiXach/SP14/copy_z7886343026196_2a1a4f0132efbb68a362b420881b40c2.jpg',
-        image1: './Img/TuiXach/SP14/copy_z7886343030031_5ab86e238604db26f91416f9c4c08aa2.jpg',
-        image2: './Img/TuiXach/SP14/copy_z7886343037370_c51da24536b5210af29da7ce6e4c49c7.jpg',
-        description: { vi: 'Kích thước: W20xH18x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ hồng pastel\n-        Mặt trước túi đính hồ điệp đính kết từ ngọc trai thật và cườm pha lê.\n-        Lót trong túi: vải canvas\n-        Quai trúc và đai da có thể tháo rời, có quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Nổi bật với sắc hồng pastel dịu dàng, chiếc túi sợi cọ thủ công W20 x H18 x đáy 8cm được tô điểm bằng hồ điệp đính kết từ ngọc trai thật và cườm pha lê đầy tinh xảo. Quai trúc thanh lịch, đai da tháo rời cùng dây đeo chéo xích phối da bò mang đến vẻ đẹp vừa nữ tính vừa hiện đại. Một thiết kế đầy cảm hứng dành cho những ai yêu thích sự tinh tế và lãng mạn.', en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: pastel pink palm fiber\n- Front decorated with real pearl and crystal butterfly\n- Inner lining: canvas fabric\n- Detachable bamboo handle, leather band, and chain crossbody strap\nAI product description: Soft pastel pink palm fiber bag (W20 x H18 x D8 cm) featuring an exquisite real pearl and crystal butterfly embellishment. Accented with natural bamboo handle and detachable leather band.' }
-    },
-    {
-        id: 114, code: 'BR015', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR015', en: 'Palm Fiber Handbag BR015' },
-        image: './Img/TuiXach/SP15/copy_z7886347965073_d310c87772073e5c2251634e2e98ffa9.jpg',
-        image1: './Img/TuiXach/SP15/copy_z7886347968895_b5e7ea87d730397eff746b29004f67c3.jpg',
-        image2: './Img/TuiXach/SP15/copy_z7886347978054_213bf3f9efbf0d2522874ff5c28efe42.jpg',
-        description: { vi: 'Kích thước: W25xH18x đáy 10cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai da, có thêm quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ W25 x H18 x đáy 10cm nổi bật với họa tiết hoa nổi thủ công phủ khắp thân túi, gợi cảm hứng từ một khu vườn hoa rực rỡ đầy sức sống. Thiết kế kết hợp hài hòa giữa chất liệu thủ công tự nhiên, lớp lót canvas bền chắc cùng quai da thanh lịch và dây đeo chéo xích phối da bò.', en: 'Size: W25 x H18 x D10 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Leather handle and chain crossbody strap with leather details\nAI product description: Palm fiber handbag (W25 x H18 x D10 cm) featuring intricate 3D hand-crocheted flowers covering the body, evoking a vibrant blooming garden. Designed with a canvas lining and leather handles.' }
-    },
-    {
-        id: 115, code: 'BR016', catalogId: 'bag',
-        tags: { material: 'soi-co', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cọ BR016', en: 'Palm Fiber Handbag BR016' },
-        image: './Img/TuiXach/SP16/copy_z7886352866493_342653726611572247de6bf31206a302.jpg',
-        image1: './Img/TuiXach/SP16/copy_z7886352869813_2b77dd8117bd375b978ecb7ffe17cfe0.jpg',
-        description: { vi: 'Kích thước: W25xH18x đáy 10cm\nMô tả chi tiết: \n-        Chất liệu: sợi cọ \n-        Lót trong túi: vải canvas\n-        Quai da, có thêm quai đeo chéo dây xích phối da bò\nCâu chuyện sản phẩm:  Túi sợi cọ W25 x H18 x đáy 10cm nổi bật với những bông hoa đỏ nổi thủ công trên nền sợi cọ tự nhiên, tạo vẻ đẹp rực rỡ và đầy nghệ thuật. Lót canvas bền chắc, quai da cao cấp cùng dây đeo chéo xích phối da bò mang đến sự tiện dụng và thanh lịch. Một thiết kế cuốn hút, giúp bạn nổi bật trong mọi khoảnh khắc.', en: 'Size: W25 x H18 x D10 cm\nDetailed description:\n- Material: palm fiber\n- Inner lining: canvas fabric\n- Leather handle and chain crossbody strap with leather details\nAI product description: Palm fiber bag (W25 x H18 x D10 cm) decorated with vibrant red hand-crocheted flowers on a natural straw background. Sturdy canvas lining, premium leather handle, and crossbody chain strap.' }
-    },
-    {
-        id: 116, code: 'BG001', catalogId: 'bag',
-        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG001', en: 'Grass Fiber Handbag BG001' },
-        image: './Img/TuiXach/SP17/2_17 (2).png',
-        image1: './Img/TuiXach/SP17/2_17 (3).png',
-        image2: './Img/TuiXach/SP17/2_17 (4).png',
-        image3: './Img/TuiXach/SP17/2_17.png',
-        description: { vi: 'Kích thước: W20cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cỏ W20cm nổi bật với thiết kế hoa thủ công độc đáo, mang vẻ đẹp mềm mại và đầy tính nghệ thuật. Chất liệu sợi cỏ tự nhiên kết hợp lớp lót canvas bền chắc tạo nên một phụ kiện vừa tinh tế vừa tiện dụng. Một lựa chọn hoàn hảo cho những cô nàng yêu thích phong cách nữ tính, thanh lịch và khác biệt.', en: 'Size: W20 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\nAI product description: Woven grass fiber bag (W20cm) featuring unique handcrafted flower details. Natural grass fiber combined with canvas lining creates a soft, artistic, and highly durable daily accessory.' }
-    },
-    {
-        id: 117, code: 'BG002', catalogId: 'bag',
-        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG002', en: 'Grass Fiber Handbag BG002' },
-        image: './Img/TuiXach/SP18/2_18 (2).png',
-        image1: './Img/TuiXach/SP18/2_18.png',
-        description: { vi: 'Kích thước: W18 x H15 x đáy 12cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-      Mặt trước đính hoa hồng móc nổi 3D\n-        Lót trong túi: vải canvas\n-        Quai trúc\nCâu chuyện sản phẩm:  Túi sợi cỏ W18 x H15 x đáy 12cm nổi bật với hoa hồng móc nổi 3D đính ở mặt trước, mang đến vẻ đẹp nữ tính và lãng mạn. Lót canvas bền chắc kết hợp quai trúc tự nhiên tạo nên một thiết kế hài hòa, tinh tế và đậm dấu ấn thủ công. Phụ kiện hoàn hảo để tạo điểm nhấn cho mọi outfit.', en: 'Size: W18 x H15 x D12 cm\nDetailed description:\n- Material: grass fiber\n- Front decorated with 3D crocheted pink roses\n- Inner lining: canvas fabric\n- Bamboo handle\nAI product description: Handcrafted grass fiber bag (W18 x H15 x D12 cm) highlighted by lovely 3D crocheted roses. Perfect blend of natural grass texture and organic bamboo handle for a feminine, rustic look.' }
-    },
-    {
-        id: 118, code: 'BG003', catalogId: 'bag',
-        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG003', en: 'Grass Fiber Handbag BG003' },
-        image: './Img/TuiXach/SP19/2_19 (2).png',
-        image1: './Img/TuiXach/SP19/2_19.png',
-        description: { vi: 'Kích thước: W25 x H18,5 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm:  Túi sợi cỏ W25 x H18,5 x đáy 8cm sở hữu thiết kế thủ công thanh lịch với vẻ đẹp tự nhiên và tinh tế. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng cho nhu cầu sử dụng hằng ngày. Một phụ kiện nhẹ nhàng, thời trang và dễ dàng đồng hành cùng nhiều phong cách khác nhau.', en: 'Size: W25 x H18.5 x D8 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\nAI product description: Elegant grass fiber shoulder bag (W25 x H18.5 x D8 cm) presenting clean hand-woven details and natural textures. A lightweight and versatile fashion piece lined with durable canvas.' }
-    },
-    {
-        id: 119, code: 'BG004', catalogId: 'bag',
-        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Sợi Cỏ BG004', en: 'Grass Fiber Handbag BG004' },
-        image: './Img/TuiXach/SP20/2_20 (1).png',
-        image1: './Img/TuiXach/SP20/2_20 (2).png',
-        image2: './Img/TuiXach/SP20/2_20.png',
-        description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
-    },
-    {
-        id: 120, code: 'BG005', catalogId: 'bag',
-        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
-        name: { vi: 'Túi Hoa Khung Nguyệt', en: 'Moon-shaped Flower Bag' },
-        image: './Img/TuiXach/BG005/BG005_01.png',
-        image1: './Img/TuiXach/BG005/BG005_02.png',
-        image2: './Img/TuiXach/BG005/BG005_03.png',
-        description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
-    },
-
-    // ── COLLECTION: Bộ Sưu Tập Đặc Biệt ──
-    {
-        id: 121, code: 'JSS002', catalogId: 'collection',
-        tags: { type: 'bo-trang-suc' }, isNew: true, inStock: true,
-        name: { vi: 'Bộ Trang Sức 4 Món Lux - Vòng Cổ + Khuyên + Vòng Tay + Nhẫn', en: 'Luxury 4-Piece Jewelry Set - Choker + Earrings + Bracelet + Ring' },
-        image: './Img/Vong-co-nu/vong-co-nu-001.jpg',
-        image1: './Img/earing/16.Khuyên tai ngọc trai trắng/khuyên-tai-ngọc-trai.jpg',
-        image2: './Img/Vong-tay/vong-tay-001.jpg',
-        image3: './Img/Nhan/01.Nhanngoctraivang/nhan-ngoc-trai-vang.jpg',
-        description: {
-            vi: 'Mã sản phẩm: JSS002\n\n🎁 BỘ TRANG SỨC 4 MÓN - BỘ SƯU TẬP CAO CẤP\n\nBộ sưu tập bao gồm:\n• 1 Vòng Cổ - Thiết kế tinh tế, sang trọng\n• 1 Khuyên Tai - Khuyên tai ngọc trai hoặc đá quý\n• 1 Vòng Tay - Vòng tay charm hoặc lắc tay nữ\n• 1 Nhẫn - Nhẫn ngọc trai hoặc đá quý\n\nChất liệu: Bạc 925 hoặc vàng, kết hợp ngọc trai thiên nhiên và đá quý cao cấp\n\n✨ ĐẶC ĐIỂM NỔI BẬT:\n- Bộ 4 món đồng bộ, sang trọng\n- Chế tác thủ công tinh xảo\n- Vật liệu cao cấp, bền đẹp\n- Phù hợp mọi phong cách\n- Có thể tuỳ chỉnh theo yêu cầu\n\n💎 CÂU CHUYỆN SẢN PHẨM:\nBộ Trang Sức Lux được thiết kế dành cho những phụ nữ yêu thích vẻ đẹp hoàn hảo và thanh lịch. Mỗi chi tiết được chế tác tinh xảo bởi các nghệ nhân hàng đầu, kết hợp hài hòa giữa các chất liệu cao cấp. Bộ này hoàn hảo cho những dịp đặc biệt, sự kiện quan trọng hay làm quà tặng ý nghĩa cho những người thân yêu.',
-            en: 'Product Code: JSS002\n\n🎁 4-PIECE LUXURY JEWELRY SET - PREMIUM COLLECTION\n\nSet includes:\n• 1 Choker - Elegant and sophisticated design\n• 1 Pair of Earrings - Pearl or gemstone earrings\n• 1 Bracelet - Charm bracelet or women bracelet\n• 1 Ring - Pearl or gemstone ring\n\nMaterial: 925 Silver or Gold, combined with natural pearls and premium gemstones\n\n✨ HIGHLIGHTS:\n- Coordinated 4-piece set with luxury appeal\n- Exquisite handcrafted details\n- Premium and durable materials\n- Suitable for any style\n- Customizable upon request\n\n💎 PRODUCT STORY:\nThe Luxury Jewelry Set is designed for women who love perfect and elegant beauty. Every detail is meticulously crafted by top artisans, harmoniously combining premium materials. This set is perfect for special occasions, important events, or as a meaningful gift for loved ones.'
-        }
-    }
+    ...(typeof data_bo_trang_suc !== 'undefined' ? data_bo_trang_suc : []),
+    ...(typeof data_charm !== 'undefined' ? data_charm : []),
+    ...(typeof data_day_chuyen !== 'undefined' ? data_day_chuyen : []),
+    ...(typeof data_lac_tay !== 'undefined' ? data_lac_tay : []),
+    ...(typeof data_chuoi_vong_co !== 'undefined' ? data_chuoi_vong_co : []),
+    ...(typeof data_nhan !== 'undefined' ? data_nhan : []),
+    ...(typeof data_khuyen_tai !== 'undefined' ? data_khuyen_tai : []),
+    ...(typeof data_vong_tay !== 'undefined' ? data_vong_tay : []),
+    ...(typeof data_kieng !== 'undefined' ? data_kieng : []),
+    ...(typeof data_bag !== 'undefined' ? data_bag : []),
+    ...(typeof data_collection !== 'undefined' ? data_collection : []),
 ];
 
 
@@ -1390,6 +362,10 @@ let state = {
     activeFilters: {},
     wishlist: JSON.parse(localStorage.getItem('wishlist') || '[]'),
     currentShareProduct: null,
+    heroPosterIndex: 0,
+    popupPosterIndex: 0,
+    heroTimer: null,
+    popupTimer: null
 };
 
 // ============================================================
@@ -1935,7 +911,23 @@ function openModal(productId) {
     mainImg.style.opacity = '1';
     thumbs.innerHTML = '';
 
-    const imageArray = [product.image, product.image1, product.image2, product.image3].filter(Boolean);
+    let imageArray = [];
+    if (product.images && Array.isArray(product.images)) {
+        imageArray = product.images.filter(Boolean);
+    } else {
+        imageArray = [
+            product.image,
+            product.image1,
+            product.image2,
+            product.image3,
+            product.image4,
+            product.image5,
+            product.image6,
+            product.image7,
+            product.image8,
+            product.image9
+        ].filter(Boolean);
+    }
     imageArray.forEach((src, i) => {
         const thumb = document.createElement('img');
         thumb.src = src;
@@ -2110,22 +1102,152 @@ window.addEventListener('scroll', () => {
 // ============================================================
 // INIT
 // ============================================================
-// ===== POSTER / SPLASH SCREEN =====
+// ===== HERO SLIDESHOW =====
+function initHeroSlideshow() {
+    const container = document.getElementById('hero-slideshow-container');
+    const dotsContainer = document.getElementById('hero-slideshow-dots');
+    if (!container || typeof data_poster_page === 'undefined' || data_poster_page.length === 0) return;
+
+    // Render slides
+    container.innerHTML = data_poster_page.map((item, index) => `
+        <a href="${item.link || '#'}" class="hero-slide-link">
+            <img src="${item.image}" alt="Banner ${item.id}" class="hero-slide ${index === 0 ? 'active' : ''}">
+        </a>
+    `).join('');
+
+    // Clear dots
+    if (dotsContainer) dotsContainer.innerHTML = '';
+
+    if (data_poster_page.length <= 1) return;
+
+    // Render dots
+    if (dotsContainer) {
+        dotsContainer.innerHTML = data_poster_page.map((_, index) => `
+            <button class="slideshow-dot ${index === 0 ? 'active' : ''}" onclick="goToHeroSlide(${index})"></button>
+        `).join('');
+    }
+
+    const startTimer = () => {
+        state.heroTimer = setInterval(() => {
+            const slides = container.querySelectorAll('.hero-slide');
+            const dots = dotsContainer ? dotsContainer.querySelectorAll('.slideshow-dot') : [];
+            if (slides.length === 0) return;
+
+            slides[state.heroPosterIndex].classList.remove('active');
+            if (dots[state.heroPosterIndex]) dots[state.heroPosterIndex].classList.remove('active');
+
+            state.heroPosterIndex = (state.heroPosterIndex + 1) % slides.length;
+
+            slides[state.heroPosterIndex].classList.add('active');
+            if (dots[state.heroPosterIndex]) dots[state.heroPosterIndex].classList.add('active');
+        }, 8000);
+    };
+
+    window.goToHeroSlide = (index) => {
+        clearInterval(state.heroTimer);
+        const slides = container.querySelectorAll('.hero-slide');
+        const dots = dotsContainer ? dotsContainer.querySelectorAll('.slideshow-dot') : [];
+        if (slides.length === 0) return;
+
+        slides[state.heroPosterIndex].classList.remove('active');
+        if (dots[state.heroPosterIndex]) dots[state.heroPosterIndex].classList.remove('active');
+
+        state.heroPosterIndex = index;
+
+        slides[state.heroPosterIndex].classList.add('active');
+        if (dots[state.heroPosterIndex]) dots[state.heroPosterIndex].classList.add('active');
+
+        startTimer();
+    };
+
+    state.heroPosterIndex = 0;
+    startTimer();
+}
+
+// ===== POSTER / SPLASH SCREEN (POPUP SLIDESHOW) =====
 function initPoster() {
     const poster = document.getElementById('poster-splash');
     const closeBtn = document.getElementById('poster-close');
-    if (!poster) return;
+    const container = document.getElementById('popup-slideshow-container');
+    const dotsContainer = document.getElementById('popup-slideshow-dots');
+    if (!poster || !container || typeof data_poster_popup === 'undefined' || data_poster_popup.length === 0) {
+        poster?.classList.add('hidden');
+        return;
+    }
+
+    // Render slides
+    container.innerHTML = data_poster_popup.map((item, index) => {
+        const isClickable = item.link && item.link.trim() !== "";
+        const imgHtml = `<img src="${item.image}" alt="Popup Poster ${item.id}" class="popup-slide ${index === 0 ? 'active' : ''}">`;
+        if (isClickable) {
+            return `<a href="${item.link}" target="_blank">${imgHtml}</a>`;
+        }
+        return imgHtml;
+    }).join('');
+
+    // Clear dots
+    if (dotsContainer) dotsContainer.innerHTML = '';
 
     const closePoster = () => {
+        if (state.popupTimer) {
+            clearInterval(state.popupTimer);
+            state.popupTimer = null;
+        }
         poster.classList.add('closing');
         setTimeout(() => poster.classList.add('hidden'), 300);
     };
 
     closeBtn.addEventListener('click', closePoster);
     poster.addEventListener('click', (e) => { if (e.target === poster) closePoster(); });
+
+    if (data_poster_popup.length <= 1) return;
+
+    // Render dots
+    if (dotsContainer) {
+        dotsContainer.innerHTML = data_poster_popup.map((_, index) => `
+            <button class="slideshow-dot ${index === 0 ? 'active' : ''}" onclick="goToPopupSlide(${index})"></button>
+        `).join('');
+    }
+
+    const startTimer = () => {
+        state.popupTimer = setInterval(() => {
+            const slides = container.querySelectorAll('.popup-slide');
+            const dots = dotsContainer ? dotsContainer.querySelectorAll('.slideshow-dot') : [];
+            if (slides.length === 0) return;
+
+            slides[state.popupPosterIndex].classList.remove('active');
+            if (dots[state.popupPosterIndex]) dots[state.popupPosterIndex].classList.remove('active');
+
+            state.popupPosterIndex = (state.popupPosterIndex + 1) % slides.length;
+
+            slides[state.popupPosterIndex].classList.add('active');
+            if (dots[state.popupPosterIndex]) dots[state.popupPosterIndex].classList.add('active');
+        }, 8000);
+    };
+
+    window.goToPopupSlide = (index) => {
+        clearInterval(state.popupTimer);
+        const slides = container.querySelectorAll('.popup-slide');
+        const dots = dotsContainer ? dotsContainer.querySelectorAll('.slideshow-dot') : [];
+        if (slides.length === 0) return;
+
+        slides[state.popupPosterIndex].classList.remove('active');
+        if (dots[state.popupPosterIndex]) dots[state.popupPosterIndex].classList.remove('active');
+
+        state.popupPosterIndex = index;
+
+        slides[state.popupPosterIndex].classList.add('active');
+        if (dots[state.popupPosterIndex]) dots[state.popupPosterIndex].classList.add('active');
+
+        startTimer();
+    };
+
+    state.popupPosterIndex = 0;
+    startTimer();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    initHeroSlideshow();
     initPoster();
     renderAll();
     initSearch();
