@@ -1092,7 +1092,26 @@ const products = [
         image1: './Img/TuiXach/BG007/BG007_02.png',
         image2: './Img/TuiXach/BG007/BG007_03.png',
         description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W20 x H18 x đáy 8cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W20 x H18 x đáy 8cm cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W20 x H18 x đáy 8cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
-    }
+    },
+      {
+        id: 123, code: 'BG008', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Hoa Kết Duyên', en: 'Flower Bag of Love' },
+        image: './Img/TuiXach/BG008/BG008_01.png',
+        image1: './Img/TuiXach/BG008/BG008_02.png',
+        image2: './Img/TuiXach/BG008/BG008_03.png',
+        description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W20 x H18 và H22(cao chỗ quai túi) x đáy 8cm  nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W20 x H18 và H22(cao chỗ quai túi) x đáy 8cm  cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W20 x H18 và H22(cao chỗ quai túi) x đáy 8cm ) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+      {
+        id: 124, code: 'BG008', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Bách Hoa Viên', en: 'Hundred Flowers Garden Bag' },
+        image: './Img/TuiXach/BG008/BG008_01.png',
+        image1: './Img/TuiXach/BG008/BG008_02.png',
+        image2: './Img/TuiXach/BG008/BG008_03.png',
+        description: { vi: 'Kích thước: W25 x H18cm x đáy 10cm cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W25 x H18cm x đáy 10cm(cao chỗ quai túi) x đáy 8cm  nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W25 x H18cm x đáy 10cm  cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W25 x H18cm x đáy 10cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+        
 ];
 
 
