@@ -98,4 +98,25 @@ const data_day_chuyen = [
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-014.jpg',
         description: { vi: 'Dây chuyền cao cấp, đẳng cấp sang trọng.', en: 'High-end luxury necklace.' }
     },
+    {
+        id: 23, code: 'JNG001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Dây chuyền cỏ 4 lá may mắn', en: 'Four-leaf clover necklace luck' },
+        image: './Img/Day-chuyen-nu/JNG001/JNG001_01.png',
+        image2: './Img/Day-chuyen-nu/JNG001/JNG001_02.png', description: {
+            vi: 'Mặt dây chuyền cỏ 4 lá kết hợp vỏ trai màu xám đen độc đáo, tượng trưng cho may mắn và hạnh phúc. Chất liệu bạc xi bạch kim mang đến vẻ đẹp tinh tế và hiện đại.',
+            en: 'Four-leaf clover necklace with unique grey-black shell, symbolizing luck and happiness. Platinum plated silver material brings refined and modern beauty.'
+        }
+    },
+    {
+        id: 24, code: 'JNP001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Dây chuyền ngọc trai vàng', en: 'Gold pearl necklace' },
+        image: './Img/Day-chuyen-nu/JNP001/JNP001_01.png',
+        image2: './Img/Day-chuyen-nu/JNP001/JNP001_02.png',
+        description: {
+            vi: 'Nổi bật với viên ngọc trai vàng chủ 9–12 li có ánh sắc sang trọng tự nhiên. Chế tác từ vàng hoặc bạc theo yêu cầu, tạo nên vẻ đẹp quý phái và thanh lịch cho người đeo.',
+            en: 'Features a main 9–12mm gold pearl with natural luxurious luster. Crafted from gold or silver upon request, creating a noble and elegant beauty for the wearer.'
+        }
+    },
 ];

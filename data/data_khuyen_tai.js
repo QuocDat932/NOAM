@@ -133,4 +133,48 @@ const data_khuyen_tai = [
         image2: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (3).png',
         description: { vi: 'Khuyên tai ngọc trai trắng', en: 'Pearl earring with white' }
     },
+    {
+        id: 1290, code: 'JES009', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai trái tim', en: 'Heart shaped earring' },
+        image: './Img/earing/JES009/JES009_01.png',
+        image1: './Img/earing/JES009/JES009_02.png',
+        description: {
+            vi: '-Mô tả sản phẩm: Thiết kế trái tim mềm mại cùng đá CZ lấp lánh, là phụ kiện hoàn hảo giúp tôn lên nét nữ tính và vẻ đẹp ngọt ngào.\n-Chất liệu: Bạc xi bạch kim ',
+            en: '-Product description: Delicate heart design with sparkling CZ stones, a perfect accessory to enhance femininity and sweet beauty.\n-Material: Platinum plated silver '
+        }
+    },
+    {
+        id: 1291, code: 'JES010', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai trái tim', en: 'Heart shaped earring' },
+        image: './Img/earing/JES010/JES010_01.png',
+        image1: './Img/earing/JES010/JES010_02.png',
+        description: {
+            vi: '-Mô tả sản phẩm: Mẫu khuyên tai mang biểu tượng tình yêu với những viên đá CZ rực rỡ, tạo điểm nhấn sang trọng và cuốn hút cho người đeo.\n-Chất liệu: Bạc xi bạch kim ',
+            en: '-Product description: Earrings symbolizing love with sparkling CZ stones, creating a luxurious and attractive accent for the wearer.\n-Material: Platinum plated silver '
+        }
+    },
+    {
+        id: 1292, code: 'JES011', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai trái tim thắt dây nơ', en: 'Heart-shaped earrings with ribbon tie' },
+        image: './Img/earing/JES011/JES011_01.png',
+        image1: './Img/earing/JES011/JES011_02.png',
+        description: {
+            vi: '-Mô tả sản phẩm: Sự kết hợp độc đáo giữa hình trái tim và dây nơ duyên dáng, điểm xuyết đá CZ lấp lánh, mang đến vẻ đẹp trẻ trung và nữ tính.\n-Chất liệu: Bạc xi bạch kim ',
+            en: '-Product description: A unique combination of a heart shape and an elegant bow, adorned with sparkling CZ stones, bringing a youthful and feminine beauty.\n-Material: Platinum plated silver '
+        }
+    },
+    {
+        id: 1293, code: 'JES012', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai dây nơ', en: 'Bow-shaped earrings' },
+        image: './Img/earing/JES012/JES012_01.png',
+        image1: './Img/earing/JES012/JES012_02.png',
+        description: {
+            vi: '-Mô tả sản phẩm: Thiết kế dây nơ thanh lịch với những viên đá CZ sáng bóng, tạo nên phong cách nhẹ nhàng, đáng yêu nhưng không kém phần sang trọng.\n-Chất liệu: Bạc xi bạch kim ',
+            en: '-Product description: Elegant bow design with sparkling CZ stones, creating a gentle, lovely yet luxurious style.\n-Material: Platinum plated silver '
+        }
+    },
 ];
