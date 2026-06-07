@@ -741,10 +741,38 @@ const products = [
         image2: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15 (2).png',
         description: { vi: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.' }
     },
+    {
+        id: 1016, code: 'JRS005', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn đá đỏ trái tim', en: 'Red stone heart ring' },
+        image: './Img/rings/JRS005/JRS005_03.png',
+        image1: './Img/rings/JRS005/JRS005_02.png',
+        image2: './Img/rings/JRS005/JRS005_01.png',
+        description: { vi: '- Chất liệu: Bạc xi bach kim\n  Câu chuyện sản phẩm:  Thiết kế mặt đá đỏ hình trái tim nổi bật, mang vẻ đẹp ngọt ngào và tinh tế. Chế tác trên nền bạc xi bạch kim, phù hợp làm trang sức hằng ngày hoặc quà tặng ý nghĩa.', en: '- Material: Platinum-plated silver\n Product story: Featuring a striking heart-shaped red stone design, exuding a sweet and delicate beauty. Crafted on a platinum-plated silver base, suitable as everyday jewelry or a meaningful gift.' }
+    },
+    {
+        id: 1017, code: 'JRS006', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn đá đỏ oval ', en: 'Oval red stone ring' },
+        image: './Img/rings/JRS006/JRS006_01.png',
+        image1: './Img/rings/JRS006/JRS006_02.png',
+        image2: './Img/rings/JRS006/JRS006_03.png',
+        image3: './Img/rings/JRS006/JRS006_04.png',
+        description: { vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bach kim\n  Câu chuyện sản phẩm:  Nhẫn đính đá đỏ dáng oval kết hợp đá CZ lấp lánh, tạo điểm nhấn sang trọng và cuốn hút. Chất liệu bạc xi bạch kim bền đẹp, phù hợp nhiều phong cách.', en: '- Combination: CZ stones\n - Material: Platinum-plated silver\n  Product story: This oval-shaped ring features a red gemstone and sparkling CZ stones, creating a luxurious and captivating focal point. The durable platinum-plated silver material suits many styles.' }
+    }, 
+    {
+        id: 1018, code: 'JRS007', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Ruby đỏ ', en: 'Red Ruby Ring' },
+        image: './Img/rings/JRS007/JRS007_01.png',
+        image1: './Img/rings/JRS007/JRS007_02.png',
+        image2: './Img/rings/JRS007/JRS007_03.png',
+        description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Nhẫn Ruby đỏ nổi bật với sắc đỏ quyến rũ, chế tác bằng vàng, tôn lên vẻ đẹp sang trọng và đẳng cấp.', en: '- Material: Gold\n  Product Story: This striking red ruby ​​ring, crafted from gold, exudes elegance and sophistication.' }
+    }, 
 
     // ── JEWELRY: Khuyên Tai ──
     {
-        id: 1201, code: 'JRE001', catalogId: 'jewelry',
+        id: 1201, code: 'JES001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
         name: { vi: 'Khuyên tai thạch anh tím vàng-bạc', en: 'Khuyên tai thạch anh tím vàng-bạc' },
         image: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1.png',
@@ -912,6 +940,49 @@ const products = [
         name: { vi: 'Vòng Tay Labradorite Moonstone', en: 'Labradorite Moonstone Bangle' },
         image: './Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg',
         description: { vi: 'Vòng tay đá quý Labradorite và Moonstone thiên nhiên.', en: 'Natural Labradorite and Moonstone gemstone bangle.' }
+    },
+    {
+        id: 93, code: 'JSB001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay nơ', en: 'Bow bracelet' },
+        image: './Img/Vong-tay/JSB001/JSB001_01.png',
+        image1: './Img/Vong-tay/JSB001/JSB001_02.png',
+        image2: './Img/Vong-tay/JSB001/JSB001_03.png',
+        description: { 
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế nơ duyên dáng đính đá CZ lấp lánh, mang đến vẻ đẹp nữ tính và thanh lịch.', 
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The charming bow design adorned with sparkling CZ stones brings a feminine and elegant look.' }
+    },
+    {
+        id: 94, code: 'JSB002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay charm túi xách', en: 'Charm bracelets and handbags' },
+        image: './Img/Vong-tay/JSB002/JSB002_01.png',
+        image1: './Img/Vong-tay/JSB002/JSB002_02.png',
+        description: { 
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Điểm nhấn charm túi xách kết hợp đá CZ sáng bóng, tạo phong cách trẻ trung và hiện đại.', 
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The handbag\'s charm features sparkling CZ stones, creating a youthful and modern style.' }
+    },
+    {
+        id: 95, code: 'JSB003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay một hàng', en: 'Single row bracelet' },
+        image: './Img/Vong-tay/JSB003/JSB003_01.png',
+        image1: './Img/Vong-tay/JSB003/JSB003_02.png',
+        description: { 
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế tối giản với một hàng đá CZ tinh tế, dễ dàng phối cùng nhiều trang phục.', 
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The minimalist design, featuring a delicate row of CZ stones, easily complements a variety of outfits.' }
+    },
+    {
+        id: 96, code: 'JSB004', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay hai hàng', en: 'Double row bracelet' },
+        image: './Img/Vong-tay/JSB004/JSB004_01.png',
+        image1: './Img/Vong-tay/JSB004/JSB004_02.png',
+        image2: './Img/Vong-tay/JSB004/JSB004_03.png',
+        description: { 
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n Câu chuyện sản phẩm: Hai hàng đá CZ lấp lánh tạo hiệu ứng nổi bật, giúp tôn lên vẻ đẹp sang trọng và cuốn hút.', 
+            en: '- Accents: CZ\n - Material: Platinum-plated silver\n Product story: Two rows of sparkling CZ stones create a striking effect, enhancing a luxurious and captivating beauty.' 
+        }
     },
 
     // ── BAG: (Sản phẩm túi xách sợi cọ SP01 - SP20) ──
