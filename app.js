@@ -1124,10 +1124,10 @@ const products = [
         id: 121, code: 'BG006', catalogId: 'bag',
         tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
         name: { vi: 'Túi Hoa Dã Viên', en: 'Wildflower Bag' },
-        image: './Img/TuiXach/BG006/BG006_01.png',
-        image1: './Img/TuiXach/BG006/BG006_02.png',
-        image2: './Img/TuiXach/BG006/BG006_03.png',
-        image3: './Img/TuiXach/BG006/BG006_04.png',
+        image: './Img/Day-chuyen-nu/BG006_01.png',
+        image1: './Img/Day-chuyen-nu/BG006_02.png',
+        image2: './Img/Day-chuyen-nu/BG006_03.png',
+        image3: './Img/Day-chuyen-nu/BG006_04.png',
         description: { vi: 'Kích thước: W22 x H17 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
     }
 ];
