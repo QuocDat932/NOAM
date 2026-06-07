@@ -539,6 +539,17 @@ const products = [
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-014.jpg',
         description: { vi: 'Dây chuyền cao cấp, đẳng cấp sang trọng.', en: 'High-end luxury necklace.' }
     },
+    {
+        id: 25, code: 'JNP002', catalogId: 'jewelry',
+        tags: { line: 'ngoc-trai', type: 'day-chuyen' }, isNew: true, inStock: true,
+        name: { vi: 'Dây chuyền ngọc trai 3 màu', en: '3-Color Pearl Necklace' },
+        image: './Img/Day-chuyen-nu/JNP002/JPK002_01.png',
+        image1: './Img/Day-chuyen-nu/JNP002/JPK002_02.png',
+        description: {
+            vi: 'Mã SP: JNP002\n- Ngọc trai: Trắng, vàng mỡ gà, xám vàng\n- Kích thước viên chủ: 9-10 li\n- Chất liệu: Vàng/bạc\n- Ghi chú: Màu sắc có thể thay đổi tùy theo ngọc trai tự nhiên từng đợt\n\nSự kết hợp hài hòa giữa ngọc trai trắng, vàng mỡ gà và xám vàng với kích thước viên chủ 9–10 li. Chế tác từ vàng hoặc bạc theo yêu cầu, mang đến vẻ đẹp độc đáo và nổi bật. Màu sắc có thể thay đổi đôi chút tùy theo màu ngọc trai tự nhiên của từng đợt.',
+            en: 'Product Code: JNP002\n- Pearls: White, yellow, yellow-grey\n- Center Pearl: 9-10mm\n- Material: Gold/Silver\n- Note: Colors may vary slightly depending on natural pearls\n\nA harmonious combination of white, yellow, and yellow-grey pearls with 9-10mm center pearls. Crafted in gold or silver upon request, offering a unique and prominent beauty. Colors may vary slightly depending on each batch of natural pearls.'
+        }
+    },
 
     // ── JEWELRY: Lắc Tay Nam ──
     {
@@ -759,7 +770,7 @@ const products = [
         image2: './Img/rings/JRS006/JRS006_03.png',
         image3: './Img/rings/JRS006/JRS006_04.png',
         description: { vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bach kim\n  Câu chuyện sản phẩm:  Nhẫn đính đá đỏ dáng oval kết hợp đá CZ lấp lánh, tạo điểm nhấn sang trọng và cuốn hút. Chất liệu bạc xi bạch kim bền đẹp, phù hợp nhiều phong cách.', en: '- Combination: CZ stones\n - Material: Platinum-plated silver\n  Product story: This oval-shaped ring features a red gemstone and sparkling CZ stones, creating a luxurious and captivating focal point. The durable platinum-plated silver material suits many styles.' }
-    }, 
+    },
     {
         id: 1018, code: 'JRS007', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
@@ -768,7 +779,7 @@ const products = [
         image1: './Img/rings/JRS007/JRS007_02.png',
         image2: './Img/rings/JRS007/JRS007_03.png',
         description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Nhẫn Ruby đỏ nổi bật với sắc đỏ quyến rũ, chế tác bằng vàng, tôn lên vẻ đẹp sang trọng và đẳng cấp.', en: '- Material: Gold\n  Product Story: This striking red ruby ​​ring, crafted from gold, exudes elegance and sophistication.' }
-    }, 
+    },
 
     // ── JEWELRY: Khuyên Tai ──
     {
@@ -948,9 +959,10 @@ const products = [
         image: './Img/Vong-tay/JSB001/JSB001_01.png',
         image1: './Img/Vong-tay/JSB001/JSB001_02.png',
         image2: './Img/Vong-tay/JSB001/JSB001_03.png',
-        description: { 
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế nơ duyên dáng đính đá CZ lấp lánh, mang đến vẻ đẹp nữ tính và thanh lịch.', 
-            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The charming bow design adorned with sparkling CZ stones brings a feminine and elegant look.' }
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế nơ duyên dáng đính đá CZ lấp lánh, mang đến vẻ đẹp nữ tính và thanh lịch.',
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The charming bow design adorned with sparkling CZ stones brings a feminine and elegant look.'
+        }
     },
     {
         id: 94, code: 'JSB002', catalogId: 'jewelry',
@@ -958,9 +970,10 @@ const products = [
         name: { vi: 'Vòng tay charm túi xách', en: 'Charm bracelets and handbags' },
         image: './Img/Vong-tay/JSB002/JSB002_01.png',
         image1: './Img/Vong-tay/JSB002/JSB002_02.png',
-        description: { 
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Điểm nhấn charm túi xách kết hợp đá CZ sáng bóng, tạo phong cách trẻ trung và hiện đại.', 
-            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The handbag\'s charm features sparkling CZ stones, creating a youthful and modern style.' }
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Điểm nhấn charm túi xách kết hợp đá CZ sáng bóng, tạo phong cách trẻ trung và hiện đại.',
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The handbag\'s charm features sparkling CZ stones, creating a youthful and modern style.'
+        }
     },
     {
         id: 95, code: 'JSB003', catalogId: 'jewelry',
@@ -968,9 +981,10 @@ const products = [
         name: { vi: 'Vòng tay một hàng', en: 'Single row bracelet' },
         image: './Img/Vong-tay/JSB003/JSB003_01.png',
         image1: './Img/Vong-tay/JSB003/JSB003_02.png',
-        description: { 
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế tối giản với một hàng đá CZ tinh tế, dễ dàng phối cùng nhiều trang phục.', 
-            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The minimalist design, featuring a delicate row of CZ stones, easily complements a variety of outfits.' }
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế tối giản với một hàng đá CZ tinh tế, dễ dàng phối cùng nhiều trang phục.',
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The minimalist design, featuring a delicate row of CZ stones, easily complements a variety of outfits.'
+        }
     },
     {
         id: 96, code: 'JSB004', catalogId: 'jewelry',
@@ -979,9 +993,9 @@ const products = [
         image: './Img/Vong-tay/JSB004/JSB004_01.png',
         image1: './Img/Vong-tay/JSB004/JSB004_02.png',
         image2: './Img/Vong-tay/JSB004/JSB004_03.png',
-        description: { 
-            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n Câu chuyện sản phẩm: Hai hàng đá CZ lấp lánh tạo hiệu ứng nổi bật, giúp tôn lên vẻ đẹp sang trọng và cuốn hút.', 
-            en: '- Accents: CZ\n - Material: Platinum-plated silver\n Product story: Two rows of sparkling CZ stones create a striking effect, enhancing a luxurious and captivating beauty.' 
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n Câu chuyện sản phẩm: Hai hàng đá CZ lấp lánh tạo hiệu ứng nổi bật, giúp tôn lên vẻ đẹp sang trọng và cuốn hút.',
+            en: '- Accents: CZ\n - Material: Platinum-plated silver\n Product story: Two rows of sparkling CZ stones create a striking effect, enhancing a luxurious and captivating beauty.'
         }
     },
 
