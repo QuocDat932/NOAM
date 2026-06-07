@@ -741,6 +741,36 @@ const products = [
         image2: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15 (2).png',
         description: { vi: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.' }
     },
+     {
+        id: 1019, code: 'JRS008', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Ruby đỏ', en: 'Nhẫn Ruby đỏ' },
+        image: './Img/Nhan/JRS008/JRS008_01.png',
+        image1: './Img/Nhan/JRS008/JRS008_02.png',
+        image2: './Img/Nhan/JRS008/JRS008_03.png',
+        description: { vi: 'Nhẫn Ruby đỏ nổi bật với viên ruby đỏ tự nhiên kích thước 9–12mm, Thiết kế Ruby đỏ tinh tế trên nền vàng, mang vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'This striking red ruby ​​ring features a natural red ruby ​​gemstone measuring 9–12mm. The exquisite red ruby ​​design on a gold setting exudes elegance and sophistication for the wearer.' }
+    },
+     {
+        id: 1020, code: 'JRS009', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn kim cương Lab/đá Nam Phi trắng', en: 'Nhẫn kim cương Lab/đá Nam Phi trắng' },
+        image: './Img/Nhan/JRS009/JRS009_04.png',
+        image1: './Img/Nhan/JRS009/JRS009_03.png',
+        image2: './Img/Nhan/JRS009/JRS009_02.png',
+        image3: './Img/Nhan/JRS009/JRS009_01.png',
+        description: { vi: 'Mẫu nhẫn đính kim cương Lab hoặc đá Nam Phi trắng lấp lánh kích thước 9–12mm, chế tác bằng vàng, phù hợp cho nhiều dịp đặc biệt.', en: 'This ring, set with a Lab-grown diamond or a sparkling white South African gemstone, is crafted in gold and is suitable for many special occasions.' }
+    },
+     {
+        id: 1021, code: 'JRS0010', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Moissanite xanh lá', en: 'Nhẫn Moissanite xanh lá' },
+        image: './Img/Nhan/JRS0010/JRS0010_01.png',
+        image1: './Img/Nhan/JRS0010/JRS0010_02.png',
+        image2: './Img/Nhan/JRS0010/JRS0010_03.png',
+        description: { vi: 'Đá Moissanite xanh lá nổi bật với độ sáng cao và màu sắc độc đáo, kích thước 9–12mm, kết hợp cùng bạc xi bạch kim tạo nên vẻ đẹp hiện đại và tinh tế.', en: 'The striking green Moissanite, with its high luminosity and unique color, combined with platinum-plated silver, creates a modern and sophisticated look.' }
+    },
+
+
 
     // ── JEWELRY: Khuyên Tai ──
     {
@@ -880,6 +910,24 @@ const products = [
         image1: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (2).png',
         image2: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (3).png',
         description: { vi: 'Khuyên tai ngọc trai trắng', en: 'Pearl earring with white' }
+    },
+    {
+        id: 1217, code: 'JES014', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai đá Nam Phi', en: 'South African gemstone earrings' },
+        image: './Img/earing/JES014/JES014_01.png',
+        image1: './Img/earing/JES014/JES014_02.png',
+        description: { vi: 'Khuyên tai đá Nam Phi', en: 'South African gemstone earrings' }
+    },
+      {
+        id: 1218, code: 'JES015', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Moissanite xanh lá', en: 'Green Moissanite Earrings' },
+        image: './Img/earing/JES015/JES015_01.png',
+        image1: './Img/earing/JES015/JES015_02.png',
+        image2: './Img/earing/JES015/JES015_03.png',
+        image3: './Img/earing/JES015/JES015_04.png',
+        description: { vi: 'Khuyên tai Moissanite xanh lá', en: 'Green Moissanite Earrings' }
     },
 
     // ── JEWELRY: Vòng Cổ Nữ ──
@@ -1083,7 +1131,35 @@ const products = [
         image1: './Img/TuiXach/SP20/2_20 (2).png',
         image2: './Img/TuiXach/SP20/2_20.png',
         description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
-    }
+    },
+     {
+        id: 122, code: 'BG007', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Hoa Mãn Viên', en: 'Garden of Blossoms Bag' },
+        image: './Img/TuiXach/BG007/BG007_01.png',
+        image1: './Img/TuiXach/BG007/BG007_02.png',
+        image2: './Img/TuiXach/BG007/BG007_03.png',
+        description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W20 x H18 x đáy 8cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W20 x H18 x đáy 8cm cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W20 x H18 x đáy 8cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+      {
+        id: 123, code: 'BG008', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Hoa Kết Duyên', en: 'Flower Bag of Love' },
+        image: './Img/TuiXach/BG008/BG008_01.png',
+        image1: './Img/TuiXach/BG008/BG008_02.png',
+        image2: './Img/TuiXach/BG008/BG008_03.png',
+        description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W20 x H18 và H22(cao chỗ quai túi) x đáy 8cm  nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W20 x H18 và H22(cao chỗ quai túi) x đáy 8cm  cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W20 x H18 và H22(cao chỗ quai túi) x đáy 8cm ) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+      {
+        id: 124, code: 'BG009', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Bách Hoa Viên', en: 'Hundred Flowers Garden Bag' },
+        image: './Img/TuiXach/BG009/BG009_01.png',
+        image1: './Img/TuiXach/BG009/BG009_02.png',
+        image2: './Img/TuiXach/BG009/BG009_03.png',
+        description: { vi: 'Kích thước: W25 x H18cm x đáy 10cm cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W25 x H18cm x đáy 10cm(cao chỗ quai túi) x đáy 8cm  nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W25 x H18cm x đáy 10cm  cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W25 x H18cm x đáy 10cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+        
 ];
 
 
