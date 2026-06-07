@@ -133,4 +133,56 @@ const data_khuyen_tai = [
         image2: './Img/earing/16.Khuyên tai ngọc trai trắng/4. mục 16 (3).png',
         description: { vi: 'Khuyên tai ngọc trai trắng', en: 'Pearl earring with white' }
     },
+    {
+        id: 1217, code: 'JES014', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai đá Nam Phi', en: 'South African gemstone earrings' },
+        image: './Img/earing/JES014/JES014_01.png',
+        image1: './Img/earing/JES014/JES014_02.png',
+        description: { vi: 'Khuyên tai đá Nam Phi', en: 'South African gemstone earrings' }
+    },
+     {
+        id: 1218, code: 'JES015', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai đá Nam Phi', en: 'South African gemstone earrings' },
+        image: './Img/earing/JES015/JES015_01.png',
+        image1: './Img/earing/JES015/JES015_02.png',
+        image2: './Img/earing/JES015/JES015_03.png',
+        image3: './Img/earing/JES015/JES015_04.png',
+        description: { vi: 'Khuyên tai đá Nam Phi', en: 'South African gemstone earrings' }
+    },
+      {
+        id: 1202, code: 'JES002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' },
+        image: './Img/earing/JES002/JES002_01.jpg',
+        image1: './Img/earing/JES002/JES002_02.jpg',
+        description: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' }
+    },
+      {
+        id: 1203, code: 'JES003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' },
+        image: './Img/earing/JES003/JES003_01.jpg',
+        image1: './Img/earing/JES003/JES003_02.jpg',
+        description: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' }
+    },
+      {
+        id: 1204, code: 'JEP001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai tím', en: 'Purple pearl earrings' },
+        image: './Img/earing/JEP001/JEP001_01.jpg',
+        image1: './Img/earing/JEP001/JEP001_02.jpg',
+        description: { vi: 'Khuyên tai ngọc trai tím', en: 'Purple pearl earrings' }
+    },
+    {
+        id: 1205, code: 'JES004', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
+        name: { vi: 'Khuyên tai Hồ Điệp', en: 'Butterfly Earrings' },
+        image: './Img/earing/JES004/JES004_01.jpg',
+        image1: './Img/earing/JES004/JES004_02.jpg',
+        image2: './Img/earing/JES004/JES004_03.jpg',
+        image3: './Img/earing/JES004/JES004_04.jpg',
+        description: { vi: 'Khuyên tai Hồ Điệp', en: 'Butterfly Earrings' }
+    },
 ];
