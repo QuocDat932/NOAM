@@ -442,9 +442,36 @@ const products = [
 
     // ── JEWELRY: Dây Chuyền Nữ ──
     {
+        id: 26, code: 'JNS002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Dây chuyền đá Moissanite', en: 'Elegant Necklace' },
+        image: './Img/Day-chuyen-nu/JNS002_01.png',
+        image1: './Img/Day-chuyen-nu/JNS002_02.png',
+        description: { vi: 'Nổi bật với đá Moissanite có độ lấp lánh vượt trội, thiết kế thanh lịch trên nền bạc xi bạch kim, phù hợp cho mọi phong cách.', en: 'Featuring exceptional brilliance with Moissanite stones, this elegant design in platinum-plated silver is perfect for any style.' }
+    },
+    {
+        id: 27, code: 'JNS003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Dây chuyền bạc xi bạch kim', en: 'Elegant Necklace' },
+        image: './Img/Day-chuyen-nu/JNS003_01.png',
+        image1: './Img/Day-chuyen-nu/JNS003_02.png',
+        image2: './Img/Day-chuyen-nu/JNS003_03.png',
+        description: { vi: 'Sự kết hợp hài hòa giữa các viên Moissanite lấp lánh và mặt đá Topaz xanh nổi bật, mang đến vẻ đẹp sang trọng và cuốn hút.', en: 'The harmonious combination of sparkling Moissanite and a striking blue Topaz creates a look of luxury and allure.' }
+    },
+    {
+        id: 28, code: 'JNS004', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Dây chuyền Hoa', en: 'Flower necklace' },
+        image: './Img/Day-chuyen-nu/JNS004_01.png',
+        image1: './Img/Day-chuyen-nu/JNS004_02.png',
+        image2: './Img/Day-chuyen-nu/JNS004_03.png',
+        image3: './Img/Day-chuyen-nu/JNS004_04.png',
+        description: { vi: 'Thiết kế tinh xảo với mặt hoa đính đá Topaz xanh, có thể đeo như dây chuyền hoặc tháo rời làm cài áo, tiện dụng và đầy phong cách.', en: 'Exquisite design with a flower pendant adorned with blue Topaz stones, can be worn as a necklace or detached as a brooch—practical and stylish.' }
+    },
+    {
         id: 30, code: 'JW-DC-001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
-        name: { vi: 'Dây Chuyền Nữ Thanh Lịch', en: 'Elegant Necklace' },
+        name: { vi: 'Dây chuyền đá Moissanite', en: 'Elegant Necklace' },
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-001.jpg',
         description: { vi: 'Dây chuyền vàng 18K, thiết kế thanh lịch cho phái đẹp.', en: '18K gold necklace, elegant design for women.' }
     },
@@ -539,6 +566,14 @@ const products = [
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-014.jpg',
         description: { vi: 'Dây chuyền cao cấp, đẳng cấp sang trọng.', en: 'High-end luxury necklace.' }
     },
+    {
+        id: 44, code: 'JPK001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Kiềng cổ ngọc trai trắng', en: 'Luxury Necklace' },
+        image: './Img/Day-chuyen-nu/JPK001_01.png',
+        image1: './Img/Day-chuyen-nu/JPK001_02.png',
+        description: { vi: 'Kiềng cổ nổi bật với viên ngọc trai trắng 12–15 li có độ bóng tự nhiên sang trọng. Chế tác theo yêu cầu bằng vàng hoặc bạc.', en: 'A standout necklace featuring a 12–15mm white pearl with a luxurious natural luster. Custom-crafted in gold or silver upon request' }
+    },
 
     // ── JEWELRY: Lắc Tay Nam ──
     {
@@ -606,6 +641,7 @@ const products = [
         image: './Img/Lac-tay-nu/L007218-015130-Ptsj.jpg',
         description: { vi: 'Lắc tay nữ cao cấp, đẳng cấp vượt trội.', en: "Premium women's bracelet, superior quality." }
     },
+
 
     // ── JEWELRY: Nhẫn ──
     {
@@ -1083,6 +1119,16 @@ const products = [
         image1: './Img/TuiXach/SP20/2_20 (2).png',
         image2: './Img/TuiXach/SP20/2_20.png',
         description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+    {
+        id: 121, code: 'BG006', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Hoa Dã Viên', en: 'Wildflower Bag' },
+        image: './Img/TuiXach/BG006/BG006_01.png',
+        image1: './Img/TuiXach/BG006/BG006_02.png',
+        image2: './Img/TuiXach/BG006/BG006_03.png',
+        image3: './Img/TuiXach/BG006/BG006_04.png',
+        description: { vi: 'Kích thước: W22 x H17 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
     }
 ];
 
