@@ -539,6 +539,22 @@ const products = [
         image: './Img/Day-chuyen-nu/Day-chuyen-nu-014.jpg',
         description: { vi: 'Dây chuyền cao cấp, đẳng cấp sang trọng.', en: 'High-end luxury necklace.' }
     },
+    {
+        id: 23, code: 'JNG001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Dây chuyền cỏ 4 lá may mắn', en: 'Lucky Clover Necklace' },
+        image: './Img/JNG001/JNG001_01.png',
+        image2: './Img/JNG001/JNG001_02.png',
+        description: { vi: 'Mô tả sản phẩm: Mặt dây chuyền cỏ 4 lá kết hợp vỏ trai màu xám đen độc đáo, tượng trưng cho may mắn và hạnh phúc. Chất liệu bạc xi bạch kim mang đến vẻ đẹp tinh tế và hiện đại.\n Mặt: Vỏ trai màu xám đen', en: 'This unique four-leaf clover pendant, combined with a dark gray mother-of-pearl shell, symbolizes luck and happiness. The platinum-plated silver material gives it a sophisticated and modern look.' }
+    },
+    {
+        id: 24, code: 'JNP001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
+        name: { vi: 'Dây chuyền ngọc trai vàng', en: 'Golden Pearl Necklace' },
+        image: './Img/JNP001/JNP001_01.png',
+        image2: './Img/JNP001/JNP001_02.png',
+        description: { vi: 'Mô tả sản phẩm: Mặt dây chuyền cỏ 4 lá kết hợp vỏ trai màu xám đen độc đáo, tượng trưng cho may mắn và hạnh phúc. Chất liệu bạc xi bạch kim mang đến vẻ đẹp tinh tế và hiện đại.\n Viên: 9-12 li', en: 'Description: The four-leaf clover pendant combined with a unique dark gray mother-of-pearl shell symbolizes luck and happiness. The platinum-plated silver material brings a sophisticated and modern look.\n Pearl: 9-12mm' }
+    },
 
     // ── JEWELRY: Lắc Tay Nam ──
     {
@@ -569,7 +585,31 @@ const products = [
         image: './Img/Lac-tay-nam/KL010-C03400_8c-Ptsj.jpg',
         description: { vi: 'Lắc tay nam hiện đại, phong cách trẻ trung.', en: "Modern men's bracelet, youthful style." }
     },
-
+    {
+        id: 65, code: 'JSL001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Lắc tay túi xách', en: "Mini handbag charm bracelet" },
+        image: './Img/JSL001/JSL001_01.png',
+        image1: './Img/JSL001/JSL001_02.png',
+        image2: './Img/JSL001/JSL001_03.png',
+        description: { vi: '-Mô tả sản phẩm: Thiết kế charm túi xách được chạm khắc và đính đá CZ tinh tế, tạo điểm nhấn độc đáo và thời trang.\n-Chất liệu: Bạc xi bạch kim.\n-Phôi: Chạm khắc và đính đá CZ', en: "-Description: The handbag charm is exquisitely engraved and inlaid with CZ stones, creating a unique and fashionable accent.\n-Material: Platinum-plated silver.\n-Mount: Engraved and inlaid with CZ stones" }
+    },
+    {
+        id: 66, code: 'JSL002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Lắc tay mắt xích', en: "Chain link bracelet" },
+        image: './Img/JSL002/JSL002_01.png',
+        image1: './Img/JSL002/JSL002_02.png',
+        description: { vi: '-Mô tả sản phẩm: Mẫu lắc tay mắt xích thanh lịch kết hợp đá CZ lấp lánh, phù hợp cho phong cách hiện đại và năng động.\n-Chất liệu: Bạc xi bạch kim.\n-Phôi: Chạm khắc và đính đá CZ', en: "-Description: This elegant chain link bracelet, adorned with sparkling CZ stones, is perfect for a modern and dynamic style.\n-Material: Platinum-plated silver.\n-Mount: Engraved and inlaid with CZ stones" }
+    },
+    {
+        id: 67, code: 'JSL003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Lắc tay mắt xích', en: "Chain link bracelet" },
+        image: './Img/JSL003/JSL003_01.png',
+        image1: './Img/JSL003/JSL003_02.png',
+        description: { vi: '-Mô tả sản phẩm: Thiết kế mắt xích sang trọng cùng đá CZ sáng đẹp, giúp hoàn thiện vẻ ngoài tinh tế và cuốn hút.\n-Chất liệu: Bạc xi bạch kim.\n-Phôi: Chạm khắc và đính đá CZ', en: "-Description: The elegant chain link design, combined with sparkling CZ stones, completes the sophisticated and captivating look.\n-Material: Platinum-plated silver.\n-Mount: Engraved and inlaid with CZ stones" }
+    },
     // ── JEWELRY: Lắc Tay Nữ ──
     {
         id: 60, code: 'JW-LT-005', catalogId: 'jewelry',
@@ -913,7 +953,22 @@ const products = [
         image: './Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg',
         description: { vi: 'Vòng tay đá quý Labradorite và Moonstone thiên nhiên.', en: 'Natural Labradorite and Moonstone gemstone bangle.' }
     },
-
+    {
+        id: 97, code: 'JSB005', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay trái tim', en: 'Heart bracelet' },
+        image: './Img/JSB005/JSB005_01.png',
+        image1: './Img/JSB005/JSB005_02.png',
+        description: { vi: 'Mô tả chi tiết: Biểu tượng trái tim đính đá CZ mang ý nghĩa yêu thương, là món phụ kiện ngọt ngào và thanh lịch.\n-Chất liệu: Bạc xi bạch kim.\n-Phối: Đá CZ trắng', en: 'Heart bracelet\n- Material: Silver plated platinum.\n- Paired with: White CZ stone' }
+    },
+    {
+        id: 98, code: 'JSB006', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay đính đá CZ', en: 'CZ stone bracelet' },
+        image: './Img/JSB006/JSB006_01.png',
+        image1: './Img/JSB006/JSB006_02.png',
+        description: { vi: 'Mô tả chi tiết: Những viên đá CZ được đính kết tinh xảo, mang đến vẻ đẹp sang trọng và nổi bật cho cổ tay.\n-Chất liệu: Bạc xi bạch kim.\n-Phối: Đá CZ trắng', en: 'Heart bracelet\n- Material: Silver plated platinum.\n- Paired with: White CZ stone' }
+    },
     // ── BAG: (Sản phẩm túi xách sợi cọ SP01 - SP20) ──
     {
         id: 100, code: 'BR001', catalogId: 'bag',
