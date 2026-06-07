@@ -295,6 +295,7 @@ const catalog = [
                     { id: 'vong-co', name: { vi: 'Vòng Cổ', en: 'Choker' } },
                     { id: 'bo-trang-suc', name: { vi: 'Bộ Trang Sức', en: 'Jewelry Set' } },
                     { id: 'charm', name: { vi: 'Charm', en: 'Charm' } },
+                    { id: 'kieng', name: { vi: 'Kiềng', en: 'Torc' } },
                 ],
             },
         ],
@@ -322,6 +323,12 @@ const catalog = [
                 ],
             },
         ],
+    },
+    {
+        id: 'collection',
+        name: { vi: 'Bộ Sưu Tập', en: 'Collections' },
+        icon: 'fa-gift',
+        filters: [],
     },
 ];
 
@@ -741,10 +748,38 @@ const products = [
         image2: './Img/rings/15.Nhẫn ngọc trai vàng 9-12 li/mục 15 (2).png',
         description: { vi: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.', en: 'Nhẫn ngọc trai vàng nổi bật với viên ngọc trai tự nhiên kích thước 9–12mm, thiết kế sang trọng và tinh tế. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc, tôn lên vẻ đẹp thanh lịch và quý phái cho người đeo.' }
     },
+    {
+        id: 1016, code: 'JRS005', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn đá đỏ trái tim', en: 'Red stone heart ring' },
+        image: './Img/rings/JRS005/JRS005_03.png',
+        image1: './Img/rings/JRS005/JRS005_02.png',
+        image2: './Img/rings/JRS005/JRS005_01.png',
+        description: { vi: '- Chất liệu: Bạc xi bach kim\n  Câu chuyện sản phẩm:  Thiết kế mặt đá đỏ hình trái tim nổi bật, mang vẻ đẹp ngọt ngào và tinh tế. Chế tác trên nền bạc xi bạch kim, phù hợp làm trang sức hằng ngày hoặc quà tặng ý nghĩa.', en: '- Material: Platinum-plated silver\n Product story: Featuring a striking heart-shaped red stone design, exuding a sweet and delicate beauty. Crafted on a platinum-plated silver base, suitable as everyday jewelry or a meaningful gift.' }
+    },
+    {
+        id: 1017, code: 'JRS006', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn đá đỏ oval ', en: 'Oval red stone ring' },
+        image: './Img/rings/JRS006/JRS006_01.png',
+        image1: './Img/rings/JRS006/JRS006_02.png',
+        image2: './Img/rings/JRS006/JRS006_03.png',
+        image3: './Img/rings/JRS006/JRS006_04.png',
+        description: { vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bach kim\n  Câu chuyện sản phẩm:  Nhẫn đính đá đỏ dáng oval kết hợp đá CZ lấp lánh, tạo điểm nhấn sang trọng và cuốn hút. Chất liệu bạc xi bạch kim bền đẹp, phù hợp nhiều phong cách.', en: '- Combination: CZ stones\n - Material: Platinum-plated silver\n  Product story: This oval-shaped ring features a red gemstone and sparkling CZ stones, creating a luxurious and captivating focal point. The durable platinum-plated silver material suits many styles.' }
+    },
+    {
+        id: 1018, code: 'JRS007', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Ruby đỏ ', en: 'Red Ruby Ring' },
+        image: './Img/rings/JRS007/JRS007_01.png',
+        image1: './Img/rings/JRS007/JRS007_02.png',
+        image2: './Img/rings/JRS007/JRS007_03.png',
+        description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Nhẫn Ruby đỏ nổi bật với sắc đỏ quyến rũ, chế tác bằng vàng, tôn lên vẻ đẹp sang trọng và đẳng cấp.', en: '- Material: Gold\n  Product Story: This striking red ruby ​​ring, crafted from gold, exudes elegance and sophistication.' }
+    },
 
     // ── JEWELRY: Khuyên Tai ──
     {
-        id: 1201, code: 'JRE001', catalogId: 'jewelry',
+        id: 1201, code: 'JES001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
         name: { vi: 'Khuyên tai thạch anh tím vàng-bạc', en: 'Khuyên tai thạch anh tím vàng-bạc' },
         image: './Img/earing/01.Khuyên tai thạch anh tím vàng-bạc theo yêu cầu/4. mục 1.png',
@@ -913,6 +948,67 @@ const products = [
         image: './Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg',
         description: { vi: 'Vòng tay đá quý Labradorite và Moonstone thiên nhiên.', en: 'Natural Labradorite and Moonstone gemstone bangle.' }
     },
+    {
+        id: 93, code: 'JSB001', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay nơ', en: 'Bow bracelet' },
+        image: './Img/Vong-tay/JSB001/JSB001_01.png',
+        image1: './Img/Vong-tay/JSB001/JSB001_02.png',
+        image2: './Img/Vong-tay/JSB001/JSB001_03.png',
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế nơ duyên dáng đính đá CZ lấp lánh, mang đến vẻ đẹp nữ tính và thanh lịch.',
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The charming bow design adorned with sparkling CZ stones brings a feminine and elegant look.'
+        }
+    },
+    {
+        id: 94, code: 'JSB002', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay charm túi xách', en: 'Charm bracelets and handbags' },
+        image: './Img/Vong-tay/JSB002/JSB002_01.png',
+        image1: './Img/Vong-tay/JSB002/JSB002_02.png',
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Điểm nhấn charm túi xách kết hợp đá CZ sáng bóng, tạo phong cách trẻ trung và hiện đại.',
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The handbag\'s charm features sparkling CZ stones, creating a youthful and modern style.'
+        }
+    },
+    {
+        id: 95, code: 'JSB003', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay một hàng', en: 'Single row bracelet' },
+        image: './Img/Vong-tay/JSB003/JSB003_01.png',
+        image1: './Img/Vong-tay/JSB003/JSB003_02.png',
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Thiết kế tối giản với một hàng đá CZ tinh tế, dễ dàng phối cùng nhiều trang phục.',
+            en: '- Accents: CZ stones\n - Material: Platinum-plated silver\n  Product story: The minimalist design, featuring a delicate row of CZ stones, easily complements a variety of outfits.'
+        }
+    },
+    {
+        id: 96, code: 'JSB004', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
+        name: { vi: 'Vòng tay hai hàng', en: 'Double row bracelet' },
+        image: './Img/Vong-tay/JSB004/JSB004_01.png',
+        image1: './Img/Vong-tay/JSB004/JSB004_02.png',
+        image2: './Img/Vong-tay/JSB004/JSB004_03.png',
+        description: {
+            vi: '- Phối: Đá CZ\n - Chất liệu: Bạc xi bạch kim\n Câu chuyện sản phẩm: Hai hàng đá CZ lấp lánh tạo hiệu ứng nổi bật, giúp tôn lên vẻ đẹp sang trọng và cuốn hút.',
+            en: '- Accents: CZ\n - Material: Platinum-plated silver\n Product story: Two rows of sparkling CZ stones create a striking effect, enhancing a luxurious and captivating beauty.'
+        }
+    },
+
+    // ── JEWELRY: Kiềng (Mẫu code để copy sau này) ──
+    /*
+    {
+        id: 1301, code: 'JPK001', catalogId: 'jewelry',
+        tags: { line: 'ngoc-trai', type: 'kieng' }, isNew: true, inStock: true,
+        name: { vi: 'Kiềng cổ ngọc trai trắng', en: 'White Pearl Torc' },
+        image: './Img/Kieng/kieng-co-ngoc-trai.png',
+        image1: './Img/Kieng/kieng-co-ngoc-trai-detail.png',
+        description: { 
+            vi: 'Kiềng cổ ngọc trai trắng nổi bật với viên ngọc trai tự nhiên kích thước 12-15 li, mang vẻ đẹp sang trọng và quyền quý. Chế tác theo yêu cầu trên chất liệu vàng hoặc bạc.', 
+            en: 'White pearl torc featuring a prominent 12-15mm natural pearl, exhibiting a luxurious and regal beauty. Custom-made upon request in gold or silver.' 
+        }
+    },
+    */
 
     // ── BAG: (Sản phẩm túi xách sợi cọ SP01 - SP20) ──
     {
@@ -1083,6 +1179,30 @@ const products = [
         image1: './Img/TuiXach/SP20/2_20 (2).png',
         image2: './Img/TuiXach/SP20/2_20.png',
         description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+    {
+        id: 120, code: 'BG005', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Hoa Khung Nguyệt', en: 'Moon-shaped Flower Bag' },
+        image: './Img/TuiXach/BG005/BG005_01.png',
+        image1: './Img/TuiXach/BG005/BG005_02.png',
+        image2: './Img/TuiXach/BG005/BG005_03.png',
+        description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
+    },
+
+    // ── COLLECTION: Bộ Sưu Tập Đặc Biệt ──
+    {
+        id: 121, code: 'JSS002', catalogId: 'collection',
+        tags: { type: 'bo-trang-suc' }, isNew: true, inStock: true,
+        name: { vi: 'Bộ Trang Sức 4 Món Lux - Vòng Cổ + Khuyên + Vòng Tay + Nhẫn', en: 'Luxury 4-Piece Jewelry Set - Choker + Earrings + Bracelet + Ring' },
+        image: './Img/Vong-co-nu/vong-co-nu-001.jpg',
+        image1: './Img/earing/16.Khuyên tai ngọc trai trắng/khuyên-tai-ngọc-trai.jpg',
+        image2: './Img/Vong-tay/vong-tay-001.jpg',
+        image3: './Img/Nhan/01.Nhanngoctraivang/nhan-ngoc-trai-vang.jpg',
+        description: {
+            vi: 'Mã sản phẩm: JSS002\n\n🎁 BỘ TRANG SỨC 4 MÓN - BỘ SƯU TẬP CAO CẤP\n\nBộ sưu tập bao gồm:\n• 1 Vòng Cổ - Thiết kế tinh tế, sang trọng\n• 1 Khuyên Tai - Khuyên tai ngọc trai hoặc đá quý\n• 1 Vòng Tay - Vòng tay charm hoặc lắc tay nữ\n• 1 Nhẫn - Nhẫn ngọc trai hoặc đá quý\n\nChất liệu: Bạc 925 hoặc vàng, kết hợp ngọc trai thiên nhiên và đá quý cao cấp\n\n✨ ĐẶC ĐIỂM NỔI BẬT:\n- Bộ 4 món đồng bộ, sang trọng\n- Chế tác thủ công tinh xảo\n- Vật liệu cao cấp, bền đẹp\n- Phù hợp mọi phong cách\n- Có thể tuỳ chỉnh theo yêu cầu\n\n💎 CÂU CHUYỆN SẢN PHẨM:\nBộ Trang Sức Lux được thiết kế dành cho những phụ nữ yêu thích vẻ đẹp hoàn hảo và thanh lịch. Mỗi chi tiết được chế tác tinh xảo bởi các nghệ nhân hàng đầu, kết hợp hài hòa giữa các chất liệu cao cấp. Bộ này hoàn hảo cho những dịp đặc biệt, sự kiện quan trọng hay làm quà tặng ý nghĩa cho những người thân yêu.',
+            en: 'Product Code: JSS002\n\n🎁 4-PIECE LUXURY JEWELRY SET - PREMIUM COLLECTION\n\nSet includes:\n• 1 Choker - Elegant and sophisticated design\n• 1 Pair of Earrings - Pearl or gemstone earrings\n• 1 Bracelet - Charm bracelet or women bracelet\n• 1 Ring - Pearl or gemstone ring\n\nMaterial: 925 Silver or Gold, combined with natural pearls and premium gemstones\n\n✨ HIGHLIGHTS:\n- Coordinated 4-piece set with luxury appeal\n- Exquisite handcrafted details\n- Premium and durable materials\n- Suitable for any style\n- Customizable upon request\n\n💎 PRODUCT STORY:\nThe Luxury Jewelry Set is designed for women who love perfect and elegant beauty. Every detail is meticulously crafted by top artisans, harmoniously combining premium materials. This set is perfect for special occasions, important events, or as a meaningful gift for loved ones.'
+        }
     }
 ];
 
@@ -1301,6 +1421,47 @@ function renderNewArrivals() {
     btn.textContent = state.showAllNew ? t('products.collapse') : t('products.viewAll');
 }
 
+function renderCollectionSection() {
+    const container = document.getElementById('collection-grid');
+    if (!container) return;
+    const collections = products.filter(p => p.catalogId === 'collection');
+
+    if (collections.length === 0) {
+        container.innerHTML = `<div class="col-span-full text-center py-12"><i class="fas fa-box-open text-5xl text-gray-300 mb-4"></i><p class="text-gray-500">${t('products.noResult')}</p></div>`;
+        return;
+    }
+
+    container.innerHTML = collections.map(product => {
+        const isWishlisted = state.wishlist.includes(product.id);
+        return `
+            <article class="collection-card group bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col h-full animate-fade-in relative">
+                <button onclick="toggleWishlist(${product.id}, event)" class="wishlist-btn ${isWishlisted ? 'active' : ''} absolute top-3 right-3 z-10">
+                    <i class="fas fa-heart"></i>
+                </button>
+                
+                <div class="relative overflow-hidden aspect-square bg-gray-50 cursor-pointer group/carousel" onclick="openModal(${product.id})">
+                    <img src="${product.image}" alt="${localized(product.name)}" class="collection-main-img w-full h-full object-cover transition duration-500">
+                    ${product.isNew ? '<span class="absolute top-3 left-3 bg-brand-500 text-white text-[9px] md:text-[11px] font-bold px-2.5 py-1 uppercase tracking-wider rounded-full shadow-md">Premium</span>' : ''}
+                    <div class="absolute inset-0 bg-black/0 group-hover/carousel:bg-black/10 transition flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl opacity-0 group-hover/carousel:opacity-100 transition"></i>
+                    </div>
+                </div>
+                
+                <div class="p-4 md:p-5 flex flex-col flex-grow">
+                    <span class="text-[10px] md:text-xs font-bold text-brand-500 uppercase tracking-widest mb-2 block">Bộ Sưu Tập</span>
+                    <h3 class="font-serif font-bold text-gray-800 text-sm md:text-lg mb-3 line-clamp-2 hover:text-brand-500 transition cursor-pointer" onclick="openModal(${product.id})">${localized(product.name)}</h3>
+                    
+                    <p class="text-gray-600 text-xs md:text-sm line-clamp-2 mb-4 flex-grow">${localized(product.description)?.split('\n')[0]}</p>
+                    
+                    <div class="flex gap-2">
+                        <button onclick="openModal(${product.id})" class="flex-1 bg-brand-900 text-brand-gold py-2 px-3 rounded-lg text-xs hover:bg-brand-gold hover:text-brand-900 transition ripple font-bold uppercase">${t('products.viewDetail')}</button>
+                        <button onclick="shareProduct(${product.id}, event)" class="bg-gray-100 text-gray-700 py-2 px-3 rounded-lg text-xs hover:bg-gray-200 transition"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+            </article>`;
+    }).join('');
+}
+
 function renderCatalogSection() {
     const tabsContainer = document.getElementById('catalog-tabs');
     const filtersContainer = document.getElementById('catalog-filters');
@@ -1466,6 +1627,7 @@ function renderAll() {
     renderBrandStory();
     renderBadges();
     renderNewArrivals();
+    renderCollectionSection();
     renderCatalogSection();
     renderCategoryTabs();
     renderReviews();
