@@ -178,4 +178,16 @@ const data_bag = [
         image2: './Img/TuiXach/BG005/BG005_03.png',
         description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
     },
+    {
+        id: 125, code: 'BG010', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: true, inStock: true,
+        name: { vi: 'Túi Hồng Mộc', en: 'Pink Wood Handbag' },
+        image: './Img/TuiXach/BG010/BG010_01.png',
+        image1: './Img/TuiXach/BG010/BG010_02.png',
+        image2: './Img/TuiXach/BG010/BG010_03.png',
+        description: {
+            vi: 'Kích thước: W18 x H15 x đáy 12cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Quai xách: quai trúc tự nhiên\n-        Chi tiết: mặt trước đính hoa nổi 3D\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm: Mẫu túi mini đáng yêu với phom dáng nhỏ gọn, quai trúc tự nhiên và chi tiết hoa nổi 3D nổi bật. Lót canvas bền đẹp giúp tăng độ chắc chắn, là lựa chọn hoàn hảo cho những cô nàng yêu thích phong cách nữ tính và thanh lịch.',
+            en: 'Size: W18 x H15 x D12 cm\nDetailed description:\n- Material: grass fiber\n- Handle: natural bamboo handle\n- Embellishment: 3D flower crochet on front\n- Inner lining: canvas fabric\nAI product description: Lovely mini bag with a compact design, natural bamboo handle, and striking 3D flower details. Durable canvas lining increases stability, making it the perfect choice for girls who love a feminine and elegant style.'
+        }
+    },
 ];
