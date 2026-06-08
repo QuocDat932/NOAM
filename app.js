@@ -78,7 +78,7 @@ const i18n = {
         ],
         products: {
             sectionLabel: 'Bộ sưu tập',
-            newArrivals: 'Sản Phẩm Mới Về',
+            newArrivals: 'Sản Phẩm Mới',
             newArrivalsLabel: 'New Arrivals',
             viewAll: 'Xem tất cả sản phẩm mới',
             collapse: 'Thu gọn',

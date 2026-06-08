@@ -2,7 +2,7 @@ const data_day_chuyen = [
     // ── JEWELRY: Dây Chuyền Nữ ──
     {
         id: 25, code: 'JNP002', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'ngoc-trai', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây chuyền ngọc trai 3 màu', en: 'Three-Color Pearl Necklace' },
         image: './Img/Day-chuyen-nu/JNP002/JNP002_01.png',
         image1: './Img/Day-chuyen-nu/JNP002/JNP002_02.png',
@@ -26,6 +26,7 @@ const data_day_chuyen = [
         tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây chuyền ngọc trai vàng', en: 'Gold pearl necklace' },
         image: './Img/Day-chuyen-nu/JNP001/JNP001_01.png',
+        image1: './Img/Day-chuyen-nu/JNP001/JNP001_03.png',
         image2: './Img/Day-chuyen-nu/JNP001/JNP001_02.png',
         description: {
             vi: 'Nổi bật với viên ngọc trai vàng chủ 9–12 li có ánh sắc sang trọng tự nhiên. Chế tác từ vàng hoặc bạc theo yêu cầu, tạo nên vẻ đẹp quý phái và thanh lịch cho người đeo.',
@@ -34,7 +35,7 @@ const data_day_chuyen = [
     },
     {
         id: 26, code: 'JNS002', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây chuyền đá Moissanite', en: 'Moissanite Pendant Necklace' },
         image: './Img/Day-chuyen-nu/JNS002/JNS002_01.png',
         image1: './Img/Day-chuyen-nu/JNS002/JNS002_02.png',
@@ -45,7 +46,7 @@ const data_day_chuyen = [
     },
     {
         id: 27, code: 'JNS003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây chuyền bạc xi bạch kim Moissanite Topaz', en: 'Moissanite & Blue Topaz Necklace' },
         image: './Img/Day-chuyen-nu/JNS003/JNS003_01.png',
         image1: './Img/Day-chuyen-nu/JNS003/JNS003_02.png',
@@ -57,7 +58,7 @@ const data_day_chuyen = [
     },
     {
         id: 28, code: 'JNS004', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: true, inStock: true,
+        tags: { line: 'da-quy', type: 'day-chuyen' }, isNew: false, inStock: true,
         name: { vi: 'Dây chuyền Hoa đá Topaz xanh', en: 'Floral Blue Topaz Necklace' },
         image: './Img/Day-chuyen-nu/JNS004/JNS004_01.png',
         image1: './Img/Day-chuyen-nu/JNS004/JNS004_02.png',

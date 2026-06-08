@@ -2,7 +2,7 @@ const data_collection = [
     // ── COLLECTION: Bộ Sưu Tập Đặc Biệt ──
     {
         id: 99, code: 'JSS002', catalogId: 'collection',
-        tags: { type: 'bo-trang-suc' }, isNew: true, inStock: true,
+        tags: { type: 'bo-trang-suc' }, isNew: false, inStock: true,
         name: { vi: 'Bộ Trang Sức 4 Món Lux', en: 'Luxury 4-Piece Jewelry Set' },
         image: './Img/Bo-trang-suc/JSS002/JSS002_01.png',
         image1: './Img/Bo-trang-suc/JSS002/JSS002_02.png',
@@ -15,7 +15,7 @@ const data_collection = [
     },
     {
         id: 29, code: 'JSS001', catalogId: 'collection',
-        tags: { type: 'bo-trang-suc' }, isNew: true, inStock: true,
+        tags: { type: 'bo-trang-suc' }, isNew: false, inStock: true,
         name: { vi: 'Bộ sưu tập Dây chuyền đá Moissanite', en: 'Moissanite Necklace Collection' },
         image: './Img/Bo-trang-suc/JSS001/JSS001_01.png',
         images: [

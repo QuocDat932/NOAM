@@ -1,7 +1,7 @@
 const data_kieng = [
     {
-        id: 1302, code: 'JPK002', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'kieng' }, isNew: true, inStock: true,
+        id: 31, code: 'JPK002', catalogId: 'jewelry',
+        tags: { line: 'ngoc-trai', type: 'kieng' }, isNew: false, inStock: true,
         name: { vi: 'Bộ vòng kiềng tay và dây chuyền cổ', en: 'Matching Torc Bangle & Necklace Set' },
         image: './Img/Kieng/JPK002/JPK002_01.png',
         image1: './Img/Kieng/JPK002/JPK002_02.png',
@@ -11,7 +11,7 @@ const data_kieng = [
         }
     },    {
         id: 44, code: 'JPK001', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'kieng' }, isNew: true, inStock: true,
+        tags: { line: 'ngoc-trai', type: 'kieng' }, isNew: false, inStock: true,
         name: { vi: 'Kiềng cổ ngọc trai trắng JPK001', en: 'White Pearl Torc JPK001' },
         image: './Img/Kieng/JPK001/JPK001_01.png',
         image1: './Img/Kieng/JPK001/JPK001_02.png',
