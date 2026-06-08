@@ -1,13 +1,6 @@
 const data_nhan = [
     // ── JEWELRY: Nhẫn ──
     {
-        id: 1000, code: 'JW-NH-001', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
-        name: { vi: 'Nhẫn Kim Cương Solitaire', en: 'Solitaire Diamond Ring' },
-        image: './Img/Nhan/nhan-001.jpg',
-        description: { vi: 'Nhẫn kim cương thiên nhiên, thiết kế Solitaire kinh điển.', en: 'Natural diamond ring, classic Solitaire design.' }
-    },
-    {
         id: 1001, code: 'JRP001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
         name: { vi: 'Nhẫn ngọc trai vàng', en: 'Nhẫn ngọc trai vàng' },
