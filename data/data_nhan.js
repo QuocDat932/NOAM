@@ -180,7 +180,7 @@ const data_nhan = [
         image: './Img/Nhan/JRS0010/JRS0010_01.png',
         image1: './Img/Nhan/JRS0010/JRS0010_02.png',
         image2: './Img/Nhan/JRS0010/JRS0010_03.png',
-        description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Đá Moissanite xanh lá nổi bật với độ sáng cao và màu sắc độc đáo, kết hợp cùng bạc xi bạch kim tạo nên vẻ đẹp hiện đại và tinh tế.', en: '- Material: Gold\n  Product Story: The striking green Moissanite, with its high luminosity and unique color, combined with platinum-plated silver, creates a modern and sophisticated look.' }
+        description: { vi: '- Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Đá Moissanite xanh lá nổi bật với độ sáng cao và màu sắc độc đáo, kết hợp cùng bạc xi bạch kim tạo nên vẻ đẹp hiện đại và tinh tế.', en: '- Material: Platinum-plated silver\n  Product Story: The striking green Moissanite, with its high luminosity and unique color, combined with platinum-plated silver, creates a modern and sophisticated look.' }
     },
 
 ];
