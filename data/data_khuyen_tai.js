@@ -134,7 +134,6 @@ const data_khuyen_tai = [
         description: { vi: 'Khuyên tai ngọc trai trắng', en: 'Pearl earring with white' }
     },
     {
-<<<<<<< HEAD
         id: 1290, code: 'JES009', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'khuyên tai' }, isNew: false, inStock: true,
         name: { vi: 'Khuyên tai trái tim', en: 'Heart shaped earring' },
@@ -176,15 +175,17 @@ const data_khuyen_tai = [
         description: {
             vi: '-Mô tả sản phẩm: Thiết kế dây nơ thanh lịch với những viên đá CZ sáng bóng, tạo nên phong cách nhẹ nhàng, đáng yêu nhưng không kém phần sang trọng.\n-Chất liệu: Bạc xi bạch kim ',
             en: '-Product description: Elegant bow design with sparkling CZ stones, creating a gentle, lovely yet luxurious style.\n-Material: Platinum plated silver '
-=======
+        }
+    },
+    {
         id: 1217, code: 'JES013', catalogId: 'jewelry',
         tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai Hoa Mai', en: 'Plum Flower Earrings' },
         image: './Img/earing/JES013/JES013_01.png',
         image1: './Img/earing/JES013/JES013_02.png',
-        description: { 
-            vi: '- Đá: Đá CZ\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Lấy cảm hứng từ hoa mai tượng trưng cho may mắn và thịnh vượng, sản phẩm nổi bật với đá CZ lấp lánh và lớp xi bạch kim cao cấp.', 
-            en: '- Stones: CZ stones\n- Material: Platinum-plated silver\nAI product description: Inspired by the plum blossom, symbolizing luck and prosperity, these earrings stand out with sparkling CZ stones and premium platinum plating.' 
+        description: {
+            vi: '- Đá: Đá CZ\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Lấy cảm hứng từ hoa mai tượng trưng cho may mắn và thịnh vượng, sản phẩm nổi bật with đá CZ lấp lánh và lớp xi bạch kim cao cấp.',
+            en: '- Stones: CZ stones\n- Material: Platinum-plated silver\nAI product description: Inspired by the plum blossom, symbolizing luck and prosperity, these earrings stand out with sparkling CZ stones and premium platinum plating.'
         }
     },
     {
@@ -193,9 +194,9 @@ const data_khuyen_tai = [
         name: { vi: 'Khuyên tai ngọc trai vàng', en: 'Golden Pearl Earrings' },
         image: './Img/earing/JEP002/JEP002_01.png',
         image1: './Img/earing/JEP002/JEP002_02.png',
-        description: { 
-            vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Nổi bật với viên ngọc trai vàng chủ 10 li mang sắc ánh vàng sang trọng và quý phái. Chế tác từ vàng hoặc bạc theo yêu cầu, là điểm nhấn tinh tế giúp tôn lên vẻ đẹp thanh lịch của người đeo.', 
-            en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Featuring a prominent 10mm golden pearl with a luxurious and noble golden luster. Crafted from gold or silver upon request, it is a delicate highlight that enhances the elegant beauty of the wearer.' 
+        description: {
+            vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Nổi bật với viên ngọc trai vàng chủ 10 li mang sắc ánh vàng sang trọng và quý phái. Chế tác từ vàng hoặc bạc theo yêu cầu, là điểm nhấn tinh tế giúp tôn lên vẻ đẹp thanh lịch của người đeo.',
+            en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Featuring a prominent 10mm golden pearl with a luxurious and noble golden luster. Crafted from gold or silver upon request, it is a delicate highlight that enhances the elegant beauty of the wearer.'
         }
     },
     {
@@ -205,10 +206,9 @@ const data_khuyen_tai = [
         image: './Img/earing/JEP003/JEP003_01.png',
         image1: './Img/earing/JEP003/JEP003_02.png',
         image2: './Img/earing/JEP003/JEP003_03.png',
-        description: { 
-            vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Tinh tế và thanh lịch với viên ngọc trai trắng chủ 10 li nổi bật. Thiết kế chế tác từ vàng hoặc bạc theo yêu cầu, dễ dàng kết hợp cùng nhiều phong cách trang phục.', 
-            en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Meticulous and elegant, featuring a prominent 10mm white pearl. Designed and crafted from gold or silver upon request, it easily complements various outfit styles.' 
->>>>>>> fd2f59c7252d52a488d130ee3f495f4d1bf35e2c
+        description: {
+            vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Tinh tế và thanh lịch với viên ngọc trai trắng chủ 10 li nổi bật. Thiết kế chế tác từ vàng hoặc bạc theo yêu cầu, dễ dàng kết hợp cùng nhiều phong cách trang phục.',
+            en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Meticulous and elegant, featuring a prominent 10mm white pearl. Designed and crafted from gold or silver upon request, it easily complements various outfit styles.'
         }
-    },
+    }
 ];
