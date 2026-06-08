@@ -178,6 +178,34 @@ const data_bag = [
         image2: './Img/TuiXach/BG005/BG005_03.png',
         description: { vi: 'Kích thước: W16xH19x15 cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ W16 x H19 x 15cm nổi bật với thiết kế thủ công từ chất liệu tự nhiên, kết hợp quai xách và đáy túi bằng da bò cao cấp. Lót trong bằng vải canvas bền chắc, mang đến sự tiện dụng và độ bền vượt trội. Một phụ kiện thanh lịch, tinh tế, phù hợp cho nhiều phong cách và dịp sử dụng khác nhau.', en: 'Size: W16 x H19 x D15 cm\nDetailed description:\n- Material: grass fiber\n- Inner lining: canvas fabric\n- Handle and bottom: cowhide leather\nAI product description: Premium grass fiber bag (W16 x H19 x D15 cm) with structure enhanced by high-quality cowhide leather handles and bottom. Durable canvas lining makes it perfect for daily style.' }
     },
+     {
+        id: 122, code: 'BG007', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Hoa Mãn Viên', en: 'Flower Bag' },
+        image: './Img/TuiXach/BG007/BG007_01.png',
+        image1: './Img/TuiXach/BG007/BG007_02.png',
+        image2: './Img/TuiXach/BG007/BG007_03.png',
+        description: { vi: 'Kích thước: W20 x H18 x đáy 8cm cm\nMô tả chi tiết: \n-        Chất liệu:Quai trúc, sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ  W20 x H18 x đáy 8cm Thiết kế nhỏ gọn với chất liệu sợi cỏ tự nhiên và quai trúc độc đáo. Hoa nổi 3D được đính thủ công tinh tế, mang đến vẻ đẹp nữ tính, phù hợp cho những chuyến dạo phố hay nghỉ dưỡng.', en: 'Grass fiber bag W20 x H18 x base 8cm. Compact design with natural grass fiber material and unique bamboo handle. Exquisitely handcrafted 3D floral embellishments add a feminine touch, perfect for strolls or relaxing getaways.' }
+    },
+    {
+        id: 123, code: 'BG008', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Hoa Kết Duyên', en: 'Flower Bag of Love' },
+        image: './Img/TuiXach/BG008/BG008_01.png',
+        image1: './Img/TuiXach/BG008/BG008_02.png',
+        image2: './Img/TuiXach/BG008/BG008_03.png',
+        description: { vi: 'W20 x H18 và H22 (cao chỗ quai túi) x đáy 8 cm\nMô tả chi tiết: \n-        Chất liệu:Quai trúc, sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ  W20 x H18 và H22 (cao chỗ quai túi) x đáy 8cm Thiết kế nhỏ gọn với chất liệu sợi cỏ tự nhiên và quai trúc độc đáo. Hoa nổi 3D được đính thủ công tinh tế, mang đến vẻ đẹp nữ tính, phù hợp cho những chuyến dạo phố hay nghỉ dưỡng.', en: 'Grass fiber bag W20 x H18 và H22 (cao chỗ quai túi) x đáy 8cm. Compact design with natural grass fiber material and unique bamboo handle. Exquisitely handcrafted 3D floral embellishments add a feminine touch, perfect for strolls or relaxing getaways.' }
+    },
+     {
+        id: 124, code: 'BG009', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Bách Hoa Viên', en: 'Hundred Flowers Garden Bag' },
+        image: './Img/TuiXach/BG009/BG009_01.png',
+        image1: './Img/TuiXach/BG009/BG009_02.png',
+        image2: './Img/TuiXach/BG009/BG009_03.png',
+        description: { vi: 'W25 x H18cm x đáy 10 cm\nMô tả chi tiết: \n-        Chất liệu:Quai trúc, sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ  W25 x H18cm x đáy 10cm Thiết kế nhỏ gọn với chất liệu sợi cỏ tự nhiên và quai trúc độc đáo. Hoa nổi 3D được đính thủ công tinh tế, mang đến vẻ đẹp nữ tính, phù hợp cho những chuyến dạo phố hay nghỉ dưỡng.', en: 'Grass fiber bag W25 x H18cm x đáy 10cm. Compact design with natural grass fiber material and unique bamboo handle. Exquisitely handcrafted 3D floral embellishments add a feminine touch, perfect for strolls or relaxing getaways.' }
+    },
+
     {
         id: 125, code: 'BG010', catalogId: 'bag',
         tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: true, inStock: true,

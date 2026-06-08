@@ -154,4 +154,33 @@ const data_nhan = [
         image2: './Img/rings/JRS007/JRS007_03.png',
         description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Nhẫn Ruby đỏ nổi bật với sắc đỏ quyến rũ, chế tác bằng vàng, tôn lên vẻ đẹp sang trọng và đẳng cấp.', en: '- Material: Gold\n  Product Story: This striking red ruby ​​ring, crafted from gold, exudes elegance and sophistication.' }
     },
+      {
+        id: 1019, code: 'JRS008', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Ruby đỏ ', en: 'Red Ruby Ring' },
+        image: './Img/Nhan/JRS008/JRS008_01.png',
+        image1: './Img/Nhan/JRS008/JRS008_02.png',
+        image2: './Img/Nhan/JRS008/JRS008_03.png',
+        description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Thiết kế Ruby đỏ tinh tế trên nền vàng, mang vẻ đẹp thanh lịch và quý phái cho người đeo.', en: '- Material: Gold\n  Product Story: The exquisite design of the red ruby ​​on a gold background brings an elegant and sophisticated look to the wearer.' }
+    },
+      {
+        id: 1020, code: 'JRS009', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn kim cương Lab/đá Nam Phi trắng', en: 'White Lab-Grown Diamond Ring' },
+        image: './Img/Nhan/JRS009/JRS009_01.png',
+        image1: './Img/Nhan/JRS009/JRS009_02.png',
+        image2: './Img/Nhan/JRS009/JRS009_03.png',
+        image3: './Img/Nhan/JRS009/JRS009_04.png',
+        description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm: Mẫu nhẫn đính kim cương Lab hoặc đá Nam Phi trắng lấp lánh, chế tác bằng vàng, phù hợp cho nhiều dịp đặc biệt.', en: '- Material: Gold\n  Product Story: This ring, set with a Lab-grown diamond or a sparkling white South African gemstone, is crafted in gold and is suitable for many special occasions.' }
+    },
+          {
+        id: 1021, code: 'JRS010', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Moissanite xanh lá', en: 'Green Moissanite Ring' },
+        image: './Img/Nhan/JRS0010/JRS0010_01.png',
+        image1: './Img/Nhan/JRS0010/JRS0010_02.png',
+        image2: './Img/Nhan/JRS0010/JRS0010_03.png',
+        description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm:  Đá Moissanite xanh lá nổi bật với độ sáng cao và màu sắc độc đáo, kết hợp cùng bạc xi bạch kim tạo nên vẻ đẹp hiện đại và tinh tế.', en: '- Material: Gold\n  Product Story: The striking green Moissanite, with its high luminosity and unique color, combined with platinum-plated silver, creates a modern and sophisticated look.' }
+    },
+
 ];
