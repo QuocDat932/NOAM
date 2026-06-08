@@ -1,27 +1,6 @@
 const data_vong_tay = [
     // ── JEWELRY: Vòng Tay ──
     {
-        id: 90, code: 'JW-VT-001', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng Tay Ngọc Trai Nuôi', en: 'Cultured Pearl Bangle' },
-        image: './Img/Vong-tay/vong-tay-ngoc-trai-nuoi.jpg',
-        description: { vi: 'Vòng tay ngọc trai nuôi cấy cao cấp, độ bóng hoàn hảo.', en: 'Premium cultured pearl bangle, perfect luster.' }
-    },
-    {
-        id: 91, code: 'JW-VT-002', catalogId: 'jewelry',
-        tags: { line: 'ngoc-trai', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng Tay Ngọc Trai Topaz', en: 'Pearl & Topaz Bangle' },
-        image: './Img/Vong-tay/vong-tay-ngoc-trai-topaz.jpg',
-        description: { vi: 'Vòng tay kết hợp ngọc trai và đá Topaz xanh.', en: 'Bangle combining pearls and blue Topaz.' }
-    },
-    {
-        id: 92, code: 'JW-VT-003', catalogId: 'jewelry',
-        tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
-        name: { vi: 'Vòng Tay Labradorite Moonstone', en: 'Labradorite Moonstone Bangle' },
-        image: './Img/Vong-tay/vong-tay-quan-3-LABRADORITE-MOONSTONE.jpg',
-        description: { vi: 'Vòng tay đá quý Labradorite và Moonstone thiên nhiên.', en: 'Natural Labradorite and Moonstone gemstone bangle.' }
-    },
-    {
         id: 93, code: 'JSB001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng tay nơ', en: 'Bow bracelet' },

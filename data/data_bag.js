@@ -206,4 +206,16 @@ const data_bag = [
         description: { vi: 'W25 x H18cm x đáy 10 cm\nMô tả chi tiết: \n-        Chất liệu:Quai trúc, sợi cỏ\n-        Lót trong túi: vải canvas\n-        Quai và đáy túi là da bò\nCâu chuyện sản phẩm:  Túi sợi cỏ  W25 x H18cm x đáy 10cm Thiết kế nhỏ gọn với chất liệu sợi cỏ tự nhiên và quai trúc độc đáo. Hoa nổi 3D được đính thủ công tinh tế, mang đến vẻ đẹp nữ tính, phù hợp cho những chuyến dạo phố hay nghỉ dưỡng.', en: 'Grass fiber bag W25 x H18cm x đáy 10cm. Compact design with natural grass fiber material and unique bamboo handle. Exquisitely handcrafted 3D floral embellishments add a feminine touch, perfect for strolls or relaxing getaways.' }
     },
 
+    {
+        id: 125, code: 'BG010', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: true, inStock: true,
+        name: { vi: 'Túi Hồng Mộc', en: 'Pink Wood Handbag' },
+        image: './Img/TuiXach/BG010/BG010_01.png',
+        image1: './Img/TuiXach/BG010/BG010_02.png',
+        image2: './Img/TuiXach/BG010/BG010_03.png',
+        description: {
+            vi: 'Kích thước: W18 x H15 x đáy 12cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Quai xách: quai trúc tự nhiên\n-        Chi tiết: mặt trước đính hoa nổi 3D\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm: Mẫu túi mini đáng yêu với phom dáng nhỏ gọn, quai trúc tự nhiên và chi tiết hoa nổi 3D nổi bật. Lót canvas bền đẹp giúp tăng độ chắc chắn, là lựa chọn hoàn hảo cho những cô nàng yêu thích phong cách nữ tính và thanh lịch.',
+            en: 'Size: W18 x H15 x D12 cm\nDetailed description:\n- Material: grass fiber\n- Handle: natural bamboo handle\n- Embellishment: 3D flower crochet on front\n- Inner lining: canvas fabric\nAI product description: Lovely mini bag with a compact design, natural bamboo handle, and striking 3D flower details. Durable canvas lining increases stability, making it the perfect choice for girls who love a feminine and elegant style.'
+        }
+    },
 ];
