@@ -218,8 +218,8 @@ const data_khuyen_tai = [
         id: 1204, code: 'JEP001', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai ngọc trai tím', en: 'Purple Pearl Earrings' },
-        image: './Img/earing/JEP001/JEP001_01.png',
-        image1: './Img/earing/JEP001/JEP001_02.png',
+        image: './Img/earing/JEP001/JEP001_01.jpg',
+        image1: './Img/earing/JEP001/JEP001_02.jpg',
         description: {
             vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Sự kết hợp hài hòa giữa ngọc trai thanh lịch và đá Nam Phi hồng ngọt ngào, tạo nên vẻ đẹp dịu dàng và quý phái. Chế tác theo yêu cầu bằng vàng hoặc bạc.',
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: The harmonious combination of elegant pearls and sweet pink South African gemstones creates a gentle and refined beauty. Custom-made in gold or silver.'
@@ -229,8 +229,8 @@ const data_khuyen_tai = [
         id: 1202, code: 'JES002', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' },
-        image: './Img/earing/JES002/JES002_01.png',
-        image1: './Img/earing/JES002/JES002_02.png',
+        image: './Img/earing/JES002/JES002_01.jpg',
+        image1: './Img/earing/JES002/JES002_02.jpg',
         description: {
             vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Thiết kế tối giản kết hợp thạch anh tím nổi bật, tôn lên nét nữ tính và cuốn hút. Sản phẩm được chế tác theo yêu cầu từ vàng hoặc bạc, đảm bảo tính độc đáo và tinh xảo.',
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: The minimalist design, combined with the striking amethyst, accentuates femininity and allure. The product is custom-made in gold or silver, ensuring uniqueness and exquisite craftsmanship.'
@@ -240,8 +240,8 @@ const data_khuyen_tai = [
         id: 1203, code: 'JES003', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' },
-        image: './Img/earing/JES003/JES003_01.png',
-        image1: './Img/earing/JES003/JES003_02.png',
+        image: './Img/earing/JES003/JES003_01.jpg',
+        image1: './Img/earing/JES003/JES003_02.jpg',
         description: {
             vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Sở hữu viên thạch anh tím rực rỡ cùng đường nét chế tác tinh tế, mang đến vẻ đẹp sang trọng và ý nghĩa phong thủy may mắn. Chế tác theo yêu cầu bằng vàng hoặc bạc.',
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Featuring a vibrant amethyst gemstone and exquisite craftsmanship, this piece exudes elegance and brings auspicious feng shui symbolism. Custom-made in gold or silver is available.'
@@ -251,10 +251,10 @@ const data_khuyen_tai = [
         id: 1205, code: 'JES004', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai Hồ Điệp', en: 'Butterfly Earrings' },
-        image: './Img/earing/JES004/JES004_01.png',
-        image1: './Img/earing/JES004/JES004_02.png',
-        image2: './Img/earing/JES004/JES004_03.png',
-        image3: './Img/earing/JES004/JES004_04.png',
+        image: './Img/earing/JES004/JES004_01.jpg',
+        image1: './Img/earing/JES004/JES004_02.jpg',
+        image2: './Img/earing/JES004/JES004_03.jpg',
+        image3: './Img/earing/JES004/JES004_04.jpg',
         description: {
             vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Lấy cảm hứng từ hình ảnh cánh bướm mềm mại, điểm nhấn là đá CZ lấp lánh giúp tôn lên vẻ đẹp nữ tính và thanh lịch. Hoàn thiện bằng bạc xi bạch kim sang trọng.',
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Inspired by the delicate image of butterfly wings, the sparkling CZ stones accentuate the feminine and elegant beauty. Finished in luxurious platinum-plated silver.'
