@@ -218,4 +218,17 @@ const data_bag = [
             en: 'Size: W18 x H15 x D12 cm\nDetailed description:\n- Material: grass fiber\n- Handle: natural bamboo handle\n- Embellishment: 3D flower crochet on front\n- Inner lining: canvas fabric\nAI product description: Lovely mini bag with a compact design, natural bamboo handle, and striking 3D flower details. Durable canvas lining increases stability, making it the perfect choice for girls who love a feminine and elegant style.'
         }
     },
+    {
+        id: 126, code: 'BG006', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Sợi Cỏ Cao Cấp BG006', en: 'Premium Grass Fiber Handbag BG006' },
+        image: './Img/TuiXach/BG006/BG006_01.png',
+        image1: './Img/TuiXach/BG006/BG006_02.png',
+        image2: './Img/TuiXach/BG006/BG006_03.png',
+        image3: './Img/TuiXach/BG006/BG006_04.png',
+        description: {
+            vi: 'Kích thước: W20 x H18 x đáy 8cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ cao cấp\n-        Quai trúc tự nhiên, chắc chắn\n-        Lót trong: vải canvas mộc\nCâu chuyện sản phẩm: Được dệt thủ công từ sợi cỏ tự nhiên có độ dẻo dai cao, túi sợi cỏ BG006 kết hợp hoàn hảo giữa nét mộc mạc và thiết kế thời trang hiện đại. Lót trong canvas bền bỉ cùng quai trúc độc đáo tạo điểm nhấn ấn tượng cho phong cách của bạn.',
+            en: 'Size: W20 x H18 x D8 cm\nDetailed description:\n- Material: premium grass fiber\n- Handle: natural bamboo handle\n- Lining: rustic canvas fabric\nAI product description: Handcrafted from high-quality natural grass fiber, the BG006 handbag seamlessly blends rustic charm with modern style. Completed with durable canvas lining and a unique bamboo handle.'
+        }
+    }
 ];

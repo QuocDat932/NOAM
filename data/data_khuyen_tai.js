@@ -210,5 +210,50 @@ const data_khuyen_tai = [
             vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Tinh tế và thanh lịch với viên ngọc trai trắng chủ 10 li nổi bật. Thiết kế chế tác từ vàng hoặc bạc theo yêu cầu, dễ dàng kết hợp cùng nhiều phong cách trang phục.',
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Meticulous and elegant, featuring a prominent 10mm white pearl. Designed and crafted from gold or silver upon request, it easily complements various outfit styles.'
         }
+    },
+    {
+        id: 1220, code: 'JES005', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai Hồ Điệp Ngọc Trai', en: 'Pearl Butterfly Earrings' },
+        image: './Img/earing/JES005/JES005_01.png',
+        image1: './Img/earing/JES005/JES005_02.png',
+        description: {
+            vi: '- Đá: Ngọc trai thiên nhiên phối đá CZ\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Thiết kế hình cánh bướm mềm mại kết hợp cùng ngọc trai thiên nhiên và đá CZ lấp lánh, mang đến vẻ quyến rũ và nữ tính tinh tế cho phái đẹp.',
+            en: '- Stones: Natural pearl and CZ stones\n- Material: Platinum-plated silver\nAI product description: Soft butterfly wings design combined with natural pearls and sparkling CZ stones, bringing a refined and feminine charm to the wearer.'
+        }
+    },
+    {
+        id: 1221, code: 'JES006', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai cỏ 4 lá may mắn', en: 'Lucky Four-Leaf Clover Earrings' },
+        image: './Img/earing/JES006/JES006_01.png',
+        image1: './Img/earing/JES006/JES006_02.png',
+        image2: './Img/earing/JES006/JES006_03.png',
+        description: {
+            vi: '- Đá: Đá CZ cao cấp\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Biểu tượng cỏ bốn lá may mắn được chế tác tinh xảo với các viên đá CZ lấp lánh, là món quà hoàn hảo mang đến niềm vui và tài lộc.',
+            en: '- Stones: Premium CZ stones\n- Material: Platinum-plated silver\nAI product description: Meticulously crafted lucky four-leaf clover design adorned with sparkling CZ stones, making it a perfect gift of joy and good fortune.'
+        }
+    },
+    {
+        id: 1222, code: 'JES007', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai đính đá hình giọt nước', en: 'Waterdrop Gemstone Earrings' },
+        image: './Img/earing/JES007/JES007_01.png',
+        image1: './Img/earing/JES007/JES007_02.png',
+        description: {
+            vi: '- Đá: Đá CZ hình giọt nước\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Dáng giọt nước thanh mảnh đính đá CZ lung linh, tôn lên nét thanh nhã, cuốn hút và kiêu sa trong từng chuyển động.',
+            en: '- Stones: Waterdrop CZ stones\n- Material: Platinum-plated silver\nAI product description: Slender waterdrop design adorned with sparkling CZ stones, showcasing grace, attraction, and elegance in every movement.'
+        }
+    },
+    {
+        id: 1223, code: 'JES008', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai vòng tròn đính đá', en: 'Sparkling Hoop Earrings' },
+        image: './Img/earing/JES008/JES008_01.png',
+        image1: './Img/earing/JES008/JES008_02.png',
+        description: {
+            vi: '- Đá: Đá CZ tròn\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Thiết kế dạng khoen tròn cổ điển đính đá CZ lấp lánh, dễ phối đồ và thích hợp cho cả thời trang hằng ngày hay sự kiện sang trọng.',
+            en: '- Stones: Round CZ stones\n- Material: Platinum-plated silver\nAI product description: Classic hoop design adorned with sparkling CZ stones, versatile and suitable for both daily wear and elegant events.'
+        }
     }
 ];
