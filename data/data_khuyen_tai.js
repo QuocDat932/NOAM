@@ -213,7 +213,52 @@ const data_khuyen_tai = [
             vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Tinh tế và thanh lịch với viên ngọc trai trắng chủ 10 li nổi bật. Thiết kế chế tác từ vàng hoặc bạc theo yêu cầu, dễ dàng kết hợp cùng nhiều phong cách trang phục.',
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Meticulous and elegant, featuring a prominent 10mm white pearl. Designed and crafted from gold or silver upon request, it easily complements various outfit styles.'
         }
-    }, 
+    },
+    {
+        id: 1220, code: 'JES005', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai Hồ Điệp Ngọc Trai', en: 'Pearl Butterfly Earrings' },
+        image: './Img/earing/JES005/JES005_01.png',
+        image1: './Img/earing/JES005/JES005_02.png',
+        description: {
+            vi: '- Đá: Ngọc trai thiên nhiên phối đá CZ\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Thiết kế hình cánh bướm mềm mại kết hợp cùng ngọc trai thiên nhiên và đá CZ lấp lánh, mang đến vẻ quyến rũ và nữ tính tinh tế cho phái đẹp.',
+            en: '- Stones: Natural pearl and CZ stones\n- Material: Platinum-plated silver\nAI product description: Soft butterfly wings design combined with natural pearls and sparkling CZ stones, bringing a refined and feminine charm to the wearer.'
+        }
+    },
+    {
+        id: 1221, code: 'JES006', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai cỏ 4 lá may mắn', en: 'Lucky Four-Leaf Clover Earrings' },
+        image: './Img/earing/JES006/JES006_01.png',
+        image1: './Img/earing/JES006/JES006_02.png',
+        image2: './Img/earing/JES006/JES006_03.png',
+        description: {
+            vi: '- Đá: Đá CZ cao cấp\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Biểu tượng cỏ bốn lá may mắn được chế tác tinh xảo với các viên đá CZ lấp lánh, là món quà hoàn hảo mang đến niềm vui và tài lộc.',
+            en: '- Stones: Premium CZ stones\n- Material: Platinum-plated silver\nAI product description: Meticulously crafted lucky four-leaf clover design adorned with sparkling CZ stones, making it a perfect gift of joy and good fortune.'
+        }
+    },
+    {
+        id: 1222, code: 'JES007', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai đính đá hình giọt nước', en: 'Waterdrop Gemstone Earrings' },
+        image: './Img/earing/JES007/JES007_01.png',
+        image1: './Img/earing/JES007/JES007_02.png',
+        description: {
+            vi: '- Đá: Đá CZ hình giọt nước\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Dáng giọt nước thanh mảnh đính đá CZ lung linh, tôn lên nét thanh nhã, cuốn hút và kiêu sa trong từng chuyển động.',
+            en: '- Stones: Waterdrop CZ stones\n- Material: Platinum-plated silver\nAI product description: Slender waterdrop design adorned with sparkling CZ stones, showcasing grace, attraction, and elegance in every movement.'
+        }
+    },
+    {
+        id: 1223, code: 'JES008', catalogId: 'jewelry',
+        tags: { line: 'bac', type: 'khuyên tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai vòng tròn đính đá', en: 'Sparkling Hoop Earrings' },
+        image: './Img/earing/JES008/JES008_01.png',
+        image1: './Img/earing/JES008/JES008_02.png',
+        description: {
+            vi: '- Đá: Đá CZ tròn\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Thiết kế dạng khoen tròn cổ điển đính đá CZ lấp lánh, dễ phối đồ và thích hợp cho cả thời trang hằng ngày hay sự kiện sang trọng.',
+            en: '- Stones: Round CZ stones\n- Material: Platinum-plated silver\nAI product description: Classic hoop design adorned with sparkling CZ stones, versatile and suitable for both daily wear and elegant events.'
+        }
+    },
     {
         id: 1204, code: 'JEP001', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
@@ -225,7 +270,7 @@ const data_khuyen_tai = [
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: The harmonious combination of elegant pearls and sweet pink South African gemstones creates a gentle and refined beauty. Custom-made in gold or silver.'
         }
     },
-      {
+    {
         id: 1202, code: 'JES002', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' },
@@ -236,7 +281,7 @@ const data_khuyen_tai = [
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: The minimalist design, combined with the striking amethyst, accentuates femininity and allure. The product is custom-made in gold or silver, ensuring uniqueness and exquisite craftsmanship.'
         }
     },
-     {
+    {
         id: 1203, code: 'JES003', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai thạch anh tím', en: 'Amethyst earrings' },
@@ -247,7 +292,7 @@ const data_khuyen_tai = [
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Featuring a vibrant amethyst gemstone and exquisite craftsmanship, this piece exudes elegance and brings auspicious feng shui symbolism. Custom-made in gold or silver is available.'
         }
     },
-     {
+    {
         id: 1205, code: 'JES004', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai Hồ Điệp', en: 'Butterfly Earrings' },
@@ -260,23 +305,23 @@ const data_khuyen_tai = [
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Inspired by the delicate image of butterfly wings, the sparkling CZ stones accentuate the feminine and elegant beauty. Finished in luxurious platinum-plated silver.'
         }
     },
-     {
+    {
         id: 1217, code: 'JES014', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai đá Nam Phi', en: 'Namibia Stone Earrings' },
         image: './Img/earing/JES014/JES014_01.png',
-        image1: './Img/earing/JES014/JES014_02.png', 
+        image1: './Img/earing/JES014/JES014_02.png',
         description: {
             vi: '- Viên chủ: 10 li\n- Chất liệu: Vàng/bạc\n- Yêu cầu: Chế tác theo yêu cầu\nCâu chuyện sản phẩm: Khuyên tai đính đá Nam Phi rực rỡ, tôn lên vẻ đẹp sang trọng và cuốn hút. Chất liệu bạc xi bạch kim bền đẹp, phù hợp cho cả sử dụng hằng ngày và những dịp đặc biệt.',
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: These dazzling South African gemstone earrings enhance a sophisticated and captivating look. Made of durable platinum-plated silver, they are suitable for both everyday wear and special occasions.'
         }
     },
-     {
+    {
         id: 1218, code: 'JES015', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'khuyên tai' }, isNew: true, inStock: true,
         name: { vi: 'Khuyên tai Moissanite xanh lá', en: 'Green Moissanite Earrings' },
         image: './Img/earing/JES015/JES015_01.png',
-        image1: './Img/earing/JES015/JES015_02.png', 
+        image1: './Img/earing/JES015/JES015_02.png',
         image2: './Img/earing/JES015/JES015_03.png',
         image3: './Img/earing/JES015/JES015_04.png',
         description: {
@@ -284,6 +329,4 @@ const data_khuyen_tai = [
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Featuring striking green Moissanite stones with impressive brilliance, the design on a platinum-plated silver base offers a modern, elegant, and distinctive look.'
         }
     },
-    
-
 ];
