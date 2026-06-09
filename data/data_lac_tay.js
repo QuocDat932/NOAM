@@ -1,7 +1,7 @@
 const data_lac_tay = [
     // ── JEWELRY: Lắc Tay ──
     {
-        id: 65, code: 'JSL001', catalogId: 'jewelry',
+        id: 7001, code: 'JSL001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc tay túi xách', en: 'Handbag Charm Bracelet' },
         image: './Img/Lac-tay-nu/JSL001/JSL001_01.png',
@@ -13,7 +13,7 @@ const data_lac_tay = [
         }
     },
     {
-        id: 66, code: 'JSL002', catalogId: 'jewelry',
+        id: 7002, code: 'JSL002', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc tay mắt xích', en: 'Chain Link Bracelet JSL002' },
         image: './Img/Lac-tay-nu/JSL002/JSL002_01.png',
@@ -24,7 +24,7 @@ const data_lac_tay = [
         }
     },
     {
-        id: 67, code: 'JSL003', catalogId: 'jewelry',
+        id: 7003, code: 'JSL003', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'lac-tay' }, isNew: false, inStock: true,
         name: { vi: 'Lắc tay mắt xích', en: 'Chain Link Bracelet JSL003' },
         image: './Img/Lac-tay-nu/JSL003/JSL003_01.png',

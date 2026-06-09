@@ -1,7 +1,7 @@
 const data_chuoi_vong_co = [
     // ── JEWELRY: Chuỗi Vòng Cổ Ngọc Trai ──
     {
-        id: 200, code: 'JP001', catalogId: 'jewelry',
+        id: 1, code: 'JP001', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Quấn 3', en: 'Triple-Wrap Pearl Necklace' },
         image: './Img/Chuoi-vong-co/01.Chuoi-vong-co-Ngoc-trai-quan-3/JP001_01.jpg',
@@ -13,7 +13,7 @@ const data_chuoi_vong_co = [
         }
     },
     {
-        id: 201, code: 'JP002', catalogId: 'jewelry',
+        id: 2, code: 'JP002', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai 3 Màu', en: 'Three-Color Pearl Necklace' },
         image: './Img/Chuoi-vong-co/02.Chuoi-vong-co-Ngoc-trai-3-mau/JP002_01.jpg',
@@ -25,7 +25,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 202, code: 'JP003', catalogId: 'jewelry',
+        id: 3, code: 'JP003', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Quấn Đôi', en: 'Double-Wrap Pearl Necklace' },
         image: './Img/Chuoi-vong-co/03.Chuoi-vong-co-Ngoc-trai-quan-doi/JP003_01.jpg',
@@ -37,7 +37,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 203, code: 'JP004', catalogId: 'jewelry',
+        id: 4, code: 'JP004', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Mặt Trái Tim', en: 'Heart Pearl Necklace' },
         image: './Img/Chuoi-vong-co/04.Chuoi-vong-co-Ngoc-trai-mat-trai-tim/JP004_01.jpg',
@@ -49,7 +49,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 204, code: 'JP005', catalogId: 'jewelry',
+        id: 5, code: 'JP005', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Đôi', en: 'Double Pearl Necklace' },
         image: './Img/Chuoi-vong-co/05.Chuoi-vong-co-Ngoc-trai-doi/JP005_01.jpg',
@@ -61,7 +61,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 205, code: 'JP006', catalogId: 'jewelry',
+        id: 6, code: 'JP006', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Mặt Hoa', en: 'Floral Pearl Necklace' },
         image: './Img/Chuoi-vong-co/06.Chuoi-vong-co-Ngoc-trai-mat-hoa/JP006_01.jpg',
@@ -73,7 +73,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 206, code: 'JP007', catalogId: 'jewelry',
+        id: 7, code: 'JP007', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Đa Năng', en: 'Multi-Wear Pearl Necklace' },
         image: './Img/Chuoi-vong-co/07.Chuoi-vong-co-Ngoc-trai-thiet-ke-da-nang/JP007_01.jpg',
@@ -85,7 +85,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 207, code: 'JP008', catalogId: 'jewelry',
+        id: 8, code: 'JP008', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Thiết Kế Đặc Biệt', en: 'Special Design Pearl Necklace' },
         image: './Img/Chuoi-vong-co/08.Chuoi-vong-co-Ngoc-trai-thiet-ke-dac-biet/JP008_01.jpg',
@@ -97,7 +97,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 208, code: 'JP009', catalogId: 'jewelry',
+        id: 9, code: 'JP009', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Trắng', en: 'White Pearl Necklace' },
         image: './Img/Chuoi-vong-co/09.Chuoi-vong-co-Ngoc-trai-trang/JP009_01.jpg',
@@ -109,7 +109,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 209, code: 'JP010', catalogId: 'jewelry',
+        id: 10, code: 'JP010', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Bộ Vòng Cổ Và Khuyên Tai Ngọc Trai Trắng', en: 'White Pearl Necklace & Earring Set' },
         image: './Img/Chuoi-vong-co/10.Bo-vong-co-va-khuyen-tai-Ngoc-trai-trang/JP010_01.jpg',
@@ -121,7 +121,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 210, code: 'JP011', catalogId: 'jewelry',
+        id: 11, code: 'JP011', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Vàng', en: 'Golden Pearl Necklace' },
         image: './Img/Chuoi-vong-co/11.Chuoi-vong-co-Ngoc-trai-vang/JP011_01.jpg',
@@ -133,7 +133,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 211, code: 'JP012', catalogId: 'jewelry',
+        id: 12, code: 'JP012', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ 3 Vòng Ngọc Trai Vàng Mỡ Gà', en: 'Triple-Layer Golden Pearl Necklace' },
         image: './Img/Chuoi-vong-co/12.Chuoi-vong-co-3-vong-Ngoc-trai-mau-vang-mo-ga/JP012_01.jpg',
@@ -145,7 +145,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 212, code: 'JP013', catalogId: 'jewelry',
+        id: 13, code: 'JP013', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ 3 Vòng Ngọc Trai Màu Đen Phối Trắng', en: 'Black & White Pearl Necklace' },
         image: './Img/Chuoi-vong-co/13.Chuoi-vong-co-3-vong-Ngoc-trai-mau-den-phoi-trang/JP013_01.jpg',
@@ -157,7 +157,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 213, code: 'JP014', catalogId: 'jewelry',
+        id: 14, code: 'JP014', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Thiết Kế', en: 'Designer Pearl Necklace' },
         image: './Img/Chuoi-vong-co/14.Chuoi-vong-co-Ngoc-trai-thiet-ke/JP014_01.jpg',
@@ -169,7 +169,7 @@ const data_chuoi_vong_co = [
     },
 
     {
-        id: 214, code: 'JP015', catalogId: 'jewelry',
+        id: 15, code: 'JP015', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Ngọc Trai Vàng Hoàng Gia', en: 'Royal Golden Pearl Necklace' },
         image: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_00.png',
