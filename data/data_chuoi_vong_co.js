@@ -76,8 +76,8 @@ const data_chuoi_vong_co = [
         id: 7, code: 'JP007', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Vòng Cổ Ngọc Trai Đa Năng', en: 'Multi-Wear Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/07.Chuoi-vong-co-Ngoc-trai-thiet-ke-da-nang/JP007_01.jpg',
-        image1: './Img/Chuoi-vong-co/07.Chuoi-vong-co-Ngoc-trai-thiet-ke-da-nang/JP007_02.jpg',
+        image: './Img/Chuoi-vong-co/07.Chuoi-vong-co-Ngoc-Trai-thiet-ke-da-nang/JP007_01.jpg',
+        image1: './Img/Chuoi-vong-co/07.Chuoi-vong-co-Ngoc-Trai-thiet-ke-da-nang/JP007_02.jpg',
         description: {
             vi: 'Thiết kế linh hoạt có thể đeo dáng dài hoặc quấn 2 vòng. Kết hợp mặt hoa 5 số đính đá CZ, chất liệu bạc xi vàng trắng cao cấp, giúp tôn lên nét sang trọng và đẳng cấp.',
             en: 'A versatile design that can be worn as a long necklace or wrapped in 2 strands. Combined with a 5-digit/shape floral pendant encrusted with CZ stones and premium white gold-plated silver material, it elevates luxury and class.'
@@ -172,13 +172,13 @@ const data_chuoi_vong_co = [
         id: 15, code: 'JP015', catalogId: 'jewelry',
         tags: { line: 'ngoc-trai', type: 'chuoi-vong-co-ngoc-trai' }, isNew: false, inStock: true,
         name: { vi: 'Chuỗi Ngọc Trai Vàng Hoàng Gia', en: 'Royal Golden Pearl Necklace' },
-        image: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_00.png',
-        image1: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_01.png',
-        image2: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_02.png',
-        image3: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_03.png',
-        image4: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_04.png',
-        image5: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_05.png',
-        image6: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-gia/JP015_06.png',
+        image: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-Gia/JP015_00.png',
+        image1: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-Gia/JP015_01.png',
+        image2: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-Gia/JP015_02.png',
+        image3: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-Gia/JP015_03.png',
+        image4: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-Gia/JP015_04.png',
+        image5: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-Gia/JP015_05.png',
+        image6: './Img/Chuoi-vong-co/15.Chuoi-ngoc-trai-mau-vang-Hoang-Gia/JP015_06.png',
         description: {
             vi: 'Chuỗi ngọc trai vàng tự nhiên với kích thước 11–12 li nổi bật, mang vẻ đẹp sang trọng và quý phái. Mặt chuỗi chế tác bằng vàng hoặc bạc cao cấp, nhận thiết kế theo yêu cầu, phù hợp làm quà tặng hoặc tôn lên phong cách thanh lịch của người đeo.',
             en: "A natural yellow pearl strand with prominent 11–12mm sizes, exuding luxury and nobility. The pendant is crafted from high-quality gold or silver, with custom designs available upon request, making it perfect as a gift or to elevate the wearer's elegant style."
