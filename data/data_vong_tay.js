@@ -1,7 +1,7 @@
 const data_vong_tay = [
     // ── JEWELRY: Vòng Tay ──
     {
-        id: 93, code: 'JSB001', catalogId: 'jewelry',
+        id: 6001, code: 'JSB001', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng tay nơ', en: 'Bow bracelet' },
         image: './Img/Vong-tay/JSB001/JSB001_01.png',
@@ -13,7 +13,7 @@ const data_vong_tay = [
         }
     },
     {
-        id: 94, code: 'JSB002', catalogId: 'jewelry',
+        id: 6002, code: 'JSB002', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng tay charm túi xách', en: 'Charm bracelets and handbags' },
         image: './Img/Vong-tay/JSB002/JSB002_01.png',
@@ -24,7 +24,7 @@ const data_vong_tay = [
         }
     },
     {
-        id: 95, code: 'JSB003', catalogId: 'jewelry',
+        id: 6003, code: 'JSB003', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng tay một hàng', en: 'Single row bracelet' },
         image: './Img/Vong-tay/JSB003/JSB003_01.png',
@@ -35,7 +35,7 @@ const data_vong_tay = [
         }
     },
     {
-        id: 96, code: 'JSB004', catalogId: 'jewelry',
+        id: 6004, code: 'JSB004', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng tay hai hàng', en: 'Double row bracelet' },
         image: './Img/Vong-tay/JSB004/JSB004_01.png',
@@ -47,7 +47,7 @@ const data_vong_tay = [
         }
     },
     {
-        id: 97, code: 'JSB005', catalogId: 'jewelry',
+        id: 6005, code: 'JSB005', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng tay trái tim', en: 'Heart bracelet' },
         image: './Img/Vong-tay/JSB005/JSB005_01.png',
@@ -59,7 +59,7 @@ const data_vong_tay = [
         }
     },
     {
-        id: 98, code: 'JSB006', catalogId: 'jewelry',
+        id: 6006, code: 'JSB006', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'vong-tay' }, isNew: false, inStock: true,
         name: { vi: 'Vòng tay đính đá CZ', en: 'CZ stone bracelet' },
         image: './Img/Vong-tay/JSB006/JSB006_01.png',
