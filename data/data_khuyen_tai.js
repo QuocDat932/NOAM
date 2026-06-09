@@ -205,4 +205,52 @@ const data_khuyen_tai = [
             en: '- Center pearl: 10mm\n- Material: Gold/silver\n- Customization: Made to order\nAI product description: Featuring striking green Moissanite stones with impressive brilliance, the design on a platinum-plated silver base offers a modern, elegant, and distinctive look.'
         }
     },
+    {
+        id: 3019, code: 'JEP004', catalogId: 'jewelry',
+        tags: { line: 'ngoc-trai', type: 'khuyen-tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai trắng', en: 'White Pearl Earrings' },
+        image: './Img/earing/JEP004/JEP004_01.png',
+        image1: './Img/earing/JEP004/JEP004_02.png',
+        image2: './Img/earing/JEP004/JEP004_03.png',
+        description: {
+            vi: '- Viên chủ: 9-10 li\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Thiết kế tối giản với viên ngọc trai trắng 9–10 li nổi bật trên nền bạc xi bạch kim. Mang đến vẻ đẹp thanh lịch, tinh tế và dễ dàng phối hợp với nhiều phong cách trang phục.',
+            en: '- Center pearl: 9-10mm\n- Material: Platinum-plated silver\nProduct story: Minimalist design with a prominent 9-10mm white pearl on a platinum-plated silver base. Brings an elegant, sophisticated beauty that is easy to pair with various outfit styles.'
+        }
+    },
+    {
+        id: 3020, code: 'JEP005', catalogId: 'jewelry',
+        tags: { line: 'ngoc-trai', type: 'khuyen-tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai trắng', en: 'White Pearl Earrings' },
+        image: './Img/earing/JEP005/JEP005.png',
+        image1: './Img/earing/JEP005/JEP005_01.png',
+        image2: './Img/earing/JEP005/JEP005_02.png',
+        description: {
+            vi: '- Viên chủ: 9-10 li\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Sở hữu viên chủ ngọc trai trắng kích thước 9–10 li, kết hợp chất liệu bạc xi bạch kim sáng bóng. Thiết kế sang trọng, phù hợp cho cả sử dụng hằng ngày và các dịp đặc biệt.',
+            en: '- Center pearl: 9-10mm\n- Material: Platinum-plated silver\nProduct story: Features a 9-10mm white center pearl combined with shiny platinum-plated silver. Luxurious design, suitable for both daily wear and special occasions.'
+        }
+    },
+    {
+        id: 3021, code: 'JEP006', catalogId: 'jewelry',
+        tags: { line: 'ngoc-trai', type: 'khuyen-tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai trắng', en: 'White Pearl Earrings' },
+        image: './Img/earing/JEP006/JEP006_01.png',
+        image1: './Img/earing/JEP006/JEP006_02.png',
+        image2: './Img/earing/JEP006/JEP006_03.png',
+        description: {
+            vi: '- Viên chủ: 9-10 li\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Vẻ đẹp cổ điển của ngọc trai trắng 9–10 li hòa quyện cùng bạc xi bạch kim cao cấp, tạo nên điểm nhấn nhẹ nhàng, nữ tính và đầy cuốn hút.',
+            en: '- Center pearl: 9-10mm\n- Material: Platinum-plated silver\nProduct story: Classic beauty of 9-10mm white pearls blending with premium platinum-plated silver, creating a gentle, feminine, and highly attractive highlight.'
+        }
+    },
+    {
+        id: 3022, code: 'JEP007', catalogId: 'jewelry',
+        tags: { line: 'ngoc-trai', type: 'khuyen-tai' }, isNew: true, inStock: true,
+        name: { vi: 'Khuyên tai ngọc trai trắng', en: 'White Pearl Earrings' },
+        image: './Img/earing/JEP007/JEP007_01.png',
+        image1: './Img/earing/JEP007/JEP007_02.png',
+        image2: './Img/earing/JEP007/JEP007_03.png',
+        description: {
+            vi: '- Viên chủ: 9-10 li\n- Chất liệu: Bạc xi bạch kim\nCâu chuyện sản phẩm: Khuyên tai ngọc trai trắng với viên chủ 9–10 li được chế tác trên nền bạc xi bạch kim, tôn lên nét quý phái và thanh lịch cho người đeo. Màu sắc và kích thước ngọc trai có thể tùy chỉnh theo yêu cầu.',
+            en: '- Center pearl: 9-10mm\n- Material: Platinum-plated silver\nProduct story: White pearl earrings with a 9-10mm center pearl crafted on a platinum-plated silver base, enhancing the noble and elegant look of the wearer. Pearl color and size can be customized upon request.'
+        }
+    }
 ];
