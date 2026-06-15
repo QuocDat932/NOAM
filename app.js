@@ -9,6 +9,7 @@ const CONFIG = {
     phone: '0988063617',
     email: 'contactnoam.vn@gmail.com',
     instagram: 'https://www.instagram.com/noam_by_nancy/',
+    facebook: 'https://www.facebook.com/noammaison',
     defaultLang: 'vi',
     newArrivalsLimit: 4,
 };
@@ -748,6 +749,7 @@ function renderFooter() {
             <div>
                 <h4 class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">${footer.connectTitle}</h4>
                 <div class="flex gap-4">
+                    <a href="${CONFIG.facebook}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-facebook-f"></i></a>
                     <a href="${CONFIG.instagram}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-instagram"></i></a>
                     <a href="https://zalo.me/${CONFIG.zalo}" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><span class="text-xs font-bold">Zalo</span></a>
                 </div>
