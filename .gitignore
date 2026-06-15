@@ -50,3 +50,8 @@ FIXES.md
 UPDATE-LOG.md
 FEATURES-V2.md
 V2-RELEASE-NOTES.md
+
+# Installer & WinMD files
+Codex Installer.exe
+Microsoft.Services.Store.winmd
+
