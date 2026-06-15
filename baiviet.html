@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOAM – Bài Viết & Kiến Thức</title>
+    <link rel="icon" type="image/jpeg" href="./Img/logo/logo-img.jpg">
+
+    <!-- SEO -->
+    <meta name="description" content="Khám phá các bài viết, kiến thức và câu chuyện chế tác trang sức handmade cao cấp từ NOAM.">
+    <meta name="keywords" content="NOAM, bài viết, kiến thức trang sức, túi xách thủ công, sợi cọ Raffia, đá quý">
+    <meta name="author" content="NOAM">
+    <meta property="og:title" content="NOAM – Bài Viết & Kiến Thức">
+    <meta property="og:image" content="./Img/logo/logo-f.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fefdf5',    /* lightest gold tint */
+                            100: '#fdf6e3',   /* warm cream */
+                            500: '#d4af37',   /* gold (primary accent) */
+                            600: '#b8961f',   /* darker gold */
+                            800: '#1a1a1a',   /* near-black */
+                            900: '#111111',   /* deep black */
+                            gold: '#d4af37',  /* gold */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    animation: { 'fade-in': 'fadeIn 0.5s ease-out', 'slide-up': 'slideUp 0.5s ease-out' },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Top Bar -->
+    <div class="bg-brand-900 text-white text-xs py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div id="top-bar-info" class="hidden md:flex space-x-4">
+                <span><i class="fas fa-phone-alt mr-2"></i>0988063617</span>
+                <span><i class="fas fa-envelope mr-2"></i>contactnoam.vn@gmail.com</span>
+            </div>
+            <div class="flex items-center space-x-4 ml-auto">
+                <!-- Language Toggle -->
+                <div class="flex items-center gap-1 border border-white/30 rounded-full px-1">
+                    <button class="lang-btn px-2 py-0.5 rounded-full text-[10px] font-bold transition"
+                        data-lang="vi">VI</button>
+                    <button class="lang-btn px-2 py-0.5 rounded-full text-[10px] font-bold transition"
+                        data-lang="en">EN</button>
+                </div>
+                <a href="https://www.instagram.com/noam_by_nancy/" target="_blank"
+                    class="hover:text-brand-gold">Instagram</a>
+                <a href="https://zalo.me/0988063617" target="_blank" class="hover:text-brand-gold">Zalo</a>
+                <a href="https://www.facebook.com/noammaison" target="_blank" class="hover:text-brand-gold">Facebook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-brand-900 shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-4">
+            <a href="index.html" class="flex items-center group">
+                <img src="./Img/logo/logo-f.jpg" alt="NOAM - Shine your Bright" class="h-10 md:h-14 w-auto">
+            </a>
+
+            <!-- Search (Desktop) - redirects to home page search -->
+            <div class="search-container flex-1 max-w-md hidden md:block">
+                <form action="index.html" method="GET" class="relative">
+                    <input type="text" name="search" id="desktop-search-input"
+                        class="search-input w-full px-4 py-2 pr-10 bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full focus:outline-none focus:border-brand-gold text-sm"
+                        placeholder="Tìm kiếm sản phẩm...">
+                    <button type="submit" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-brand-gold/60 hover:text-brand-gold">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+                <a href="index.html#brand-story" class="nav-link text-white/70 hover:text-brand-gold transition"
+                    data-i18n="nav.brandStory">Câu chuyện thương hiệu</a>
+                <a href="index.html#products-section" class="nav-link text-white/70 hover:text-brand-gold transition"
+                    data-i18n="nav.products">Sản phẩm</a>
+                <a href="baiviet.html" class="nav-link text-white/70 hover:text-brand-gold transition nav-active"
+                    data-i18n="nav.blog">Bài viết</a>
+                <a href="index.html#knowledge" class="nav-link text-white/70 hover:text-brand-gold transition"
+                    data-i18n="nav.knowledge">Kiến thức</a>
+                <a href="index.html#contact" class="nav-link text-white/70 hover:text-brand-gold transition"
+                    data-i18n="nav.contact">Liên hệ</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-gold"><i class="fas fa-bars"></i></button>
+        </div>
+
+        <!-- Mobile Search - redirects to home page search -->
+        <div class="md:hidden px-4 pb-3">
+            <form action="index.html" method="GET" class="search-container relative">
+                <input type="text" name="search"
+                    class="search-input w-full px-4 py-2 pr-10 bg-white/10 border border-white/20 text-white placeholder-white/50 rounded-full focus:outline-none focus:border-brand-gold text-sm"
+                    placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-brand-gold/60 hover:text-brand-gold">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-brand-900 border-t border-white/10 p-4 absolute w-full shadow-lg z-50">
+            <nav class="flex flex-col space-y-3 font-medium text-sm uppercase text-white/80">
+                <a href="index.html#brand-story" class="block py-2 hover:text-brand-gold border-b border-white/10 transition"
+                    data-i18n="nav.brandStory">Câu chuyện thương hiệu</a>
+                <a href="index.html#products-section" class="block py-2 hover:text-brand-gold border-b border-white/10 transition"
+                    data-i18n="nav.products">Sản phẩm</a>
+                <a href="baiviet.html" class="block py-2 hover:text-brand-gold border-b border-white/10 transition nav-active"
+                    data-i18n="nav.blog">Bài viết</a>
+                <a href="index.html#knowledge" class="block py-2 hover:text-brand-gold border-b border-white/10 transition"
+                    data-i18n="nav.knowledge">Kiến thức</a>
+                <a href="index.html#contact" class="block py-2 hover:text-brand-gold transition" data-i18n="nav.contact">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Blog Content -->
+    <main id="blog-content" class="bg-gray-50 py-12 md:py-16 min-h-[60vh] animate-fade-in">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Dynamic Content (List View or Detail View) goes here -->
+            <div id="blog-container"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-900 text-white pt-12 md:pt-16 pb-8">
+        <div id="footer-content" class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="./Img/logo/logo-f.jpg" alt="NOAM" class="h-12 w-auto rounded">
+                </div>
+                <p id="footer-tagline" class="text-gray-400 text-sm">Nghệ thuật tạo tác từ thiên nhiên.</p>
+            </div>
+            <div>
+                <h4 id="footer-contact-title" class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">Liên Hệ</h4>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><i class="fas fa-phone w-5 text-brand-500"></i> 0988063617</li>
+                    <li><i class="fas fa-envelope w-5 text-brand-500"></i> contactnoam.vn@gmail.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 id="footer-connect-title" class="text-lg font-bold mb-4 border-l-4 border-brand-500 pl-3">Kết Nối</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/noammaison" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/noam_by_nancy/" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://zalo.me/0988063617" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-900 transition"><span class="text-xs font-bold">Zalo</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 pb-16 md:pb-0 text-center text-xs text-gray-500">
+            <p>&copy; 2025 NOAM. Developed and designed by <a href="https://sunsolutions.vn" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-yellow-300 transition underline">SunSolutions.vn</a></p>
+        </div>
+    </footer>
+
+    <!-- Lightbox for Image Full View -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button onclick="closeLightbox()"
+            class="absolute top-4 right-4 text-white text-3xl hover:text-brand-500 transition z-10"><i
+                class="fas fa-times"></i></button>
+        <img id="lightbox-img" src="" alt="Full View">
+    </div>
+
+    <!-- Back to Top -->
+    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav id="bottom-nav" class="bottom-nav">
+        <!-- Dynamic bottom navigation -->
+    </nav>
+
+    <!-- Zalo Floating Button -->
+    <div class="fixed bottom-20 md:bottom-6 right-6 z-40">
+        <a href="https://zalo.me/0988063617" target="_blank"
+            class="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-600 transition animate-bounce">
+            <span class="font-bold text-[10px] md:text-xs">Zalo</span>
+        </a>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Articles Data & Control Logic -->
+    <script src="./data/data_baiviet.js"></script>
+    <script src="./baiviet.js"></script>
+</body>
+
+</html>

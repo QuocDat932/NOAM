@@ -17,7 +17,7 @@ const CONFIG = {
 // ===== I18N (Translations) =====
 const i18n = {
     vi: {
-        nav: { brandStory: 'Câu chuyện thương hiệu', products: 'Sản phẩm', knowledge: 'Kiến thức', contact: 'Liên hệ' },
+        nav: { brandStory: 'Câu chuyện thương hiệu', products: 'Sản phẩm', blog: 'Bài viết', knowledge: 'Kiến thức', contact: 'Liên hệ' },
         hero: {
             subtitle: 'Bộ sưu tập 2025',
             title: 'Vẻ Đẹp Vĩnh Cửu<br>Của Thời Gian',
@@ -141,7 +141,7 @@ const i18n = {
         bottomNav: { home: 'Trang chủ', products: 'Sản phẩm', chat: 'Chat', contact: 'Liên hệ' },
     },
     en: {
-        nav: { brandStory: 'Brand Story', products: 'Products', knowledge: 'Knowledge', contact: 'Contact' },
+        nav: { brandStory: 'Brand Story', products: 'Products', blog: 'Articles', knowledge: 'Knowledge', contact: 'Contact' },
         hero: {
             subtitle: 'Collection 2025',
             title: 'Timeless Elegance<br>Beyond Beauty',
