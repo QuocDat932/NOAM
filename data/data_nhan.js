@@ -169,17 +169,17 @@ const data_nhan = [
         name: { vi: 'Nhẫn kim cương Lab/đá Nam Phi trắng', en: 'White Lab-Grown Diamond Ring' },
         image: './Img/Nhan/JRS009/JRS009_01.png',
         image1: './Img/Nhan/JRS009/JRS009_02.png',
-        image2: './Img/Nhan/JRS009/JRS009_03.png',
-        image3: './Img/Nhan/JRS009/JRS009_04.png',
+        image2: './Img/Nhan/JRS009/JRS009.png',
         description: { vi: '- Chất liệu: Vàng\n  Câu chuyện sản phẩm: Mẫu nhẫn đính kim cương Lab hoặc đá Nam Phi trắng lấp lánh, chế tác bằng vàng, phù hợp cho nhiều dịp đặc biệt.', en: '- Material: Gold\n  Product Story: This ring, set with a Lab-grown diamond or a sparkling white South African gemstone, is crafted in gold and is suitable for many special occasions.' }
     },
     {
         id: 2021, code: 'JRS010', catalogId: 'jewelry',
         tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
         name: { vi: 'Nhẫn Moissanite xanh lá', en: 'Green Moissanite Ring' },
-        image: './Img/Nhan/JRS0010/JRS0010_01.png',
-        image1: './Img/Nhan/JRS0010/JRS0010_02.png',
-        image2: './Img/Nhan/JRS0010/JRS0010_03.png',
+        image: './Img/Nhan/JRS0010/JRS010_01.png',
+        image1: './Img/Nhan/JRS0010/JRS010_02.png',
+        image2: './Img/Nhan/JRS0010/JRS010_03.png',
+        image3: './Img/Nhan/JRS0010/JRS010.png',  
         description: { vi: '- Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Đá Moissanite xanh lá nổi bật với độ sáng cao và màu sắc độc đáo, kết hợp cùng bạc xi bạch kim tạo nên vẻ đẹp hiện đại và tinh tế.', en: '- Material: Platinum-plated silver\n  Product Story: The striking green Moissanite, with its high luminosity and unique color, combined with platinum-plated silver, creates a modern and sophisticated look.' }
     },
 
