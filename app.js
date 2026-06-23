@@ -35,41 +35,40 @@ const i18n = {
                 { icon: 'fa-hand-sparkles', title: 'Thiết kế riêng', desc: 'Nhận thiết kế theo yêu cầu, tạo nên sản phẩm độc bản cho bạn.' },
             ],
         },
+        tagline: {
+            abbreviation: 'Natural Artistry of Minerals',
+            translation: 'Nghệ thuật tạo tác từ thiên nhiên'
+        },
         brandStory: {
             sectionLabel: 'Brand Story',
             sectionTitle: 'Câu Chuyện Thương Hiệu',
-            nameOrigin: {
-                title: 'NOAM',
-                subtitle: 'Một cái tên trong tiếng Hebrew mang ý nghĩa tinh tế',
-                meaning: 'Pleasant · Delight · Grace',
-                desc: 'Sự dịu dàng, thanh nhã, duyên dáng - một năng lượng rất đẹp: dịu dàng, an yên, nhưng vẫn đầy chiều sâu.',
-            },
-            acronym: {
-                title: 'N · O · A · M',
-                items: [
-                    { letter: 'N', word: 'Nature', desc: 'Thiên nhiên' },
-                    { letter: 'O', word: 'Origin', desc: 'Nguyên bản' },
-                    { letter: 'A', word: 'Art', desc: 'Nghệ thuật' },
-                    { letter: 'M', word: 'Making', desc: 'Thủ công' },
-                ],
+            positioning: {
+                title: 'Định vị thương hiệu',
+                text: 'Trang sức thiết kế cao cấp – Túi xách thời trang - thủ công – từ đá quý thiên nhiên – từ sợi cọ/cỏ - mang phong cách hiện đại tối giản.',
+                focusTitle: 'Tập trung vào:',
+                focusItems: [
+                    'Vẻ đẹp nguyên bản của chất liệu',
+                    'Nghệ thuật thủ công Việt Nam',
+                    'Cá tính riêng của khách hàng'
+                ]
             },
             story: {
-                title: 'Câu Chuyện Của Chúng Tôi',
+                title: 'Brand Story cho NOAM Handmade',
                 paragraphs: [
                     'Trong thế giới của những sản phẩm thủ công, mỗi chất liệu đều mang trong mình một câu chuyện của thời gian.',
                     'NOAM Handmade được sinh ra từ niềm tin rằng: một món đồ không chỉ để sử dụng hay làm đẹp, mà còn là một tác phẩm nghệ thuật mang linh hồn của người chế tác.',
-                    'Từ những viên đá quý, sợi cọ, tấm da hay chất liệu thô mộc, qua đôi tay của những người nghệ nhân, từng chi tiết được tạo nên bằng sự tỉ mỉ, kiên nhẫn và tình yêu dành cho nghề. Mỗi sản phẩm của NOAM - dù là trang sức hay túi xách - đều chứa đựng một hành trình sáng tạo riêng biệt.',
-                    'Đó không chỉ là thiết kế, mà là sự giao thoa của ánh sáng, chất liệu, văn hóa và cảm xúc.',
-                ],
+                    'Từ những viên đá quý, sợi cọ, tấm da hay chất liệu thô mộc, qua đôi tay của những người nghệ nhân, từng chi tiết được tạo nên bằng sự tỉ mỉ, kiên nhẫn và tình yêu dành cho nghề. Mỗi sản phẩm của NOAM – dù là trang sức hay túi xách – đều chứa đựng một hành trình sáng tạo riêng biệt.',
+                    'Đó không chỉ là thiết kế, mà là sự giao thoa của ánh sáng, chất liệu, văn hóa và cảm xúc. Có thể là vẻ đẹp của thiên nhiên, dấu ấn của thời gian, hay những khoảnh khắc rất riêng trong cuộc sống của mỗi người.',
+                    'NOAM tin rằng: Giá trị đích thực của một sản phẩm không nằm ở sự phô bày, mà ở cảm xúc nó khơi gợi và dấu ấn mà nó để lại.',
+                    'NOAM Handmade – dành cho những lựa chọn tinh tế và khác biệt. ✨'
+                ]
             },
-            values: [
-                { icon: 'fa-leaf', title: 'Vẻ đẹp nguyên bản', desc: 'Tôn vinh vẻ đẹp tự nhiên của chất liệu' },
-                { icon: 'fa-hands', title: 'Nghệ thuật thủ công', desc: 'Chế tác bởi nghệ nhân Việt Nam' },
-                { icon: 'fa-fingerprint', title: 'Cá tính riêng', desc: 'Mỗi sản phẩm là một dấu ấn khác biệt' },
-            ],
-            belief: 'Giá trị đích thực của một sản phẩm không nằm ở sự phô bày, mà ở cảm xúc nó khơi gợi và dấu ấn mà nó để lại.',
-            slogan: 'Shine your Bright',
-            sloganDesc: 'Tỏa sáng theo cách rất riêng của bạn.',
+            slogan: {
+                title: 'Slogan:',
+                text: 'Shine your Bright',
+                translation: '→ Tỏa sáng theo cách rất riêng của bạn.',
+                desc: 'Không chỉ đơn thuần là điểm nhấn cho vẻ ngoài, mỗi thiết kế còn là một tuyên ngôn thầm lặng về cá tính, khí chất và ánh sáng nội tại của người sở hữu. Vẻ đẹp đích thực không nằm ở sự phô bày, mà ở cách mỗi người lựa chọn tỏa sáng theo dấu ấn riêng của mình. ✨'
+            }
         },
         badges: [
             { icon: 'fa-medal', text: 'Chất lượng Vàng' },
@@ -159,41 +158,40 @@ const i18n = {
                 { icon: 'fa-hand-sparkles', title: 'Custom Design', desc: 'Bespoke designs to create one-of-a-kind products just for you.' },
             ],
         },
+        tagline: {
+            abbreviation: 'Natural Artistry of Minerals',
+            translation: 'Art crafted from nature'
+        },
         brandStory: {
             sectionLabel: 'Brand Story',
             sectionTitle: 'Our Brand Story',
-            nameOrigin: {
-                title: 'NOAM',
-                subtitle: 'A Hebrew name with a beautiful and delicate meaning',
-                meaning: 'Pleasant · Delight · Grace',
-                desc: 'Gentleness, elegance, charm - a beautiful energy: tender, serene, yet full of depth.',
-            },
-            acronym: {
-                title: 'N · O · A · M',
-                items: [
-                    { letter: 'N', word: 'Nature', desc: 'Natural materials' },
-                    { letter: 'O', word: 'Origin', desc: 'Authentic origin' },
-                    { letter: 'A', word: 'Art', desc: 'Artistic craft' },
-                    { letter: 'M', word: 'Making', desc: 'Handmade' },
-                ],
+            positioning: {
+                title: 'Brand Positioning',
+                text: 'Premium Designer Jewelry – Fashion Handbags - Handcrafted – from natural gemstones – from palm/grass fiber – modern minimalist style.',
+                focusTitle: 'Focusing on:',
+                focusItems: [
+                    'Original beauty of materials',
+                    'Vietnamese craftsmanship',
+                    'Customers\' unique identity'
+                ]
             },
             story: {
-                title: 'Our Story',
+                title: 'Brand Story for NOAM Handmade',
                 paragraphs: [
                     'In the world of handmade products, every material carries within it a story of time.',
                     'NOAM Handmade was born from the belief that an item is not just for use or beauty, but is also a work of art carrying the soul of its maker.',
-                    'From precious gemstones, palm fibers, leather to raw materials - through the hands of artisans, every detail is crafted with meticulous care, patience, and love for the craft. Each NOAM product - whether jewelry or handbag - holds a unique creative journey.',
-                    'It is not just design, but an intersection of light, material, culture, and emotion.',
-                ],
+                    'From precious gemstones, palm fibers, leather to raw materials, through the hands of artisans, every detail is crafted with meticulous care, patience, and love for the craft. Each NOAM product – whether jewelry or handbag – holds a unique creative journey.',
+                    'It is not just design, but an intersection of light, material, culture, and emotion. It could be the beauty of nature, the mark of time, or very personal moments in each person\'s life.',
+                    'NOAM believes that: The true value of a product lies not in display, but in the emotions it evokes and the impression it leaves behind.',
+                    'NOAM Handmade – for refined and distinct choices. ✨'
+                ]
             },
-            values: [
-                { icon: 'fa-leaf', title: 'Natural Beauty', desc: 'Celebrating the authentic beauty of materials' },
-                { icon: 'fa-hands', title: 'Artisan Craft', desc: 'Handcrafted by Vietnamese artisans' },
-                { icon: 'fa-fingerprint', title: 'Unique Identity', desc: 'Each product is a distinctive signature' },
-            ],
-            belief: 'The true value of a product lies not in display, but in the emotions it evokes and the impression it leaves behind.',
-            slogan: 'Shine your Bright',
-            sloganDesc: 'Shine in your own unique way.',
+            slogan: {
+                title: 'Slogan:',
+                text: 'Shine your Bright',
+                translation: '→ Shine in your own unique way.',
+                desc: 'Not just a highlight for the appearance, each design is a silent statement of identity, aura, and inner light of the owner. True beauty lies not in display, but in the way each person chooses to shine with their own mark. ✨'
+            }
         },
         badges: [
             { icon: 'fa-medal', text: 'Gold Quality' },
@@ -488,62 +486,52 @@ function renderBrandStory() {
 
     container.innerHTML = `
         <!-- Section Header -->
-        <div class="text-center mb-12 md:mb-16">
+        <div class="text-center mb-12 md:mb-16 animate-fade-in">
             <span class="text-brand-500 text-xs md:text-sm font-bold tracking-widest uppercase">${bs.sectionLabel}</span>
             <h2 class="text-2xl md:text-4xl font-serif font-bold text-brand-900 mt-2">${bs.sectionTitle}</h2>
             <div class="w-16 md:w-20 h-1 bg-brand-500 mx-auto mt-4"></div>
         </div>
 
-        <!-- Name Origin -->
-        <div class="max-w-3xl mx-auto text-center mb-16 md:mb-20">
-            <h3 class="text-3xl md:text-5xl font-serif font-bold text-brand-900 mb-3">${bs.nameOrigin.title}</h3>
-            <p class="text-gray-500 text-sm md:text-base mb-4">${bs.nameOrigin.subtitle}</p>
-            <p class="text-brand-500 text-lg md:text-xl font-medium italic tracking-wide mb-4">${bs.nameOrigin.meaning}</p>
-            <p class="text-gray-600 text-sm md:text-base leading-relaxed max-w-xl mx-auto">${bs.nameOrigin.desc}</p>
-        </div>
-
-        <!-- NOAM Acronym -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-20 max-w-4xl mx-auto">
-            ${bs.acronym.items.map(item => `
-                <div class="bg-gray-50 rounded-xl p-6 text-center border border-gray-100 hover:border-brand-500 hover:shadow-lg transition duration-300">
-                    <span class="text-4xl md:text-5xl font-serif font-bold text-brand-500">${item.letter}</span>
-                    <p class="text-sm md:text-base font-bold text-brand-900 mt-2">${item.word}</p>
-                    <p class="text-xs text-gray-500 mt-1">${item.desc}</p>
+        <!-- Positioning Section -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16 md:mb-20">
+            <div class="bg-brand-50 border-l-4 border-brand-500 p-6 md:p-8 rounded-r-2xl shadow-sm">
+                <h3 class="text-brand-900 font-serif font-bold text-lg md:text-xl mb-3">${bs.positioning.title}</h3>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed text-justify">${bs.positioning.text}</p>
+            </div>
+            <div class="p-4 md:p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                <h4 class="text-brand-900 font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i class="fas fa-bullseye text-brand-500"></i> ${bs.positioning.focusTitle}
+                </h4>
+                <div class="space-y-3">
+                    ${bs.positioning.focusItems.map(item => `
+                        <div class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-5 h-5 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-xs">✔</span>
+                            <span class="text-gray-600 text-sm md:text-base font-medium">${item}</span>
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('')}
+            </div>
         </div>
 
-        <!-- Story -->
+        <!-- Story Paragraphs -->
         <div class="max-w-3xl mx-auto mb-16 md:mb-20">
             <h3 class="text-xl md:text-2xl font-serif font-bold text-brand-900 text-center mb-8">${bs.story.title}</h3>
-            <div class="space-y-4 md:space-y-6">
+            <div class="space-y-6 text-gray-600 text-sm md:text-base leading-relaxed text-justify">
                 ${bs.story.paragraphs.map((p, i) => `
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed text-justify ${i === 0 ? 'text-lg md:text-xl text-gray-700 font-light text-center italic' : ''}">${p}</p>
+                    <p class="${i === 0 ? 'text-lg md:text-xl text-gray-700 font-light text-center italic border-b border-gray-100 pb-6 mb-6' : ''} ${i === bs.story.paragraphs.length - 1 ? 'font-bold text-brand-900 text-center text-base md:text-lg mt-6' : ''}">${p}</p>
                 `).join('')}
             </div>
         </div>
 
-        <!-- Values -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20 max-w-4xl mx-auto">
-            ${bs.values.map(v => `
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas ${v.icon} text-2xl text-brand-500"></i>
-                    </div>
-                    <h4 class="font-bold text-brand-900 mb-2">${v.title}</h4>
-                    <p class="text-gray-500 text-sm">${v.desc}</p>
-                </div>
-            `).join('')}
-        </div>
-
-        <!-- Belief Quote -->
+        <!-- Slogan Section -->
         <div class="max-w-3xl mx-auto text-center mb-12">
-            <div class="bg-brand-900 rounded-2xl p-8 md:p-12">
+            <div class="bg-brand-900 rounded-2xl p-8 md:p-12 shadow-xl border border-brand-gold/10">
                 <i class="fas fa-quote-left text-brand-500 text-2xl md:text-3xl mb-4 block"></i>
-                <p class="text-white text-base md:text-lg leading-relaxed italic mb-6">${bs.belief}</p>
+                <span class="text-xs font-bold text-brand-500 uppercase tracking-widest block mb-2">${bs.slogan.title}</span>
+                <p class="text-brand-gold text-3xl md:text-5xl font-serif font-bold tracking-wider mb-2">${bs.slogan.text}</p>
+                <p class="text-white text-base md:text-lg font-medium italic tracking-wide mb-6">${bs.slogan.translation}</p>
                 <div class="w-12 h-0.5 bg-brand-500 mx-auto mb-6"></div>
-                <p class="text-brand-gold text-2xl md:text-3xl font-serif font-bold tracking-wider">${bs.slogan}</p>
-                <p class="text-gray-400 text-sm mt-2">${bs.sloganDesc}</p>
+                <p class="text-gray-300 text-xs md:text-sm leading-relaxed max-w-xl mx-auto text-justify md:text-center">${bs.slogan.desc}</p>
             </div>
         </div>
     `;
@@ -769,10 +757,18 @@ function renderBottomNav() {
         <a href="#contact" class="bottom-nav-item"><i class="fas fa-phone"></i><span>${bn.contact}</span></a>`;
 }
 
+function renderTagline() {
+    const abb = document.getElementById('tagline-abbreviation');
+    const trans = document.getElementById('tagline-translation');
+    if (abb) abb.textContent = t('tagline.abbreviation');
+    if (trans) trans.textContent = t('tagline.translation');
+}
+
 function renderAll() {
     renderTopBar();
     renderNav();
     renderHero();
+    renderTagline();
     renderAbout();
     renderBrandStory();
     renderBadges();
@@ -1283,7 +1279,7 @@ window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer
 // ===== SCROLL SPY – Highlight active nav on scroll =====
 function initScrollSpy() {
     // Sections in page order (top → bottom)
-    const sectionIds = ['brand-story', 'products-section', 'knowledge', 'contact'];
+    const sectionIds = ['products-section', 'knowledge', 'brand-story', 'contact'];
 
     // Cache all nav links (desktop + mobile menu + bottom nav)
     const navSelectors = 'header nav a.nav-link, #mobile-menu nav a';
