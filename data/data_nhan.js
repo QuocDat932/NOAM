@@ -182,5 +182,14 @@ const data_nhan = [
         image3: './Img/Nhan/JRS0010/JRS010.png',  
         description: { vi: '- Chất liệu: Bạc xi bạch kim\n  Câu chuyện sản phẩm:  Đá Moissanite xanh lá nổi bật với độ sáng cao và màu sắc độc đáo, kết hợp cùng bạc xi bạch kim tạo nên vẻ đẹp hiện đại và tinh tế.', en: '- Material: Platinum-plated silver\n  Product Story: The striking green Moissanite, with its high luminosity and unique color, combined with platinum-plated silver, creates a modern and sophisticated look.' }
     },
-
+    {
+        id: 2022, code: 'JRS011', catalogId: 'jewelry',
+        tags: { line: 'da-quy', type: 'nhan' }, isNew: false, inStock: true,
+        name: { vi: 'Nhẫn Ruby đá Nam Phi', en: 'South African Ruby Ring' },
+        image: './Img/Nhan/JRS011/JRS011_01.png',
+        image1: './Img/Nhan/JRS011/JRS011_02.png',
+        image2: './Img/Nhan/JRS011/JRS011_03.png',
+        image3: './Img/Nhan/JRS011/JRS011_04.png',  
+        description: { vi: '- Chất liệu: Vàng 10K, 14K, 18K\n  Câu chuyện sản phẩm:  Nhẫn đá Nam Phi nổi bật với sắc hồng thanh lịch, được chế tác theo yêu cầu bằng vàng 10K, 14K hoặc 18K, mang đến vẻ đẹp tinh tế và sang trọng.', en: '- Material: Gold 10K, 14K, 18K\n  Product Story: Featuring an elegant pink hue, the South African gemstone ring is custom-crafted in 10K, 14K, or 18K gold, showcasing a perfect blend of sophistication, elegance, and luxury.' }
+    },
 ];
