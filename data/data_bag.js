@@ -241,5 +241,20 @@ const data_bag = [
             vi: 'Kích thước: W18 x H15 x đáy 12cm\nMô tả chi tiết: \n-        Chất liệu: sợi cỏ\n-        Quai xách: quai trúc tự nhiên\n-        Chi tiết: mặt trước đính hoa nổi 3D\n-        Lót trong túi: vải canvas\nCâu chuyện sản phẩm: Mẫu túi mini đáng yêu với phom dáng nhỏ gọn, quai trúc tự nhiên và chi tiết hoa nổi 3D nổi bật. Lót canvas bền đẹp giúp tăng độ chắc chắn, là lựa chọn hoàn hảo cho những cô nàng yêu thích phong cách nữ tính và thanh lịch.',
             en: 'Size: W18 x H15 x D12 cm\nDetailed description:\n- Material: grass fiber\n- Handle: natural bamboo handle\n- Embellishment: 3D flower crochet on front\n- Inner lining: canvas fabric\nAI product description: Lovely mini bag with a compact design, natural bamboo handle, and striking 3D flower details. Durable canvas lining increases stability, making it the perfect choice for girls who love a feminine and elegant style.'
         }
+    },
+    {
+        id: 1027, code: 'BR017', catalogId: 'bag',
+        tags: { material: 'soi-co-grass', line: 'tui-xach' }, isNew: false, inStock: true,
+        name: { vi: 'Túi Pink Raffia', en: 'Pink Raffia Handbag' },
+        image: './Img/TuiXach/SP27-BR017/BR017_01.png',
+        image1: './Img/TuiXach/SP27-BR017/BR017_02.png',
+        image2: './Img/TuiXach/SP27-BR017/BR017_03.png',
+        image3: './Img/TuiXach/SP27-BR017/BR017_04.png',
+        image4: './Img/TuiXach/SP27-BR017/BR017_05.png',
+        description: {
+            vi: 'Kích thước: W14 x H20cm, đáy 13 x 14cm\nMô tả chi tiết:\n- Chất liệu: sợi cọ phối da bò hồng\n- Màu sắc: hồng\n- Lót trong túi: vải canvas\nCâu chuyện sản phẩm: Mẫu túi sợi cọ Pink Raffia nổi bật với chất liệu sợi cọ tự nhiên phối da bò hồng, tạo cảm giác nữ tính và thanh lịch. Thiết kế nhỏ gọn cùng lớp lót canvas chắc chắn, phù hợp để sử dụng trong nhiều dịp.',
+            en: 'Size: W14 x H20 cm, base 13 x 14 cm\nDetailed description:\n- Material: raffia fiber combined with pink cowhide leather\n- Color: pink\n- Inner lining: canvas fabric\nAI product description: The Pink Raffia bag stands out with its natural raffia fiber combined with pink cowhide leather, creating a feminine and elegant feel. The compact design and sturdy canvas lining make it suitable for many occasions.'
+        }
     }
 ];
+
